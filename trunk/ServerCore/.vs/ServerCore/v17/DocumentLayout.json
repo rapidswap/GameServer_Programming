@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\github\\GameServer_Programming\\trunk\\ServerCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF58059-E66D-4D2D-9F90-70AF0F0EDA11}|ServerCore.vcxproj|C:\\github\\GameServer_Programming\\trunk\\ServerCore\\ServerCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7CF58059-E66D-4D2D-9F90-70AF0F0EDA11}|ServerCore.vcxproj|solutionrelative:ServerCore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerCore.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\trunk\\ServerCore\\ServerCore.cpp",
+              "RelativeDocumentMoniker": "ServerCore.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\trunk\\ServerCore\\ServerCore.cpp",
+              "RelativeToolTip": "ServerCore.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-31T09:47:14.514Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

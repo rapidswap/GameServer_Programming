@@ -145,15 +145,27 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ServerLibrary.cpp" />
+    <ClCompile Include="tinyXml\tinystr.cpp" />
+    <ClCompile Include="tinyXml\tinyxml.cpp" />
+    <ClCompile Include="tinyXml\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyXml\tinyxmlparser.cpp" />
     <ClCompile Include="Util\Clock.cpp" />
+    <ClCompile Include="Util\config.cpp" />
+    <ClCompile Include="Util\Lock.cpp" />
+    <ClCompile Include="Util\Thread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="ServerLibrary.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tinyXml\tinystr.h" />
+    <ClInclude Include="tinyXml\tinyxml.h" />
     <ClInclude Include="Util\Clock.h" />
+    <ClInclude Include="Util\config.h" />
+    <ClInclude Include="Util\Lock.h" />
     <ClInclude Include="Util\RandomMt.h" />
     <ClInclude Include="Util\Singleton.h" />
+    <ClInclude Include="Util\Thread.h" />
     <ClInclude Include="Util\Type.h" />
     <ClInclude Include="Util\Util.h" />
   </ItemGroup>

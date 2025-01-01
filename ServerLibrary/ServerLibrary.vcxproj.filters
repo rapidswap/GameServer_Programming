@@ -24,6 +24,27 @@
     <ClCompile Include="Util\Clock.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="tinyXml\tinystr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxml.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlerror.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlparser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\config.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Lock.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Thread.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -48,6 +69,21 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ServerLibrary.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinystr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinyxml.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\config.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Lock.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Thread.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

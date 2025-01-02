@@ -71,7 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);C:\Program Files\OpenSSL-Win64\include</IncludePath>
+    <LibraryPath>C:\Program Files\OpenSSL-Win64\lib\VC\x64\MDd;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,14 +110,17 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1;</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcrypto.lib;libssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,29 +149,44 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ServerLibrary.cpp" />
-    <ClCompile Include="tinyXml\tinystr.cpp" />
-    <ClCompile Include="tinyXml\tinyxml.cpp" />
-    <ClCompile Include="tinyXml\tinyxmlerror.cpp" />
-    <ClCompile Include="tinyXml\tinyxmlparser.cpp" />
+    <ClCompile Include="Util\Assert.cpp" />
     <ClCompile Include="Util\Clock.cpp" />
-    <ClCompile Include="Util\config.cpp" />
+    <ClCompile Include="Util\Config.cpp" />
     <ClCompile Include="Util\Lock.cpp" />
+    <ClCompile Include="Util\Logger.cpp" />
+    <ClCompile Include="Util\Minidump.cpp" />
+    <ClCompile Include="Util\SMTPMail.cpp" />
     <ClCompile Include="Util\Thread.cpp" />
+    <ClCompile Include="Util\tinyXml\tinystr.cpp" />
+    <ClCompile Include="Util\tinyXml\tinyxml.cpp" />
+    <ClCompile Include="Util\tinyXml\tinyxmlerror.cpp" />
+    <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="ServerLibrary.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tinyXml\tinystr.h" />
-    <ClInclude Include="tinyXml\tinyxml.h" />
+    <ClInclude Include="Util\Assert.h" />
     <ClInclude Include="Util\Clock.h" />
-    <ClInclude Include="Util\config.h" />
+    <ClInclude Include="Util\Config.h" />
     <ClInclude Include="Util\Lock.h" />
+    <ClInclude Include="Util\Logger.h" />
+    <ClInclude Include="Util\Minidump.h" />
     <ClInclude Include="Util\RandomMt.h" />
     <ClInclude Include="Util\Singleton.h" />
+    <ClInclude Include="Util\SMTPMail.h" />
     <ClInclude Include="Util\Thread.h" />
+    <ClInclude Include="Util\tinyXml\tinystr.h" />
+    <ClInclude Include="Util\tinyXml\tinyxml.h" />
     <ClInclude Include="Util\Type.h" />
     <ClInclude Include="Util\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Util\config.app" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Util\config.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

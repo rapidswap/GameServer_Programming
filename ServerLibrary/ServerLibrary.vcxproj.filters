@@ -24,25 +24,37 @@
     <ClCompile Include="Util\Clock.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="tinyXml\tinystr.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyXml\tinyxml.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyXml\tinyxmlerror.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyXml\tinyxmlparser.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Util\config.cpp">
+    <ClCompile Include="Util\Config.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Util\Lock.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Util\Thread.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Logger.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxml.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxmlerror.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\tinyXml\tinystr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Assert.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Minidump.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SMTPMail.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,10 +86,7 @@
     <ClInclude Include="tinyXml\tinystr.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="tinyXml\tinyxml.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\config.h">
+    <ClInclude Include="Util\Config.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Util\Lock.h">
@@ -86,5 +95,29 @@
     <ClInclude Include="Util\Thread.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Util\Logger.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\tinyXml\tinystr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\tinyXml\tinyxml.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Assert.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Minidump.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SMTPMail.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Util\config.app" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Util\config.xml" />
   </ItemGroup>
 </Project>

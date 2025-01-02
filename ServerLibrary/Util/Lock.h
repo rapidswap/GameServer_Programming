@@ -37,11 +37,11 @@ public:
 #define SAFE_LOCK(lock) LockSafeScope __lockSafe(&lock, _W(__FILE__), __LINE__);
 
 // µ¥µå¶ô Å½Áö
-class LcokManger : public Singleton<LockManager>
+class LockManager : public Singleton<LockManager>
 {
 	size_t idSeed_;
 public:
-	LockManger();
+	LockManager();
 
 	Lock* searchLockCycle(Lock* newLock);
 	Lock* checkDeadLock(Lock* lock);

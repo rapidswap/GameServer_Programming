@@ -18,6 +18,7 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <cstdint>
+
 #include <map>
 #include <hash_map>
 #include <array>
@@ -48,15 +49,15 @@
 typedef void(*Function)(void*);
 
 //기타 유틸
-#include "./Util/csv_parser/csv_parser.hpp"
+//#include "./Util/csv_parser/csv_parser.hpp"
 #include "./Util/tinyXml/tinyxml.h"
 
 // TODO: 필수 헤더 파일
-#include "./Net/WinSocket.h"
+//#include "./Net/WinSocket.h"
 #include "./Util/Type.h"
 #include "./Util/Util.h"
 
-#include "./Util/GameObject.h"
+//#include "./Util/GameObject.h"
 #include "./Util/Singleton.h"
 #include "./Util/RandomMT.h"
 
@@ -64,51 +65,51 @@ typedef void(*Function)(void*);
 #include "./Util/Logger.h"
 #include "./Util/Assert.h"
 
-#include "./Util/Table.h"
+//#include "./Util/Table.h"
 #include "./Util/Thread.h"
-#include "./Util/Lock.h"
-#include "./Util/ThreadJobQueue.h"
-#include "./Util/Task.h"
+//#include "./Util/Lock.h"
+//#include "./Util/ThreadJobQueue.h"
+//#include "./Util/Task.h"
 
-#include "./Util/MemoryLeak.h"
-#include "./Util/Memory_LowFragmentationHeap.h"
+//#include "./Util/MemoryLeak.h"
+//#include "./Util/Memory_LowFragmentationHeap.h"
 #include "./Util/Minidump.h"
 
 #include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
-#include "./Util/Monitoring.h"
-#include "./util/ProgramValidation.h"
+//#include "./Util/Monitoring.h"
+//#include "./util/ProgramValidation.h"
 
 //패킷들
-#include "./Net/Packet/Stream.h"
-#include "./Net/Packet/PacketHeader.h"
-#include "./Net/Packet/PacketClass.h"
-#include "./Net/Packet/PacketAnalyzer.h"
-#include "./Net/Packet/PacketFactory.h"
-#include "./Net/Packet/Package.h"
-#include "./Net/Packet/PacketObfuscation.h"
+//#include "./Net/Packet/Stream.h"
+//#include "./Net/Packet/PacketHeader.h"
+//#include "./Net/Packet/PacketClass.h"
+//#include "./Net/Packet/PacketAnalyzer.h"
+//#include "./Net/Packet/PacketFactory.h"
+//#include "./Net/Packet/Package.h"
+//#include "./Net/Packet/PacketObfuscation.h"
 
 //컨텐츠 관련
-#include "./Contents/ContentsProcess.h"
+//#include "./Contents/ContentsProcess.h"
 
 //서버
-#include "./Net/Session.h"
-#include "./Net/SessionManager.h"
-#include "./Net/Server.h"
+//#include "./Net/Session.h"
+//#include "./Net/SessionManager.h"
+//#include "./Net/Server.h"
 
-#include "./Net/Iocp/IOCPServer.h"
-#include "./Net/Iocp/IOCPSession.h"
-#include "./Net/SessionMonitor.h"
+//#include "./Net/Iocp/IOCPServer.h"
+//#include "./Net/Iocp/IOCPSession.h"
+//#include "./Net/SessionMonitor.h"
 
 //터미널
-#include "./Net/Terminal/TerminalSession.h"
-#include "./Net/Terminal/Terminal.h"
-#include "./Net/Terminal/TerminalManager.h"
+//#include "./Net/Terminal/TerminalSession.h"
+//#include "./Net/Terminal/Terminal.h"
+//#include "./Net/Terminal/TerminalManager.h"
 
 //DB
-#include "./Database/ADODatabase.h"
-#include "./Database/Query.h"
-#include "./Database/DBManager.h"
+//#include "./Database/ADODatabase.h"
+//#include "./Database/Query.h"
+//#include "./Database/DBManager.h"
 
 // 전역 변수
-#include "Shutdown.h"
+//#include "Shutdown.h"

@@ -1,16 +1,21 @@
 ﻿#include "pch.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
-	printf("yesterday %ws\n", CLOCK.yesterday().c_str());
-	printf("today %ws\n", CLOCK.today().c_str());
-	printf("tomorrow %ws\n", CLOCK.tomorrow().c_str());
-	printf("today is [%d]week of the day\n", CLOCK.todayOfTheWeek());
+    const char* from = "kjseoin7988@naver.com";  // 발신자 이메일 주소
+    const char* to = "kjseoin7988@naver.com"; // 수신자 이메일 주소
+    const char* subject = "Test Email"; // 이메일 제목
+    const char* body = "This is a test email sent from C++ using SMTP."; // 이메일 본문
+    const char* username = "kjseoin7988@naver.com"; // 네이버 이메일 주소
+    const char* password = ""; // 네이버 이메일 비밀번호
 
-	printf("system = %llu\n", NOW_TICK());
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%ws\n", CLOCK.nowTimeWithMilliSec().c_str());
-	}
-	return 0;
+    // 이메일 보내기
+    if (sendMail(from, to, subject, body, username, password)) {
+        printf("Email sent successfully!\n");
+    }
+    else {
+        printf("Failed to send email.\n");
+    }
+
+    return 0;
 }

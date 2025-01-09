@@ -172,11 +172,15 @@
     <ClInclude Include="Util\Config.h" />
     <ClInclude Include="Util\Lock.h" />
     <ClInclude Include="Util\Logger.h" />
+    <ClInclude Include="Util\MemoryLeak.h" />
+    <ClInclude Include="Util\Memory_LowFragmentationHeap.h" />
     <ClInclude Include="Util\Minidump.h" />
     <ClInclude Include="Util\RandomMt.h" />
     <ClInclude Include="Util\Singleton.h" />
     <ClInclude Include="Util\SMTPMail.h" />
+    <ClInclude Include="Util\Table.h" />
     <ClInclude Include="Util\Thread.h" />
+    <ClInclude Include="Util\ThreadJobqueue.h" />
     <ClInclude Include="Util\tinyXml\tinystr.h" />
     <ClInclude Include="Util\tinyXml\tinyxml.h" />
     <ClInclude Include="Util\Type.h" />

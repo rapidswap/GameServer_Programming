@@ -113,6 +113,18 @@
     <ClInclude Include="Util\SMTPMail.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Util\ThreadJobqueue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Table.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\MemoryLeak.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Memory_LowFragmentationHeap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Util\config.app" />

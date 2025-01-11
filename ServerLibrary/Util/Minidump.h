@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "dbghelp.h"
 
-// dump 함수 포인터
+//dump 함수 포인터
 typedef BOOL(WINAPI* WRITEDUMP)(
     _In_  HANDLE hProcess,
     _In_  DWORD ProcessId,

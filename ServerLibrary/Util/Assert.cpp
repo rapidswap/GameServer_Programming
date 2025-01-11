@@ -6,7 +6,7 @@ void Assert(int condition, LPCWSTR conditionStr, LPCWSTR fileName, int lineNo)
     if (condition) {
         return;
     }
-    //shutdownServer();
+    shutdownServer();
 
     wstr_t	msg;
     msg = L" Assert: ";

@@ -49,7 +49,7 @@
 typedef void(*Function)(void*);
 
 //기타 유틸
-//#include "./Util/csv_parser/csv_parser.hpp"
+#include "./Util/csv_parser/csv_parser.hpp"
 #include "./Util/tinyXml/tinyxml.h"
 
 // TODO: 필수 헤더 파일
@@ -57,7 +57,7 @@ typedef void(*Function)(void*);
 #include "./Util/Type.h"
 #include "./Util/Util.h"
 
-//#include "./Util/GameObject.h"
+#include "./Util/GameObject.h"
 #include "./Util/Singleton.h"
 #include "./Util/RandomMT.h"
 
@@ -65,20 +65,20 @@ typedef void(*Function)(void*);
 #include "./Util/Logger.h"
 #include "./Util/Assert.h"
 
-//#include "./Util/Table.h"
+#include "./Util/Table.h"
 #include "./Util/Thread.h"
-//#include "./Util/Lock.h"
-//#include "./Util/ThreadJobQueue.h"
-//#include "./Util/Task.h"
+#include "./Util/Lock.h"
+#include "./Util/ThreadJobQueue.h"
+#include "./Util/Task.h"
 
-//#include "./Util/MemoryLeak.h"
-//#include "./Util/Memory_LowFragmentationHeap.h"
+#include "./Util/MemoryLeak.h"
+#include "./Util/Memory_LowFragmentationHeap.h"
 #include "./Util/Minidump.h"
 
 #include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
-//#include "./Util/Monitoring.h"
-//#include "./util/ProgramValidation.h"
+#include "./Util/Monitoring.h"
+//#include "./Util/ProgramValidation.h"
 
 //패킷들
 //#include "./Net/Packet/Stream.h"
@@ -112,4 +112,4 @@ typedef void(*Function)(void*);
 //#include "./Database/DBManager.h"
 
 // 전역 변수
-//#include "Shutdown.h"
+#include "Shutdown.h"

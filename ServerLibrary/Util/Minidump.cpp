@@ -10,7 +10,7 @@ MiniDump::MiniDump()
 LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
 {
 	// 快急 辆丰 贸府何磐
-	//shutdownServer();
+	shutdownServer();
 
 	_CrtMemDumpAllObjectsSince(NULL);
 

@@ -57,6 +57,15 @@
     <ClCompile Include="Util\SMTPMail.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Util\csv_parser\csv_parser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Task.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Shutdown.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -113,7 +122,7 @@
     <ClInclude Include="Util\SMTPMail.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Util\ThreadJobqueue.h">
+    <ClInclude Include="Util\ThreadJobQueue.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Util\Table.h">
@@ -125,9 +134,25 @@
     <ClInclude Include="Util\Memory_LowFragmentationHeap.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Util\csv_parser\csv_parser.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\GameObject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Task.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Monitoring.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Util\config.app" />
+    <None Include="item.csv" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Util\config.xml" />

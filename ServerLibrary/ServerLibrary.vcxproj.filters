@@ -66,6 +66,15 @@
     <ClCompile Include="Shutdown.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Net\Server.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\IOCP\IOCPServer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Session.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -147,6 +156,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Shutdown.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Server.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IOCP\IOCPServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Session.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

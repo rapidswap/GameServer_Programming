@@ -93,11 +93,11 @@ typedef void(*Function)(void*);
 //#include "./Contents/ContentsProcess.h"
 
 //¼­¹ö
-//#include "./Net/Session.h"
+#include "./Net/Session.h"
 //#include "./Net/SessionManager.h"
-//#include "./Net/Server.h"
+#include "./Net/Server.h"
 
-//#include "./Net/Iocp/IOCPServer.h"
+#include "./Net/Iocp/IOCPServer.h"
 //#include "./Net/Iocp/IOCPSession.h"
 //#include "./Net/SessionMonitor.h"
 

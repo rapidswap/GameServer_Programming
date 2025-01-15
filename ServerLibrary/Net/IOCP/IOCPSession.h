@@ -51,7 +51,7 @@ private:
 	void send(WSABUF wsaBuf);
 
 public:
-	IOCPSEssion();
+	IOCPSession();
 
 	void onSend(size_t transferSize);
 	void sendPacket(Packet* packet);

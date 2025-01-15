@@ -43,7 +43,7 @@ public:
 private:
 	void initialize();
 
-	void checkerrorIO(DWORD ret);
+	void checkErrorIO(DWORD ret);
 	
 	void recv(WSABUF wsaBuf);
 	bool isRecving(size_t transferSize);
@@ -57,5 +57,5 @@ public:
 	void sendPacket(Packet* packet);
 
 	Package* onRecv(size_t transferSize);
-	void recvbStandBy();
+	void recvStandBy();
 };

@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
+    <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
     <ClCompile Include="Net\Server.cpp" />
     <ClCompile Include="Net\Session.cpp" />
     <ClCompile Include="pch.cpp">
@@ -169,6 +170,7 @@
     <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Net\IOCP\IOCPSession.h" />
     <ClInclude Include="Net\Server.h" />
     <ClInclude Include="Net\IOCP\IOCPServer.h" />
     <ClInclude Include="Net\Session.h" />

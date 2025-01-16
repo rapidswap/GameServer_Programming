@@ -146,6 +146,11 @@
     <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
     <ClCompile Include="Net\Server.cpp" />
     <ClCompile Include="Net\Session.cpp" />
+    <ClCompile Include="Net\SessionManager.cpp" />
+    <ClCompile Include="Net\SessionMonitor.cpp" />
+    <ClCompile Include="Net\Terminal\Terminal.cpp" />
+    <ClCompile Include="Net\Terminal\TerminalSession.cpp" />
+    <ClCompile Include="Net\Terminal\TerminlaManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -174,6 +179,11 @@
     <ClInclude Include="Net\Server.h" />
     <ClInclude Include="Net\IOCP\IOCPServer.h" />
     <ClInclude Include="Net\Session.h" />
+    <ClInclude Include="Net\SessionManager.h" />
+    <ClInclude Include="Net\SessionMonitor.h" />
+    <ClInclude Include="Net\Terminal\Terminal.h" />
+    <ClInclude Include="Net\Terminal\TerminalManager.h" />
+    <ClInclude Include="Net\Terminal\TerminalSession.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ServerLibrary.h" />
     <ClInclude Include="Shutdown.h" />

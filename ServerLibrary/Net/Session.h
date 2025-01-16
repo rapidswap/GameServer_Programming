@@ -32,7 +32,7 @@ public:
 	virtual Package* pmRecv(size_t transferSize) = 0;
 	virtual void recvStandBy() {};
 
-	virtual void onClose();
+	virtual void onClose(bool force = false);
 
 	SOCKET& socket();
 	str_t clientAddress();

@@ -57,8 +57,8 @@ bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
 {
 	socketData_.socket_ = socket;
 	int addrLen;
-	getpeername(socketData_.socket_, (struct sockaddr*)&socketData_.addrInfo, &addrLen);
-	socketData_.addrInfo = addrInfo;
+	getpeername(socketData_.socket_, (struct sockaddr*)&socketData_.addrInfo_, &addrLen);
+	socketData_.addrInfo_ = addrInfo;
 	if (!this->setSocketOpt()) {
 		return false;
 	}
@@ -66,9 +66,14 @@ bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
 	return true;
 }
 
-void Session::onClose()
+void Session::onClose(bool force)
 {
-	SessionManager::getInstance().closeSession(this);
+	if (force) {
+		_session_manager.forceCloseSession(this);
+	}
+	else {
+		_session_manager.closeSession(this);
+	}
 }
 
 SOCKET& Session::socket()

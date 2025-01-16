@@ -78,6 +78,21 @@
     <ClCompile Include="Net\IOCP\IOCPSession.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Net\SessionManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SessionMonitor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\TerminalSession.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\Terminal.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Terminal\TerminlaManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -171,6 +186,21 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Net\IOCP\IOCPSession.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SessionManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SessionMonitor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\Terminal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\TerminalSession.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Terminal\TerminalManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

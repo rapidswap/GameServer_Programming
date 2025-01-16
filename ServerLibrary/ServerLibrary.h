@@ -94,17 +94,17 @@ typedef void(*Function)(void*);
 
 //서버
 #include "./Net/Session.h"
-//#include "./Net/SessionManager.h"
+#include "./Net/SessionManager.h"
 #include "./Net/Server.h"
 
 #include "./Net/Iocp/IOCPServer.h"
-//#include "./Net/Iocp/IOCPSession.h"
-//#include "./Net/SessionMonitor.h"
+#include "./Net/Iocp/IOCPSession.h"
+#include "./Net/SessionMonitor.h"
 
 //터미널
-//#include "./Net/Terminal/TerminalSession.h"
-//#include "./Net/Terminal/Terminal.h"
-//#include "./Net/Terminal/TerminalManager.h"
+#include "./Net/Terminal/TerminalSession.h"
+#include "./Net/Terminal/Terminal.h"
+#include "./Net/Terminal/TerminalManager.h"
 
 //DB
 //#include "./Database/ADODatabase.h"

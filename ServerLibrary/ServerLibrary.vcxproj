@@ -144,6 +144,8 @@
   <ItemGroup>
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
     <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
+    <ClCompile Include="Net\Packet\PacketAnalyzer.cpp" />
+    <ClCompile Include="Net\Packet\Stream.cpp" />
     <ClCompile Include="Net\Server.cpp" />
     <ClCompile Include="Net\Session.cpp" />
     <ClCompile Include="Net\SessionManager.cpp" />
@@ -159,6 +161,7 @@
     </ClCompile>
     <ClCompile Include="ServerLibrary.cpp" />
     <ClCompile Include="Shutdown.cpp" />
+    <ClCompile Include="TaskTest.cpp" />
     <ClCompile Include="Util\Assert.cpp" />
     <ClCompile Include="Util\Clock.cpp" />
     <ClCompile Include="Util\Config.cpp" />
@@ -176,6 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Net\IOCP\IOCPSession.h" />
+    <ClInclude Include="Net\Packet\Package.h" />
+    <ClInclude Include="Net\Packet\PacketAnalyzer.h" />
+    <ClInclude Include="Net\Packet\PacketClass.h" />
+    <ClInclude Include="Net\Packet\PacketFactory.h" />
+    <ClInclude Include="Net\Packet\PacketHeader.h" />
+    <ClInclude Include="Net\Packet\Stream.h" />
     <ClInclude Include="Net\Server.h" />
     <ClInclude Include="Net\IOCP\IOCPServer.h" />
     <ClInclude Include="Net\Session.h" />

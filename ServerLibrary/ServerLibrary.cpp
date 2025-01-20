@@ -1,28 +1,70 @@
-﻿#include "pch.h"
+﻿//#include "pch.h"
+#include <vector>
+#include <iostream>
+#include "./Net/Packet/Stream.h"
 
-class SystemReport : public Work
+class Packet
 {
 public:
-    void tick() override
-    {
-        Monitoring& monitor = Monitoring::getInstance();
-        SLog(L"### CPU Usage: %2.2f%%, Memory Usage: %u bytes", monitor.processCpuUsage(), monitor.processMemUsage());
-    }
+	int a;
+	int8_t b;
+	float c;
+	vector<int> d;
+
+	Packet()
+	{
+
+	}
+
+	Packet(Stream& stream)
+	{
+		this->decode(stream);
+	}
+	void encode(Stream& stream)
+	{
+		stream << a;
+		stream << b;
+		stream << c;
+		stream << d;
+	}
+	void decode(Stream& stream)
+	{
+		stream >> &a;
+		stream >> &b;
+		stream >> &c;
+		stream >> &d;
+	}
 };
 
-int main()
+int t_main(int argc, _TCHAR* argv[])
 {
-    // TaskManager 초기화
-    TaskManager::getInstance();
+	Stream sender;
+	{
+		Packet sendPacket;
+		sendPacket.a = 0xff00f1;
+		sendPacket.b = 'A';
+		sendPacket.c = 2.12395f;
+		sendPacket.d.push_back(124);
+		sendPacket.d.push_back(2623);
+		sendPacket.d.push_back(4568);
+		sendPacket.d.push_back(2346);
+		sendPacket.d.push_back(6708);
 
-    // SystemReport 인스턴스 생성
-    SystemReport systemReport;
+		sendPacket.encode(sender);
+	}
 
-    // 1초마다 CPU와 메모리 사용량을 보고하도록 TaskManager에 추가
-    const int MONITOR_REPORTING_SEC = 1;
-    TaskManager::getInstance().add(&systemReport, MONITOR_REPORTING_SEC, TICK_INFINITY);
+	Stream reciever;
+	reciever = sender;
+	{
+		Packet recvPacket;
+		recvPacket.decode(reciever);
 
-
-
-    return 0;
+		cout << recvPacket.a << endl;
+		cout << recvPacket.b << endl;
+		cout << recvPacket.c << endl;
+		for (auto n : recvPacket.d) {
+			cout << n << endl;
+		}
+	}
+	return 0;
 }

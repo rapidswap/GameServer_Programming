@@ -81,12 +81,12 @@ typedef void(*Function)(void*);
 //#include "./Util/ProgramValidation.h"
 
 //ÆÐÅ¶µé
-//#include "./Net/Packet/Stream.h"
-//#include "./Net/Packet/PacketHeader.h"
-//#include "./Net/Packet/PacketClass.h"
-//#include "./Net/Packet/PacketAnalyzer.h"
-//#include "./Net/Packet/PacketFactory.h"
-//#include "./Net/Packet/Package.h"
+#include "./Net/Packet/Stream.h"
+#include "./Net/Packet/PacketHeader.h"
+#include "./Net/Packet/PacketClass.h"
+#include "./Net/Packet/PacketAnalyzer.h"
+#include "./Net/Packet/PacketFactory.h"
+#include "./Net/Packet/Package.h"
 //#include "./Net/Packet/PacketObfuscation.h"
 
 //ÄÁÅÙÃ÷ °ü·Ã

@@ -18,7 +18,7 @@ protected:
 	SERVER_STATUS status_;
 	ContentsProcess* contentsProcess_;
 public:
-	Server(contentsProcess_* contentsProcess);
+	Server(ContentsProcess* contentsProcess);
 	virtual ~Server();
 
 	virtual void initialize(xml_t* config);

@@ -12,7 +12,7 @@ Server::Server(ContentsProcess* contentsProcess)
 	if (!loadConfig(&config)) {
 		return;
 	}
-	this->initalize(&config);
+	this->initialize(&config);
 }
 
 Server::~Server()

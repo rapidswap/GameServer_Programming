@@ -90,7 +90,7 @@ typedef void(*Function)(void*);
 //#include "./Net/Packet/PacketObfuscation.h"
 
 //ÄÁÅÙÃ÷ °ü·Ã
-//#include "./Contents/ContentsProcess.h"
+#include "./Contents/ContentsProcess.h"
 
 //¼­¹ö
 #include "./Net/Session.h"

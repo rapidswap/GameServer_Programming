@@ -102,6 +102,9 @@
     <ClCompile Include="Net\Packet\PacketAnalyzer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Contents\ContentsProcess.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -228,6 +231,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Net\Packet\Package.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Contents\ContentsProcess.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

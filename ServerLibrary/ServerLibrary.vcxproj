@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);C:\Program Files\OpenSSL-Win64\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <LibraryPath>C:\Program Files\OpenSSL-Win64\lib\VC\x64\MDd;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Contents\ContentsProcess.cpp" />
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
     <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
     <ClCompile Include="Net\Packet\PacketAnalyzer.cpp" />
@@ -178,6 +179,7 @@
     <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Contents\ContentsProcess.h" />
     <ClInclude Include="Net\IOCP\IOCPSession.h" />
     <ClInclude Include="Net\Packet\Package.h" />
     <ClInclude Include="Net\Packet\PacketAnalyzer.h" />

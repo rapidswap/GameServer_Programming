@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Contents\ContentsProcess.cpp" />
+    <ClCompile Include="Database\QueryRecord.cpp" />
+    <ClCompile Include="Database\QueryStatement.cpp" />
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
     <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
     <ClCompile Include="Net\Packet\PacketAnalyzer.cpp" />
@@ -180,6 +182,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contents\ContentsProcess.h" />
+    <ClInclude Include="Database\QueryRecord.h" />
+    <ClInclude Include="Database\QueryStatement.h" />
     <ClInclude Include="Net\IOCP\IOCPSession.h" />
     <ClInclude Include="Net\Packet\Package.h" />
     <ClInclude Include="Net\Packet\PacketAnalyzer.h" />

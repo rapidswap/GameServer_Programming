@@ -115,6 +115,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Contents\ContentsProcess.cpp" />
+    <ClCompile Include="Database\Query.cpp" />
     <ClCompile Include="Database\QueryRecord.cpp" />
     <ClCompile Include="Database\QueryStatement.cpp" />
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
@@ -182,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contents\ContentsProcess.h" />
+    <ClInclude Include="Database\ADODatabase.h" />
+    <ClInclude Include="Database\Database.h" />
+    <ClInclude Include="Database\Query.h" />
     <ClInclude Include="Database\QueryRecord.h" />
     <ClInclude Include="Database\QueryStatement.h" />
     <ClInclude Include="Net\IOCP\IOCPSession.h" />

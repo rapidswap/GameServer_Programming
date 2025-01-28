@@ -21,7 +21,7 @@ tick_t Clock::strToTick(wstr_t str, WCHAR* fmt)
 
     swscanf_s(str.c_str(), fmt, &year, &month, &day, &hour, &minute, &second);
 
-    //		   초,		분,    시,  일,  월(0부터시작), 년(1900년부터시작)
+
     tm time = { second, minute, hour, day, month - 1, year - 1900 };
 
     return mktime(&time);

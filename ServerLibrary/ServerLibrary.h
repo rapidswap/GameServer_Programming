@@ -52,7 +52,7 @@ typedef void(*Function)(void*);
 #include "./Util/tinyXml/tinyxml.h"
 
 // TODO: 필수 헤더 파일
-//#include "./Net/WinSocket.h"
+#include "./Net/WinSocket.h"
 #include "./Util/Type.h"
 #include "./Util/Util.h"
 
@@ -77,7 +77,7 @@ typedef void(*Function)(void*);
 #include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
 #include "./Util/Monitoring.h"
-//#include "./Util/ProgramValidation.h"
+#include "./Util/ProgramValidation.h"
 
 //패킷들
 #include "./Net/Packet/Stream.h"
@@ -86,7 +86,7 @@ typedef void(*Function)(void*);
 #include "./Net/Packet/PacketAnalyzer.h"
 #include "./Net/Packet/PacketFactory.h"
 #include "./Net/Packet/Package.h"
-//#include "./Net/Packet/PacketObfuscation.h"
+#include "./Net/Packet/PacketObfuscation.h"
 
 //컨텐츠 관련
 #include "./Contents/ContentsProcess.h"

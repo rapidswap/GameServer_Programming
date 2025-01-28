@@ -30,7 +30,7 @@ size_t Stream::size()
 	return offset_;
 }
 
-void Stream::operator=(Stream& stream)
+void Stream::operator = (Stream& stream)
 {
 	this->set(stream.data(), stream.size());
 }
@@ -42,6 +42,7 @@ void Stream::set(UCHAR* data, size_t size)
 }
 
 // write
+//------------------------------------------------------------------------//
 bool Stream::checkWriteBound(size_t len)
 {
 	if (offset_ + len > sizeof(stream_)) {

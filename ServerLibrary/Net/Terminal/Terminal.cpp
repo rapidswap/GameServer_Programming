@@ -19,6 +19,7 @@ void Terminal::initialize(xmlNode_t* config)
 
 	elem = config->FirstChildElement("IP");
 	strcpy_s(ip_, elem->GetText());
+
 	elem = config->FirstChildElement("Port");
 	sscanf_s(elem->GetText(), "%d", &port_);
 
@@ -47,7 +48,7 @@ int Terminal::port()
 	return port_;
 }
 
-void Terminal::conncetProcess()
+void Terminal::connectProcess()
 {
 CONNECT_START:
 	int tryCount = 0;
@@ -56,20 +57,20 @@ CONNECT_START:
 			break;
 		}
 		SLog(L"* try connect [%s] server[%S]:[%d]... [%d]", name_.c_str(), ip_, port_, tryCount++);
-		Sleep(1000);
+		Sleep(1000);        // 1초마다 연결 시도
 	}
 	status_ = TERMINAL_READY;
 
-	// 자신이 터미널 세션임을 알림
+	// 자신이 터미널 세션임을 알려준다.
 	PK_I_NOTIFY_TERMINAL terminalPacket;
 	this->sendPacket(&terminalPacket);
 
-	SLog(L"* [%s]terminal conncet [%S]:[%d] ready", name_.c_str(), ip_, port_);
+	SLog(L"* [%s]terminal connect [%S]:[%d] ready", name_.c_str(), ip_, port_);
 	while (_shutdown == false) {
 		Package* package = session_.onRecv(0);
 
 		if (package == nullptr) {
-			SLog(L"! terminal [%s] disconnected!", name_.c_str());
+			SLog(L"! termnal [%s] disconnected !", name_.c_str());
 			session_.onClose();
 			goto CONNECT_START;
 		}
@@ -80,5 +81,5 @@ CONNECT_START:
 
 void Terminal::run()
 {
-	processThread_ = MAKE_THREAD(Terminal, conncetProcess);
+	processThread_ = MAKE_THREAD(Terminal, connectProcess);
 }

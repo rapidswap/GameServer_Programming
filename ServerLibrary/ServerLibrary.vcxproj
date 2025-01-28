@@ -40,10 +40,11 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -71,8 +72,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
-    <LibraryPath>C:\Program Files\OpenSSL-Win64\lib\VC\x64\MDd;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);C:\Program Files\Common Files\System\ado;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);D:\boost_1_56_0\lib64-msvc-12.0;D:\boost_1_56_0\libs;</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -111,11 +112,12 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1;</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
+      <ConformanceMode>Default</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,12 +146,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Contents\ContentsProcess.cpp" />
+    <ClCompile Include="Database\ADODatabase.cpp" />
+    <ClCompile Include="Database\DBManager.cpp" />
     <ClCompile Include="Database\Query.cpp" />
     <ClCompile Include="Database\QueryRecord.cpp" />
     <ClCompile Include="Database\QueryStatement.cpp" />
     <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
     <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
     <ClCompile Include="Net\Packet\PacketAnalyzer.cpp" />
+    <ClCompile Include="Net\Packet\PacketObfuscation.cpp" />
     <ClCompile Include="Net\Packet\Stream.cpp" />
     <ClCompile Include="Net\Server.cpp" />
     <ClCompile Include="Net\Session.cpp" />
@@ -157,16 +162,14 @@
     <ClCompile Include="Net\SessionMonitor.cpp" />
     <ClCompile Include="Net\Terminal\Terminal.cpp" />
     <ClCompile Include="Net\Terminal\TerminalSession.cpp" />
-    <ClCompile Include="Net\Terminal\TerminlaManager.cpp" />
+    <ClCompile Include="Net\Terminal\TerminalManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="ServerLibrary.cpp" />
     <ClCompile Include="Shutdown.cpp" />
-    <ClCompile Include="TaskTest.cpp" />
     <ClCompile Include="Util\Assert.cpp" />
     <ClCompile Include="Util\Clock.cpp" />
     <ClCompile Include="Util\Config.cpp" />
@@ -186,6 +189,7 @@
     <ClInclude Include="Contents\ContentsProcess.h" />
     <ClInclude Include="Database\ADODatabase.h" />
     <ClInclude Include="Database\Database.h" />
+    <ClInclude Include="Database\DBManager.h" />
     <ClInclude Include="Database\Query.h" />
     <ClInclude Include="Database\QueryRecord.h" />
     <ClInclude Include="Database\QueryStatement.h" />
@@ -195,6 +199,7 @@
     <ClInclude Include="Net\Packet\PacketClass.h" />
     <ClInclude Include="Net\Packet\PacketFactory.h" />
     <ClInclude Include="Net\Packet\PacketHeader.h" />
+    <ClInclude Include="Net\Packet\PacketObfuscation.h" />
     <ClInclude Include="Net\Packet\Stream.h" />
     <ClInclude Include="Net\Server.h" />
     <ClInclude Include="Net\IOCP\IOCPServer.h" />
@@ -204,6 +209,7 @@
     <ClInclude Include="Net\Terminal\Terminal.h" />
     <ClInclude Include="Net\Terminal\TerminalManager.h" />
     <ClInclude Include="Net\Terminal\TerminalSession.h" />
+    <ClInclude Include="Net\Winsocket.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ServerLibrary.h" />
     <ClInclude Include="Shutdown.h" />
@@ -220,6 +226,7 @@
     <ClInclude Include="Util\Memory_LowFragmentationHeap.h" />
     <ClInclude Include="Util\Minidump.h" />
     <ClInclude Include="Util\Monitoring.h" />
+    <ClInclude Include="Util\ProgramValidation.h" />
     <ClInclude Include="Util\RandomMt.h" />
     <ClInclude Include="Util\Singleton.h" />
     <ClInclude Include="Util\SMTPMail.h" />

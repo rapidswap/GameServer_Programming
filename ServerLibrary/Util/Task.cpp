@@ -40,7 +40,6 @@ void TaskNode::tick()
 	}
 }
 
-//---------------------------------------------------------------------//
 Task::Task(int id)
 {
 	id_ = id;
@@ -87,7 +86,6 @@ void Task::run()
 	thread_ = MAKE_THREAD(Task, process);
 }
 
-//---------------------------------------------------------------------//
 TaskManager::TaskManager()
 {
 	xml_t config;

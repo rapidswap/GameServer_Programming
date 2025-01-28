@@ -13,7 +13,7 @@ public:
 		session_ = session;
 		packet_ = packet;
 	}
-	
+
 	~Package()
 	{
 		session_ = nullptr;

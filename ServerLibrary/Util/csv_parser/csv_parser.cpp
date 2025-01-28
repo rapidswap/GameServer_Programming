@@ -1,5 +1,6 @@
 #include "pch.h"
 /* INCLUDING HEADER FILES */
+#pragma warning(disable:4996) 
 
 
 /* BEGIN DEFINITION FOR PUBLIC METHODS */

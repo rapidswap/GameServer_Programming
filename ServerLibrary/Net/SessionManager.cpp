@@ -3,7 +3,7 @@
 #include "./IOCP/IOCPServer.h"
 
 SessionManager::SessionManager(int maxConnection)
-	:lock_(L"SessionManager")
+	: lock_(L"SessionManager")
 {
 	sessionSeed_ = 1;
 	maxConnection_ = maxConnection;
@@ -49,6 +49,7 @@ bool SessionManager::addSession(Session* session)
 	return true;
 }
 
+//소켓을 닫으라는 클라이언트에게 보냅니다.
 bool SessionManager::closeSession(Session* session)
 {
 	SAFE_LOCK(lock_);
@@ -58,7 +59,7 @@ bool SessionManager::closeSession(Session* session)
 	auto findSession = std::find(sessionList_.begin(), sessionList_.end(), session);
 	if (findSession != sessionList_.end()) {
 		Session* delSession = *findSession;
-		SLog(L"* detected close by cliend [%s]", delSession->clientAddress().c_str());
+		SLog(L"* detected close by client [%s]", delSession->clientAddress().c_str());
 		::closesocket(delSession->socket());
 
 		sessionList_.remove(delSession);
@@ -69,7 +70,7 @@ bool SessionManager::closeSession(Session* session)
 	return false;
 }
 
-// 소켓 강제 닫기
+//소켓을 강제로 닫습니다.
 void SessionManager::forceCloseSession(Session* session)
 {
 	SAFE_LOCK(lock_);
@@ -77,13 +78,28 @@ void SessionManager::forceCloseSession(Session* session)
 		return;
 	}
 
-	// 우아한 종료 유도
+	//우아한 종료 유도. 원래는 클라이언트에서 서버 접속을 종료하도록 유도해야 한다.
 	LINGER linger;
-	linger.l_onoff = 1; // 사용
-	linger.l_linger = 0; // 대기시간, 0일시 완료 안된 패킷 버리고 즉시 종료
+	linger.l_onoff = 1;   //사용
+	linger.l_linger = 0;  //대기시간, 0일시 완료 안된 패킷 버리고 즉시 종료.
 
 	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char*)&linger, sizeof(linger));
 	this->closeSession(session);
+}
+
+Session* SessionManager::session(oid_t id)
+{
+	SAFE_LOCK(lock_);
+	Session* findSession = nullptr;
+
+	for (auto session : sessionList_) {
+		if (session->id() == id) {
+			findSession = session;
+			break;
+		}
+	}
+
+	return findSession;
 }
 
 void SessionManager::runCommand(wstr_t cmdLine)
@@ -108,14 +124,13 @@ void SessionManager::runCommand(wstr_t cmdLine)
 	if (cmdFunc) {
 		cmdFunc(&sessionList_, &arg);
 	}
-
 }
 
-// 서버에서 치트키 정의
+// 서버에서 내리는 치트키 정의
 void SessionManager::commandFuncInitialize()
 {
 #if 0
-	// 기본적인 3개만 생성, 이후 늘어나면 별도 클래스 분리
+	//기본적인 3개만 생성, 이후 늘어나면 별도 클래스로 분리
 	auto notiyFunc = [](SessionList* sessionList, wstr_t* arg) {
 		auto eachFunc = [arg](void* atom) {
 			Session* session = (Session*)atom;
@@ -123,20 +138,20 @@ void SessionManager::commandFuncInitialize()
 				return;
 			}
 			array<CHAR, SIZE_256> tmpBuf;
-			StrConvW2A((WCHAR*)arg->c.str(), tmpBuf.data(), tmpBuf.size());
+			StrConvW2A((WCHAR*)arg->c_str(), tmpBuf.data(), tmpBuf.size());
 
 			PK_S_ANS_CHATTING retPacket;
-			retPacket.id = "Server";
+			retPacket.id_ = "Server";
 			retPacket.text_ = "* Notity : ";
 			retPacket.text_ += tmpBuf.data();
 
 			session->sendPacket(&retPacket);
-		};
+			};
 
 		for (auto session : *sessionList) {
 			eachFunc(session);
 		}
-	};
+		};
 
 	auto kickoffFunc = [](SessionList* sessionList, wstr_t* arg) {
 		vector<Session*> removeSessionVec;

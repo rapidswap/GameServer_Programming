@@ -4,13 +4,11 @@
 
 #include "QueryRecord.h"
 #include "QueryStatement.h"
-
 class Query
 {
 protected:
 	QueryStatement* statement_;
-	QueryRecord record_;
-	
+	QueryRecord			record_;
 public:
 	Query();
 	virtual ~Query();
@@ -20,4 +18,6 @@ public:
 
 	void setStatement(QueryStatement* statement);
 	QueryStatement* statement();
+
+
 };

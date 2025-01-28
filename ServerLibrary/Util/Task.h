@@ -21,7 +21,6 @@ public:
 	void tick();
 };
 
-//---------------------------------------------------------------------//
 class Task
 {
 	std::list<TaskNode*> taskList_;
@@ -38,7 +37,6 @@ public:
 	void run();
 };
 
-//---------------------------------------------------------------------//
 class TaskManager : public Singleton <TaskManager>
 {
 	int                     threadCount_;

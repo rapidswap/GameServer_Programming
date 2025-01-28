@@ -1,9 +1,7 @@
 #pragma once
 #include "pch.h"
-//#include <hash_map>
 #include <unordered_map>
 #include <map>
-//#include <hash_set>
 #include <unordered_set>
 #include <set>
 #include <vector>
@@ -134,9 +132,6 @@ public:
     }
 };
 
-//-----------------------------------------------------------------//
-//리스트 재 정의
-//-----------------------------------------------------------------//
 template <typename VALUE>
 class List
 {
@@ -251,7 +246,6 @@ public:
         }
     }
 
-    //-----------------------------------------------------------------//
     // 알고리즘
     VALUE	find(VALUE& aVal)
     {

@@ -5,7 +5,7 @@ class Stream
 {
 	size_t offset_;
 	size_t readPt_;
-	array<UCHAR, SOCKET_BUF_SIZE>stream_;
+	array <UCHAR, SOCKET_BUF_SIZE> stream_;
 
 public:
 	Stream();
@@ -19,7 +19,9 @@ public:
 	void set(UCHAR* stream, size_t size);
 
 	// write
+	//------------------------------------------------------------------------//
 	bool checkWriteBound(size_t len);
+
 
 	template<class T>
 	void operator << (const T& value);
@@ -39,6 +41,7 @@ public:
 	void operator << (const wstr_t value);
 
 	// read
+	//------------------------------------------------------------------------//
 	bool checkReadBound(size_t len);
 	void read(void* retVal, size_t len);
 

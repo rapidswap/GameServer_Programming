@@ -29,6 +29,11 @@ const WCHAR* Lock::name()
 
 size_t Lock::lockId()
 {
+	// 안전한 접근을 위한 체크 추가
+	if (this == nullptr) {
+		SErrLog(L"Null lock object accessed");
+		return 0;
+	}
 	return lockId_;
 }
 
@@ -62,7 +67,7 @@ threadId_t Lock::threadId()
 {
 	return threadId_;
 }
-//-------------------------------------------------------//
+
 // 생성자에서 락을 걸고, 스코프 빠져나가는 객체 해제시 락을 푼다.
 // std::lock_guard<lock_t> guard(lock) 과 같은거지만, 
 // 데드락 감지를 위해 직접 구현한다.
@@ -100,10 +105,8 @@ LockSafeScope::~LockSafeScope()
 		return;
 	}
 	lock_->unlock();
-	//lock_->setThreadId(nullptr);
 }
 
-//-------------------------------------------------------//
 LockManager::LockManager()
 {
 	idSeed_ = 0;

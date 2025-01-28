@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 
+#define PACKET_MAKE_DATE "2015/03/14 13:14:41" 
 enum PacketType : Int64 {
     /*128*/    E_C_REQ_EXIT = 128,
     /*129*/    E_S_ANS_EXIT = 129,

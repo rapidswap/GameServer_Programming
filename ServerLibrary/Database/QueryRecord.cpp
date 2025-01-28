@@ -15,8 +15,7 @@ QueryRecord::~QueryRecord()
 	record_ = nullptr;
 }
 
-void QueryRecord::errorReport(_com_error& e)
-{
+void QueryRecord::errorReport(_com_error& e) {
 	SLog(L"* Query error = %S", e.Description());
 }
 
@@ -25,9 +24,14 @@ recordPtr& QueryRecord::resultRecord()
 	return record_;
 }
 
-void QueryRecord::operator=(QueryRecord& lvalue)
+void QueryRecord::operator = (QueryRecord& lvalue)
 {
 	record_ = lvalue.resultRecord();
+}
+
+void QueryRecord::operator = (recordPtr& lvalue)
+{
+	record_ = lvalue;
 }
 
 void QueryRecord::setRecord(recordPtr record)
@@ -43,12 +47,11 @@ bool QueryRecord::opened()
 void QueryRecord::close()
 {
 	try {
-		if (record_ != nullptr && this->opened()) {
+		if (record_ != nullptr && this->opened())
 			record_->Close();
-		}
 	}
 	catch (_com_error& e) {
-			this->errorReport(e);
+		this->errorReport(e);
 	}
 }
 
@@ -64,7 +67,7 @@ void QueryRecord::setResultVal(int result)
 
 bool QueryRecord::isEof()
 {
-	if (record_ = nullptr) {
+	if (record_ == nullptr) {
 		return true;
 	}
 	try {
@@ -84,7 +87,7 @@ HRESULT QueryRecord::moveNext()
 	catch (_com_error& e) {
 		this->errorReport(e);
 	}
-	return S_FLASE;
+	return S_FALSE;
 }
 
 HRESULT QueryRecord::movePrevious()

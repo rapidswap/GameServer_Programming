@@ -3,7 +3,6 @@
 
 TerminalManager::TerminalManager()
 {
-
 }
 
 TerminalManager::~TerminalManager()
@@ -65,6 +64,7 @@ bool TerminalManager::isTerminal(const char* ip)
 void TerminalManager::run(Server* server)
 {
 	server_ = server;
+
 	xml_t config;
 	if (!loadConfig(&config)) {
 		return;

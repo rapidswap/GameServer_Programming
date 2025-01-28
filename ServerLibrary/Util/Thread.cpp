@@ -38,7 +38,7 @@ Lock* Thread::lock()
 	return lock_;
 }
 
-//--------------------------------------------------//
+
 ThreadManager::~ThreadManager()
 {
 	for (auto thread : threadPool_) {

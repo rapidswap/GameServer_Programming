@@ -21,11 +21,11 @@ ContentsProcess::~ContentsProcess()
 	runFuncTable_.clear();
 }
 
-void ContentsProcess::initialize(xml_t *config)
+void ContentsProcess::initialize(xml_t* config)
 {
 	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Contents");
 	if (!root) {
-		SErrLog(L"* not exits prcess setting");
+		SErrLog(L"* not exist process setting");
 		return;
 	}
 	xmlNode_t* elem = root->FirstChildElement("ThreadCount");
@@ -38,7 +38,7 @@ void ContentsProcess::initialize(xml_t *config)
 	}
 
 	packageQueue_ = new ThreadJobQueue<Package*>(L"ContentsProcessQueue");
-	for (int i = 0; i < processCount; i++) {
+	for (int i = 0; i < processCount; ++i) {
 		threadPool_[i] = MAKE_THREAD(ContentsProcess, process);
 	}
 	this->registDefaultPacketFunc();
@@ -61,14 +61,14 @@ void ContentsProcess::run(Package* package)
 	PacketType type = package->packet_->type();
 	auto itr = runFuncTable_.find(type);
 	if (itr == runFuncTable_.end()) {
-		SLog(L"! invalid packet runFunction. tyep[%d]", type);
+		SLog(L"! invaild packet runFunction. type[%d]", type);
 		package->session_->onClose();
 		return;
 	}
 	RunFunc runFunction = itr->second;
 #ifdef _DEBUG
-	SLog(L"*** [%d] packet run ***");
-#endif
+	SLog(L"*** [%d] packet run ***", type);
+#endif //_DEBUG
 	runFunction(package->session_, package->packet_);
 }
 
@@ -92,6 +92,7 @@ void ContentsProcess::process()
 	}
 }
 
+//--------------------------------------------------------------//
 // 기본 패킷 기능 구현
 void ContentsProcess::Packet_HeartBeat(Session* session, Packet* rowPacket)
 {

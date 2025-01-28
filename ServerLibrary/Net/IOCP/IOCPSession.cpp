@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "../Session.h"
 #include "IOCPSession.h"
-#include "../SesionManager.h"
+#include "../SessionManager.h"
 #include "../Packet/PacketAnalyzer.h"
 
 IoData::IoData()
@@ -34,13 +34,14 @@ int32_t IoData::setupTotalBytes()
 	packet_size_t packetLen[1] = { 0, };
 	if (totalBytes_ == 0) {
 		memcpy_s((void*)packetLen, sizeof(packetLen), (void*)buffer_.data(), sizeof(packetLen));
+		PacketObfuscation::getInstance().decodingHeader((Byte*)&packetLen, sizeof(packetLen));
+
 		totalBytes_ = (size_t)packetLen[0];
 	}
 	offset += sizeof(packetLen);
 
 	return offset;
 }
-
 size_t IoData::totalByte()
 {
 	return totalBytes_;
@@ -66,19 +67,27 @@ bool IoData::setData(Stream& stream)
 	this->clear();
 
 	if (buffer_.max_size() <= stream.size()) {
-		SLog(L"! packet size too bif [%d]byte", stream.size());
+		SLog(L"! packet size too big [%d]byte", stream.size());
 		return false;
 	}
-	packet_size_t offset = 0;
-	char* buf = buffer_.data();
-	// head size + real data size
 
-	packet_size_t packetLen[1] = { sizeof(packet_size_t) + (packet_size_t)stream.size(), };
+	const size_t packetHeaderSize = sizeof(packet_size_t);
+	packet_size_t offset = 0;
+
+	char* buf = buffer_.data();
+	//									 head size  + real data size
+	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
 	// insert packet len
-	memcpy_s(buf + offset, buffer_.max_size(), (void*)packetLen, sizeof(packetLen));
-	offset += sizeof(packetLen);
+	memcpy_s(buf + offset, buffer_.max_size(), (void*)packetLen, packetHeaderSize);
+	offset += packetHeaderSize;
+
+	// packet obfuscation
+	PacketObfuscation::getInstance().encodingHeader((Byte*)buf, packetHeaderSize);
+	PacketObfuscation::getInstance().encodingData((Byte*)stream.data(), stream.size());
+
 	// insert packet data
 	memcpy_s(buf + offset, buffer_.max_size(), stream.data(), (int32_t)stream.size());
+	offset += (packet_size_t)stream.size();
 
 	totalBytes_ = offset;
 	return true;
@@ -93,11 +102,13 @@ WSABUF IoData::wsabuf()
 {
 	WSABUF wsaBuf;
 	wsaBuf.buf = buffer_.data() + currentBytes_;
-	wsaBuf.len = (ULONG)(totalBytes_ = currentBytes_);
+	wsaBuf.len = (ULONG)(totalBytes_ - currentBytes_);
 	return wsaBuf;
 }
 
+//-----------------------------------------------------------------//
 IOCPSession::IOCPSession()
+	: Session()
 {
 	this->initialize();
 }
@@ -111,10 +122,12 @@ void IOCPSession::initialize()
 
 void IOCPSession::checkErrorIO(DWORD ret)
 {
-	if (ret == SOCKET_ERROR && (WSAGetLastError() != ERROR_IO_PENDING)) {
-		SLog(L"! socket error: %d",WSAGetLastError);
+	if (ret == SOCKET_ERROR
+		&& (WSAGetLastError() != ERROR_IO_PENDING)) {
+		SLog(L"! socket error: %d", WSAGetLastError());
 	}
 }
+
 void IOCPSession::recv(WSABUF wsaBuf)
 {
 	DWORD flags = 0;
@@ -126,7 +139,7 @@ void IOCPSession::recv(WSABUF wsaBuf)
 bool IOCPSession::isRecving(size_t transferSize)
 {
 	if (ioData_[IO_READ].needMoreIO(transferSize)) {
-		this->recv(ioData_[IO_READ].wsabuf();
+		this->recv(ioData_[IO_READ].wsabuf());
 		return true;
 	}
 	return false;
@@ -143,7 +156,7 @@ void IOCPSession::recvStandBy()
 	this->recv(wsaBuf);
 }
 
-void IOCPSession::send(WSABUF wsabuf)
+void IOCPSession::send(WSABUF wsaBuf)
 {
 	DWORD flags = 0;
 	DWORD sendBytes;
@@ -182,16 +195,19 @@ Package* IOCPSession::onRecv(size_t transferSize)
 	if (this->isRecving(transferSize)) {
 		return nullptr;
 	}
-	packet_size_t packetDataSize = ioData_[IO_READ].totalByte() - sizeof(packet_size_t);
+
+	const size_t packetHeaderSize = sizeof(packet_size_t);
+	packet_size_t packetDataSize = (packet_size_t)(ioData_[IO_READ].totalByte() - packetHeaderSize);
 	Byte* packetData = (Byte*)ioData_[IO_READ].data() + offset;
 
-	PacketObfuscation::getInstance().decoding(packetData, packetDataSize);
-	Packet* packet = PacketAnalyzer::getInstance().analyzer((const char*)packetdata, packetDataSize);
+	PacketObfuscation::getInstance().decodingData(packetData, packetDataSize);
+	Packet* packet = PacketAnalyzer::getInstance().analyzer((const char*)packetData, packetDataSize);
 	if (packet == nullptr) {
-		SLog(L"! invalid packet");
-		this->onClose();
+		SLog(L"! invaild packet");
+		this->onClose(true);
 		return nullptr;
 	}
+
 	this->recvStandBy();
 
 	Package* package = new Package(this, packet);

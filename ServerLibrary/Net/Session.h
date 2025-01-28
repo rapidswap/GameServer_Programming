@@ -2,8 +2,8 @@
 #include "pch.h"
 
 struct SOCKET_DATA {
-	SOCKET socket_;
-	SOCKADDR_IN addrInfo_;
+	SOCKET				socket_;
+	SOCKADDR_IN			addrInfo_;
 };
 
 enum {
@@ -14,35 +14,35 @@ enum {
 class Session
 {
 protected:
-	SOCKET_DATA socketData_;
-	oid_t id_;
-	int8_t type_;
-	bool setSocketOpt();
-	tick_t lastHeartBeat_;
+	SOCKET_DATA		    socketData_;
+	oid_t				id_;
+	int8_t				type_;
+	tick_t				lastHeartBeat_;
+	bool				setSocketOpt();
 
 public:
 	Session();
 	virtual ~Session();
 
-	virtual bool onAccept(SOCKET socket, SOCKADDR_IN addrInfo);
+	virtual bool		onAccept(SOCKET socket, SOCKADDR_IN addrInfo);
 
-	virtual void onSend(size_t transferSize) = 0;
-	virtual void sendPacket(Packet* packet) = 0;
+	virtual void		onSend(size_t transferSize) = 0;
+	virtual void		sendPacket(Packet* packet) = 0;
 
-	virtual Package* pmRecv(size_t transferSize) = 0;
-	virtual void recvStandBy() {};
+	virtual Package* onRecv(size_t transferSize) = 0;
+	virtual void		recvStandBy() {};
 
-	virtual void onClose(bool force = false);
+	virtual void		onClose(bool force = false);
 
 	SOCKET& socket();
-	str_t clientAddress();
+	wstr_t				clientAddress();
 
-	oid_t id();
-	void setId(oid_t id);
+	oid_t				id();
+	void				setId(oid_t id);
 
-	int8_t type();
-	void setType(int8_t tpye);
+	int8_t				type();
+	void				setType(int8_t type);
 
-	tick_t heartBeat();
-	void updateHeartBeat();
+	tick_t				heartBeat();
+	void				updateHeartBeat();
 };

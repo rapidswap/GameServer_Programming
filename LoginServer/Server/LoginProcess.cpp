@@ -8,15 +8,15 @@ LoginProcess::LoginProcess()
 
 void LoginProcess::registSubPacketFunc()
 {
-#define INSERT_PACKET_PROCESS(type)	runFuncTable_.insert(make_pair(E_##type,&LoginProcess::##type))
+#define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &LoginProcess::##type))
 
 	INSERT_PACKET_PROCESS(C_REQ_ID_PW);
 	INSERT_PACKET_PROCESS(I_DB_ANS_ID_PW);
 	INSERT_PACKET_PROCESS(I_LOGIN_NOTIFY_ID_LOADED);
 }
 
-
-// 패킷 처리 정의
+//---------------------------------------------------------------//
+//패킷 처리 정의
 void LoginProcess::C_REQ_ID_PW(Session* session, Packet* rowPacket)
 {
 	PK_C_REQ_ID_PW* packet = (PK_C_REQ_ID_PW*)rowPacket;
@@ -55,7 +55,6 @@ void LoginProcess::I_DB_ANS_ID_PW(Session* session, Packet* rowPacket)
 		SLog(L"! Chatting Server terminal is not connected");
 	}
 	terminal->sendPacket(&iPacket);
-
 }
 
 void LoginProcess::I_LOGIN_NOTIFY_ID_LOADED(Session* session, Packet* rowPacket)

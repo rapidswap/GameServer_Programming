@@ -17,7 +17,7 @@ bool TerminalSession::connectTo(char* ip, int port)
 
 	int ret = ::connect(socketData_.socket_, (sockaddr*)&socketData_.addrInfo_, sizeof(socketData_.addrInfo_));
 	if (ret == SOCKET_ERROR) {
-		SLog(L"! terminal socket conncet fail");
+		SLog(L"! terminal socket connect fail");
 		return false;
 	}
 	return true;
@@ -25,19 +25,19 @@ bool TerminalSession::connectTo(char* ip, int port)
 
 void TerminalSession::onSend(size_t transferSize)
 {
-	// Nothing
+	//Noting
 }
 
-void TerminalSession::sendPacket(Pakcet* packet)
+void TerminalSession::sendPacket(Packet* packet)
 {
 	Stream stream;
-	packet->encond(stream);
+	packet->encode(stream);
 
 	packet_size_t offset = 0;
 	array<char, SOCKET_BUF_SIZE> buffer;
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 
-	// head size + real data size
+	//									 head size  + real data size
 	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
 	// insert packet len
 	memcpy_s(buffer.data() + offset, buffer.max_size(), (void*)packetLen, packetHeaderSize);

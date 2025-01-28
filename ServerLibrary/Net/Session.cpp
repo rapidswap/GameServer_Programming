@@ -19,11 +19,11 @@ bool Session::setSocketOpt()
 	int keepAlive = 1;
 	int keepAliveIdle = 1;
 	int keepAliveCnt = 3;
-	int keppAliveInterval = 3;
+	int keepAliveInterval = 3;
 
 	int ret;
 	ret = ::setsockopt(socketData_.socket_, SOL_SOCKET, SO_KEEPALIVE, &keepAlive, sizeof(keepAlive));
-	if (ret == SOKCET_ERROR) {
+	if (ret == SOCKET_ERROR) {
 		return false;
 	}
 	ret = ::setsockopt(socketData_.socket_, SOL_TCP, SO_KEEPIDLE, &keepAliveIdle, sizeof(keepAliveIdle));
@@ -41,8 +41,8 @@ bool Session::setSocketOpt()
 #else
 	tcp_keepalive keepAliveSet = { 0 }, returned = { 0 };
 	keepAliveSet.onoff = 1;
-	keepAliveSet.keepalivetime = 3000; // Keep Alive in 3 sec
-	keepAliveSet.keepaliveinterval = 3000; // Resend if No-Reply
+	keepAliveSet.keepalivetime = 3000;        // Keep Alive in 3 sec.
+	keepAliveSet.keepaliveinterval = 3000;    // Resend if No-Reply
 
 	DWORD dwBytes;
 	if (WSAIoctl(socketData_.socket_, SIO_KEEPALIVE_VALS, &keepAliveSet, sizeof(keepAliveSet), &returned, sizeof(returned), &dwBytes, NULL, NULL) != 0) {
@@ -50,7 +50,6 @@ bool Session::setSocketOpt()
 	}
 #endif
 	return true;
-	 
 }
 
 bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
@@ -62,7 +61,6 @@ bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
 	if (!this->setSocketOpt()) {
 		return false;
 	}
-
 	return true;
 }
 
@@ -81,11 +79,16 @@ SOCKET& Session::socket()
 	return socketData_.socket_;
 }
 
-str_t Session::clientAddress()
+wstr_t Session::clientAddress()
 {
 	array<char, SIZE_64> ip;
 	inet_ntop(AF_INET, &(socketData_.addrInfo_.sin_addr), ip.data(), ip.size());
-	return ip.data();
+
+	array<WCHAR, SIZE_64> wip;
+	StrConvA2W(ip.data(), wip.data(), wip.max_size());
+	wstr_t stringData = wip.data();
+
+	return stringData;
 }
 
 oid_t Session::id()

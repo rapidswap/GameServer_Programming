@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <chrono>
 #include <ctime>
 
@@ -21,13 +21,13 @@
 #define DAY_TO_TICK(x)          (x * TICK_DAY)
 
 typedef enum {
-    DAY_SUNDAY = 0,
-    DAY_MONDAY = 1,        
-    DAY_TUESDAY = 2,        
-    DAY_WEDNESDAY = 3,        
-    DAY_THURSDAY = 4,
-    DAY_FRIDAY = 5,
-    DAY_SATURDAY = 6,
+    DAY_SUNDAY      = 0,
+    DAY_MONDAY      = 1,        //¡ﬂ±πæÓ∑Œ ø˘ø‰¿œ¿∫ ‡¯—¢ÏÈ
+    DAY_TUESDAY     = 2,        //¡ﬂ±πæÓ∑Œ »≠ø‰¿œ¿∫ ‡¯—¢Ï£
+    DAY_WEDNESDAY   = 3,        //...
+    DAY_THURSDAY    = 4,
+    DAY_FRIDAY      = 5,
+    DAY_SATURDAY    = 6,
 }DayOfTheWeek;
 
 #define DATETIME_FORMAT         L"D%Y-%m-%dT%H:%M:%S"
@@ -42,8 +42,8 @@ typedef system_clock::time_point timePoint;
 class Clock : public Singleton<Clock>
 {
     tick_t	serverStartTick_;
-
-    wstr_t	tickToStr(tick_t tick, WCHAR* fmt = DATETIME_FORMAT);
+    
+    wstr_t	tickToStr(tick_t tick, WCHAR *fmt = DATETIME_FORMAT);
 
 public:
     Clock();
@@ -51,14 +51,14 @@ public:
 
     tick_t	serverStartTick();
     tick_t	systemTick();
-    tick_t	strToTick(wstr_t str, WCHAR* fmt = DB_TIME_FORMAT);
-
-    wstr_t	nowTime(WCHAR* fmt = DATETIME_FORMAT);
-    wstr_t	nowTimeWithMilliSec(WCHAR* fmt = DATETIME_FORMAT);
+    tick_t	strToTick(wstr_t str, WCHAR *fmt = DB_TIME_FORMAT);
+    
+    wstr_t	nowTime(WCHAR *fmt = DATETIME_FORMAT);
+    wstr_t	nowTimeWithMilliSec(WCHAR *fmt = DATETIME_FORMAT);
 
     wstr_t today();
     wstr_t tomorrow();
     wstr_t yesterday();
-
+    
     DayOfTheWeek todayOfTheWeek();
 };

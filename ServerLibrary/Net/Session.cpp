@@ -1,6 +1,6 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Session.h"
-#include "./IOCP/IOCPServer.h"
+#include "./Iocp/IOCPServer.h"
 
 Session::Session()
 {
@@ -56,7 +56,7 @@ bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
 {
 	socketData_.socket_ = socket;
 	int addrLen;
-	getpeername(socketData_.socket_, (struct sockaddr*)&socketData_.addrInfo_, &addrLen);
+	getpeername(socketData_.socket_, (struct sockaddr *)&socketData_.addrInfo_, &addrLen);
 	socketData_.addrInfo_ = addrInfo;
 	if (!this->setSocketOpt()) {
 		return false;

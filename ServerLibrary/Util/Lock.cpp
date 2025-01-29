@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Lock.h"
 #include "Thread.h"
 
@@ -8,7 +8,7 @@
 
 const int INVALID_LINE = -1;
 
-Lock::Lock(WCHAR* name)
+Lock::Lock(WCHAR *name)
 {
 	lockId_ = LockManager::getInstance().generalId();
 	name_ = name;
@@ -22,18 +22,13 @@ Lock::~Lock()
 	name_.clear();
 }
 
-const WCHAR* Lock::name()
+const WCHAR* Lock::name() 
 {
 	return name_.c_str();
 }
 
 size_t Lock::lockId()
 {
-	// 안전한 접근을 위한 체크 추가
-	if (this == nullptr) {
-		SErrLog(L"Null lock object accessed");
-		return 0;
-	}
 	return lockId_;
 }
 
@@ -67,11 +62,11 @@ threadId_t Lock::threadId()
 {
 	return threadId_;
 }
-
+//-------------------------------------------------------//
 // 생성자에서 락을 걸고, 스코프 빠져나가는 객체 해제시 락을 푼다.
 // std::lock_guard<lock_t> guard(lock) 과 같은거지만, 
 // 데드락 감지를 위해 직접 구현한다.
-LockSafeScope::LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo)
+LockSafeScope::LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo)
 {
 	if (lock == nullptr) {
 		return;
@@ -81,7 +76,7 @@ LockSafeScope::LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo)
 	}
 
 	lock_ = lock;
-	Lock* deadLock = LockManager::getInstance().checkDeadLock(lock_);
+	Lock *deadLock = LockManager::getInstance().checkDeadLock(lock_);
 	if (deadLock != nullptr) {
 #ifdef STERN_MODE
 		SErrLog(L"! [%s]lock and [%s]lock is dead detecting!", deadLock->name(), lock->name());
@@ -105,32 +100,39 @@ LockSafeScope::~LockSafeScope()
 		return;
 	}
 	lock_->unlock();
+	//lock_->setThreadId(nullptr);
 }
 
+//-------------------------------------------------------//
 LockManager::LockManager()
 {
 	idSeed_ = 0;
 }
 
 /*
+http://www.npteam.net/849
+http://www.boost.org/doc/libs/1_46_1/libs/graph/doc/astar_visitor.html
+http://includestdio.tistory.com/m/post/12
+
+http://www.bogotobogo.com/cplusplus/multithreaded4_cplusplus11B.php#nested_lock
 락은 자신이 걸린 threadId를,
 Thread에서는 걸고있는 Lock 번호가 있음.
 이들을 따라가 보다가 자신이 걸려는 lock이 나오면 lock 순환
 즉 데드락 처리.
 */
-Lock* LockManager::searchLockCycle(Lock* newLock)
+Lock* LockManager::searchLockCycle(Lock *newLock)
 {
 	//list 따라 lock 이름을 비교해 본다.
-	Thread* thread = ThreadManager::getInstance().at(GET_CURRENT_THREAD_ID());
+	Thread *thread = ThreadManager::getInstance().at(GET_CURRENT_THREAD_ID());
 	if (!thread) {
 		return nullptr;
 	}
-	std::vector<Lock*> trace;		// 데드락 탐지시, 걸린 락 stact 추척
+	std::vector<Lock *> trace;		// 데드락 탐지시, 걸린 락 stact 추척
 	trace.push_back(newLock);
 
-	Lock* deadLock = nullptr;
+	Lock *deadLock = nullptr;
 	while (true) {
-		Lock* threadLock = thread->lock();
+		Lock *threadLock = thread->lock();
 		if (threadLock == nullptr) {
 			break;
 		}
@@ -148,9 +150,9 @@ Lock* LockManager::searchLockCycle(Lock* newLock)
 	return deadLock;
 }
 
-Lock* LockManager::checkDeadLock(Lock* newLock)
+Lock* LockManager::checkDeadLock(Lock *newLock)
 {
-	Lock* deadLock = this->searchLockCycle(newLock);
+	Lock *deadLock = this->searchLockCycle(newLock);
 	if (deadLock) {
 		return deadLock;
 	}

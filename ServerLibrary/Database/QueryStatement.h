@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 typedef enum
@@ -21,17 +21,17 @@ public:
     QueryStatement();
     ~QueryStatement();
 
-    void setQuery(WCHAR* query, QUERY_TYPE type = QUERY_NOT_RETURN);
+    void setQuery(WCHAR *query, QUERY_TYPE type = QUERY_NOT_RETURN);
 
-    const WCHAR* query();
+    const WCHAR *query();
     QUERY_TYPE type();
 
     //------------------ 파라메터 추가 -----------------/
     template<typename T>
-    void addArg(WCHAR* fmt, T value);
+    void addArg(WCHAR *fmt, T value);
 
-    void addParam(CHAR* value);
-    void addParam(WCHAR* value);
+    void addParam(CHAR *value);
+    void addParam(WCHAR *value);
     void addParam(INT32 value);
     void addParam(UINT32 value);
     void addParam(INT64 value);

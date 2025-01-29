@@ -1,6 +1,8 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
+// Âü°í
+//http://msdn.microsoft.com/ko-kr/library/windows/desktop/aa366750(v=vs.85).aspx
 class LowFragmentationHeap
 {
 public:

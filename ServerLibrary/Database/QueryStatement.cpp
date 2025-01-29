@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 #include "QueryRecord.h"
 #include "QueryStatement.h"
@@ -14,7 +14,7 @@ QueryStatement::~QueryStatement()
 {
 }
 
-void QueryStatement::setQuery(WCHAR* query, QUERY_TYPE type)
+void QueryStatement::setQuery(WCHAR *query, QUERY_TYPE type)
 {
 	query_ = query;
 	type_ = type;
@@ -31,7 +31,7 @@ QUERY_TYPE QueryStatement::type()
 
 //------------------ 파라메터 추가 -----------------/
 template<typename T>
-void QueryStatement::addArg(WCHAR* fmt, T value)
+void QueryStatement::addArg(WCHAR *fmt, T value)
 {
 	array<WCHAR, DB_PARAM_SIZE> buffer;
 	snwprintf(buffer, fmt, value);
@@ -44,12 +44,12 @@ void QueryStatement::addArg(WCHAR* fmt, T value)
 	query_ += buffer.data();
 }
 
-void QueryStatement::addParam(CHAR* value)
+void QueryStatement::addParam(CHAR *value)
 {
 	this->addArg(L"'%S'", value);
 }
 
-void QueryStatement::addParam(WCHAR* value)
+void QueryStatement::addParam(WCHAR *value)
 {
 	this->addArg(L"'%s'", value);
 }

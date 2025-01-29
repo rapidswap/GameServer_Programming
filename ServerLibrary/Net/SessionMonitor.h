@@ -1,9 +1,9 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class SessionMonitor : public Work
 {
-public:
+public :
 	SessionMonitor();
 	void tick();
 };

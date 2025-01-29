@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 typedef enum
 {
@@ -21,11 +21,11 @@ public:
     {
     }
 
-    virtual bool connect(const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password) = 0;
+    virtual bool connect(const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password) = 0;
     virtual bool connect() = 0;
     virtual bool connected() = 0;
     virtual bool disconnect() = 0;
 
     virtual void run() = 0;
-    DB_STATE& state() { return state_; }
+    DB_STATE &state() { return state_; }
 };

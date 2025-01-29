@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "psapi.h"
 
 class Monitoring : public Singleton<Monitoring>
@@ -9,7 +9,7 @@ class Monitoring : public Singleton<Monitoring>
 	HANDLE self;
 
 public:
-	Monitoring()
+	Monitoring() 
 	{
 		SYSTEM_INFO sysInfo;
 		FILETIME ftime, fsys, fuser;
@@ -26,7 +26,7 @@ public:
 		memcpy(&lastUserCPU, &fuser, sizeof(FILETIME));
 	}
 
-	double processCpuUsage()
+	double processCpuUsage() 
 	{
 		FILETIME ftime, fsys, fuser;
 		ULARGE_INTEGER now, sys, user;
@@ -41,9 +41,9 @@ public:
 		percent = (double)((sys.QuadPart - lastSysCPU.QuadPart) + (user.QuadPart - lastUserCPU.QuadPart));
 		percent /= (now.QuadPart - lastCPU.QuadPart);
 		percent /= numProcessors;
-		//		lastCPU = now;
-		//		lastUserCPU = user;
-		//		lastSysCPU = sys;
+//		lastCPU = now;
+//		lastUserCPU = user;
+//		lastSysCPU = sys;
 		percent = percent * 100;
 		return fixInRange(0, percent, 100);
 	}
@@ -52,7 +52,7 @@ public:
 	{
 		PROCESS_MEMORY_COUNTERS pmc;
 		GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
-		return (size_t)pmc.WorkingSetSize;
+		return (size_t) pmc.WorkingSetSize;
 	}
 
 	SIZE_T physyicMemUsage()
@@ -61,6 +61,6 @@ public:
 		memInfo.dwLength = sizeof(MEMORYSTATUSEX);
 		GlobalMemoryStatusEx(&memInfo);
 
-		return (size_t)memInfo.ullTotalPhys - memInfo.ullAvailPhys;
+		return (size_t) memInfo.ullTotalPhys - memInfo.ullAvailPhys;
 	}
 };

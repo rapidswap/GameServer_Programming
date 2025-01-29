@@ -1,9 +1,9 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "IOCPServer.h"
 #include "IOCPSession.h"
 
-IOCPServer::IOCPServer(ContentsProcess* contentsProcess)
-	:Server(contentsProcess)
+IOCPServer::IOCPServer(ContentsProcess *contentsProcess)
+:Server(contentsProcess)
 {
 }
 
@@ -14,37 +14,37 @@ IOCPServer::~IOCPServer()
 
 bool IOCPServer::createListenSocket()
 {
-	listenSocket_ = WSASocket(AF_INET, SOCK_STREAM, NULL, NULL, 0, WSA_FLAG_OVERLAPPED);
-	if (listenSocket_ == INVALID_SOCKET) {
-		SErrLog(L"! listenSocket fail");
-		return false;
-	}
+    listenSocket_ = WSASocket(AF_INET, SOCK_STREAM, NULL, NULL, 0, WSA_FLAG_OVERLAPPED);
+    if (listenSocket_ == INVALID_SOCKET) {
+        SErrLog(L"! listenSocket fail");
+        return false;
+    }
 
-	SOCKADDR_IN serverAddr;
-	serverAddr.sin_family = AF_INET;
+    SOCKADDR_IN serverAddr;
+    serverAddr.sin_family = AF_INET;
 	serverAddr.sin_port = htons((u_short)port_);
 	inet_pton(AF_INET, ip_, &(serverAddr.sin_addr));
 
 	int reUseAddr = 1;
-	setsockopt(listenSocket_, SOL_SOCKET, SO_REUSEADDR, (char*)&reUseAddr, (int)sizeof(reUseAddr));
+	setsockopt(listenSocket_, SOL_SOCKET, SO_REUSEADDR, (char *)&reUseAddr, (int)sizeof(reUseAddr));
 
-	int retval = ::bind(listenSocket_, (SOCKADDR*)&serverAddr, sizeof(serverAddr));
-	if (retval == SOCKET_ERROR) {
-		SErrLog(L"! bind fail");
-		return false;
-	}
+    int retval = ::bind(listenSocket_, (SOCKADDR *)&serverAddr, sizeof(serverAddr));
+    if (retval == SOCKET_ERROR) {
+        SErrLog(L"! bind fail");
+        return false;
+    }
 
-	const int BACK_SOCKETS = 5;
-	retval = ::listen(listenSocket_, BACK_SOCKETS);
-	if (retval == SOCKET_ERROR) {
-		SErrLog(L"! listen fail");
-		return false;
-	}
+    const int BACK_SOCKETS = 5;
+    retval = ::listen(listenSocket_, BACK_SOCKETS);
+    if (retval == SOCKET_ERROR) {
+        SErrLog(L"! listen fail");
+        return false;
+    }
 
 	array<char, SIZE_64> ip;
 	inet_ntop(AF_INET, &(serverAddr.sin_addr), ip.data(), ip.size());
 	SLog(L"* server listen socket created, ip: %S, port: %d", ip.data(), port_);
-	return true;
+    return true;
 }
 
 bool IOCPServer::run()
@@ -59,7 +59,7 @@ bool IOCPServer::run()
 		return false;
 	}
 	this->createListenSocket();
-
+	
 	acceptThread_ = MAKE_THREAD(IOCPServer, acceptThread);
 	for (int i = 0; i < workerThreadCount_; ++i) {
 		workerThread_[i] = MAKE_THREAD(IOCPServer, workerThread);
@@ -78,17 +78,17 @@ bool IOCPServer::run()
 
 SOCKET IOCPServer::listenSocket()
 {
-	return listenSocket_;
+    return listenSocket_;
 }
 
 HANDLE IOCPServer::iocp()
 {
-	return iocp_;
+    return iocp_;
 }
 
 void IOCPServer::onAccept(SOCKET accepter, SOCKADDR_IN addrInfo)
 {
-	IOCPSession* session = new IOCPSession();
+    IOCPSession *session = new IOCPSession();
 	if (session == nullptr) {
 		SLog(L"! accept session create fail");
 		return;
@@ -103,25 +103,25 @@ void IOCPServer::onAccept(SOCKET accepter, SOCKADDR_IN addrInfo)
 	}
 	session->ioData_[IO_READ].clear();
 
-	HANDLE handle = CreateIoCompletionPort((HANDLE)accepter, this->iocp(), (ULONG_PTR) & (*session), NULL);
+	HANDLE handle = CreateIoCompletionPort((HANDLE)accepter, this->iocp(), (ULONG_PTR)&(*session), NULL);
 	if (!handle) {
 		SAFE_DELETE(session);
 		return;
 	}
-
-	SLog(L"* client accecpt from [%s]", session->clientAddress().c_str());
+    
+    SLog(L"* client accecpt from [%s]", session->clientAddress().c_str());
 	session->recvStandBy();
 }
 
 DWORD WINAPI IOCPServer::acceptThread(LPVOID serverPtr)
 {
-	IOCPServer* server = (IOCPServer*)serverPtr;
-
-	while (!_shutdown) {
+	IOCPServer	*server = (IOCPServer *)serverPtr;
+	
+    while (!_shutdown) {
 		SOCKET		acceptSocket = INVALID_SOCKET;
 		SOCKADDR_IN recvAddr;
 		static int addrLen = sizeof(recvAddr);
-		acceptSocket = WSAAccept(server->listenSocket(), (struct sockaddr*)&recvAddr, &addrLen, NULL, 0);
+		acceptSocket = WSAAccept(server->listenSocket(), (struct sockaddr *)&recvAddr, &addrLen, NULL, 0);
 		if (acceptSocket == SOCKET_ERROR) {
 			if (!server->status() == SERVER_STOP) {
 				SLog(L"! Accept fail");
@@ -139,14 +139,14 @@ DWORD WINAPI IOCPServer::acceptThread(LPVOID serverPtr)
 
 DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 {
-	IOCPServer* server = (IOCPServer*)serverPtr;
+	IOCPServer *server = (IOCPServer *)serverPtr;
 
 	while (!_shutdown) {
-		IoData* ioData = nullptr;
-		IOCPSession* session = nullptr;
+		IoData			*ioData = nullptr;
+		IOCPSession	*session = nullptr;
 		DWORD			transferSize;
 
-		BOOL ret = GetQueuedCompletionStatus(server->iocp(), &transferSize, (PULONG_PTR)&session, (LPOVERLAPPED*)&ioData, INFINITE);
+		BOOL ret = GetQueuedCompletionStatus(server->iocp(), &transferSize, (PULONG_PTR)&session, (LPOVERLAPPED *)&ioData, INFINITE);
 		if (!ret) {
 			continue;
 		}
@@ -166,13 +166,13 @@ DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 			continue;
 
 		case IO_READ:
-		{
-			Package* package = session->onRecv((size_t)transferSize);
-			if (package != nullptr) {
-				server->putPackage(package);
+			{
+				Package *package = session->onRecv((size_t)transferSize);
+				if (package != nullptr) {
+					server->putPackage(package);
+				}
 			}
-		}
-		continue;
+			continue;
 
 		case IO_ERROR:
 			SLog(L"* close by client error [%d][%s]", session->id(), session->clientAddress().c_str());
@@ -182,4 +182,3 @@ DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 	}
 	return 0;
 }
-

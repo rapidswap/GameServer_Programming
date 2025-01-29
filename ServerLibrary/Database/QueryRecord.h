@@ -1,24 +1,24 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 class QueryRecord
 {
-	recordPtr		record_;
+    recordPtr		record_;
 	int				resultVal_;		//Äõ¸® °á°ú°ª
-public:
-	QueryRecord();
-	~QueryRecord();
+public:	
+    QueryRecord();
+    ~QueryRecord();
 
-	void errorReport(_com_error& e);
+    void errorReport(_com_error &e);
 
-	void operator = (QueryRecord& lvalue);
-	void operator = (recordPtr& lvalue);
-	recordPtr& resultRecord();
+    void operator = (QueryRecord &lvalue);
+    void operator = (recordPtr &lvalue);
+    recordPtr &resultRecord();
 
-	bool        opened();
-	void        close();
-	void        setRecord(recordPtr record);
+    bool        opened();
+    void        close();
+    void        setRecord(recordPtr record);
 	bool		isEof();
 
 	int			resultVal();

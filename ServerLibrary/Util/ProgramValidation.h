@@ -1,7 +1,7 @@
 #pragma once
 
 // 만약 바이너리가 유출 되었을때를 대비한 안전장치 (서버 검증 장치)
-#include "pch.h"
+#include "stdafx.h"
 #include <locale>
 #include <iostream>
 #include <sstream>
@@ -42,6 +42,7 @@ class ProgramValidation
 		void setBirthTick()
 		{
 			//문자열 시간을 tick_t화 하기
+			//https://msdn.microsoft.com/en-us/library/ta5wcy3s.aspx
 			locale loc;
 			basic_stringstream<char> birthDate;
 			ios_base::iostate st = 0;
@@ -53,7 +54,7 @@ class ProgramValidation
 			basic_istream<char>::_Iter i = use_facet
 				<time_get <char> >
 				(loc).get_date(basic_istream<char>::_Iter(birthDate.rdbuf()),
-					basic_istream<char>::_Iter(0), birthDate, st, &t);
+				basic_istream<char>::_Iter(0), birthDate, st, &t);
 
 			if (st & ios_base::failbit) {
 				cout << "time_get::get_time(" << birthDate.rdbuf()->str() << ") FAILED on char: " << *i << endl;
@@ -71,7 +72,7 @@ class ProgramValidation
 			this->checkExpire();
 		}
 	};
-
+	
 
 public:
 	ProgramValidation()

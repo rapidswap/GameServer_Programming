@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Lock
 {
@@ -29,9 +29,9 @@ public:
 
 class LockSafeScope
 {
-	Lock* lock_;
+	Lock          *lock_;
 public:
-	LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo);
+	LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo);
 	~LockSafeScope();
 };
 
@@ -45,8 +45,8 @@ class LockManager : public Singleton < LockManager >
 public:
 	LockManager();
 
-	Lock* searchLockCycle(Lock* newLock);
-	Lock* checkDeadLock(Lock* lock);
+	Lock* searchLockCycle(Lock *newLock);
+	Lock* checkDeadLock(Lock *lock);
 
 	size_t generalId();
 };

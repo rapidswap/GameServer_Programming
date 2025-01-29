@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Assert.h"
 
 void Assert(int condition, LPCWSTR conditionStr, LPCWSTR fileName, int lineNo)

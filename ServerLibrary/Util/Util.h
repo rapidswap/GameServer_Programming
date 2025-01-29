@@ -1,64 +1,65 @@
 #pragma once
 #include <algorithm>
 
-//string ì´ˆê¸°í™”
+//string ÃÊ±âÈ­
 #define UNDEFINE_NAME		L"Undefine_Name"
 
-//snprintf ì¬ì •ì˜, ì•ˆì „ì„ ìœ„í•´ array ì‚¬ìš©ì„ ê¸°ë³¸ìœ¼ë¡œ í•©ë‹ˆë‹¤.
+//snprintf ÀçÁ¤ÀÇ, ¾ÈÀüÀ» À§ÇØ array »ç¿ëÀ» ±âº»À¸·Î ÇÕ´Ï´Ù.
 #define snprintf(dst, format, ...)     _snprintf_s(dst.data(), dst.size(), _TRUNCATE, format, __VA_ARGS__)
 #define snwprintf(dst, format, ...)    _snwprintf_s(dst.data(), dst.size(), _TRUNCATE, format, __VA_ARGS__)
 
-//ë²”ìœ„ ë³´ì • ë° ì²´í¬
+//¹üÀ§ º¸Á¤ ¹× Ã¼Å©
 #define fixInRange(minimum, x, maximum)     min(maximum, max(x, minimum)) 
 #define isInRange(minimum, x, maximum)      (x == fixInRange(minimum, x, maximum)) ? true : false
 
-//overflow ì²´í¬
+//overflow Ã¼Å©
 inline bool isOverFlower_uint(unsigned int original, unsigned int add)
 {
-    unsigned int before = original;
-    unsigned int after = original + add;
+	unsigned int before = original;
+	unsigned int after = original + add;
     if ((original & 0x80000000) != (after & 0x80000000)) {
         return false;
     }
     return true;
 }
 
-//ì»´íŒŒì¼ ê¸°ë³¸ ë©”í¬ë¡œ íšŒí”¼ìš© __FUNCTION__
+//ÄÄÆÄÀÏ ±âº» ¸ŞÅ©·Î È¸ÇÇ¿ë __FUNCTION__ °°Àº..
 #define __W(x)              L##x
 #define _W(x)               __W(x)
 
-
-//ë¬¸ìì—´ ë³€í™˜
-inline void StrConvA2T(CHAR* src, TCHAR* dest, size_t destLen) {
+//-------------------------------------------------------------------//
+//¹®ÀÚ¿­ º¯È¯
+inline void StrConvA2T(CHAR *src, TCHAR *dest, size_t destLen) {
 #ifdef  UNICODE                     // r_winnt
     if (destLen < 1) {
         return;
     }
-    MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int)destLen - 1);
+    MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int) destLen - 1);
 #endif
 }
 
-inline void StrConvT2A(TCHAR* src, CHAR* dest, size_t destLen) {
+inline void StrConvT2A(TCHAR *src, CHAR *dest, size_t destLen) {
 #ifdef  UNICODE                     // r_winnt
     if (destLen < 1) {
         return;
     }
-    WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int)destLen, NULL, FALSE);
+	WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int) destLen, NULL, FALSE);
 #endif
 }
 
-inline void StrConvA2W(CHAR* src, WCHAR* dest, size_t destLen) {
+inline void StrConvA2W(CHAR *src, WCHAR *dest, size_t destLen) {
     if (destLen < 1) {
         return;
     }
-    MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int)destLen - 1);
+	MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int) destLen - 1);
 }
-inline void StrConvW2A(WCHAR* src, CHAR* dest, size_t destLen) {
+inline void StrConvW2A(WCHAR *src, CHAR *dest, size_t destLen) {
     if (destLen < 1) {
         return;
     }
-    WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int)destLen, NULL, FALSE);
+	WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int) destLen, NULL, FALSE);
 }
+//-------------------------------------------------------------------//
 
 // delete object
 #undef	SAFE_DELETE

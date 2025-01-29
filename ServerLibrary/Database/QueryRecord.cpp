@@ -1,58 +1,58 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "QueryRecord.h"
 
 QueryRecord::QueryRecord()
 {
-	record_.CreateInstance(__uuidof(ADODB::Recordset));
+    record_.CreateInstance(__uuidof(ADODB::Recordset));
 }
 
 QueryRecord::~QueryRecord()
 {
-	if (record_ == nullptr) {
-		return;
-	}
-	record_.Release();
-	record_ = nullptr;
+    if (record_ == nullptr) {
+        return;
+    }
+    record_.Release();
+    record_ = nullptr;
 }
 
-void QueryRecord::errorReport(_com_error& e) {
-	SLog(L"* Query error = %S", e.Description());
+void QueryRecord::errorReport(_com_error &e) {
+    SLog(L"* Query error = %S", e.Description());
 }
 
-recordPtr& QueryRecord::resultRecord()
+recordPtr &QueryRecord::resultRecord()
 {
-	return record_;
+    return record_;
 }
 
-void QueryRecord::operator = (QueryRecord& lvalue)
+void QueryRecord::operator = (QueryRecord &lvalue)
 {
 	record_ = lvalue.resultRecord();
 }
 
-void QueryRecord::operator = (recordPtr& lvalue)
+void QueryRecord::operator = (recordPtr &lvalue)
 {
-	record_ = lvalue;
+    record_ = lvalue;
 }
 
 void QueryRecord::setRecord(recordPtr record)
 {
-	record_ = record;
+    record_ = record;
 }
 
 bool QueryRecord::opened()
 {
-	return record_->State == ADODB::adStateOpen ? true : false;
+    return record_->State == ADODB::adStateOpen ? true : false;
 }
 
 void QueryRecord::close()
 {
-	try {
-		if (record_ != nullptr && this->opened())
-			record_->Close();
-	}
-	catch (_com_error& e) {
-		this->errorReport(e);
-	}
+    try{
+        if (record_ != nullptr && this->opened())
+            record_->Close();
+    }
+    catch (_com_error &e){
+        this->errorReport(e);
+    }
 }
 
 int QueryRecord::resultVal()
@@ -73,7 +73,7 @@ bool QueryRecord::isEof()
 	try {
 		return record_->EndOfFile ? true : false;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return false;
@@ -84,7 +84,7 @@ HRESULT QueryRecord::moveNext()
 	try {
 		return record_->MoveNext();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -95,7 +95,7 @@ HRESULT QueryRecord::movePrevious()
 	try {
 		return record_->MovePrevious();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -106,7 +106,7 @@ HRESULT QueryRecord::moveFirst()
 	try {
 		return record_->MoveFirst();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -117,7 +117,7 @@ HRESULT QueryRecord::moveLast()
 	try {
 		return record_->MoveLast();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -131,7 +131,7 @@ bool QueryRecord::get(char* fieldName, char* fieldValue)
 		sprintf_s(fieldValue, DB_PARAM_SIZE, "%s", (LPCSTR)((_bstr_t)vtValue.bstrVal));
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -146,7 +146,7 @@ bool QueryRecord::get(char* fieldName, wchar_t* fieldValue)
 		swprintf_s(fieldValue, DB_PARAM_SIZE, L"%s", (LPWSTR)((_bstr_t)vtValue.bstrVal));
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -161,7 +161,7 @@ bool QueryRecord::get(char* fieldName, int32_t& fieldValue)
 		fieldValue = vtValue.intVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -176,7 +176,7 @@ bool QueryRecord::get(char* fieldName, int64_t& fieldValue)
 		fieldValue = vtValue.intVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -191,7 +191,7 @@ bool QueryRecord::get(char* fieldName, float& fieldValue)
 		fieldValue = vtValue.fltVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -206,7 +206,7 @@ bool QueryRecord::get(char* fieldName, double& fieldValue)
 		fieldValue = vtValue.dblVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -221,7 +221,7 @@ bool QueryRecord::get(char* fieldName, long& fieldValue)
 		fieldValue = vtValue.lVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}

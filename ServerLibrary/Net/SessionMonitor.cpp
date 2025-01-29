@@ -1,7 +1,7 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionMonitor.h"
 
-SessionMonitor::SessionMonitor()
+SessionMonitor::SessionMonitor() 
 {
 	static bool init = false;
 	if (init) {
@@ -10,7 +10,7 @@ SessionMonitor::SessionMonitor()
 	init = true;
 
 	const int MONITOR_REPORTING_SEC = 1;
-	TaskManager::getInstance().add(this, MONITOR_REPORTING_SEC, TICK_INFINITY);
+	TaskManager::getInstance().add(this, MONITOR_REPORTING_SEC, TICK_INFINTY);
 }
 
 void SessionMonitor::tick()

@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 class Session;
 class SessionManager;
 class Package;
@@ -15,7 +15,7 @@ class IoData
 {
 	OVERLAPPED		overlapped_;
 	IO_OPERATION	ioType_;
-	size_t  		totalBytes_;
+    size_t  		totalBytes_;
 	size_t			currentBytes_;
 	array<char, SOCKET_BUF_SIZE> buffer_;
 
@@ -28,12 +28,12 @@ public:
 	int32_t setupTotalBytes();
 	size_t totalByte();
 
-	IO_OPERATION& type();
+	IO_OPERATION &type();
 	void setType(IO_OPERATION type);
 
 	WSABUF wsabuf();
-	char* data();
-	bool setData(Stream& stream);
+	char *data();
+	bool setData(Stream &stream);
 	LPWSAOVERLAPPED overlapped();
 };
 
@@ -54,12 +54,12 @@ private:
 	void			send(WSABUF wsaBuf);
 
 public:
-	IOCPSession();
+    IOCPSession();
 
 	void			onSend(size_t transferSize);
-	void		    sendPacket(Packet* packet);
-
-	Package* onRecv(size_t transferSize);
-	void			recvStandBy();
+	void		    sendPacket(Packet *packet);
+	
+	Package*		onRecv(size_t transferSize);
+    void			recvStandBy();
 
 };

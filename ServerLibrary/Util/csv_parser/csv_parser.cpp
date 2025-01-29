@@ -1,6 +1,6 @@
-#include "pch.h"
+#include "stdafx.h"
 /* INCLUDING HEADER FILES */
-#pragma warning(disable:4996) 
+//#include <csv_parser/csv_parser.hpp>
 
 
 /* BEGIN DEFINITION FOR PUBLIC METHODS */
@@ -10,7 +10,7 @@ bool csv_parser::init(FILE * input_file_pointer)
 
 	if (input_fp == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to open input file from file pointer\n");
+		fprintf(stderr, "Fatal error : unable to open input file from file pointer");
 
 		return false;
 	}
@@ -31,7 +31,7 @@ bool csv_parser::init(const char * input_file)
 
 	if (!filename_length)
 	{
-		fprintf(stderr, "Fatal error : invalid input file %s\n", input_file);
+		fprintf(stderr, "Fatal error : invalid input file %s", input_file);
 
 		return false;
 	}
@@ -40,20 +40,20 @@ bool csv_parser::init(const char * input_file)
 
 	if (input_filename == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to allocate memory for file name buffer %s\n", input_file);
+		fprintf(stderr, "Fatal error : unable to allocate memory for file name buffer %s", input_file);
 
 		return false;
 	}
 
 	memset(input_filename, 0, filename_length + 1);
 
-	strcpy(input_filename, input_file);
+    strcpy_s(input_filename, filename_length + 1, input_file);
 
-	input_fp = fopen(input_file, "r");
+    fopen_s(&input_fp, input_file, "r");
 
 	if (input_fp == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to open input file %s\n", input_file);
+		fprintf(stderr, "Fatal error : unable to open input file %s", input_file);
 
 		CSV_PARSER_FREE_BUFFER_PTR(input_filename);
 
@@ -479,7 +479,7 @@ void csv_parser::_read_single_line(char ** buffer, unsigned int * buffer_len)
 
 	if (length_of_row > 0)
 	{
-		*buffer_len = length_of_row * sizeof(char) + 1;
+        *buffer_len = (unsigned int)(length_of_row * sizeof(char)+1);
 
 		*buffer = (char *) realloc(*buffer, *buffer_len);
 

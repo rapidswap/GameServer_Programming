@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #define RAND(type, maxVal)       (type) RandomMT::getInstance().rand(maxVal)
 
@@ -7,12 +7,12 @@ class RandomMT : public Singleton<RandomMT>
 {
     uint64_t rand(int maxVal)
     {
-        static uint32_t seed = 0;
-        //MT19937 ë‚œìˆ˜ ì—”ì§„
-        std::mt19937 engine((uint32_t)time(nullptr) + seed++);
-        //UINT64 ë²”ìœ„ = ì•½ 1844ê²½ = 18,446,744,073,709,551,615(16ì§„ìˆ˜ 0xFFFFFFFFFFFFFFFF)ë¥¼ ì£¼ê¸°
-        std::uniform_int_distribution<uint64_t> distribution(0, UINT64_MAX);
-        //rand ìƒì„± í•¨ìˆ˜í¬ì¸í„° bind
+		static uint32_t seed = 0;
+        //MT19937 ³­¼ö ¿£Áø
+		std::mt19937 engine((uint32_t)time(nullptr) + seed++);
+        //UINT64 ¹üÀ§ = ¾à 1844°æ = 18,446,744,073,709,551,615(16Áø¼ö 0xFFFFFFFFFFFFFFFF)¸¦ ÁÖ±â
+        std::uniform_int_distribution<uint64_t> distribution(0, UINT64_MAX); 
+        //rand »ı¼º ÇÔ¼öÆ÷ÀÎÅÍ bind
         auto generator = bind(distribution, engine);
 
         return (uint64_t)(generator() % maxVal);

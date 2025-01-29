@@ -1,6 +1,6 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionManager.h"
-#include "./IOCP/IOCPServer.h"
+#include "./Iocp/IOCPServer.h"
 
 SessionManager::SessionManager(int maxConnection)
 	: lock_(L"SessionManager")
@@ -12,7 +12,7 @@ SessionManager::SessionManager(int maxConnection)
 
 SessionManager::~SessionManager()
 {
-	vector<Session*> removeSessionVec;
+	vector<Session *> removeSessionVec;
 	removeSessionVec.resize(sessionList_.size());
 	std::copy(sessionList_.begin(), sessionList_.end(), removeSessionVec.begin());
 	for (auto session : removeSessionVec) {
@@ -31,7 +31,7 @@ oid_t SessionManager::createSessionId()
 	return sessionSeed_++;
 }
 
-bool SessionManager::addSession(Session* session)
+bool SessionManager::addSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	auto findSession = std::find(sessionList_.begin(), sessionList_.end(), session);
@@ -50,7 +50,7 @@ bool SessionManager::addSession(Session* session)
 }
 
 //소켓을 닫으라는 클라이언트에게 보냅니다.
-bool SessionManager::closeSession(Session* session)
+bool SessionManager::closeSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	if (session == nullptr) {
@@ -58,7 +58,7 @@ bool SessionManager::closeSession(Session* session)
 	}
 	auto findSession = std::find(sessionList_.begin(), sessionList_.end(), session);
 	if (findSession != sessionList_.end()) {
-		Session* delSession = *findSession;
+		Session *delSession = *findSession;
 		SLog(L"* detected close by client [%s]", delSession->clientAddress().c_str());
 		::closesocket(delSession->socket());
 
@@ -71,7 +71,7 @@ bool SessionManager::closeSession(Session* session)
 }
 
 //소켓을 강제로 닫습니다.
-void SessionManager::forceCloseSession(Session* session)
+void SessionManager::forceCloseSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	if (!session) {
@@ -83,14 +83,14 @@ void SessionManager::forceCloseSession(Session* session)
 	linger.l_onoff = 1;   //사용
 	linger.l_linger = 0;  //대기시간, 0일시 완료 안된 패킷 버리고 즉시 종료.
 
-	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char*)&linger, sizeof(linger));
+	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char *)&linger, sizeof(linger));
 	this->closeSession(session);
 }
 
 Session* SessionManager::session(oid_t id)
 {
 	SAFE_LOCK(lock_);
-	Session* findSession = nullptr;
+	Session *findSession = nullptr;
 
 	for (auto session : sessionList_) {
 		if (session->id() == id) {
@@ -98,7 +98,7 @@ Session* SessionManager::session(oid_t id)
 			break;
 		}
 	}
-
+	
 	return findSession;
 }
 
@@ -130,15 +130,15 @@ void SessionManager::runCommand(wstr_t cmdLine)
 void SessionManager::commandFuncInitialize()
 {
 #if 0
-	//기본적인 3개만 생성, 이후 늘어나면 별도 클래스로 분리
-	auto notiyFunc = [](SessionList* sessionList, wstr_t* arg) {
-		auto eachFunc = [arg](void* atom) {
-			Session* session = (Session*)atom;
+    //기본적인 3개만 생성, 이후 늘어나면 별도 클래스로 분리
+    auto notiyFunc = [](SessionList *sessionList, wstr_t *arg) {
+        auto eachFunc = [arg](void *atom) {
+            Session *session = (Session*)atom;
 			if (session->type() == SESSION_TYPE_TERMINAL) {
 				return;
 			}
-			array<CHAR, SIZE_256> tmpBuf;
-			StrConvW2A((WCHAR*)arg->c_str(), tmpBuf.data(), tmpBuf.size());
+            array<CHAR, SIZE_256> tmpBuf;
+            StrConvW2A((WCHAR*)arg->c_str(), tmpBuf.data(), tmpBuf.size());
 
 			PK_S_ANS_CHATTING retPacket;
 			retPacket.id_ = "Server";
@@ -146,17 +146,17 @@ void SessionManager::commandFuncInitialize()
 			retPacket.text_ += tmpBuf.data();
 
 			session->sendPacket(&retPacket);
-			};
+        };
 
 		for (auto session : *sessionList) {
 			eachFunc(session);
 		}
-		};
+    };
 
-	auto kickoffFunc = [](SessionList* sessionList, wstr_t* arg) {
-		vector<Session*> removeSessionVec;
-		auto eachFunc = [&removeSessionVec, arg](void* atom) {
-			Session* session = (Session*)atom;
+    auto kickoffFunc = [](SessionList *sessionList, wstr_t *arg){
+        vector<Session *> removeSessionVec;
+        auto eachFunc = [&removeSessionVec, arg](void *atom) {
+            Session *session = (Session*)atom;
 			if (session->type() == SESSION_TYPE_TERMINAL) {
 				return;
 			}
@@ -166,23 +166,23 @@ void SessionManager::commandFuncInitialize()
 			retPacket.text_ = "! Kick off by Server";
 			session->sendPacket(&retPacket);
 
-			removeSessionVec.push_back(session);
-			};
+            removeSessionVec.push_back(session);
+        }; 
 		for (auto session : *sessionList) {
 			eachFunc(session);
 		}
 
-		for (auto session : removeSessionVec) {
+        for (auto session : removeSessionVec) {
 			session->onClose();
-		}
-		};
+        }
+    };
 
-	auto exitFunc = [](SessionList* sessionList, wstr_t* arg) {
-		_shutdown = true;
-		};
+    auto exitFunc = [](SessionList *sessionList, wstr_t *arg){
+        _shutdown = true;
+    };
 
-	//명령어 등록
-	serverCommand_.insert(make_pair(L"/notify", notiyFunc));
+    //명령어 등록
+    serverCommand_.insert(make_pair(L"/notify", notiyFunc));
 	serverCommand_.insert(make_pair(L"/kickoff", kickoffFunc));
 	serverCommand_.insert(make_pair(L"/exit", exitFunc));
 #endif

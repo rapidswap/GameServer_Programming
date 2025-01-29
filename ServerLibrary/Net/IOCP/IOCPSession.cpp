@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "../Session.h"
 #include "IOCPSession.h"
 #include "../SessionManager.h"
@@ -8,7 +8,7 @@ IoData::IoData()
 {
 	ZeroMemory(&overlapped_, sizeof(overlapped_));
 	ioType_ = IO_ERROR;
-
+	
 	this->clear();
 }
 
@@ -33,7 +33,7 @@ int32_t IoData::setupTotalBytes()
 	packet_size_t offset = 0;
 	packet_size_t packetLen[1] = { 0, };
 	if (totalBytes_ == 0) {
-		memcpy_s((void*)packetLen, sizeof(packetLen), (void*)buffer_.data(), sizeof(packetLen));
+		memcpy_s((void *)packetLen, sizeof(packetLen), (void *)buffer_.data(), sizeof(packetLen));
 		PacketObfuscation::getInstance().decodingHeader((Byte*)&packetLen, sizeof(packetLen));
 
 		totalBytes_ = (size_t)packetLen[0];
@@ -47,7 +47,7 @@ size_t IoData::totalByte()
 	return totalBytes_;
 }
 
-IO_OPERATION& IoData::type()
+IO_OPERATION &IoData::type()
 {
 	return ioType_;
 }
@@ -62,7 +62,7 @@ char* IoData::data()
 	return buffer_.data();
 }
 
-bool IoData::setData(Stream& stream)
+bool IoData::setData(Stream &stream)
 {
 	this->clear();
 
@@ -74,11 +74,11 @@ bool IoData::setData(Stream& stream)
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 	packet_size_t offset = 0;
 
-	char* buf = buffer_.data();
+	char *buf = buffer_.data();
 	//									 head size  + real data size
 	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
 	// insert packet len
-	memcpy_s(buf + offset, buffer_.max_size(), (void*)packetLen, packetHeaderSize);
+	memcpy_s(buf + offset, buffer_.max_size(), (void *)packetLen, packetHeaderSize);
 	offset += packetHeaderSize;
 
 	// packet obfuscation
@@ -108,7 +108,7 @@ WSABUF IoData::wsabuf()
 
 //-----------------------------------------------------------------//
 IOCPSession::IOCPSession()
-	: Session()
+: Session()
 {
 	this->initialize();
 }
@@ -124,7 +124,7 @@ void IOCPSession::checkErrorIO(DWORD ret)
 {
 	if (ret == SOCKET_ERROR
 		&& (WSAGetLastError() != ERROR_IO_PENDING)) {
-		SLog(L"! socket error: %d", WSAGetLastError());
+        SLog(L"! socket error: %d", WSAGetLastError());
 	}
 }
 
@@ -171,23 +171,23 @@ void IOCPSession::onSend(size_t transferSize)
 	}
 }
 
-void IOCPSession::sendPacket(Packet* packet)
+void IOCPSession::sendPacket(Packet *packet)
 {
 	Stream stream;
 	packet->encode(stream);
 	if (!ioData_[IO_WRITE].setData(stream)) {
 		return;
 	}
-
+	
 	WSABUF wsaBuf;
 	wsaBuf.buf = ioData_[IO_WRITE].data();
-	wsaBuf.len = (ULONG)stream.size();
+	wsaBuf.len = (ULONG) stream.size();
 
 	this->send(wsaBuf);
-	this->recvStandBy();
+    this->recvStandBy();
 }
 
-Package* IOCPSession::onRecv(size_t transferSize)
+Package *IOCPSession::onRecv(size_t transferSize)
 {
 	packet_size_t offset = 0;
 	offset += ioData_[IO_READ].setupTotalBytes();
@@ -198,10 +198,10 @@ Package* IOCPSession::onRecv(size_t transferSize)
 
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 	packet_size_t packetDataSize = (packet_size_t)(ioData_[IO_READ].totalByte() - packetHeaderSize);
-	Byte* packetData = (Byte*)ioData_[IO_READ].data() + offset;
+	Byte *packetData = (Byte*) ioData_[IO_READ].data() + offset;
 
 	PacketObfuscation::getInstance().decodingData(packetData, packetDataSize);
-	Packet* packet = PacketAnalyzer::getInstance().analyzer((const char*)packetData, packetDataSize);
+	Packet *packet = PacketAnalyzer::getInstance().analyzer((const char *)packetData, packetDataSize);
 	if (packet == nullptr) {
 		SLog(L"! invaild packet");
 		this->onClose(true);
@@ -210,6 +210,6 @@ Package* IOCPSession::onRecv(size_t transferSize)
 
 	this->recvStandBy();
 
-	Package* package = new Package(this, packet);
+	Package *package = new Package(this, packet);
 	return package;
 }

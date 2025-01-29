@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Object
 {
@@ -11,7 +11,7 @@ class NameObject
 {
 	wstr_t name_;
 public:
-	wstr_t& name()
+	wstr_t& name() 
 	{
 		return name_;
 	}
@@ -39,7 +39,7 @@ class GameObject : public NameObject, public Work
 
 public:
 	// 클래스 이름 마다 소멸자 이름이 다르므로, free로 통일 시키자
-	virtual ~GameObject()
+	virtual ~GameObject() 
 	{
 		this->free();
 	}

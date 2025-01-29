@@ -1,7 +1,7 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Config.h"
 
-bool loadConfig(xml_t* config)
+bool loadConfig(xml_t *config)
 {
 	if (!config->LoadFile("./config.xml")) {
 		printf("! not exist config file.");

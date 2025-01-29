@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionManager.h"
 
 // 서버의 공통 모듈 처리
@@ -18,16 +18,16 @@ protected:
 	int						workerThreadCount_;
 
 	SERVER_STATUS			status_;
-	ContentsProcess* contentsProcess_;
+	ContentsProcess			*contentsProcess_;
 
 public:
-	Server(ContentsProcess* contentsProcess);
+	Server(ContentsProcess *contentsProcess);
 	virtual ~Server();
 
-	virtual void			initialize(xml_t* config);
+	virtual void			initialize(xml_t *config);
 
 	virtual bool			run() = 0;
-	SERVER_STATUS& status();
+	SERVER_STATUS			&status();
 
-	void					putPackage(Package* package);
+	void					putPackage(Package *package);
 };

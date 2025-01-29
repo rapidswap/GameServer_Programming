@@ -1,13 +1,13 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "MiniDump.h"
 
 MiniDump::MiniDump()
 {
-    ::SetUnhandledExceptionFilter(execptionFilter);
-    printf("* Dump filter setting complte!\n");
+	::SetUnhandledExceptionFilter(execptionFilter);
+	printf("* Dump filter setting complte!\n");
 }
 
-LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
+LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS *exceptionInfo)
 {
     //우선 종료 처리부터 하고
     shutdownServer();
@@ -17,8 +17,8 @@ LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
     HMODULE dumpDll = nullptr;
     dumpDll = ::LoadLibraryA("DBGHELP.DLL");
     if (!dumpDll) {
-        printf("! DBGHelp.dll not loaded\n");
-        return 0;
+		printf("! DBGHelp.dll not loaded\n");
+		return 0;
     }
 
     wstr_t dumpPatch;
@@ -27,18 +27,18 @@ LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
 
     HANDLE file = ::CreateFile(dumpPatch.c_str(), GENERIC_WRITE, FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if (file == INVALID_HANDLE_VALUE) {
-        printf("! dump file not making\n");
+		printf("! dump file not making\n");
         return 0;
     }
 
     _MINIDUMP_EXCEPTION_INFORMATION info;
-    info.ThreadId = ::GetCurrentThreadId();
+	info.ThreadId = ::GetCurrentThreadId();
     info.ExceptionPointers = exceptionInfo;
     info.ClientPointers = NULL;
 
     WRITEDUMP dumpFunc = (WRITEDUMP)::GetProcAddress(dumpDll, "MiniDumpWriteDump");
     if (dumpFunc(GetCurrentProcess(), GetCurrentProcessId(), file, MiniDumpNormal, &info, NULL, NULL) == FALSE) {
-        printf("! dump file saving error\n");
+		printf("! dump file saving error\n");
         return 0;
     }
     ::CloseHandle(file);

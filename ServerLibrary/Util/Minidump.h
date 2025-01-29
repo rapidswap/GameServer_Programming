@@ -1,9 +1,10 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "dbghelp.h"
+// 참고 http://msdn.microsoft.com/ko-kr/library/windows/desktop/ms680360(v=vs.85).aspx
 
 //dump 함수 포인터
-typedef BOOL(WINAPI* WRITEDUMP)(
+typedef BOOL(WINAPI *WRITEDUMP)(
     _In_  HANDLE hProcess,
     _In_  DWORD ProcessId,
     _In_  HANDLE hFile,
@@ -16,7 +17,7 @@ typedef BOOL(WINAPI* WRITEDUMP)(
 class MiniDump : public Singleton<MiniDump>
 {
 public:
-    MiniDump();
+	MiniDump();
 
-    static LONG WINAPI execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo);
+	static LONG WINAPI execptionFilter(struct _EXCEPTION_POINTERS *exceptionInfo);
 };

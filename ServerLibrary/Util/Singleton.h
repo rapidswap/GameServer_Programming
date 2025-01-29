@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 template <class T>
 class Singleton
@@ -10,7 +10,7 @@ protected:
 
 public:
     Singleton(const Singleton&);
-    Singleton& operator = (const Singleton&);
+    Singleton& operator = (const Singleton &);
 
     static T& getInstance()
     {

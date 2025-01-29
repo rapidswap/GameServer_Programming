@@ -1,13 +1,13 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "packetHeader.h"
 #include "Stream.h"
 
 class Packet {
 public:
     virtual PacketType type() = 0;
-    virtual void encode(Stream& stream) { stream << (Int64)this->type(); };
-    virtual void decode(Stream& stream) { };
+    virtual void encode(Stream &stream) { stream << (Int64) this->type(); };
+    virtual void decode(Stream &stream) { };
 };
 
 class PK_C_REQ_EXIT : public Packet
@@ -46,13 +46,13 @@ public:
     std::string     id_;
     std::string     password_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << id_;
         stream << password_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &id_;
         stream >> &password_;
     }
@@ -74,14 +74,14 @@ public:
     UInt32     port_;
     std::string     name_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << ip_;
         stream << port_;
         stream << name_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &ip_;
         stream >> &port_;
         stream >> &name_;
@@ -97,14 +97,14 @@ public:
     std::string     id_;
     std::string     password_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << id_;
         stream << password_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &id_;
         stream >> &password_;
@@ -120,14 +120,14 @@ public:
     UInt64     oidAccountId_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
         stream >> &result_;
@@ -142,13 +142,13 @@ public:
     UInt64     clientId_;
     UInt64     oidAccountId_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
     }
@@ -162,13 +162,13 @@ public:
     UInt64     clientId_;
     UInt64     oidAccountId_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
     }
@@ -183,14 +183,14 @@ public:
     std::string     name_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << name_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &name_;
         stream >> &result_;
@@ -206,14 +206,14 @@ public:
     std::string     name_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << name_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &name_;
         stream >> &result_;
@@ -227,12 +227,12 @@ public:
 
     std::string     name_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << name_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &name_;
     }
 };
@@ -244,12 +244,12 @@ public:
 
     std::string     text_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << text_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &text_;
     }
 };
@@ -262,13 +262,13 @@ public:
     std::string     name_;
     std::string     text_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << name_;
         stream << text_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &name_;
         stream >> &text_;
     }

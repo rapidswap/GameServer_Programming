@@ -1,4 +1,4 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
-extern bool loadConfig(xml_t* config);
+extern bool loadConfig(xml_t *config);

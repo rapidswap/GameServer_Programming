@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Shutdown.h"
 
 bool _shutdown = false;

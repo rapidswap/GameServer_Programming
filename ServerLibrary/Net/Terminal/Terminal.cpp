@@ -1,8 +1,8 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Terminal.h"
 #include "../Packet/PacketAnalyzer.h"
 
-Terminal::Terminal(Server* server, wstr_t name)
+Terminal::Terminal(Server *server, wstr_t name)
 {
 	server_ = server;
 	name_ = name;
@@ -13,9 +13,9 @@ Terminal::~Terminal()
 	status_ = TERMINAL_STOP;
 }
 
-void Terminal::initialize(xmlNode_t* config)
+void Terminal::initialize(xmlNode_t *config)
 {
-	xmlNode_t* elem;
+	xmlNode_t *elem;
 
 	elem = config->FirstChildElement("IP");
 	strcpy_s(ip_, elem->GetText());
@@ -31,14 +31,14 @@ TERMINAL_STATUS& Terminal::status()
 	return status_;
 }
 
-void Terminal::sendPacket(Packet* packet)
+void Terminal::sendPacket(Packet *packet)
 {
 	if (status_ == TERMINAL_READY) {
 		session_.sendPacket(packet);
 	}
 }
 
-const char* Terminal::ip()
+const char *Terminal::ip()
 {
 	return ip_;
 }
@@ -67,7 +67,7 @@ CONNECT_START:
 
 	SLog(L"* [%s]terminal connect [%S]:[%d] ready", name_.c_str(), ip_, port_);
 	while (_shutdown == false) {
-		Package* package = session_.onRecv(0);
+		Package *package = session_.onRecv(0);
 
 		if (package == nullptr) {
 			SLog(L"! termnal [%s] disconnected !", name_.c_str());

@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 TerminalManager::TerminalManager()
 {
@@ -13,21 +13,21 @@ TerminalManager::~TerminalManager()
 	}
 }
 
-void TerminalManager::initialize(xml_t* config)
+void TerminalManager::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Terminal");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Terminal");
 	xmlHandle_t terminalNode = TiXmlHandle(root);
 	if (!root) {
 		SLog(L"@ not exist terminal setting");
 		return;
 	}
 
-	xmlNode_t* elem = terminalNode.FirstChildElement().Element();
+	xmlNode_t *elem = terminalNode.FirstChildElement().Element();
 	while (elem) {
 		array<WCHAR, _MAX_PATH> terminalName;
-		StrConvA2W((char*)elem->Value(), terminalName.data(), terminalName.max_size());
+		StrConvA2W((char *)elem->Value(), terminalName.data(), terminalName.max_size());
 
-		Terminal* terminal = new Terminal(server_, terminalName.data());
+		Terminal *terminal = new Terminal(server_, terminalName.data());
 		terminal->initialize(elem);
 		this->put(terminalName.data(), terminal);
 
@@ -37,7 +37,7 @@ void TerminalManager::initialize(xml_t* config)
 	SLog(L"### Terminal set ###");
 }
 
-void TerminalManager::put(wstr_t serverName, Terminal* terminal)
+void TerminalManager::put(wstr_t serverName, Terminal *terminal)
 {
 	terminalPool_.insert(make_pair(serverName, terminal));
 }
@@ -51,7 +51,7 @@ Terminal* TerminalManager::get(wstr_t name)
 	return terminalPool_.at(name);
 }
 
-bool TerminalManager::isTerminal(const char* ip)
+bool TerminalManager::isTerminal(const char *ip)
 {
 	for (auto terminal : terminalPool_) {
 		if (!strcmp(terminal.second->ip(), ip)) {
@@ -61,7 +61,7 @@ bool TerminalManager::isTerminal(const char* ip)
 	return false;
 }
 
-void TerminalManager::run(Server* server)
+void TerminalManager::run(Server *server)
 {
 	server_ = server;
 

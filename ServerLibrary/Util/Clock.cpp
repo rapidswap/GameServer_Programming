@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "Clock.h"
 
 Clock::Clock()
@@ -10,7 +10,7 @@ Clock::~Clock()
 {
 }
 
-tick_t Clock::strToTick(wstr_t str, WCHAR* fmt)
+tick_t Clock::strToTick(wstr_t str, WCHAR *fmt)
 {
     int	year = 0;
     int	month = 0;
@@ -21,7 +21,7 @@ tick_t Clock::strToTick(wstr_t str, WCHAR* fmt)
 
     swscanf_s(str.c_str(), fmt, &year, &month, &day, &hour, &minute, &second);
 
-
+    //		   초,		분,    시,  일,  월(0부터시작), 년(1900년부터시작)
     tm time = { second, minute, hour, day, month - 1, year - 1900 };
 
     return mktime(&time);
@@ -37,7 +37,7 @@ tick_t Clock::systemTick()
     return system_clock::to_time_t(system_clock::now());
 }
 
-wstr_t Clock::tickToStr(tick_t tick, WCHAR* fmt)
+wstr_t Clock::tickToStr(tick_t tick, WCHAR *fmt)
 {
     array<WCHAR, SIZE_128> timeStr;
 
@@ -48,33 +48,33 @@ wstr_t Clock::tickToStr(tick_t tick, WCHAR* fmt)
     return timeStr.data();
 }
 
-wstr_t Clock::nowTime(WCHAR* fmt)
+wstr_t Clock::nowTime(WCHAR *fmt)
 {
     return this->tickToStr(this->systemTick(), fmt);
 }
 
-wstr_t Clock::nowTimeWithMilliSec(WCHAR* fmt)
+wstr_t Clock::nowTimeWithMilliSec(WCHAR *fmt)
 {
 #if 0
     timePoint now = system_clock::now();
     timePoint oldSecond = system_clock::from_time_t(this->systemTick());
 
     duration<double> milliSecond = now - oldSecond;
-    array<WCHAR, SIZE_8> milliStr;
-    snwprintf(milliStr, L"%03d", (int)(milliSecond.count() * 1000));
+	array<WCHAR, SIZE_8> milliStr;
+	snwprintf(milliStr, L"%03d", (int)(milliSecond.count() * 1000));
 #else
-    high_resolution_clock::time_point point = high_resolution_clock::now();
-    milliseconds ms = duration_cast<milliseconds>(point.time_since_epoch());
+	high_resolution_clock::time_point point = high_resolution_clock::now();
+	milliseconds ms = duration_cast<milliseconds>(point.time_since_epoch());
 
-    seconds s = duration_cast<seconds>(ms);
-    tick_t t = s.count();
-    std::size_t fractionalSeconds = ms.count() % 1000;
-    array<WCHAR, SIZE_8> milliStr;
-    snwprintf(milliStr, L"%03d", (int)(fractionalSeconds));
+	seconds s = duration_cast<seconds>(ms);
+	tick_t t = s.count();
+	std::size_t fractionalSeconds = ms.count() % 1000;
+	array<WCHAR, SIZE_8> milliStr;
+	snwprintf(milliStr, L"%03d", (int)(fractionalSeconds));
 #endif
     wstr_t timeString = this->tickToStr(this->systemTick(), fmt);
     timeString += L".";
-    timeString += milliStr.data();
+	timeString += milliStr.data();
     return timeString;
 }
 

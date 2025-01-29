@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "QueryStatement.h"
 #include "QueryRecord.h"
 #include "Query.h"
@@ -26,7 +26,7 @@ QueryRecord& Query::result()
 	return record_;
 }
 
-void Query::setStatement(QueryStatement* statement)
+void Query::setStatement(QueryStatement *statement)
 {
 	statement_ = statement;
 }

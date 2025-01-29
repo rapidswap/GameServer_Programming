@@ -1,9 +1,9 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <atomic>
 
-
-// íƒ€ì… ì •ì˜
+//-------------------------------------------------------------------//
+// Å¸ÀÔ Á¤ÀÇ
 typedef UINT64					object_t;
 typedef UINT64					oid_t;
 typedef int32_t					packet_size_t;
@@ -17,7 +17,8 @@ typedef std::recursive_mutex	lock_t;
 typedef std::string				str_t;
 typedef std::wstring			wstr_t;
 
-// í¬ê¸° ì •ì˜
+//-------------------------------------------------------------------//
+// Å©±â Á¤ÀÇ
 #define SIZE_8				8
 #define SIZE_64				64
 #define SIZE_128			128
@@ -26,11 +27,12 @@ typedef std::wstring			wstr_t;
 #define SIZE_4096			4096
 #define SIZE_8192			8192
 
-
+//-------------------------------------------------------------------//
 #define DB_PARAM_SIZE		8192
 #define SOCKET_BUF_SIZE		1024 * 10
 
-// íŒ¨í‚·ì„ typeì„ ë§ì¶”ê¸° ìœ„í•œ ì¬ì •ì˜ C# ê¸°ì¤€
+//-------------------------------------------------------------------//
+// ÆĞÅ¶À» typeÀ» ¸ÂÃß±â À§ÇÑ ÀçÁ¤ÀÇ C# ±âÁØ
 typedef unsigned char		Byte;
 typedef char				Char;
 typedef INT16				Int16;

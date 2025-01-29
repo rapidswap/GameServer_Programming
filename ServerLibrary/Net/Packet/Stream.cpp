@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "Stream.h"
 
 Stream::Stream()
@@ -7,7 +7,7 @@ Stream::Stream()
 	this->initialize();
 }
 
-Stream::Stream(UCHAR* stream, size_t size)
+Stream::Stream(UCHAR *stream, size_t size)
 {
 	this->initialize();
 	this->set(stream, size);
@@ -20,7 +20,7 @@ void Stream::initialize()
 	ZeroMemory(&stream_, sizeof(stream_));
 }
 
-UCHAR* Stream::data()
+UCHAR *Stream::data()
 {
 	return stream_.data();
 }
@@ -30,15 +30,15 @@ size_t Stream::size()
 	return offset_;
 }
 
-void Stream::operator = (Stream& stream)
+void Stream::operator = (Stream &stream)
 {
 	this->set(stream.data(), stream.size());
 }
 
-void Stream::set(UCHAR* data, size_t size)
+void Stream::set(UCHAR *data, size_t size)
 {
 	this->offset_ = size;
-	memcpy_s(this->stream_.data(), stream_.size(), (void*)data, size);
+	memcpy_s(this->stream_.data(), stream_.size(), (void *)data, size);
 }
 
 // write
@@ -62,48 +62,48 @@ bool Stream::checkWriteBound(size_t len)
 	offset_ += size;
 
 template<class T>
-void Stream::operator << (const T& value)
+void Stream::operator << (const T &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const bool& value)
+void Stream::operator << (const bool &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT8& value)
+void Stream::operator << (const INT8 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT8& value)
+void Stream::operator << (const UINT8 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT16& value)
+void Stream::operator << (const INT16 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT16& value)
+void Stream::operator << (const UINT16 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT32& value)
+void Stream::operator << (const INT32 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT32& value)
+void Stream::operator << (const UINT32 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT64& value)
+void Stream::operator << (const INT64 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT64& value)
+void Stream::operator << (const UINT64 &value)
 {
 	STREAM_WRITE(value);
 }
 
-void Stream::operator << (const std::vector<wstr_t>& value)
+void Stream::operator << (const std::vector<wstr_t> &value)
 {
 	*this << value.size();
 	for (auto i : value) {
@@ -140,9 +140,9 @@ bool Stream::checkReadBound(size_t len)
 	return true;
 }
 
-void Stream::read(void* retVal, size_t len)
+void Stream::read(void *retVal, size_t len)
 {
-	memcpy_s(retVal, len, (void*)(stream_.data() + readPt_), len);
+	memcpy_s(retVal, len, (void *)(stream_.data() + readPt_), len);
 	readPt_ += len;
 }
 
@@ -154,49 +154,49 @@ void Stream::read(void* retVal, size_t len)
 	this->read((void *)(retVal), size);	
 
 template<class T>
-void Stream::operator >> (T* retVal)
+void Stream::operator >> (T *retVal)
 {
 	STREAM_READ(T, retVal);
 }
 
-void Stream::operator >> (bool* retVal)
+void Stream::operator >> (bool *retVal)
 {
 	STREAM_READ(bool, retVal);
 }
-void Stream::operator >> (INT8* retVal)
+void Stream::operator >> (INT8 *retVal)
 {
 	STREAM_READ(INT8, retVal);
 }
-void Stream::operator >> (UINT8* retVal)
+void Stream::operator >> (UINT8 *retVal)
 {
 	STREAM_READ(UINT8, retVal);
 }
-void Stream::operator >> (INT16* retVal)
+void Stream::operator >> (INT16 *retVal)
 {
 	STREAM_READ(INT16, retVal);
 }
-void Stream::operator >> (UINT16* retVal)
+void Stream::operator >> (UINT16 *retVal)
 {
 	STREAM_READ(UINT16, retVal);
 }
-void Stream::operator >> (INT32* retVal)
+void Stream::operator >> (INT32 *retVal)
 {
 	STREAM_READ(INT32, retVal);
 }
-void Stream::operator >> (UINT32* retVal)
+void Stream::operator >> (UINT32 *retVal)
 {
 	STREAM_READ(UINT32, retVal);
 }
-void Stream::operator >> (INT64* retVal)
+void Stream::operator >> (INT64 *retVal)
 {
 	STREAM_READ(INT64, retVal);
 }
-void Stream::operator >> (UINT64* retVal)
+void Stream::operator >> (UINT64 *retVal)
 {
 	STREAM_READ(UINT64, retVal);
 }
 
-void Stream::operator >> (std::vector<wstr_t>* retVal)
+void Stream::operator >> (std::vector<wstr_t> *retVal)
 {
 	size_t size;
 	*this >> &size;
@@ -208,7 +208,7 @@ void Stream::operator >> (std::vector<wstr_t>* retVal)
 	}
 }
 
-void Stream::operator >> (str_t* retVal)
+void Stream::operator >> (str_t *retVal)
 {
 	INT32 size;
 	*this >> &size;
@@ -216,8 +216,8 @@ void Stream::operator >> (str_t* retVal)
 		return;
 	}
 
-	char* buf = new char[size + 1];
-	this->read((void*)(buf), size * sizeof(CHAR));
+	char *buf = new char[size + 1];
+	this->read((void *)(buf), size * sizeof(CHAR));
 	buf[size] = '\0';
 
 	retVal->clear();
@@ -226,7 +226,7 @@ void Stream::operator >> (str_t* retVal)
 	delete buf;
 }
 
-void Stream::operator >> (wstr_t* retVal)
+void Stream::operator >> (wstr_t *retVal)
 {
 	INT32 size;
 	*this >> &size;
@@ -234,8 +234,8 @@ void Stream::operator >> (wstr_t* retVal)
 		return;
 	}
 
-	WCHAR* buf = new WCHAR[size + 1];
-	this->read((void*)(buf), size * sizeof(WCHAR));
+	WCHAR *buf = new WCHAR[size + 1];
+	this->read((void *)(buf), size * sizeof(WCHAR));
 	buf[size] = '\0';
 
 	retVal->clear();

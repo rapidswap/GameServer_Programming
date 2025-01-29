@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "mswsock.lib")
@@ -19,9 +19,6 @@
 #include <stdio.h>
 #include <cstdint>
 
-#include <map>
-#include <array>
-
 #include <assert.h> 
 #include <fcntl.h>
 #include <algorithm>  
@@ -38,20 +35,21 @@
 #include <random>
 #include <typeinfo>    //typeinfo
 // TODO: 공용 매크로
-#define CONTEXT_SWITCH     std::this_thread::sleep_for(std::chrono::nanoseconds(1))
+//#define CONTEXT_SWITCH     std::this_thread::sleep_for(std::chrono::nanoseconds(1))
 #if _DEBUG
 #define CONTEXT_SWITCH		Sleep(1)
 #else
 #define CONTEXT_SWITCH		::SwitchToThread()
 #endif
 
-typedef void(*Function)(void*);
+typedef void(*Function)(void *);
 
 //기타 유틸
 #include "./Util/csv_parser/csv_parser.hpp"
 #include "./Util/tinyXml/tinyxml.h"
 
 // TODO: 필수 헤더 파일
+//-------------------------------------------------------------------//
 #include "./Net/WinSocket.h"
 #include "./Util/Type.h"
 #include "./Util/Util.h"
@@ -77,7 +75,7 @@ typedef void(*Function)(void*);
 #include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
 #include "./Util/Monitoring.h"
-#include "./Util/ProgramValidation.h"
+#include "./util/ProgramValidation.h"
 
 //패킷들
 #include "./Net/Packet/Stream.h"

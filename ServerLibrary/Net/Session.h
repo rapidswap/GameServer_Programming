@@ -1,5 +1,7 @@
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
+// 유저 세션 구조체
+// PC 온라인 게임 기준으로 작성하여서, 모바일 환경시 수정이 필요함.
 
 struct SOCKET_DATA {
 	SOCKET				socket_;
@@ -21,21 +23,21 @@ protected:
 	bool				setSocketOpt();
 
 public:
-	Session();
-	virtual ~Session();
+    Session();
+    virtual ~Session();
 
 	virtual bool		onAccept(SOCKET socket, SOCKADDR_IN addrInfo);
 
 	virtual void		onSend(size_t transferSize) = 0;
-	virtual void		sendPacket(Packet* packet) = 0;
-
-	virtual Package* onRecv(size_t transferSize) = 0;
+	virtual void		sendPacket(Packet *packet) = 0;
+	
+	virtual Package*	onRecv(size_t transferSize) = 0;
 	virtual void		recvStandBy() {};
 
-	virtual void		onClose(bool force = false);
+    virtual void		onClose(bool force = false);
 
-	SOCKET& socket();
-	wstr_t				clientAddress();
+	SOCKET&				socket();
+    wstr_t				clientAddress();
 
 	oid_t				id();
 	void				setId(oid_t id);

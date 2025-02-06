@@ -33,9 +33,9 @@
             // 
             // mainPanel_
             // 
-            mainPanel_.Location = new Point(0, 0);
+            mainPanel_.Location = new Point(12, 12);
             mainPanel_.Name = "mainPanel_";
-            mainPanel_.Size = new Size(800, 489);
+            mainPanel_.Size = new Size(734, 411);
             mainPanel_.TabIndex = 0;
             // 
             // DummyClient
@@ -47,7 +47,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "DummyClient";
             Text = "DummyClient";
-            Load += Form1_Load;
+            Shown += DummyClient_Shown;
             ResumeLayout(false);
         }
 

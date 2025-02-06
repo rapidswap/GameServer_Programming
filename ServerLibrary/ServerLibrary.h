@@ -35,7 +35,7 @@
 #include <random>
 #include <typeinfo>    //typeinfo
 // TODO: 공용 매크로
-//#define CONTEXT_SWITCH     std::this_thread::sleep_for(std::chrono::nanoseconds(1))
+
 #if _DEBUG
 #define CONTEXT_SWITCH		Sleep(1)
 #else

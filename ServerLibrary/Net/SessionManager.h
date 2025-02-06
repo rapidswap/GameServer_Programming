@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "Session.h"
-//http://duongame.tistory.com/36  다른 이야기이긴 하나 모바일 서버 만드는데 도움은 될듯
+
 // 세션을 관리 하는 주체
 
 #define SESSION_CAPACITY		(5000)
@@ -17,7 +17,7 @@ class SessionManager : public Singleton<SessionManager>
 	int									maxConnection_;
     Lock								lock_;
 
-	oid_t								sessionSeed_;			// 세션 메니져에서 관리하는 시드
+	oid_t								sessionSeed_;			
 
 	// 서버 수동 명령어
     typedef std::function<void (SessionList *sessionList, wstr_t *arg)> cmdFunc;

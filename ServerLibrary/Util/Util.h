@@ -27,7 +27,6 @@ inline bool isOverFlower_uint(unsigned int original, unsigned int add)
 #define __W(x)              L##x
 #define _W(x)               __W(x)
 
-//-------------------------------------------------------------------//
 //문자열 변환
 inline void StrConvA2T(CHAR *src, TCHAR *dest, size_t destLen) {
 #ifdef  UNICODE                     // r_winnt
@@ -59,7 +58,6 @@ inline void StrConvW2A(WCHAR *src, CHAR *dest, size_t destLen) {
     }
 	WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int) destLen, NULL, FALSE);
 }
-//-------------------------------------------------------------------//
 
 // delete object
 #undef	SAFE_DELETE

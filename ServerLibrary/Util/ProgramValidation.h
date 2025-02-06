@@ -42,7 +42,6 @@ class ProgramValidation
 		void setBirthTick()
 		{
 			//문자열 시간을 tick_t화 하기
-			//https://msdn.microsoft.com/en-us/library/ta5wcy3s.aspx
 			locale loc;
 			basic_stringstream<char> birthDate;
 			ios_base::iostate st = 0;

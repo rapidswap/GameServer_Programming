@@ -41,9 +41,6 @@ public:
 		percent = (double)((sys.QuadPart - lastSysCPU.QuadPart) + (user.QuadPart - lastUserCPU.QuadPart));
 		percent /= (now.QuadPart - lastCPU.QuadPart);
 		percent /= numProcessors;
-//		lastCPU = now;
-//		lastUserCPU = user;
-//		lastSysCPU = sys;
 		percent = percent * 100;
 		return fixInRange(0, percent, 100);
 	}

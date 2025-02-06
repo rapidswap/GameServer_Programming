@@ -4,9 +4,9 @@
 
 typedef enum
 {
-    QUERY_NOT_RETURN,				//리턴없는 쿼리
-    QUERY_WAIT_RETURN,				//DB응답을 꼭 기다린뒤 처리하는 쿼리
-    QUERY_CALL_BACK,				//DB응답을 기다리지 않지만 뒷처리는 있는 쿼리
+    QUERY_NOT_RETURN,				
+    QUERY_WAIT_RETURN,				
+    QUERY_CALL_BACK,				
 }QUERY_TYPE;
 
 class QueryStatement

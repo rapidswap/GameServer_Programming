@@ -41,8 +41,8 @@ bool Session::setSocketOpt()
 #else
 	tcp_keepalive keepAliveSet = { 0 }, returned = { 0 };
 	keepAliveSet.onoff = 1;
-	keepAliveSet.keepalivetime = 3000;        // Keep Alive in 3 sec.
-	keepAliveSet.keepaliveinterval = 3000;    // Resend if No-Reply
+	keepAliveSet.keepalivetime = 3000;        
+	keepAliveSet.keepaliveinterval = 3000;    
 
 	DWORD dwBytes;
 	if (WSAIoctl(socketData_.socket_, SIO_KEEPALIVE_VALS, &keepAliveSet, sizeof(keepAliveSet), &returned, sizeof(returned), &dwBytes, NULL, NULL) != 0) {

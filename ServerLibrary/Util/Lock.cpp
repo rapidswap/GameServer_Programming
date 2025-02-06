@@ -110,11 +110,6 @@ LockManager::LockManager()
 }
 
 /*
-http://www.npteam.net/849
-http://www.boost.org/doc/libs/1_46_1/libs/graph/doc/astar_visitor.html
-http://includestdio.tistory.com/m/post/12
-
-http://www.bogotobogo.com/cplusplus/multithreaded4_cplusplus11B.php#nested_lock
 락은 자신이 걸린 threadId를,
 Thread에서는 걸고있는 Lock 번호가 있음.
 이들을 따라가 보다가 자신이 걸려는 lock이 나오면 lock 순환

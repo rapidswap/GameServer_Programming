@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Logger.h"
-//-----------------------------------------------------------------//
+
 LogPrintf::LogPrintf()
 {
     printf("* Log create : printf log mode\n");
@@ -11,7 +11,7 @@ void LogPrintf::log(WCHAR *logStr)
     printf("%ws", logStr);
 }
 
-//-----------------------------------------------------------------//
+
 LogFile::LogFile(xml_t *config)
 {
 	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Log");
@@ -56,7 +56,7 @@ void LogFile::log(WCHAR *logStr)
     fs_ << logStr;
     fs_.flush();
 }
-//-----------------------------------------------------------------//
+
 
 LogWriter::LogWriter()
 {
@@ -117,12 +117,6 @@ void LogWriter::log(WCHAR *fmt, va_list args)
 	else {
 		logMessage += prefix_;
 	}
-	//array<WCHAR, SIZE_8 * 2> threadIdStr;
-	//snwprintf(threadIdStr, L"0x%X", (unsigned int) threadId);
-
-	//logMessage += L":";
-	//logMessage += threadIdStr.data();
-	//logMessage += L"\t";
 
 	array<WCHAR, SIZE_1024> logStr;
 
@@ -132,7 +126,7 @@ void LogWriter::log(WCHAR *fmt, va_list args)
 	logMessage += L"\n";
     base_->log((WCHAR *)logMessage.c_str());
 }
-//-----------------------------------------------------------------//
+
 SystemLog::SystemLog()
 {
 	xml_t config;

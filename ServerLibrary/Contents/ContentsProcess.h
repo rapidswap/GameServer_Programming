@@ -29,7 +29,6 @@ public:
 
 	virtual void registSubPacketFunc() = 0;
 
-	//--------------------------------------------------------------//
 	// 기본 패킷 기능 구현
 	static void Packet_HeartBeat(Session *session, Packet *rowPacket);
 	static void Packet_Notify_Terminal(Session *session, Packet *rowPacket);

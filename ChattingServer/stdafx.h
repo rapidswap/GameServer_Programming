@@ -13,5 +13,6 @@
 // TODO: reference additional headers your program requires here
 #include "ServerLibrary.h"
 
-#include "./Query/QI_DB_REQ_ID_PW.h"
-#include "./Query/QI_DB_REQ_LOAD_DATA.h"
+#include "Server\User.h"
+#include "Server\UserManager.h"
+#include "Server\ChattingProcess.h"

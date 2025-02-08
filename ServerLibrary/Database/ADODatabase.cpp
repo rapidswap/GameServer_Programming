@@ -44,10 +44,11 @@ bool ADODatabase::connect()
 	if (!dbConnection_) {
 		return false;
 	}
-
+	
 	try {
 		HRESULT hr = dbConnection_->Open(connectionStr_.c_str(), _T(""), _T(""), NULL);
 		if (SUCCEEDED(hr)) {
+			
 			dbConnection_->PutCursorLocation(ADODB::adUseClient);
 			SLog(L"* [%s]DB connection success", dbName_.c_str());
 			state_ = DB_STANDBY;
@@ -56,6 +57,7 @@ bool ADODatabase::connect()
 	}
 	catch (_com_error &e) {
 		this->comError(L"connction", e);
+		
 	}
 
 	return false;
@@ -65,9 +67,11 @@ bool ADODatabase::connect(const WCHAR *provider, const WCHAR *serverName, const 
 {
 	array<WCHAR, SIZE_128> buffer;
 	snwprintf(buffer, L"Provider=%s;Server=%s;Database=%s;Uid=%s;Pwd=%s;", provider, serverName, dbName, id, password);
+	
     connectionStr_ = buffer.data();
+	
     SLog(L"* [%s]DB try connection provider = %s", dbName_.c_str(), provider);
-
+	SLog(L"* connectionStr_ : %s", connectionStr_.c_str());
 	return this->connect();
 }
 
@@ -85,9 +89,9 @@ bool ADODatabase::connect(const WCHAR *serverName, const WCHAR *dbName, const WC
 		}
 	}
 
-	//mssql 2005, 2008로 접속시
-	if (this->connect(L"SQLNCLI", serverName, dbName, id, password)) {
-		SLog(L"* database SQLNCLI : %s connect",  dbName);
+	// 연결은 되는데..이상하게 다시 끊김.
+	if (this->connect(L"SQLOLEDB", serverName, dbName, id, password)) {
+		SLog(L"* database SQLOLEDB : %s connect",  dbName);
 		return true;
 	}
 	return false;

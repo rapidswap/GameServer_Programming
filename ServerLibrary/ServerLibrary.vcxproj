@@ -223,6 +223,7 @@
     <ClCompile Include="Database\Query.cpp" />
     <ClCompile Include="Database\QueryRecord.cpp" />
     <ClCompile Include="Database\QueryStatement.cpp" />
+    <ClCompile Include="Database\testOLEDB.cpp" />
     <ClCompile Include="Net\Asio\ASIOServer.cpp" />
     <ClCompile Include="Net\Asio\ASIOSession.cpp" />
     <ClCompile Include="Net\Iocp\IOCPServer.cpp" />

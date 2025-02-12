@@ -1,5 +1,8 @@
 #pragma once
 #include "stdafx.h"
+#include <oledb.h> 
+#include <comdef.h>
+#include <comutil.h>
 
 typedef enum
 {

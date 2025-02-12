@@ -70,7 +70,7 @@ CONNECT_START:
 		Package *package = session_.onRecv(0);
 
 		if (package == nullptr) {
-			SLog(L"! termnal [%s] disconnected !", name_.c_str());
+			SLog(L"! termnal [%s] disconnected ! IP[%S] Port[%d]", name_.c_str(),ip_,port_);
 			session_.onClose();
 			goto CONNECT_START;
 		}

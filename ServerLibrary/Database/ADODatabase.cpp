@@ -63,39 +63,41 @@ bool ADODatabase::connect()
 	return false;
 }
 
-bool ADODatabase::connect(const WCHAR *provider, const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password)
+bool ADODatabase::connect(const WCHAR* provider, const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password)
 {
 	array<WCHAR, SIZE_128> buffer;
 	snwprintf(buffer, L"Provider=%s;Server=%s;Database=%s;Uid=%s;Pwd=%s;", provider, serverName, dbName, id, password);
-	
-    connectionStr_ = buffer.data();
-	
-    SLog(L"* [%s]DB try connection provider = %s", dbName_.c_str(), provider);
-	SLog(L"* connectionStr_ : %s", connectionStr_.c_str());
-	return this->connect();
+
+	connectionStr_ = buffer.data();
+
+	SLog(L"* [%s]DB try connection provider = %s", dbName_.c_str(), provider);
+	return this->connect(); // 실제 연결 메서드 호출
 }
 
-bool ADODatabase::connect(const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password)
+bool ADODatabase::connect(const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password)
 {
-    dbName_ = dbName;
+	dbName_ = dbName;
 	SLog(L"* connect try: %s, %s, %s", dbName, id, password);
 
-	for (int index = 10; index < 20; ++index) {
-		array<WCHAR, SIZE_64> mssqlName;
-		snwprintf(mssqlName, L"SQLNCLI%d", index);
-		if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
-			SLog(L"* database %s : %s connect", mssqlName, dbName);
-			return true;
-		}
-	}
+	 //SQLNCLI 프로바이더 연결 시도
+	//for (int index = 10; index < 20; ++index) {
+	//	array<WCHAR, SIZE_64> mssqlName;
+	//	snwprintf(mssqlName, L"SQLNCLI%d", index);
+	//	if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
+	//		SLog(L"* database %s : %s connect", mssqlName.data(), dbName);
+	//		return true;
+	//	}
+	//}
 
-	// 연결은 되는데..이상하게 다시 끊김.
+	// SQLOLEDB 프로바이더로 연결 시도
 	if (this->connect(L"SQLOLEDB", serverName, dbName, id, password)) {
-		SLog(L"* database SQLOLEDB : %s connect",  dbName);
+		SLog(L"* database SQLOLEDB : %s connect", dbName);
 		return true;
 	}
+
 	return false;
 }
+
 
 bool ADODatabase::connected()
 {

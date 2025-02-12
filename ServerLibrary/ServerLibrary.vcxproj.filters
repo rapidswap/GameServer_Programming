@@ -309,8 +309,5 @@
     <ClCompile Include="Net\Packet\PacketObfuscation.cpp">
       <Filter>Network\Packet</Filter>
     </ClCompile>
-    <ClCompile Include="Database\testOLEDB.cpp">
-      <Filter>Database</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

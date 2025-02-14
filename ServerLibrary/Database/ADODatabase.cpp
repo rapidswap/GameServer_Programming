@@ -79,21 +79,21 @@ bool ADODatabase::connect(const WCHAR* serverName, const WCHAR* dbName, const WC
 	dbName_ = dbName;
 	SLog(L"* connect try: %s, %s, %s", dbName, id, password);
 
-	 //SQLNCLI 프로바이더 연결 시도
-	//for (int index = 10; index < 20; ++index) {
-	//	array<WCHAR, SIZE_64> mssqlName;
-	//	snwprintf(mssqlName, L"SQLNCLI%d", index);
-	//	if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
-	//		SLog(L"* database %s : %s connect", mssqlName.data(), dbName);
-	//		return true;
-	//	}
-	//}
+	// SQLNCLI 프로바이더 연결 시도
+	for (int index = 10; index < 20; ++index) {
+		array<WCHAR, SIZE_64> mssqlName;
+		snwprintf(mssqlName, L"SQLNCLI%d", index);
+		if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
+			SLog(L"* database %s : %s connect", mssqlName.data(), dbName);
+			return true;
+		}
+	}
 
 	// SQLOLEDB 프로바이더로 연결 시도
-	if (this->connect(L"SQLOLEDB", serverName, dbName, id, password)) {
-		SLog(L"* database SQLOLEDB : %s connect", dbName);
-		return true;
-	}
+	//if (this->connect(L"SQLOLEDB", serverName, dbName, id, password)) {
+	//	SLog(L"* database SQLOLEDB : %s connect", dbName);
+	//	return true;
+	//}
 
 	return false;
 }

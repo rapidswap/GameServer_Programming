@@ -9,16 +9,16 @@
 
 class ProgramValidation
 {
-	void checkSMTP()
-	{
-		SOCKET smtpSocket;
-		if (!connectSMTP(&smtpSocket)) {
-			SLog(L"! The smtp server is not loaded.");
-#ifndef _DEBUG
-			exit(1);
-#endif //_DEBUG
-		}
-	}
+//	void checkSMTP()
+//	{
+//		SOCKET smtpSocket;
+//		if (!connectSMTP(&smtpSocket)) {
+//			SLog(L"! The smtp server is not loaded.");
+//#ifndef _DEBUG
+//			exit(1);
+//#endif //_DEBUG
+//		}
+//	}
 
 	class ProgramExpire
 	{
@@ -77,7 +77,7 @@ public:
 	ProgramValidation()
 	{
 		ProgramExpire checkExpire;
-		this->checkSMTP();
+		//this->checkSMTP();
 	}
 };
 

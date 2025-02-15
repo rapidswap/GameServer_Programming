@@ -13,7 +13,7 @@
     </ChattingServer>
     <DBAgent>
       <IP>127.0.0.1</IP>
-      <Port>9100</Port>
+      <Port>9300</Port>
     </DBAgent>
   </Terminal>
   <Log>

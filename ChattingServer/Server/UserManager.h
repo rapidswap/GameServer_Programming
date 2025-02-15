@@ -6,7 +6,7 @@ class Session;
 
 class UserManager :public Singleton<UserManager>
 {
-	map<oid_t, User*> userPool_;
+	unordered_map<oid_t, User*> userPool_;
 
 public:
 	void insert(User* user)
@@ -22,7 +22,7 @@ public:
 
 	User* at(oid_t id)
 	{
-		auto itr = userPool_.lower_bound(id);
+		auto itr = userPool_.find(id);
 		if (itr == userPool_.end()) {
 			return nullptr;
 		}

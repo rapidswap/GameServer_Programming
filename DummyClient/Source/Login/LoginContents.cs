@@ -1,11 +1,11 @@
-﻿using DummyClient.Source.Network;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace DummyClient.Source.Login
+
+namespace DummyClient
 {
     class LoginContents : ContentsProcess
     {
@@ -22,7 +22,7 @@ namespace DummyClient.Source.Login
             Program.programState_.setName(packet.name_);
 
             PK_C_REQ_REGIST_CHATTING_NAME rPacket = new PK_C_REQ_REGIST_CHATTING_NAME();
-            rPacket.name_= packet.name_;
+            rPacket.name_ = packet.name_;
             Program.programState_.sendPacket(rPacket);
         }
     }

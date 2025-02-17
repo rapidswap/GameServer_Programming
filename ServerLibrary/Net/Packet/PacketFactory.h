@@ -27,6 +27,8 @@ public:
             case E_C_REQ_REGIST_CHATTING_NAME:    return new PK_C_REQ_REGIST_CHATTING_NAME();
             case E_C_REQ_CHATTING:    return new PK_C_REQ_CHATTING();
             case E_S_ANS_CHATTING:    return new PK_S_ANS_CHATTING();
+            case E_S_ANS_NEW_USER_NOTIFY: return new PK_S_ANS_NEW_USER_NOTIFY();
+            case E_S_ANS_USER_LIST: return new PK_S_ANS_USER_LIST();
         }
         return nullptr;
     }

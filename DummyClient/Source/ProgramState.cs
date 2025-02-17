@@ -1,6 +1,4 @@
-﻿using DummyClient.Source.Network;
-
-namespace DummyClient
+﻿namespace DummyClient
 {
     internal enum PROGRAM_STATE
     {

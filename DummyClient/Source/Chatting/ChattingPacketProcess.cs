@@ -1,12 +1,11 @@
-﻿using DummyClient.Source.Network;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DummyClient.Source.Chatting
+namespace DummyClient
 {
     class ChattingPacketProcess : PacketProcess
     {
@@ -21,6 +20,12 @@ namespace DummyClient.Source.Chatting
             PacketType type = (PacketType)packet.type();
             switch (type)
             {
+                case PacketType.E_S_ANS_NEW_USER_NOTIFY:
+                    contents_.notifyNewUser(packet);
+                    return;
+                case PacketType.E_S_ANS_USER_LIST:
+                    contents_.notifyUserList(packet);
+                    return;
                 case PacketType.E_S_ANS_CHATTING:
                     contents_.recvChatting(packet);
                     return;

@@ -19,4 +19,7 @@ enum PacketType : Int64 {
     /*141*/    E_C_REQ_REGIST_CHATTING_NAME = 141,
     /*142*/    E_C_REQ_CHATTING = 142,
     /*143*/    E_S_ANS_CHATTING = 143,
+    /*144*/    E_S_ANS_NEW_USER_NOTIFY = 144,
+    /*145*/    E_S_ANS_USER_LIST = 145,
+
 };

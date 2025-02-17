@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.IO;
-using DummyClient.Source.Network;
 using System.Net.Sockets;
 
 namespace DummyClient
@@ -32,6 +31,8 @@ namespace DummyClient
                 case PacketType.E_C_REQ_REGIST_CHATTING_NAME: return new PK_C_REQ_REGIST_CHATTING_NAME();
                 case PacketType.E_C_REQ_CHATTING: return new PK_C_REQ_CHATTING();
                 case PacketType.E_S_ANS_CHATTING: return new PK_S_ANS_CHATTING();
+                case PacketType.E_S_ANS_NEW_USER_NOTIFY:return new PK_S_ANS_NEW_USER_NOTIFY();
+                case PacketType.E_S_ANS_USER_LIST:return new PK_S_ANS_USER_LIST();
             }
             return null;
         }

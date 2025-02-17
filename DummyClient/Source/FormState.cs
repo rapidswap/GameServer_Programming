@@ -1,7 +1,4 @@
-﻿using DummyClient.Source.Chatting;
-using DummyClient.Source.Login;
-using DummyClient.Source.Network;
-using System.Threading;
+﻿using System.Threading;
 using System.Windows.Forms;
 
 namespace DummyClient

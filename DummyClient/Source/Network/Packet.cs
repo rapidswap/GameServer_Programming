@@ -1,11 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DummyClient.Source.Network
+namespace DummyClient
 {
     public interface PacketInterface
     {
@@ -20,9 +16,9 @@ namespace DummyClient.Source.Network
     {
         protected MemoryStream packet_ = new MemoryStream();
 
-        ~PacketData() 
+        ~PacketData()
         {
-            packet_=null;
+            packet_ = null;
         }
     }
 }

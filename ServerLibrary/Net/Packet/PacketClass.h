@@ -274,4 +274,48 @@ public:
     }
 };
 
+class PK_S_ANS_NEW_USER_NOTIFY :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_NEW_USER_NOTIFY; }
+
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
+};
+
+class PK_S_ANS_USER_LIST :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_USER_LIST; }
+
+    std::vector<std::string> names_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << (Int32)names_.size();
+        for (const auto& name : names_) {
+            stream << name;
+        }
+    }
+
+    void decode(Stream& stream) {
+        Int32 size;
+        stream >> &size;
+
+        names_.clear();
+        for (Int32 i = 0; i < size; i++) {
+            std::string name;
+            stream >> &name;
+            names_.push_back(name);
+        }
+    }
+};
 

@@ -1,11 +1,4 @@
-﻿using DummyClient.Source.Network;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DummyClient.Source.Chatting
+﻿namespace DummyClient
 {
     class ChattingContents:ContentsProcess
     {
@@ -13,6 +6,27 @@ namespace DummyClient.Source.Chatting
         {
             PK_S_ANS_CHATTING packet=(PK_S_ANS_CHATTING)rowPacket;
             Program.programState_.putMessage(packet.name_+packet.text_);
+        }
+
+        public void notifyNewUser(PacketInterface rowPacket)
+        {
+            PK_S_ANS_NEW_USER_NOTIFY packet = (PK_S_ANS_NEW_USER_NOTIFY)rowPacket;
+            Program.programState_.putMessage(packet.name_+"님이 입장하셨습니다.");
+        }
+
+        public void notifyUserList(PacketInterface rowPacket)
+        {
+            PK_S_ANS_USER_LIST packet = (PK_S_ANS_USER_LIST)rowPacket;
+            if (packet.names_ == null || packet.names_.Count == 0)
+            {
+                Program.programState_.putMessage("현재 접속자가 없습니다.");
+                return;
+            }
+
+            foreach (string userName in packet.names_)
+            {
+                Program.programState_.putMessage($"현재 접속중: [{userName}]");
+            }
         }
     }
 }

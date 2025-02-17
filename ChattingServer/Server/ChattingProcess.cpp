@@ -60,6 +60,32 @@ void ChattingProcess::C_REQ_REGIST_CHATTING_NAME(Session* session, Packet* rowPa
 	UserManager::getInstance().insert(user);
 
 	SLog(L"* user [%s] created from [%S]", userName.data(), session->clientAddress().c_str());
+
+	PK_S_ANS_NEW_USER_NOTIFY notifyPacket;
+	notifyPacket.name_ = packet->name_;
+	UserManager::getInstance().broadcast(&notifyPacket, session->id());
+
+	PK_S_ANS_USER_LIST listPacket;
+	auto& userManager = UserManager::getInstance();
+	std::vector<pair<oid_t, User*>> users = userManager.getAllUsers();
+
+	SLog(L"* Current user count: %d", users.size());
+
+	for (const auto& userPair : users) {
+		if (userPair.first != session->id()) {  // 자신 제외
+			User* existingUser = userPair.second;
+			if (existingUser) {
+				array<char, SIZE_64> existingName;
+				StrConvW2A((WCHAR*)existingUser->name().c_str(), existingName.data(), existingName.size());
+				listPacket.names_.push_back(string(existingName.data()));
+
+				SLog(L"* Added user to list: %S", existingName.data());
+			}
+		}
+	}
+
+	SLog(L"* Sending user list with %d users", listPacket.names_.size());
+	session->sendPacket(&listPacket);
 }
 
 void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
@@ -82,6 +108,8 @@ void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
 
 	SLog(L"* send message %S, %S", retPacket.name_.c_str(), retPacket.text_.c_str());
 	session->sendPacket(&retPacket);
+
+	UserManager::getInstance().broadcast(&retPacket,session->id());
 }
 
 void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
@@ -100,3 +128,4 @@ void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
 }
+

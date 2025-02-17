@@ -3,12 +3,12 @@
     partial class DummyClient
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,36 +23,40 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            mainPanel_ = new Panel();
-            SuspendLayout();
+            this.mainPanel_ = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
             // mainPanel_
             // 
-            mainPanel_.Location = new Point(12, 12);
-            mainPanel_.Name = "mainPanel_";
-            mainPanel_.Size = new Size(734, 411);
-            mainPanel_.TabIndex = 0;
+            this.mainPanel_.Location = new System.Drawing.Point(5, 8);
+            this.mainPanel_.Name = "mainPanel_";
+            this.mainPanel_.Size = new System.Drawing.Size(608, 420);
+            this.mainPanel_.TabIndex = 0;
             // 
             // DummyClient
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 450);
-            Controls.Add(mainPanel_);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "DummyClient";
-            Text = "DummyClient";
-            Shown += DummyClient_Shown;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.mainPanel_);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "DummyClient";
+            this.Text = "DummyClient";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DummyClient_FormClosing);
+            this.Shown += new System.EventHandler(this.DummyClient_Shown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        public Panel mainPanel_;
+        public System.Windows.Forms.Panel mainPanel_;
+
     }
 }
+

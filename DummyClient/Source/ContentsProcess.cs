@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Forms;
 
-namespace DummyClient.Source
+namespace DummyClient
 {
     internal abstract class ContentsProcess
     {

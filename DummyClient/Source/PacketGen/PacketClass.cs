@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.IO;
-using DummyClient.Source.Network;
 using System.Net.Sockets;
 
 namespace DummyClient
@@ -346,6 +345,63 @@ namespace DummyClient
         {
             name_ = PacketUtil.decodestring(packet, ref offset);
             text_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_NEW_USER_NOTIFY : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_NEW_USER_NOTIFY; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_NEW_USER_NOTIFY; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_USER_LIST : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_USER_LIST; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_USER_LIST; }
+
+        public List<string> names_ = new List<string>();
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+
+            PacketUtil.encode(packet_, (Int32)names_.Count);
+
+            foreach (string name in names_)
+            {
+                PacketUtil.encode(packet_, name);
+            }
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            Int32 count = PacketUtil.decodeInt32(packet, ref offset);
+
+            names_.Clear();
+
+            for (int i = 0; i < count; i++)
+            {
+                string name = PacketUtil.decodestring(packet, ref offset);
+                names_.Add(name);
+            }
         }
         MemoryStream PacketInterface.getStream()
         {

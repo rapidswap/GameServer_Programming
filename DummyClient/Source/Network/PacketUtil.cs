@@ -1,11 +1,9 @@
-﻿using DummyClient.Source.Network;
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 
 namespace DummyClient
 {
-    // 패킷의 구성 성분을 만든다
     public static class PacketUtil
     {
         //--- encodeing 부분
@@ -16,8 +14,7 @@ namespace DummyClient
 
         public static void encode(MemoryStream packet, Byte value)
         {
-            // Byte 값을 바이트 배열로 변환하여 메모리 스트림에 작성
-            packet.WriteByte(value);
+            packet.Write(BitConverter.GetBytes(value), 0, sizeof(Byte));
         }
 
         public static void encode(MemoryStream packet, Char value)

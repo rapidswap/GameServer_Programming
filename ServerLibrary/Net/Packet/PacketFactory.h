@@ -29,6 +29,7 @@ public:
             case E_S_ANS_CHATTING:    return new PK_S_ANS_CHATTING();
             case E_S_ANS_NEW_USER_NOTIFY: return new PK_S_ANS_NEW_USER_NOTIFY();
             case E_S_ANS_USER_LIST: return new PK_S_ANS_USER_LIST();
+            case E_S_ANS_USER_EXIT_NOTIFY: return new PK_S_ANS_USER_EXIT_NOTIFY();
         }
         return nullptr;
     }

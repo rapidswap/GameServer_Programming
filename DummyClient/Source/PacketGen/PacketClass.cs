@@ -13,12 +13,16 @@ namespace DummyClient
     {
         Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_EXIT; }
         Int64 type() { return (Int64)PacketType.E_C_REQ_EXIT; }
+        public string name_;
+
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
+            name_ = PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {
@@ -29,12 +33,15 @@ namespace DummyClient
     {
         Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_EXIT; }
         Int64 type() { return (Int64)PacketType.E_S_ANS_EXIT; }
+        public string name_;
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
+            name_ = PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {
@@ -402,6 +409,27 @@ namespace DummyClient
                 string name = PacketUtil.decodestring(packet, ref offset);
                 names_.Add(name);
             }
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_USER_EXIT_NOTIFY : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_USER_EXIT_NOTIFY; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_USER_EXIT_NOTIFY; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {

@@ -115,27 +115,28 @@ void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
 void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 {
 	PK_C_REQ_EXIT* packet = (PK_C_REQ_EXIT*)rowPacket;
+	SLog(L"!!!test!!!");
 	User* user = UserManager::getInstance().at(session->id());
 	if (user == nullptr) {
 		SLog(L"! not registed : %s", session->clientAddress().c_str());
 		session->onClose();
 		return;
 	}
-	SLog(L"!!!test!!!");
-	array<WCHAR, SIZE_64> userName;
-	StrConvA2W((CHAR*)packet->name_.c_str(), userName.data(), userName.size());
+	
+	//array<WCHAR, SIZE_64> userName;
+	//StrConvA2W((CHAR*)packet->name_.c_str(), userName.data(), userName.size());
 
-	// 다른 유저들에게 퇴장 알림
-	PK_S_ANS_USER_EXIT_NOTIFY notifyPacket;
-	notifyPacket.name_ = packet->name_;
-	UserManager::getInstance().broadcast(&notifyPacket, session->id());
+	//// 다른 유저들에게 퇴장 알림
+	//PK_S_ANS_USER_EXIT_NOTIFY notifyPacket;
+	//notifyPacket.name_ = packet->name_;
+	//UserManager::getInstance().broadcast(&notifyPacket, session->id());
 
 	UserManager::getInstance().remove(session->id());
 
 	// 퇴장하는 유저에게 보내는 응답 패킷에 이름 설정 추가
 	PK_S_ANS_EXIT ansPacket;
-	ansPacket.name_ = packet->name_;  // 이 부분이 누락되어 있었음
+	//ansPacket.name_ = packet->name_;  // 이 부분이 누락되어 있었음
 
-	SLog(L"* recv exit packet by [%s], name: [%S]", session->clientAddress().c_str(), packet->name_.c_str());
+	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str(), packet->name_.c_str());
 	session->sendPacket(&ansPacket);
 }

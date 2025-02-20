@@ -4,6 +4,7 @@
 class User :public GameObject
 {
 	Session* session_;
+
 public:
 	User(Session* session)
 	{

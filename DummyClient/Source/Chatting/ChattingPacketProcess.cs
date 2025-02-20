@@ -29,9 +29,9 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CHATTING:
                     contents_.recvChatting(packet);
                     return;
-                case PacketType.E_S_ANS_USER_EXIT_NOTIFY:
-                    contents_.leaveUser(packet);
-                    return;
+                //case PacketType.E_S_ANS_USER_EXIT_NOTIFY:
+                //    contents_.leaveUser(packet);
+                //    return;
                 //case PacketType.E_S_ANS_EXIT:
                 //    contents_.leaveUser(packet);  // 먼저 퇴장 처리
                 //    if (Application.OpenForms["ChattingForm"] is ChattingForm chattingForm)

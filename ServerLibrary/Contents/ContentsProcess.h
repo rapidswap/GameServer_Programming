@@ -24,7 +24,7 @@ private:
 public:
 	ContentsProcess();
 	~ContentsProcess();
-	
+	virtual void onSessionClose(Session* session) {}
 	void putPackage(Package *package);
 
 	virtual void registSubPacketFunc() = 0;

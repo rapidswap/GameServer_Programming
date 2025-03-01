@@ -54,7 +54,7 @@ namespace DummyClient
         /*145*/
         E_S_ANS_USER_LIST = 145,
         /*146*/
-        E_S_ANS_USER_EXIT_NOTIFY = 146,
+        E_S_ANS_EXIT_USER_NOTIFY = 146,
 
     }
 };

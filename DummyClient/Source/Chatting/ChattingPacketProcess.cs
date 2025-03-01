@@ -29,19 +29,10 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CHATTING:
                     contents_.recvChatting(packet);
                     return;
-                //case PacketType.E_S_ANS_USER_EXIT_NOTIFY:
-                //    contents_.leaveUser(packet);
-                //    return;
-                //case PacketType.E_S_ANS_EXIT:
-                //    contents_.leaveUser(packet);  // 먼저 퇴장 처리
-                //    if (Application.OpenForms["ChattingForm"] is ChattingForm chattingForm)
-                //    {
-                //        chattingForm.BeginInvoke(new Action(() => {
-                //            chattingForm.Close();  // 채팅폼 닫기
-                //            Application.Exit();    // 프로그램 종료
-                //        }));
-                //    }
-                //    return;
+                //case PacketType.E_S_ANS_EXIT_USER_NOTIFY:
+                //    contents_.leaveUser(packet);  
+                   // return;
+
 
             }
             if (base.defaultRun(packet)==false)

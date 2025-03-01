@@ -61,7 +61,7 @@ void ContentsProcess::run(Package *package)
 	PacketType type = package->packet_->type();
 	auto itr = runFuncTable_.find(type);
 	if (itr == runFuncTable_.end()) {
-		SLog(L"! invaild packet runFunction. type[%d]", type);
+		SLog(L"! invalid packet runFunction. type[%d]", type);
 		package->session_->onClose();
 		return;
 	}
@@ -109,9 +109,10 @@ void ContentsProcess::Packet_Notify_Terminal(Session *session, Packet *rowPacket
 
 void ContentsProcess::C_REQ_EXIT(Session *session, Packet *rowPacket)
 {
-	//클라이언트 read thread 를 종료시켜 주기 위해 처리
 	PK_C_REQ_EXIT *packet = (PK_C_REQ_EXIT *)rowPacket;
 	PK_S_ANS_EXIT ansPacket;
+
+	SLog(L"ContentsPro!!!test!!!");
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
 }

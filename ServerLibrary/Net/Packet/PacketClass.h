@@ -14,33 +14,33 @@ class PK_C_REQ_EXIT : public Packet
 {
 public:
     PacketType type() { return E_C_REQ_EXIT; }
-    std::string     name_;
+    //std::string     name_;
+    //void encode(Stream& stream) {
+    //    stream << (Int64)this->type();
+    //    stream << name_;
+    //}
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
-        stream << name_;
-    }
-
-    void decode(Stream& stream) {
-        stream >> &name_;
-    }
+    //void decode(Stream& stream) {
+    //    stream >> &name_;
+    //}
 };
 
 class PK_S_ANS_EXIT : public Packet
 {
+
 public:
-    PacketType type() { return E_S_ANS_EXIT; }  
+    
+    PacketType type() { return E_S_ANS_EXIT; }
+    //std::string     name_;
+    //void encode(Stream& stream) {
+    //    stream << (Int64)this->type();
+    //    stream << name_;
+    //}
 
-    std::string     name_;
+    //void decode(Stream& stream) {
+    //    stream >> &name_;
+    //}
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
-        stream << name_;
-    }
-
-    void decode(Stream& stream) {
-        stream >> &name_;
-    }
 };
 
 class PK_I_NOTIFY_TERMINAL : public Packet
@@ -342,9 +342,7 @@ class PK_S_ANS_USER_EXIT_NOTIFY : public Packet
 {
 public:
     PacketType type() { return E_S_ANS_USER_EXIT_NOTIFY; }
-
-    std::string name_;
-
+    std::string     name_;
     void encode(Stream& stream) {
         stream << (Int64)this->type();
         stream << name_;
@@ -354,6 +352,7 @@ public:
         stream >> &name_;
     }
 };
+
 
 
 

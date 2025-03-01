@@ -28,50 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_input_ = new System.Windows.Forms.TextBox();
-            this.richTextBox_view_ = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+            textBox_input_ = new TextBox();
+            richTextBox_view_ = new RichTextBox();
+            button_quit_ = new Button();
+            SuspendLayout();
             // 
             // textBox_input_
             // 
-            this.textBox_input_.Location = new System.Drawing.Point(20, 314);
-            this.textBox_input_.Name = "textBox_input_";
-            this.textBox_input_.Size = new System.Drawing.Size(456, 21);
-            this.textBox_input_.TabIndex = 3;
-            this.textBox_input_.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_input_KeyDown);
+            textBox_input_.Location = new Point(20, 392);
+            textBox_input_.Margin = new Padding(3, 4, 3, 4);
+            textBox_input_.Name = "textBox_input_";
+            textBox_input_.Size = new Size(456, 23);
+            textBox_input_.TabIndex = 3;
+            textBox_input_.KeyDown += textBox_input_KeyDown;
             // 
             // richTextBox_view_
             // 
-            this.richTextBox_view_.BackColor = System.Drawing.Color.Teal;
-            this.richTextBox_view_.ForeColor = System.Drawing.Color.White;
-            this.richTextBox_view_.Location = new System.Drawing.Point(20, 12);
-            this.richTextBox_view_.Name = "richTextBox_view_";
-            this.richTextBox_view_.ReadOnly = true;
-            this.richTextBox_view_.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_view_.Size = new System.Drawing.Size(457, 296);
-            this.richTextBox_view_.TabIndex = 2;
-            this.richTextBox_view_.Text = "";
+            richTextBox_view_.BackColor = Color.Teal;
+            richTextBox_view_.ForeColor = Color.White;
+            richTextBox_view_.Location = new Point(20, 15);
+            richTextBox_view_.Margin = new Padding(3, 4, 3, 4);
+            richTextBox_view_.Name = "richTextBox_view_";
+            richTextBox_view_.ReadOnly = true;
+            richTextBox_view_.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBox_view_.Size = new Size(457, 369);
+            richTextBox_view_.TabIndex = 2;
+            richTextBox_view_.Text = "";
+            // 
+            // button_quit_
+            // 
+            button_quit_.Location = new Point(197, 453);
+            button_quit_.Margin = new Padding(3, 4, 3, 4);
+            button_quit_.Name = "button_quit_";
+            button_quit_.Size = new Size(75, 29);
+            button_quit_.TabIndex = 6;
+            button_quit_.Text = "종료";
+            button_quit_.UseVisualStyleBackColor = true;
+            button_quit_.Click += button1_Click;
             // 
             // ChattingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(498, 349);
-            this.Controls.Add(this.textBox_input_);
-            this.Controls.Add(this.richTextBox_view_);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ChattingForm";
-            this.Text = "ChattingForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(498, 495);
+            Controls.Add(button_quit_);
+            Controls.Add(textBox_input_);
+            Controls.Add(richTextBox_view_);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ChattingForm";
+            Text = "ChattingForm";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.TextBox textBox_input_;
         private System.Windows.Forms.RichTextBox richTextBox_view_;
+        private Button button_quit_;
     }
 }

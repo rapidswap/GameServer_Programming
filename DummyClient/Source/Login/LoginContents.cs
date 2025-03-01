@@ -25,5 +25,10 @@ namespace DummyClient
             rPacket.name_ = packet.name_;
             Program.programState_.sendPacket(rPacket);
         }
+
+        public void S_ANS_EXIT(PacketInterface rowPacket)
+        {
+            MessageBox.Show("종료 됨", "확인", MessageBoxButtons.OK);
+        }
     }
 }

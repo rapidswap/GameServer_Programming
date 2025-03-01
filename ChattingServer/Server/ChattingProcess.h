@@ -5,6 +5,7 @@ class ChattingProcess : public ContentsProcess
 {
 public:
 	ChattingProcess();
+	virtual void onSessionClose(Session* session) override;
 private:
 	void registSubPacketFunc();
 

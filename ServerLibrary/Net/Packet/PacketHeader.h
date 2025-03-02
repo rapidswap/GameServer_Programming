@@ -21,11 +21,5 @@ enum PacketType : Int64 {
     /*143*/    E_S_ANS_CHATTING = 143,
     /*144*/    E_S_ANS_NEW_USER_NOTIFY = 144,
     /*145*/    E_S_ANS_USER_LIST = 145,
-<<<<<<< HEAD
-    /*146*/    E_S_ANS_USER_EXIT_NOTIFY=146,
 
-    
-=======
-
->>>>>>> parent of 03a8f5d (EXIT notify)
 };

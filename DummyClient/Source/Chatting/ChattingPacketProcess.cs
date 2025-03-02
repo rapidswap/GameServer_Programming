@@ -29,14 +29,6 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CHATTING:
                     contents_.recvChatting(packet);
                     return;
-<<<<<<< HEAD
-                //case PacketType.E_S_ANS_EXIT_USER_NOTIFY:
-                //    contents_.leaveUser(packet);
-                //    return;
-
-
-=======
->>>>>>> parent of 03a8f5d (EXIT notify)
             }
             if (base.defaultRun(packet)==false)
             {

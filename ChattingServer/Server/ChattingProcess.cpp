@@ -128,39 +128,8 @@ void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 	UserManager::getInstance().remove(session->id());
 
 	PK_S_ANS_EXIT ansPacket;
-<<<<<<< HEAD
-	SLog(L"chattingPro!!!test!!!");
-=======
->>>>>>> parent of 03a8f5d (EXIT notify)
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
 
 }
 
-<<<<<<< HEAD
-//void ChattingProcess::S_ANS_EXIT(Session* session, Packet* rowPacket)
-//{
-//	PK_S_ANS_EXIT* packet = (PK_S_ANS_EXIT*)rowPacket;
-//
-//	User* user = UserManager::getInstance().at(session->id());
-//	if (user == nullptr) {
-//		SLog(L"! not registed : %s", session->clientAddress().c_str());
-//		session->onClose();
-//		return;
-//	}
-//
-//	user = new User(session);
-//
-//	array<WCHAR, SIZE_64> userName;
-//	StrConvA2W((CHAR*)packet->name_.c_str(), userName.data(), userName.size());
-//	user->setName(userName.data());
-//	UserManager::getInstance().insert(user);
-//
-//	PK_S_ANS_USER_EXIT_NOTIFY notiPacket;
-//	notiPacket.name_ = packet->name_;
-//	UserManager::getInstance().broadcast(&notiPacket, session->id());
-//
-//	UserManager::getInstance().remove(session->id());
-//}
-=======
->>>>>>> parent of 03a8f5d (EXIT notify)

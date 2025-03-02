@@ -30,8 +30,8 @@ namespace DummyClient
                     contents_.recvChatting(packet);
                     return;
                 //case PacketType.E_S_ANS_EXIT_USER_NOTIFY:
-                //    contents_.leaveUser(packet);  
-                   // return;
+                //    contents_.leaveUser(packet);
+                //    return;
 
 
             }

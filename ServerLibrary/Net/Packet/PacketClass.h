@@ -31,16 +31,15 @@ class PK_S_ANS_EXIT : public Packet
 public:
     
     PacketType type() { return E_S_ANS_EXIT; }
-    //std::string     name_;
-    //void encode(Stream& stream) {
-    //    stream << (Int64)this->type();
-    //    stream << name_;
-    //}
+    std::string     name_;
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
 
-    //void decode(Stream& stream) {
-    //    stream >> &name_;
-    //}
-
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
 };
 
 class PK_I_NOTIFY_TERMINAL : public Packet

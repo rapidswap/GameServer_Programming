@@ -15,6 +15,7 @@ void ChattingProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(C_REQ_REGIST_CHATTING_NAME);
 	INSERT_PACKET_PROCESS(C_REQ_CHATTING);
 	INSERT_PACKET_PROCESS(C_REQ_EXIT);
+	//INSERT_PACKET_PROCESS(S_ANS_EXIT);
 	
 }
 
@@ -115,7 +116,7 @@ void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
 
 void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 {
-	/*PK_C_REQ_EXIT* packet = (PK_C_REQ_EXIT*)rowPacket;
+	PK_C_REQ_EXIT* packet = (PK_C_REQ_EXIT*)rowPacket;
 	SLog(L"chattingPro!!!test!!!");
 	User* user = UserManager::getInstance().at(session->id());
 	if (user == nullptr) {
@@ -127,48 +128,32 @@ void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 
 	PK_S_ANS_EXIT ansPacket;
 	SLog(L"chattingPro!!!test!!!");
-	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
-	session->sendPacket(&ansPacket);*/
-
-	User* user = UserManager::getInstance().at(session->id());
-	if (user == nullptr) {
-		SLog(L"! not registed : %s", session->clientAddress().c_str());
-		session->onClose();
-		return;
-	}
-
-	// 퇴장하는 유저의 이름 변환
-	array<char, SIZE_64> exitUserName;
-	StrConvW2A((WCHAR*)user->name().c_str(), exitUserName.data(), exitUserName.size());
-
-	// 퇴장 메시지를 다른 유저들에게 브로드캐스트
-	PK_S_ANS_CHATTING exitMsg;
-	exitMsg.name_ = "System";
-	exitMsg.text_ = string(exitUserName.data()) + string(" has left the chat");
-	UserManager::getInstance().broadcast(&exitMsg, session->id());  // 자신을 제외한 브로드캐스트
-
-	// 유저 제거
-	UserManager::getInstance().remove(session->id());
-
-	PK_S_ANS_EXIT ansPacket;
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
-}
-void ChattingProcess::onSessionClose(Session* session)
-{
-	User* user = UserManager::getInstance().at(session->id());
-	if (user != nullptr) {
-		// 퇴장하는 유저의 이름 변환
-		array<char, SIZE_64> exitUserName;
-		StrConvW2A((WCHAR*)user->name().c_str(), exitUserName.data(), exitUserName.size());
 
-		// 퇴장 메시지를 다른 유저들에게 브로드캐스트
-		PK_S_ANS_CHATTING exitMsg;
-		exitMsg.name_ = "System";
-		exitMsg.text_ = string(exitUserName.data()) + string(" has disconnected");
-		UserManager::getInstance().broadcast(&exitMsg, session->id());  // 자신을 제외한 브로드캐스트
-
-		// 유저 제거
-		UserManager::getInstance().remove(session->id());
-	}
 }
+
+//void ChattingProcess::S_ANS_EXIT(Session* session, Packet* rowPacket)
+//{
+//	PK_S_ANS_EXIT* packet = (PK_S_ANS_EXIT*)rowPacket;
+//
+//	User* user = UserManager::getInstance().at(session->id());
+//	if (user == nullptr) {
+//		SLog(L"! not registed : %s", session->clientAddress().c_str());
+//		session->onClose();
+//		return;
+//	}
+//
+//	user = new User(session);
+//
+//	array<WCHAR, SIZE_64> userName;
+//	StrConvA2W((CHAR*)packet->name_.c_str(), userName.data(), userName.size());
+//	user->setName(userName.data());
+//	UserManager::getInstance().insert(user);
+//
+//	PK_S_ANS_USER_EXIT_NOTIFY notiPacket;
+//	notiPacket.name_ = packet->name_;
+//	UserManager::getInstance().broadcast(&notiPacket, session->id());
+//
+//	UserManager::getInstance().remove(session->id());
+//}

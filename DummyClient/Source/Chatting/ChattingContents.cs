@@ -14,12 +14,12 @@
             Program.programState_.putMessage(packet.name_+"님이 입장하셨습니다.");
         }
 
-        //public void leaveUser(PacketInterface rowPacket)
-        //{
-        //    PK_S_ANS_EXIT_USER_NOTIFY packet = (PK_S_ANS_EXIT_USER_NOTIFY)rowPacket;
-        //    Program.programState_.putMessage($"{packet.name_}님이 퇴장하셨습니다.");
-            
-        //}
+        public void leaveUser(PacketInterface rowPacket)
+        {
+            PK_S_ANS_EXIT_USER_NOTIFY packet = (PK_S_ANS_EXIT_USER_NOTIFY)rowPacket;
+            Program.programState_.putMessage($"{packet.name_}님이 퇴장하셨습니다.");
+
+        }
 
         public void notifyUserList(PacketInterface rowPacket)
         {

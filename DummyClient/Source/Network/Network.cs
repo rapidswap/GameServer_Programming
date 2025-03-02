@@ -76,13 +76,11 @@ namespace DummyClient
 
         public void disConnect()
         {
-            
             state_ = NET_STATE.DISCONNECT;
             PK_C_REQ_EXIT packet = new PK_C_REQ_EXIT();
             PK_S_ANS_EXIT exitPacket=new PK_S_ANS_EXIT();
             this.sendPacket(exitPacket);
             this.sendPacket(packet);
-            
         }
 
         public void setPacketProcess(PacketProcess packetProcess)

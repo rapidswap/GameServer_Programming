@@ -16,6 +16,9 @@
     <Filter Include="Util\tinyXml">
       <UniqueIdentifier>{fe4488fe-e708-4358-85fa-85aab140c823}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Network\Asio">
+      <UniqueIdentifier>{578f3ed4-fa44-4509-a40a-c16459b8bd43}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Network\Iocp">
       <UniqueIdentifier>{86505370-5b63-4c32-a95c-120bad82b8f8}</UniqueIdentifier>
     </Filter>
@@ -148,6 +151,12 @@
     <ClInclude Include="Net\Session.h">
       <Filter>Network</Filter>
     </ClInclude>
+    <ClInclude Include="Net\Asio\ASIOSession.h">
+      <Filter>Network\Asio</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Asio\ASIOServer.h">
+      <Filter>Network\Asio</Filter>
+    </ClInclude>
     <ClInclude Include="Database\Query.h">
       <Filter>Database</Filter>
     </ClInclude>
@@ -272,6 +281,12 @@
     </ClCompile>
     <ClCompile Include="Net\SessionManager.cpp">
       <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Asio\ASIOSession.cpp">
+      <Filter>Network\Asio</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Asio\ASIOServer.cpp">
+      <Filter>Network\Asio</Filter>
     </ClCompile>
     <ClCompile Include="Database\Query.cpp">
       <Filter>Database</Filter>

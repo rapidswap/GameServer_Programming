@@ -12,6 +12,6 @@ private:
 	static void I_DB_ANS_PARSE_DATA(Session* session, Packet* rowPacket);
 	static void C_REQ_REGIST_CHATTING_NAME(Session* session, Packet* rowPacket);
 	static void C_REQ_CHATTING(Session* session, Packet* rowPacket);
-	static void C_REQ_EXIT(Session* session, Packet* rowPacket);
-	//static void S_ANS_EXIT(Session* session, Packet* rowPacket);
+	//static void C_REQ_EXIT(Session* session, Packet* rowPacket);
+	static void C_REQ_CHAT_EXIT(Session* session, Packet* rowPacket);
 };

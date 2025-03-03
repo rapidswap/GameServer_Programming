@@ -33,6 +33,8 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CHATTING: return new PK_S_ANS_CHATTING();
                 case PacketType.E_S_ANS_NEW_USER_NOTIFY:return new PK_S_ANS_NEW_USER_NOTIFY();
                 case PacketType.E_S_ANS_USER_LIST:return new PK_S_ANS_USER_LIST();
+                case PacketType.E_S_ANS_EXIT_USER:return new PK_S_ANS_EXIT_USER();
+                case PacketType.E_C_REQ_CHAT_EXIT:return new PK_C_REQ_CHAT_EXIT();
             }
             return null;
         }

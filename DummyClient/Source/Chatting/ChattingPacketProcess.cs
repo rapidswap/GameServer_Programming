@@ -29,6 +29,12 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CHATTING:
                     contents_.recvChatting(packet);
                     return;
+                case PacketType.E_S_ANS_EXIT_USER:
+                    contents_.C_REQ_CHAT_EXIT(packet);
+                    return;
+                case PacketType.E_S_ANS_EXIT:
+                    return;
+                
             }
             if (base.defaultRun(packet)==false)
             {

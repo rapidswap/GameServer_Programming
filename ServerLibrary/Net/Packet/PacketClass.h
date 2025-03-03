@@ -320,3 +320,34 @@ public:
     }
 };
 
+class PK_S_ANS_EXIT_USER :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_EXIT_USER; }
+
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
+};
+class PK_C_REQ_CHAT_EXIT :public Packet
+{
+public:
+    PacketType type() { return E_C_REQ_CHAT_EXIT; }
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
+};

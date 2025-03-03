@@ -30,7 +30,7 @@
         {
             textBox_input_ = new TextBox();
             richTextBox_view_ = new RichTextBox();
-            button_quit_ = new Button();
+            exitButton_ = new Button();
             SuspendLayout();
             // 
             // textBox_input_
@@ -55,16 +55,15 @@
             richTextBox_view_.TabIndex = 2;
             richTextBox_view_.Text = "";
             // 
-            // button_quit_
+            // exitButton_
             // 
-            button_quit_.Location = new Point(197, 453);
-            button_quit_.Margin = new Padding(3, 4, 3, 4);
-            button_quit_.Name = "button_quit_";
-            button_quit_.Size = new Size(75, 29);
-            button_quit_.TabIndex = 6;
-            button_quit_.Text = "종료";
-            button_quit_.UseVisualStyleBackColor = true;
-            button_quit_.Click += button1_Click;
+            exitButton_.Location = new Point(192, 439);
+            exitButton_.Name = "exitButton_";
+            exitButton_.Size = new Size(75, 23);
+            exitButton_.TabIndex = 4;
+            exitButton_.Text = "button1";
+            exitButton_.UseVisualStyleBackColor = true;
+            exitButton_.Click += leaveUsers;
             // 
             // ChattingForm
             // 
@@ -73,7 +72,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(498, 495);
-            Controls.Add(button_quit_);
+            Controls.Add(exitButton_);
             Controls.Add(textBox_input_);
             Controls.Add(richTextBox_view_);
             FormBorderStyle = FormBorderStyle.None;
@@ -88,6 +87,6 @@
 
         private System.Windows.Forms.TextBox textBox_input_;
         private System.Windows.Forms.RichTextBox richTextBox_view_;
-        private Button button_quit_;
+        private Button exitButton_;
     }
 }

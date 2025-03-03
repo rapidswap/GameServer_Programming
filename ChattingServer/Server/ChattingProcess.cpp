@@ -14,8 +14,7 @@ void ChattingProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_DB_ANS_PARSE_DATA);
 	INSERT_PACKET_PROCESS(C_REQ_REGIST_CHATTING_NAME);
 	INSERT_PACKET_PROCESS(C_REQ_CHATTING);
-	INSERT_PACKET_PROCESS(C_REQ_EXIT);
-	//INSERT_PACKET_PROCESS(S_ANS_EXIT);
+	INSERT_PACKET_PROCESS(C_REQ_CHAT_EXIT);
 	
 }
 
@@ -114,10 +113,11 @@ void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
 	UserManager::getInstance().broadcast(&retPacket,session->id());
 }
 
-void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
+void ChattingProcess::C_REQ_CHAT_EXIT(Session* session, Packet* rowPacket)
 {
 	//클라이언트 read thread 를 종료시켜 주기 위해 처리
-	PK_C_REQ_EXIT* packet = (PK_C_REQ_EXIT*)rowPacket;
+	
+	PK_C_REQ_CHAT_EXIT* packet = (PK_C_REQ_CHAT_EXIT*)rowPacket;
 	SLog(L"chattingPro!!!test!!!");
 	User* user = UserManager::getInstance().at(session->id());
 	if (user == nullptr) {
@@ -125,11 +125,19 @@ void ChattingProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 		session->onClose();
 		return;
 	}
+
+	PK_S_ANS_EXIT_USER exitPacket;
+	array<char, SIZE_64> name;
+	StrConvW2A((WCHAR*)user->name().c_str(), name.data(), name.size());
+	exitPacket.name_ = name.data();
+	SLog(L"exitUser!!!test!!! Name: %S", exitPacket.name_.c_str());
+	UserManager::getInstance().broadcast(&exitPacket, session->id());
 	UserManager::getInstance().remove(session->id());
 
 	PK_S_ANS_EXIT ansPacket;
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
-
 }
+
+
 

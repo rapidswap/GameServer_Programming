@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,13 +51,16 @@ namespace DummyClient
             chatWnd_.pushText(text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void leaveUsers(object sender, EventArgs e)
         {
-            PK_C_REQ_EXIT exitPacket=new PK_C_REQ_EXIT();
-            
-            Program.programState_.sendPacket(exitPacket);
-            this.Dispose();
+            //PK_C_REQ_EXIT exitPacket = new PK_C_REQ_EXIT();
+            PK_C_REQ_CHAT_EXIT exitUserPacket = new PK_C_REQ_CHAT_EXIT();
+            Program.programState_.sendPacket(exitUserPacket);
+            // Program.programState_.sendPacket(exitPacket);
             Application.Exit();
         }
+
+
     }
 }

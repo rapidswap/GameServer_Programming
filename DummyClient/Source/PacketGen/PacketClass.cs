@@ -20,10 +20,6 @@ namespace DummyClient
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
         }
-        void PacketInterface.decode(byte[] packet, ref int offset)
-        {
->>>>>>> parent of 03a8f5d (EXIT notify)
-        }
         MemoryStream PacketInterface.getStream()
         {
             return packet_;
@@ -412,6 +408,45 @@ namespace DummyClient
             return packet_;
         }
     }
-=======
->>>>>>> parent of 03a8f5d (EXIT notify)
+
+    public class PK_S_ANS_EXIT_USER : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_EXIT_USER; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_EXIT_USER; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_REQ_CHAT_EXIT : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_CHAT_EXIT; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_CHAT_EXIT; }
+        //public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+           // PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+           // name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
 }

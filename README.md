@@ -35,4 +35,6 @@ PC 클라이언트
     
     K --> Z
 
+### 시퀀스 다이어그램
+![Image](https://github.com/user-attachments/assets/84176ed8-2006-499d-9302-837f73633e88)
 

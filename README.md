@@ -146,3 +146,8 @@ flowchart TD
 
 ## 마무리
 이 시스템은 모듈화된 서버 라이브러리와 효율적인 패킷/데이터베이스 처리, 그리고 다수의 클라이언트를 동시에 지원하는 네트워크 구조를 통해 높은 확장성과 안정성을 제공합니다. 각 모듈은 독립적으로 관리되며, 필요에 따라 손쉽게 기능 확장이 가능하도록 설계되었습니다.
+
+## 참고자료
+[게임 서버 프로그래밍 입문](https://product.kyobobook.co.kr/detail/S000060600761)
+[윤성우 열혈 TCP/IP 소켓 프로그래밍] (https://product.kyobobook.co.kr/detail/S000001589146)
+[게임 서버 프로그래밍 교과서] (https://product.kyobobook.co.kr/detail/S000001792817)

@@ -63,9 +63,7 @@ threadId_t Lock::threadId()
 	return threadId_;
 }
 //-------------------------------------------------------//
-// 생성자에서 락을 걸고, 스코프 빠져나가는 객체 해제시 락을 푼다.
-// std::lock_guard<lock_t> guard(lock) 과 같은거지만, 
-// 데드락 감지를 위해 직접 구현한다.
+
 LockSafeScope::LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo)
 {
 	if (lock == nullptr) {
@@ -109,15 +107,10 @@ LockManager::LockManager()
 	idSeed_ = 0;
 }
 
-/*
-락은 자신이 걸린 threadId를,
-Thread에서는 걸고있는 Lock 번호가 있음.
-이들을 따라가 보다가 자신이 걸려는 lock이 나오면 lock 순환
-즉 데드락 처리.
-*/
+
 Lock* LockManager::searchLockCycle(Lock *newLock)
 {
-	//list 따라 lock 이름을 비교해 본다.
+
 	Thread *thread = ThreadManager::getInstance().at(GET_CURRENT_THREAD_ID());
 	if (!thread) {
 		return nullptr;

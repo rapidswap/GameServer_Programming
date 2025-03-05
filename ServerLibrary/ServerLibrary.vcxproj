@@ -202,9 +202,7 @@
     <ClInclude Include="Util\Memory_LowFragmentationHeap.h" />
     <ClInclude Include="Util\Minidump.h" />
     <ClInclude Include="Util\Monitoring.h" />
-    <ClInclude Include="Util\RandomMT.h" />
     <ClInclude Include="Util\Singleton.h" />
-    <ClInclude Include="Util\SMTPMail.h" />
     <ClInclude Include="Util\Table.h" />
     <ClInclude Include="Util\Task.h" />
     <ClInclude Include="Util\Thread.h" />
@@ -247,7 +245,6 @@
     <ClCompile Include="Util\Lock.cpp" />
     <ClCompile Include="Util\Logger.cpp" />
     <ClCompile Include="Util\Minidump.cpp" />
-    <ClCompile Include="Util\SMTPMail.cpp" />
     <ClCompile Include="Util\Task.cpp" />
     <ClCompile Include="Util\Thread.cpp" />
     <ClCompile Include="Util\tinyXml\tinystr.cpp" />

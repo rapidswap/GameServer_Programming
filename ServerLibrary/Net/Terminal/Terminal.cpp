@@ -57,7 +57,7 @@ CONNECT_START:
 			break;
 		}
 		SLog(L"* try connect [%s] server[%S]:[%d]... [%d]", name_.c_str(), ip_, port_, tryCount++);
-		Sleep(1000);        // 1초마다 연결 시도
+		Sleep(1000);        
 	}
 	status_ = TERMINAL_READY;
 

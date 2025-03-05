@@ -33,7 +33,7 @@ LogFile::~LogFile()
         return;
     }
 
-    //뒤에 로그파일이 붙으면 종료시, 종료시각을 파일이름 뒤에 붙여줍니다.
+
     wstr_t closeFileName = fileName_.substr(0, found);
     closeFileName += CLOCK.nowTime(L"_%Y%m%d-%H%M%S.log");
     _wrename(fileName_.c_str(), closeFileName.c_str());
@@ -109,7 +109,7 @@ void LogWriter::log(WCHAR *fmt, va_list args)
 
 	logMessage += L"\t";
 
-	// 쓰레드 정보 넣기
+
 	Thread *thread = ThreadManager::getInstance().at(threadId);
 	if (thread) {
 		logMessage += thread->name();

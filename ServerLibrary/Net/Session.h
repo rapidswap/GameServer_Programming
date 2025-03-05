@@ -1,7 +1,6 @@
 #pragma once
 #include "stdafx.h"
-// 유저 세션 구조체
-// PC 온라인 게임 기준으로 작성하여서, 모바일 환경시 수정이 필요함.
+
 
 struct SOCKET_DATA {
 	SOCKET				socket_;

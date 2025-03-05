@@ -15,8 +15,7 @@ void LoginProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_LOGIN_NOTIFY_ID_LOADED);
 }
 
-//---------------------------------------------------------------//
-//패킷 처리 정의
+
 void LoginProcess::C_REQ_ID_PW(Session *session, Packet *rowPacket)
 {
 	PK_C_REQ_ID_PW *packet = (PK_C_REQ_ID_PW *)rowPacket;

@@ -12,7 +12,7 @@ public:
 	}
 
 	QI_DB_REQ_LOAD_DATA() {
-		statement_->setQuery(this->procedure(), QUERY_CALL_BACK);		// 실행할 쿼리 설정
+		statement_->setQuery(this->procedure(), QUERY_CALL_BACK);		
 	}
 
 	~QI_DB_REQ_LOAD_DATA() {

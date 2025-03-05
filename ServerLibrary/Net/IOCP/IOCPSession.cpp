@@ -75,17 +75,13 @@ bool IoData::setData(Stream &stream)
 	packet_size_t offset = 0;
 
 	char *buf = buffer_.data();
-	//									 head size  + real data size
 	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
-	// insert packet len
 	memcpy_s(buf + offset, buffer_.max_size(), (void *)packetLen, packetHeaderSize);
 	offset += packetHeaderSize;
 
-	// packet obfuscation
 	PacketObfuscation::getInstance().encodingHeader((Byte*)buf, packetHeaderSize);
 	PacketObfuscation::getInstance().encodingData((Byte*)stream.data(), stream.size());
 
-	// insert packet data
 	memcpy_s(buf + offset, buffer_.max_size(), stream.data(), (int32_t)stream.size());
 	offset += (packet_size_t)stream.size();
 

@@ -1,8 +1,6 @@
 #pragma once
 #include "stdafx.h"
 
-// 컨텐츠를 여기서 파생해서 구현합니다.
-
 #define MAX_PACKET_THREAD_		SIZE_64
 class ContentsProcess
 {
@@ -28,7 +26,7 @@ public:
 
 	virtual void registSubPacketFunc() = 0;
 
-	// 기본 패킷 기능 구현
+
 	static void Packet_HeartBeat(Session *session, Packet *rowPacket);
 	static void Packet_Notify_Terminal(Session *session, Packet *rowPacket);
 	static void C_REQ_EXIT(Session *session, Packet *rowPacket);

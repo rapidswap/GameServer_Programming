@@ -38,7 +38,6 @@ class GameObject : public NameObject, public Work
 	float		direction_;
 
 public:
-	// 클래스 이름 마다 소멸자 이름이 다르므로, free로 통일 시키자
 	virtual ~GameObject() 
 	{
 		this->free();

@@ -49,7 +49,7 @@ bool SessionManager::addSession(Session *session)
 	return true;
 }
 
-//소켓을 닫으라는 클라이언트에게 보냅니다.
+
 bool SessionManager::closeSession(Session *session)
 {
 	SAFE_LOCK(lock_);
@@ -70,7 +70,7 @@ bool SessionManager::closeSession(Session *session)
 	return false;
 }
 
-//소켓을 강제로 닫습니다.
+
 void SessionManager::forceCloseSession(Session *session)
 {
 	SAFE_LOCK(lock_);
@@ -78,7 +78,7 @@ void SessionManager::forceCloseSession(Session *session)
 		return;
 	}
 
-	//우아한 종료 유도. 원래는 클라이언트에서 서버 접속을 종료하도록 유도해야 한다.
+	//우아한 종료 유도. 
 	LINGER linger;
 	linger.l_onoff = 1;   //사용
 	linger.l_linger = 0;  //대기시간, 0일시 완료 안된 패킷 버리고 즉시 종료.
@@ -126,11 +126,11 @@ void SessionManager::runCommand(wstr_t cmdLine)
 	}
 }
 
-// 서버에서 내리는 치트키 정의
+// 치트키
 void SessionManager::commandFuncInitialize()
 {
 #if 0
-    //기본적인 3개만 생성, 이후 늘어나면 별도 클래스로 분리
+
     auto notiyFunc = [](SessionList *sessionList, wstr_t *arg) {
         auto eachFunc = [arg](void *atom) {
             Session *session = (Session*)atom;

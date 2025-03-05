@@ -92,7 +92,6 @@ void ContentsProcess::process()
 	}
 }
 
-// 기본 패킷 기능 구현
 void ContentsProcess::Packet_HeartBeat(Session *session, Packet *rowPacket)
 {
 	if (session->type() != SESSION_TYPE_CLIENT) {

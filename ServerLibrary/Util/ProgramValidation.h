@@ -29,10 +29,10 @@ class ProgramValidation
 			tick_t expireTick = serverBirthTick_ + DAY_TO_TICK(30);
 			tick_t now = CLOCK.systemTick();
 			if (!isInRange(serverBirthTick_, now, expireTick)) {
-				sendMail("serverAlert@server.com",
-					"serverProgramer@server.com",
-					"[EXPIRE] 서버 유효성 체크 실패",
-					"IP주소, port 번호등...");
+				//sendMail("serverAlert@server.com",
+				//	"serverProgramer@server.com",
+				//	"[EXPIRE] 서버 유효성 체크 실패",
+				//	"IP주소, port 번호등...");
 #ifndef _DEBUG
 				exit(1);
 #endif //_DEBUG
@@ -48,7 +48,7 @@ class ProgramValidation
 			struct tm t;
 			memset(&t, 0, sizeof(struct tm));
 
-			birthDate << __DATE__;		//컴파일 날짜
+			birthDate << __DATE__;		
 			birthDate.imbue(loc);
 			basic_istream<char>::_Iter i = use_facet
 				<time_get <char> >
@@ -77,7 +77,7 @@ public:
 	ProgramValidation()
 	{
 		ProgramExpire checkExpire;
-		//this->checkSMTP();
+
 	}
 };
 

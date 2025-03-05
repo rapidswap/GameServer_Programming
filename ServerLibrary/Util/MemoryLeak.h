@@ -7,8 +7,8 @@
 
 #ifdef USE_VISUAL_LEAK_DETECTOR
 #include <vld.h>
-//단 vld 의 경우 프로그램 종료시의 메모리 릭도 탐지해 표시함 ;ㅁ;
-#else //USE_VISUAL_LEAK_DETECTOR
+
+#else 
 
 
 #define _CRTDBG_MAP_ALLOC

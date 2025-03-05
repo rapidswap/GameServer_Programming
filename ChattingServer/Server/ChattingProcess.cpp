@@ -115,7 +115,6 @@ void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
 
 void ChattingProcess::C_REQ_CHAT_EXIT(Session* session, Packet* rowPacket)
 {
-	//클라이언트 read thread 를 종료시켜 주기 위해 처리
 	
 	PK_C_REQ_CHAT_EXIT* packet = (PK_C_REQ_CHAT_EXIT*)rowPacket;
 	SLog(L"chattingPro!!!test!!!");

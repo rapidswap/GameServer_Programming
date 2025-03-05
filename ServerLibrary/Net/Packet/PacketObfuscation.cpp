@@ -4,7 +4,6 @@
 
 XorObfuscation::XorObfuscation()
 {
-	//암호 선택에 대해서는 조금 고민해 볼것.
 	key_ = PACKET_MAKE_DATE;
 	keyLength_ = (int)key_.length();
 }
@@ -43,7 +42,6 @@ void XorObfuscation::decodingData(Byte *packet, size_t packetLen)
 //--------------------------------------------------------//
 PacketObfuscation::PacketObfuscation()
 {
-	//Todo : xor 말고 다른 알고리즘도 만들어서 config xml에서 선택하게 하기
 	obfuscation_ = new XorObfuscation();
 }
 

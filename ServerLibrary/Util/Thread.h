@@ -27,8 +27,6 @@ public:
 //#define THREAD_POOL_HASHMAP
 class ThreadManager : public Singleton < ThreadManager >
 {
-	// HACK: hash_map / unordered_map 에서 get를 할때, 라이브러리에서 버켓 index 에러가 난다.
-	// HACK: 그런 이유로 검증된 map으로 컨테이너 교체를 한다.
 #ifdef THREAD_POOL_HASHMAP
 	hash_map <threadId_t, Thread*> threadPool_;
 #else //THREAD_POOL_HASHMAP

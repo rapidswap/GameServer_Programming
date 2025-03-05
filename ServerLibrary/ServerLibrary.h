@@ -56,7 +56,6 @@ typedef void(*Function)(void *);
 
 #include "./Util/GameObject.h"
 #include "./Util/Singleton.h"
-#include "./Util/RandomMT.h"
 
 #include "./Util/Clock.h"
 #include "./Util/Logger.h"
@@ -72,7 +71,6 @@ typedef void(*Function)(void *);
 #include "./Util/Memory_LowFragmentationHeap.h"
 #include "./Util/Minidump.h"
 
-#include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
 #include "./Util/Monitoring.h"
 #include "./util/ProgramValidation.h"

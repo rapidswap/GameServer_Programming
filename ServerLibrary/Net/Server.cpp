@@ -14,7 +14,7 @@ Server::Server(ContentsProcess *contentsProcess)
 	}
 	this->initialize(&config);
 
-	// db 초기화
+
 	_db_manager;
 }
 
@@ -30,10 +30,8 @@ Server::~Server()
 
 void Server::initialize(xml_t *config)
 {
-	//터미널 설정
 	_terminal.run(this);
 
-	//테스크 설정
 	TaskManager::getInstance();
 
 	//서버 설정

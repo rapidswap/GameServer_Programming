@@ -19,11 +19,11 @@ void DBAgentProcess::I_DB_REQ_ID_PW(Session *session, Packet *rowPacket)
 {
 	PK_I_DB_REQ_ID_PW *packet = (PK_I_DB_REQ_ID_PW *)rowPacket;
 
-	QI_DB_REQ_ID_PW *query = new QI_DB_REQ_ID_PW();	        			// 쿼리 만들기
+	QI_DB_REQ_ID_PW *query = new QI_DB_REQ_ID_PW();	        			
 	query->clientId_ = packet->clientId_;
 
 	QueryStatement *statement = query->statement();
-	statement->addParam((char *)packet->id_.c_str());					// 파라메터 계속 붙여나가기
+	statement->addParam((char *)packet->id_.c_str());					
 	statement->addParam((char *)packet->password_.c_str());
 	
 	DBManager::getInstance().pushQuery(query);

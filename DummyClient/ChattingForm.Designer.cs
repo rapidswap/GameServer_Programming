@@ -57,11 +57,11 @@
             // 
             // exitButton_
             // 
-            exitButton_.Location = new Point(192, 439);
+            exitButton_.Location = new Point(208, 439);
             exitButton_.Name = "exitButton_";
             exitButton_.Size = new Size(75, 23);
             exitButton_.TabIndex = 4;
-            exitButton_.Text = "button1";
+            exitButton_.Text = "Exit";
             exitButton_.UseVisualStyleBackColor = true;
             exitButton_.Click += leaveUsers;
             // 

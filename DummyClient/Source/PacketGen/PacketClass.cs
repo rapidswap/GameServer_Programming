@@ -449,4 +449,21 @@ namespace DummyClient
             return packet_;
         }
     }
+
+    public class PK_S_ANS_CREATECHARACTER_OPEN : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
 }

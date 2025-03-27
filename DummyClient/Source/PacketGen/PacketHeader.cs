@@ -37,5 +37,8 @@ namespace DummyClient
         E_S_ANS_USER_LIST = 145,
         E_S_ANS_EXIT_USER = 146,
         E_C_REQ_CHAT_EXIT=147,
+        E_S_ANS_CREATECHARACTER_OPEN=148,
+        E_C_REQ_CREATECHARACTER=149,
+
     }
 };

@@ -31,5 +31,10 @@ namespace DummyClient
             this.Dispose();
             Application.Exit();
         }
+
+        private void Character_Click(object sender, EventArgs e)
+        {
+            Program.programState_.setState(PROGRAM_STATE.CREATECHARACTER, null, 0);
+        }
     }
 }

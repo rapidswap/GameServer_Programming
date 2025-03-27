@@ -85,4 +85,14 @@ namespace DummyClient
             network_.setPacketProcess(new ChattingPacketProcess());
         }
     }
+
+    internal class CreateCharacterState : FormState
+    {
+        public override void open(string ip, uint port)
+        {
+            form_ = new CreateCharacterForm();
+            setForm();
+            network_.setPacketProcess(new CreateCharacterProcess());
+        }
+    }
 }

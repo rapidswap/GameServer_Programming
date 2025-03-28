@@ -351,3 +351,56 @@ public:
         stream >> &name_;
     }
 };
+
+class PK_C_REQ_CREATE_CHARACTER : public Packet
+{
+public:
+    PacketType type() { return E_C_REQ_CREATE_CHARACTER; }
+
+    UInt64     clientId_;
+    std::string     id_;
+    std::string     password_;
+    std::string     name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &name_;
+    }
+};
+
+
+class PK_I_DB_REQ_CHARACTER : public Packet
+{
+public:
+    PacketType type() { return E_I_DB_REQ_CHARACTER; }
+
+    UInt64     clientId_;
+    std::string     id_;
+    std::string     password_;
+    std::string     name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &name_;
+    }
+};

@@ -13,6 +13,7 @@ void LoginProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(C_REQ_ID_PW);
 	INSERT_PACKET_PROCESS(I_DB_ANS_ID_PW);
 	INSERT_PACKET_PROCESS(I_LOGIN_NOTIFY_ID_LOADED);
+	INSERT_PACKET_PROCESS(C_REQ_CREATE_CHARACTER);
 }
 
 
@@ -26,6 +27,20 @@ void LoginProcess::C_REQ_ID_PW(Session *session, Packet *rowPacket)
 	dbPacket.password_ = packet->password_;
 
 	Terminal *terminal = _terminal.get(L"DBAgent");
+	terminal->sendPacket(&dbPacket);
+}
+
+void LoginProcess::C_REQ_CREATE_CHARACTER(Session* session, Packet* rowPacket)
+{
+	PK_C_REQ_CREATE_CHARACTER* packet = (PK_C_REQ_CREATE_CHARACTER*)rowPacket;
+
+	PK_I_DB_REQ_CHARACTER dbPacket;
+	dbPacket.clientId_ = (UInt64)session->id();
+	dbPacket.id_ = packet->id_;
+	dbPacket.password_ = packet->password_;
+	dbPacket.name_ = packet->name_;
+
+	Terminal* terminal = _terminal.get(L"DBAgent");
 	terminal->sendPacket(&dbPacket);
 }
 

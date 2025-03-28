@@ -35,7 +35,9 @@ namespace DummyClient
                 case PacketType.E_S_ANS_USER_LIST:return new PK_S_ANS_USER_LIST();
                 case PacketType.E_S_ANS_EXIT_USER:return new PK_S_ANS_EXIT_USER();
                 case PacketType.E_C_REQ_CHAT_EXIT:return new PK_C_REQ_CHAT_EXIT();
-                case PacketType.E_S_ANS_CREATECHARACTER_OPEN: return new PK_S_ANS_CREATECHARACTER_OPEN();
+                case E_C_REQ_CREATE_CHARACTER: return new PK_C_REQ_CREATE_CHARACTER();
+                case E_I_DB_REQ_CHARACTER: return new PK_I_DB_REQ_CHARACTER();
+                case E_I_DB_ANS_CREATE_CHARACTER: return new PK_I_DB_ANS_CREATE_CHARACTER();
             }
             return null;
         }

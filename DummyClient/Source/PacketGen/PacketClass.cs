@@ -438,11 +438,11 @@ namespace DummyClient
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
-           // PacketUtil.encode(packet_, name_);
+            // PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
-           // name_ = PacketUtil.decodestring(packet, ref offset);
+            // name_ = PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {
@@ -450,16 +450,86 @@ namespace DummyClient
         }
     }
 
-    public class PK_S_ANS_CREATECHARACTER_OPEN : PacketData, PacketInterface
+    public class PK_C_REQ_CREATE_CHARACTER : PacketData, PacketInterface
     {
-        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
-        Int64 type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_CREATE_CHARACTER; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_CREATE_CHARACTER; }
+        public UInt64 clientId_;
+        public string id_;
+        public string password_;
+        public string name_;
+
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, id_);
+            PacketUtil.encode(packet_, password_);
+            PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            id_ = PacketUtil.decodestring(packet, ref offset);
+            password_ = PacketUtil.decodestring(packet, ref offset);
+            name_= PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_I_DB_REQ_CHARACTER : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_REQ_CHARACTER; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_REQ_CHARACTER; }
+        public UInt64 clientId_;
+        public string id_;
+        public string password_;
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, id_);
+            PacketUtil.encode(packet_, password_);
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            id_ = PacketUtil.decodestring(packet, ref offset);
+            password_ = PacketUtil.decodestring(packet, ref offset);
+            name_= PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_I_DB_ANS_CREATE_CHARACTER : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_ANS_CREATE_CHARACTER; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_ANS_CREATE_CHARACTER; }
+        public UInt64 clientId_;
+        public UInt64 oidAccountId_;
+        public Byte result_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, oidAccountId_);
+            PacketUtil.encode(packet_, result_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            result_ = PacketUtil.decodeByte(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {

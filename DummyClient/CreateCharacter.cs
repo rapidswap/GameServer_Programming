@@ -4,28 +4,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DummyClient
 {
-    public partial class CreateCharacterForm : Form
+    public partial class CreateCharacter : Form
     {
-
-        public CreateCharacterForm()
+        public CreateCharacter()
         {
+            InitializeComponent();
         }
-
-        ~CreateCharacterForm()
-        {
-            base.Dispose();
-
-        }
-
-     
-
-
     }
 }

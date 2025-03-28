@@ -13,6 +13,7 @@ void DBAgentProcess::registSubPacketFunc()
 
 	INSERT_PACKET_PROCESS(I_DB_REQ_ID_PW);
 	INSERT_PACKET_PROCESS(I_DB_REQ_LOAD_DATA);
+	INSERT_PACKET_PROCESS(I_DB_REQ_CHARACTER);
 }
 
 void DBAgentProcess::I_DB_REQ_ID_PW(Session *session, Packet *rowPacket)
@@ -40,6 +41,7 @@ void DBAgentProcess::I_DB_REQ_CHARACTER(Session* session, Packet* rowPacket)
 	statement->addParam((char*)packet->password_.c_str());
 	statement->addParam((char*)packet->name_.c_str());
 }
+
 void DBAgentProcess::I_DB_REQ_LOAD_DATA(Session *session, Packet *rowPacket)
 {
 	PK_I_DB_REQ_LOAD_DATA *packet = (PK_I_DB_REQ_LOAD_DATA *)rowPacket;

@@ -33,6 +33,9 @@
     <ClInclude Include="Query\QI_DB_REQ_LOAD_DATA.h">
       <Filter>Query</Filter>
     </ClInclude>
+    <ClInclude Include="Query\QI_DB_REQ_CREATE_CHARACTER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

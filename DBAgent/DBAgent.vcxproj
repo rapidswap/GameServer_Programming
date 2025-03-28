@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DBAgentProcess.h" />
+    <ClInclude Include="Query\QI_DB_REQ_CREATE_CHARACTER.h" />
     <ClInclude Include="Query\QI_DB_REQ_ID_PW.h" />
     <ClInclude Include="Query\QI_DB_REQ_LOAD_DATA.h" />
     <ClInclude Include="stdafx.h" />

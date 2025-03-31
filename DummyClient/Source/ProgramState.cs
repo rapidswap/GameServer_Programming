@@ -4,6 +4,7 @@
     {
         LOGIN,
         CHATTING,
+        CREATECHARACTER,
         MAX,
     }
 
@@ -26,6 +27,10 @@
 
                 case PROGRAM_STATE.CHATTING:
                     formState_ = new ChattingFormState();
+                    break;
+
+                case PROGRAM_STATE.CREATECHARACTER:
+                    formState_=new CreateCharacterState();
                     break;
             }
         }

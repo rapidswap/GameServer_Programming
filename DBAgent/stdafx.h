@@ -15,3 +15,5 @@
 
 #include "./Query/QI_DB_REQ_ID_PW.h"
 #include "./Query/QI_DB_REQ_LOAD_DATA.h"
+#include "./Query/QI_DB_REQ_CREATE_CHARACTER.h"
+#include "./Query/QI_DB_REQ_CREATE_USER.h"

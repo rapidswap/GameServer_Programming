@@ -351,3 +351,97 @@ public:
         stream >> &name_;
     }
 };
+
+class PK_C_REQ_CREATE_CHARACTER : public Packet
+{
+public:
+    PacketType type() { return E_C_REQ_CREATE_CHARACTER; }
+
+    UInt64     clientId_;
+    std::string     id_;
+    std::string     password_;
+    UInt64          oidAccountId_;
+    UInt32          level_;
+    UInt64          exp_;
+    std::string     name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << oidAccountId_;
+        stream << level_;
+        stream << exp_;
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &oidAccountId_;
+        stream >> &level_;
+        stream >> &exp_;
+        stream >> &name_;
+    }
+};
+
+
+class PK_I_DB_REQ_CHARACTER : public Packet
+{
+public:
+    PacketType type() { return E_I_DB_REQ_CHARACTER; }
+
+    UInt64     clientId_;
+    std::string     id_;
+    std::string     password_;
+    UInt64          oidAccountId_;
+    UInt32          level_;
+    UInt64          exp_;
+    std::string     name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << oidAccountId_;
+        stream << level_;
+        stream << exp_;
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &oidAccountId_;
+        stream >> &level_;
+        stream >> &exp_;
+        stream >> &name_;
+    }
+};
+
+class PK_I_DB_ANS_CREATE_CHARACTER : public Packet
+{
+public:
+    PacketType type() { return E_I_DB_ANS_CREATE_CHARACTER; }
+
+    UInt64     clientId_;
+    UInt64     oidAccountId_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << oidAccountId_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &oidAccountId_;
+        stream >> &result_;
+    }
+};

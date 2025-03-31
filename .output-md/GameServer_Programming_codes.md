@@ -1,29 +1,9 @@
 #  Project Contents
-## LoginServer\LoginServer.vcxproj
+## ChattingServer\ChattingServer.vcxproj
 ```vcxproj
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -32,36 +12,8 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
@@ -72,96 +24,18 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e1c820bc-e4c9-418a-afc3-4415d8cfa778}</ProjectGuid>
-    <RootNamespace>LoginServer</RootNamespace>
+    <ProjectGuid>{d9687045-9147-4b36-816e-71c68e01c7eb}</ProjectGuid>
+    <RootNamespace>ChattingServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
+    <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -172,15 +46,6 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>false</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -195,49 +60,13 @@
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -245,101 +74,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);C:\github\GameServer_Programming\ServerLibrary</IncludePath>
+    <IncludePath>$(SolutuinDir)\ServerLibrary;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);$(SolutionDir)\ServerLibrary;C:\github\GameServer_Programming\ServerLibrary;</IncludePath>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -359,121 +104,17 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>Default</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -485,24 +126,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -512,24 +135,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LoginServer.cpp" />
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="ChattingServer.cpp" />
+    <ClCompile Include="Server\ChattingProcess.cpp" />
+    <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Server\LoginProcess.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Server\LoginProcess.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="targetver.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerLibrary\ServerLibrary.vcxproj">
       <Project>{6e110469-40cf-47f8-b4c3-df093d50164c}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Server\ChattingProcess.h" />
+    <ClInclude Include="Server\User.h" />
+    <ClInclude Include="Server\UserManager.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="config.xml" />
@@ -540,9 +164,3211 @@
 </Project>
 ```
 
+## ChattingServer\Server\ChattingProcess.cpp
+```cpp
+#include "stdafx.h"
+#include "ChattingProcess.h"
+
+ChattingProcess::ChattingProcess()
+{
+	this->registSubPacketFunc();
+}
+
+void ChattingProcess::registSubPacketFunc()
+{
+#define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &ChattingProcess::##type))
+
+	INSERT_PACKET_PROCESS(I_CHTTING_NOTIFY_ID);
+	INSERT_PACKET_PROCESS(I_DB_ANS_PARSE_DATA);
+	INSERT_PACKET_PROCESS(C_REQ_REGIST_CHATTING_NAME);
+	INSERT_PACKET_PROCESS(C_REQ_CHATTING);
+	INSERT_PACKET_PROCESS(C_REQ_CHAT_EXIT);
+	
+}
+
+void ChattingProcess::I_CHTTING_NOTIFY_ID(Session* session, Packet* rowPacket)
+{
+	PK_I_CHTTING_NOTIFY_ID* packet = (PK_I_CHTTING_NOTIFY_ID*)rowPacket;
+
+	PK_I_DB_REQ_LOAD_DATA dbPacket;
+	dbPacket.clientId_ = packet->clientId_;
+	dbPacket.oidAccountId_ = packet->oidAccountId_;
+
+	Terminal* terminal = _terminal.get(L"DBAgent");
+	terminal->sendPacket(&dbPacket);
+}
+
+void ChattingProcess::I_DB_ANS_PARSE_DATA(Session* session, Packet* rowPacket)
+{
+	PK_I_DB_ANS_PARSE_DATA* packet = (PK_I_DB_ANS_PARSE_DATA*)rowPacket;
+
+	PK_I_LOGIN_NOTIFY_ID_LOADED iPacket;
+	iPacket.clientId_ = packet->clientId_;
+	iPacket.name_ = packet->name_;
+	iPacket.result_ = packet->result_;
+
+	SLog(L"* [%S] name load from db", iPacket.name_.c_str());
+	Terminal* terminal = _terminal.get(L"LoginServer");
+	terminal->sendPacket(&iPacket);
+}
+
+void ChattingProcess::C_REQ_REGIST_CHATTING_NAME(Session* session, Packet* rowPacket)
+{
+	PK_C_REQ_REGIST_CHATTING_NAME* packet = (PK_C_REQ_REGIST_CHATTING_NAME*)rowPacket;
+	User* user = UserManager::getInstance().at(session->id());
+	if (user != nullptr) {
+		SLog(L"! try duplicate regist : %s, name : %S", session->clientAddress().c_str(), packet->name_.c_str());
+		session->onClose();
+		return;
+	}
+	user = new User(session);
+
+	array<WCHAR, SIZE_64> userName;
+	StrConvA2W((CHAR*)packet->name_.c_str(), userName.data(), userName.size());
+	user->setName(userName.data());
+	UserManager::getInstance().insert(user);
+
+	SLog(L"* user [%s] created from [%S]", userName.data(), session->clientAddress().c_str());
+
+	PK_S_ANS_NEW_USER_NOTIFY notifyPacket;
+	notifyPacket.name_ = packet->name_;
+	UserManager::getInstance().broadcast(&notifyPacket, session->id());
+
+	PK_S_ANS_USER_LIST listPacket;
+	auto& userManager = UserManager::getInstance();
+	std::vector<pair<oid_t, User*>> users = userManager.getAllUsers();
+
+	SLog(L"* Current user count: %d", users.size());
+
+	for (const auto& userPair : users) {
+		if (userPair.first != session->id()) {  // 자신 제외
+			User* existingUser = userPair.second;
+			if (existingUser) {
+				array<char, SIZE_64> existingName;
+				StrConvW2A((WCHAR*)existingUser->name().c_str(), existingName.data(), existingName.size());
+				listPacket.names_.push_back(string(existingName.data()));
+
+				SLog(L"* Added user to list: %S", existingName.data());
+			}
+		}
+	}
+
+	SLog(L"* Sending user list with %d users", listPacket.names_.size());
+	session->sendPacket(&listPacket);
+}
+
+void ChattingProcess::C_REQ_CHATTING(Session* session, Packet* rowPacket)
+{
+	PK_C_REQ_CHATTING* packet = (PK_C_REQ_CHATTING*)rowPacket;
+
+	User* user = UserManager::getInstance().at(session->id());
+	if (user == nullptr) {
+		SLog(L"! not registed : %s", session->clientAddress().c_str());
+		session->onClose();
+		return;
+	}
+
+	PK_S_ANS_CHATTING retPacket;
+	array<char, SIZE_64> name;
+	StrConvW2A((WCHAR*)user->name().c_str(), name.data(), name.size());
+	retPacket.name_ = name.data();
+	retPacket.text_ = "-> : ";
+	retPacket.text_ += packet->text_;
+
+	SLog(L"* send message %S, %S", retPacket.name_.c_str(), retPacket.text_.c_str());
+	session->sendPacket(&retPacket);
+
+	UserManager::getInstance().broadcast(&retPacket,session->id());
+}
+
+void ChattingProcess::C_REQ_CHAT_EXIT(Session* session, Packet* rowPacket)
+{
+	
+	PK_C_REQ_CHAT_EXIT* packet = (PK_C_REQ_CHAT_EXIT*)rowPacket;
+	SLog(L"chattingPro!!!test!!!");
+	User* user = UserManager::getInstance().at(session->id());
+	if (user == nullptr) {
+		SLog(L"! not registed : %s", session->clientAddress().c_str());
+		session->onClose();
+		return;
+	}
+
+	PK_S_ANS_EXIT_USER exitPacket;
+	array<char, SIZE_64> name;
+	StrConvW2A((WCHAR*)user->name().c_str(), name.data(), name.size());
+	exitPacket.name_ = name.data();
+	SLog(L"exitUser!!!test!!! Name: %S", exitPacket.name_.c_str());
+	UserManager::getInstance().broadcast(&exitPacket, session->id());
+	UserManager::getInstance().remove(session->id());
+
+	PK_S_ANS_EXIT ansPacket;
+	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
+	session->sendPacket(&ansPacket);
+}
+```
+
+## ChattingServer\Server\ChattingProcess.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class ChattingProcess : public ContentsProcess
+{
+public:
+	ChattingProcess();
+private:
+	void registSubPacketFunc();
+
+	static void I_CHTTING_NOTIFY_ID(Session* session, Packet* rowPacket);
+	static void I_DB_ANS_PARSE_DATA(Session* session, Packet* rowPacket);
+	static void C_REQ_REGIST_CHATTING_NAME(Session* session, Packet* rowPacket);
+	static void C_REQ_CHATTING(Session* session, Packet* rowPacket);
+	//static void C_REQ_EXIT(Session* session, Packet* rowPacket);
+	static void C_REQ_CHAT_EXIT(Session* session, Packet* rowPacket);
+};
+```
+
+## ChattingServer\Server\User.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class User :public GameObject
+{
+	Session* session_;
+
+public:
+	User(Session* session)
+	{
+		session_ = session;
+	}
+
+	Session* session()
+	{
+		return session_;
+	}
+
+	void tick()
+	{
+
+	}
+};
+```
+
+## ChattingServer\Server\UserManager.h
+```h
+#pragma once
+#include "stdafx.h"
+#include <algorithm>
+class User;
+class Session;
+
+class UserManager :public Singleton<UserManager>
+{
+	unordered_map<oid_t, User*> userPool_;
+
+public:
+	void insert(User* user)
+	{
+		oid_t key = user->session()->id();
+		userPool_.insert(make_pair(key, user));
+	}
+
+	template<typename T>
+	void broadcast(T* packet, oid_t senderId)
+	{
+		for (const auto& userPair : userPool_)
+		{
+			if (userPair.first == senderId) {
+				continue;
+			}
+
+			if (userPair.second && userPair.second->session()) {
+				userPair.second->session()->sendPacket(packet);
+			}
+		}
+	}
+
+	vector<pair<oid_t, User*>> getAllUsers()
+	{
+		vector<pair<oid_t, User*>> users;
+		for (const auto& pair : userPool_) {
+			users.push_back(pair);
+		}
+		return users;
+	}
+
+	void remove(oid_t id)
+	{
+		userPool_.erase(id);
+	}
+
+	User* at(oid_t id)
+	{
+		auto itr = userPool_.find(id);
+		if (itr == userPool_.end()) {
+			return nullptr;
+		}
+		return itr->second;
+	}
+
+	size_t size()
+	{
+		return userPool_.size();
+	}
+};
+```
+
+## ChattingServer\stdafx.cpp
+```cpp
+// stdafx.cpp : source file that includes just the standard includes
+// LoginServer.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file
+```
+
+## ChattingServer\stdafx.h
+```h
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include "targetver.h"
+
+#include <stdio.h>
+#include <tchar.h>
+
+// TODO: reference additional headers your program requires here
+#include "ServerLibrary.h"
+
+#include "Server\User.h"
+#include "Server\UserManager.h"
+#include "Server\ChattingProcess.h"
+```
+
+## ChattingServer\targetver.h
+```h
+#pragma once
+
+// Including SDKDDKVer.h defines the highest available Windows platform.
+
+// If you wish to build your application for a previous Windows platform, include WinSDKVer.h and
+// set the _WIN32_WINNT macro to the platform you wish to support before including SDKDDKVer.h.
+
+#include <SDKDDKVer.h>
+```
+
+## ChattingServer\x64\Debug\ChattingServer.tlog\ChattingServer.lastbuildstate
+```lastbuildstate
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.41.34120:TargetPlatformVersion=10.0.26100.0:
+Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
+```
+
+## DBAgent\DBAgentProcess.cpp
+```cpp
+#pragma once
+#include "stdafx.h"
+#include "DBAgentProcess.h"
+
+DBAgentProcess::DBAgentProcess()
+{
+	this->registSubPacketFunc();
+}
+
+void DBAgentProcess::registSubPacketFunc()
+{
+#define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &DBAgentProcess::##type))
+
+	INSERT_PACKET_PROCESS(I_DB_REQ_ID_PW);
+	INSERT_PACKET_PROCESS(I_DB_REQ_LOAD_DATA);
+}
+
+void DBAgentProcess::I_DB_REQ_ID_PW(Session *session, Packet *rowPacket)
+{
+	PK_I_DB_REQ_ID_PW *packet = (PK_I_DB_REQ_ID_PW *)rowPacket;
+
+	QI_DB_REQ_ID_PW *query = new QI_DB_REQ_ID_PW();	        			
+	query->clientId_ = packet->clientId_;
+
+	QueryStatement *statement = query->statement();
+	statement->addParam((char *)packet->id_.c_str());					
+	statement->addParam((char *)packet->password_.c_str());
+	
+	DBManager::getInstance().pushQuery(query);
+}
+
+void DBAgentProcess::I_DB_REQ_LOAD_DATA(Session *session, Packet *rowPacket)
+{
+	PK_I_DB_REQ_LOAD_DATA *packet = (PK_I_DB_REQ_LOAD_DATA *)rowPacket;
+
+	QI_DB_REQ_LOAD_DATA *query = new QI_DB_REQ_LOAD_DATA();
+	query->clientId_ = packet->clientId_;
+
+	QueryStatement *statement = query->statement();
+	statement->addParam(packet->oidAccountId_);
+
+	DBManager::getInstance().pushQuery(query);
+}
+```
+
+## DBAgent\DBAgentProcess.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class DBAgentProcess : public ContentsProcess
+{
+public:
+	DBAgentProcess();
+private:
+	void registSubPacketFunc();
+	static void I_DB_REQ_ID_PW(Session *session, Packet *rowPacket);
+	static void I_DB_REQ_LOAD_DATA(Session *session, Packet *rowPacket);
+};
+```
+
+## DBAgent\main.cpp
+```cpp
+#include "stdafx.h"
+#include "DBAgentProcess.h"
+
+void serverProcess()
+{
+	shared_ptr<Server> server(new IOCPServer(new DBAgentProcess()));
+	if (!server->run()) {
+		SLog(L"! error: server start fail");
+		return;
+	}
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	DBManager::getInstance().run();
+
+	shared_ptr<Thread> serverThread(new Thread(new thread_t(serverProcess), L"DBAgent"));
+	return 0;
+}
+```
+
+## DBAgent\Query\QI_DB_REQ_ID_PW.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class QI_DB_REQ_ID_PW: public Query
+{
+public:
+	oid_t clientId_;
+
+	WCHAR *procedure()
+	{
+		return L"p_AccountData_Select";
+	}
+
+	QI_DB_REQ_ID_PW() {
+		statement_->setQuery(this->procedure(), QUERY_CALL_BACK);		
+	}
+
+	~QI_DB_REQ_ID_PW() {
+		PK_I_DB_ANS_ID_PW iPacket;
+		iPacket.clientId_ = (UInt64)clientId_;
+		iPacket.result_ = FALSE;
+		if (!record_.isEof()) {
+			record_.moveFirst();
+		}
+
+		while (!record_.isEof()) {
+			int oidAccount = 0;
+			if (record_.get("oidAccount", oidAccount)) {
+				iPacket.oidAccountId_ = oidAccount;
+				iPacket.result_ = TRUE;
+				break;
+			}
+			else {
+				SLog(L"* this query [%s] have error", this->procedure());
+				break;
+			}
+			record_.moveNext();
+		}
+
+		Terminal *terminal = _terminal.get(L"LoginServer");
+		terminal->sendPacket(&iPacket);
+	}
+};
+```
+
+## DBAgent\Query\QI_DB_REQ_LOAD_DATA.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class QI_DB_REQ_LOAD_DATA: public Query
+{
+public:
+	oid_t clientId_;
+
+	WCHAR *procedure()
+	{
+		return L"p_Character_Select";
+	}
+
+	QI_DB_REQ_LOAD_DATA() {
+		statement_->setQuery(this->procedure(), QUERY_CALL_BACK);		
+	}
+
+	~QI_DB_REQ_LOAD_DATA() {
+		PK_I_DB_ANS_PARSE_DATA	iPacket;
+		iPacket.clientId_ = (UInt64)clientId_;
+		iPacket.result_ = FALSE;
+		if (!record_.isEof()) {
+			record_.moveFirst();
+		}
+
+		while (!record_.isEof()) {
+			array<WCHAR, DB_PARAM_SIZE> buffer;
+
+			if (record_.get("name", buffer.data())) {
+				SLog(L"id : %s", buffer.data());
+				array<CHAR, DB_PARAM_SIZE> nameBuf;
+				StrConvW2A(buffer.data(), nameBuf.data(), nameBuf.size());
+				iPacket.name_ = nameBuf.data();
+				iPacket.result_ = TRUE;
+			}
+			record_.moveNext();
+		}
+
+		Terminal *terminal = _terminal.get(L"ChattingServer");
+		terminal->sendPacket(&iPacket);
+	}
+};
+```
+
+## DBAgent\stdafx.cpp
+```cpp
+// stdafx.cpp : source file that includes just the standard includes
+// DBAgent.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file
+```
+
+## DBAgent\stdafx.h
+```h
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include "targetver.h"
+
+#include <stdio.h>
+#include <tchar.h>
+
+// TODO: reference additional headers your program requires here
+#include "ServerLibrary.h"
+
+#include "./Query/QI_DB_REQ_ID_PW.h"
+#include "./Query/QI_DB_REQ_LOAD_DATA.h"
+```
+
+## DBAgent\targetver.h
+```h
+#pragma once
+
+// Including SDKDDKVer.h defines the highest available Windows platform.
+
+// If you wish to build your application for a previous Windows platform, include WinSDKVer.h and
+// set the _WIN32_WINNT macro to the platform you wish to support before including SDKDDKVer.h.
+
+#include <SDKDDKVer.h>
+```
+
+## DBAgent\x64\Debug\DBAgent.tlog\DBAgent.lastbuildstate
+```lastbuildstate
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.41.34120:TargetPlatformVersion=10.0.26100.0:
+Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
+```
+
+## DummyClient\.vs\DummyClient\v17\DocumentLayout.backup.json
+```json
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\github\\GameServer_Programming\\DummyClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chattingcontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chattingcontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\chattingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\contentsprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\contentsprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\programstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\programstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\formstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\formstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chattingpacketprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chattingpacketprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packetobfuscation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packetobfuscation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\login\\logincontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\login\\logincontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chatwnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chatwnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packetutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packetutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|C:\\github\\GameServer_Programming\\DummyClient\\dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|C:\\github\\GameServer_Programming\\DummyClient\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChattingContents.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingContents.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChattingContents.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingContents.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChattingContents.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:25:58.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PacketFactory.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketFactory.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketFactory.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketFactory.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketFactory.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:12:59.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContentsProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ContentsProcess.cs",
+              "RelativeDocumentMoniker": "Source\\ContentsProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ContentsProcess.cs",
+              "RelativeToolTip": "Source\\ContentsProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:16:34.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChattingForm.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.Designer.cs",
+              "RelativeDocumentMoniker": "ChattingForm.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.Designer.cs",
+              "RelativeToolTip": "ChattingForm.Designer.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAIAwwEQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:15:58.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChattingForm.cs [Design]",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeDocumentMoniker": "ChattingForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs [Design]",
+              "RelativeToolTip": "ChattingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:51:02.247Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChattingForm.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeDocumentMoniker": "ChattingForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeToolTip": "ChattingForm.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAApwDoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T09:15:29.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChattingPacketProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingPacketProcess.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChattingPacketProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingPacketProcess.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChattingPacketProcess.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:27:19.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PacketHeader.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketHeader.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketHeader.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketHeader.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketHeader.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:13:11.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Network.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\Network.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Network.cs",
+              "RelativeToolTip": "Source\\Network\\Network.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAUwJIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:28:36.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormState.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\FormState.cs",
+              "RelativeDocumentMoniker": "Source\\FormState.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\FormState.cs",
+              "RelativeToolTip": "Source\\FormState.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwEEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:33:06.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProgramState.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ProgramState.cs",
+              "RelativeDocumentMoniker": "Source\\ProgramState.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ProgramState.cs",
+              "RelativeToolTip": "Source\\ProgramState.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:32:54.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PacketClass.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketClass.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketClass.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketClass.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketClass.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAuwNkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T22:57:00.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Packet.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Packet.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\Packet.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Packet.cs",
+              "RelativeToolTip": "Source\\Network\\Packet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T22:53:41.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PacketObfuscation.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketObfuscation.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\PacketObfuscation.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketObfuscation.cs",
+              "RelativeToolTip": "Source\\Network\\PacketObfuscation.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:34:37.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:52:01.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginContents.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Login\\LoginContents.cs",
+              "RelativeDocumentMoniker": "Source\\Login\\LoginContents.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Login\\LoginContents.cs",
+              "RelativeToolTip": "Source\\Login\\LoginContents.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:22:07.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatWnd.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChatWnd.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChatWnd.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChatWnd.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChatWnd.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:18:51.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PacketUtil.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketUtil.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\PacketUtil.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketUtil.cs",
+              "RelativeToolTip": "Source\\Network\\PacketUtil.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwDMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:14:02.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PacketProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketProcess.cs",
+              "RelativeDocumentMoniker": "Source\\PacketProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketProcess.cs",
+              "RelativeToolTip": "Source\\PacketProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:15:00.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DummyClient.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeDocumentMoniker": "DummyClient.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeToolTip": "DummyClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:48:46.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DummyClient.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeDocumentMoniker": "DummyClient.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "DummyClient.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:37:13.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DummyClient",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.csproj",
+              "RelativeDocumentMoniker": "DummyClient.csproj",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.csproj",
+              "RelativeToolTip": "DummyClient.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-17T11:43:33.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LoginForm.Designer.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwGsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:17:22.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DummyClient.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.Designer.cs",
+              "RelativeDocumentMoniker": "DummyClient.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.Designer.cs",
+              "RelativeToolTip": "DummyClient.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:10:43.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:08:00.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "LoginForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:49:25.79Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## DummyClient\.vs\DummyClient\v17\DocumentLayout.json
+```json
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\github\\GameServer_Programming\\DummyClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\formstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\formstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\programstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\programstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\createcharacter\\createcharacterprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\createcharacter\\createcharacterprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\packetgen\\packetheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\packetgen\\packetheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packetobfuscation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packetobfuscation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\network\\packetutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\network\\packetutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chattingpacketprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chattingpacketprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chattingcontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chattingcontents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\createcharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:createcharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\contentsprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\contentsprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|C:\\github\\GameServer_Programming\\DummyClient\\chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\chattingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:chattingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\source\\chatting\\chatwnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:source\\chatting\\chatwnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|C:\\github\\GameServer_Programming\\DummyClient\\dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\dummyclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:dummyclient.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|c:\\github\\gameserver_programming\\dummyclient\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67BE53CC-032B-4090-A9A1-3CA1F27BC710}|DummyClient.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateCharacterProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\CreateCharacter\\CreateCharacterProcess.cs",
+              "RelativeDocumentMoniker": "Source\\CreateCharacter\\CreateCharacterProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\CreateCharacter\\CreateCharacterProcess.cs",
+              "RelativeToolTip": "Source\\CreateCharacter\\CreateCharacterProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:35:50.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormState.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\FormState.cs",
+              "RelativeDocumentMoniker": "Source\\FormState.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\FormState.cs",
+              "RelativeToolTip": "Source\\FormState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:33:06.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PacketProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketProcess.cs",
+              "RelativeDocumentMoniker": "Source\\PacketProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketProcess.cs",
+              "RelativeToolTip": "Source\\PacketProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:15:00.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProgramState.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ProgramState.cs",
+              "RelativeDocumentMoniker": "Source\\ProgramState.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ProgramState.cs",
+              "RelativeToolTip": "Source\\ProgramState.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:32:54.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:52:01.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:08:00.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Network.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\Network.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Network.cs",
+              "RelativeToolTip": "Source\\Network\\Network.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAUwBAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:28:36.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Packet.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Packet.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\Packet.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\Packet.cs",
+              "RelativeToolTip": "Source\\Network\\Packet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T22:53:41.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PacketFactory.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketFactory.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketFactory.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketFactory.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketFactory.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:12:59.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PacketClass.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketClass.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketClass.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketClass.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketClass.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAwM4BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T22:57:00.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PacketHeader.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketHeader.cs",
+              "RelativeDocumentMoniker": "Source\\PacketGen\\PacketHeader.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\PacketGen\\PacketHeader.cs",
+              "RelativeToolTip": "Source\\PacketGen\\PacketHeader.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:13:11.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PacketObfuscation.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketObfuscation.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\PacketObfuscation.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketObfuscation.cs",
+              "RelativeToolTip": "Source\\Network\\PacketObfuscation.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:34:37.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PacketUtil.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketUtil.cs",
+              "RelativeDocumentMoniker": "Source\\Network\\PacketUtil.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Network\\PacketUtil.cs",
+              "RelativeToolTip": "Source\\Network\\PacketUtil.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA+wDMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:14:02.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChattingContents.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingContents.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChattingContents.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingContents.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChattingContents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:25:58.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateCharacter.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\CreateCharacter.cs",
+              "RelativeDocumentMoniker": "CreateCharacter.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\CreateCharacter.cs",
+              "RelativeToolTip": "CreateCharacter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:30:43.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DummyClient.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeDocumentMoniker": "DummyClient.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeToolTip": "DummyClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:48:46.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChattingForm.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeDocumentMoniker": "ChattingForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeToolTip": "ChattingForm.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA7wDEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T09:15:29.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ContentsProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ContentsProcess.cs",
+              "RelativeDocumentMoniker": "Source\\ContentsProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\ContentsProcess.cs",
+              "RelativeToolTip": "Source\\ContentsProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:16:34.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChattingPacketProcess.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingPacketProcess.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChattingPacketProcess.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChattingPacketProcess.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChattingPacketProcess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:27:19.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ChattingForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs",
+              "RelativeDocumentMoniker": "ChattingForm.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "ChattingForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:51:02.247Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ChattingForm.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.Designer.cs",
+              "RelativeDocumentMoniker": "ChattingForm.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\ChattingForm.Designer.cs",
+              "RelativeToolTip": "ChattingForm.Designer.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAIAwwEQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:15:58.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ChatWnd.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChatWnd.cs",
+              "RelativeDocumentMoniker": "Source\\Chatting\\ChatWnd.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\Source\\Chatting\\ChatWnd.cs",
+              "RelativeToolTip": "Source\\Chatting\\ChatWnd.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:18:51.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DummyClient.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs",
+              "RelativeDocumentMoniker": "DummyClient.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "DummyClient.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T23:37:13.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DummyClient",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.csproj",
+              "RelativeDocumentMoniker": "DummyClient.csproj",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.csproj",
+              "RelativeToolTip": "DummyClient.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-17T11:43:33.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LoginForm.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:17:22.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DummyClient.Designer.cs",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.Designer.cs",
+              "RelativeDocumentMoniker": "DummyClient.Designer.cs",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DummyClient\\DummyClient.Designer.cs",
+              "RelativeToolTip": "DummyClient.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T07:10:43.708Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.deps.json
+```json
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DummyClient/1.0.0": {
+        "runtime": {
+          "DummyClient.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DummyClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
+```
+
+## DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.runtimeconfig.json
+```json
+{
+  "runtimeOptions": {
+    "tfm": "net6.0",
+    "frameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "6.0.0"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "6.0.0"
+      }
+    ]
+  }
+}
+```
+
+## DummyClient\bin\Debug\net8.0-windows\DummyClient.deps.json
+```json
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DummyClient/1.0.0": {
+        "runtime": {
+          "DummyClient.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DummyClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
+```
+
+## DummyClient\bin\Debug\net8.0-windows\DummyClient.runtimeconfig.json
+```json
+{
+  "runtimeOptions": {
+    "tfm": "net8.0",
+    "frameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "8.0.0"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "8.0.0"
+      }
+    ],
+    "configProperties": {
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true
+    }
+  }
+}
+```
+
+## DummyClient\ChattingForm.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    public partial class ChattingForm : Form
+    {
+        private ChatWnd chatWnd_ = null;
+
+        public ChattingForm()
+        {
+            InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
+            chatWnd_ = new ChatWnd(richTextBox_view_);
+            Program.programState_.putMessage_ += new ProgramState.putMessageDele(pushText);
+        }
+
+        ~ChattingForm()
+        {
+            base.Dispose();
+            chatWnd_ = null;
+        }
+
+        private void textBox_input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String inputStr = textBox_input_.Text + Environment.NewLine;
+                richTextBox_view_.Text += inputStr;
+                textBox_input_.Clear();
+
+                PK_C_REQ_CHATTING packet = new PK_C_REQ_CHATTING();
+                packet.text_ = inputStr;
+                Program.programState_.sendPacket(packet);
+                packet = null;
+
+            }
+            e.Handled = true;
+        }
+
+        public void pushText(string text)
+        {
+            chatWnd_.pushText(text);
+        }
+
+
+        private void leaveUsers(object sender, EventArgs e)
+        {
+            //PK_C_REQ_EXIT exitPacket = new PK_C_REQ_EXIT();
+            PK_C_REQ_CHAT_EXIT exitUserPacket = new PK_C_REQ_CHAT_EXIT();
+            Program.programState_.sendPacket(exitUserPacket);
+            // Program.programState_.sendPacket(exitPacket);
+            Application.Exit();
+        }
+
+
+    }
+}
+```
+
+## DummyClient\ChattingForm.Designer.cs
+```cs
+癤퓆amespace DummyClient
+{
+    partial class ChattingForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            textBox_input_ = new TextBox();
+            richTextBox_view_ = new RichTextBox();
+            exitButton_ = new Button();
+            SuspendLayout();
+            // 
+            // textBox_input_
+            // 
+            textBox_input_.Location = new Point(20, 392);
+            textBox_input_.Margin = new Padding(3, 4, 3, 4);
+            textBox_input_.Name = "textBox_input_";
+            textBox_input_.Size = new Size(456, 23);
+            textBox_input_.TabIndex = 3;
+            textBox_input_.KeyDown += textBox_input_KeyDown;
+            // 
+            // richTextBox_view_
+            // 
+            richTextBox_view_.BackColor = Color.Teal;
+            richTextBox_view_.ForeColor = Color.White;
+            richTextBox_view_.Location = new Point(20, 15);
+            richTextBox_view_.Margin = new Padding(3, 4, 3, 4);
+            richTextBox_view_.Name = "richTextBox_view_";
+            richTextBox_view_.ReadOnly = true;
+            richTextBox_view_.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBox_view_.Size = new Size(457, 369);
+            richTextBox_view_.TabIndex = 2;
+            richTextBox_view_.Text = "";
+            // 
+            // exitButton_
+            // 
+            exitButton_.Location = new Point(208, 439);
+            exitButton_.Name = "exitButton_";
+            exitButton_.Size = new Size(75, 23);
+            exitButton_.TabIndex = 4;
+            exitButton_.Text = "Exit";
+            exitButton_.UseVisualStyleBackColor = true;
+            exitButton_.Click += leaveUsers;
+            // 
+            // ChattingForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(498, 495);
+            Controls.Add(exitButton_);
+            Controls.Add(textBox_input_);
+            Controls.Add(richTextBox_view_);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ChattingForm";
+            Text = "ChattingForm";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox textBox_input_;
+        private System.Windows.Forms.RichTextBox richTextBox_view_;
+        private Button exitButton_;
+    }
+}
+```
+
+## DummyClient\CreateCharacter.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    public partial class CreateCharacterForm : Form
+    {
+
+        public CreateCharacterForm()
+        {
+        }
+
+        ~CreateCharacterForm()
+        {
+            base.Dispose();
+
+        }
+
+     
+
+
+    }
+}
+```
+
+## DummyClient\CreateCharacter.Designer.cs
+```cs
+癤퓆amespace DummyClient
+{
+    partial class CreateCharacter
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
+        }
+
+        #endregion
+    }
+}
+```
+
+## DummyClient\DummyClient.cs
+```cs
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    partial class DummyClient : Form
+    {
+        public DummyClient()
+        {
+            InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
+        }
+
+        private void DummyClient_Shown(object sender, EventArgs e)
+        {
+            Program.programState_.setState(PROGRAM_STATE.LOGIN, null, 0);
+        }
+
+        private void DummyClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.programState_.close();
+            this.Dispose();
+            Application.Exit();
+        }
+
+        public void removePanelForm(ref Form form)
+        {
+            mainPanel_.Controls.Remove(form);
+        }
+    }
+}
+```
+
+## DummyClient\DummyClient.Designer.cs
+```cs
+癤퓆amespace DummyClient
+{
+    partial class DummyClient
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.mainPanel_ = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // mainPanel_
+            // 
+            this.mainPanel_.Location = new System.Drawing.Point(5, 8);
+            this.mainPanel_.Name = "mainPanel_";
+            this.mainPanel_.Size = new System.Drawing.Size(608, 420);
+            this.mainPanel_.TabIndex = 0;
+            // 
+            // DummyClient
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.mainPanel_);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "DummyClient";
+            this.Text = "DummyClient";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DummyClient_FormClosing);
+            this.Shown += new System.EventHandler(this.DummyClient_Shown);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        public System.Windows.Forms.Panel mainPanel_;
+
+    }
+}
+```
+
+## DummyClient\LoginForm.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    public partial class LoginForm : Form
+    {
+
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
+
+        private void button_login_Click(object sender, EventArgs e)
+        {
+            PK_C_REQ_ID_PW packet = new PK_C_REQ_ID_PW();
+            packet.id_ = textBox_id_.Text;
+            packet.password_ = textBox_pw_.Text;
+            Program.programState_.sendPacket(packet);
+        }
+
+        private void button_quit(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Application.Exit();
+        }
+
+        private void Character_Click(object sender, EventArgs e)
+        {
+            PK_S_ANS_CREATECHARACTER_OPEN packet = new PK_S_ANS_CREATECHARACTER_OPEN();
+            Program.programState_.sendPacket(packet);
+        }
+    }
+}
+```
+
+## DummyClient\obj\Debug\net5.0-windows7.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+```cs
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETCoreApp,Version=v5.0", FrameworkDisplayName = ".NET 5.0")]
+```
+
+## DummyClient\obj\Debug\net5.0-windows7.0\DummyClient.designer.deps.json
+```json
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {}
+  },
+  "libraries": {}
+}
+```
+
+## DummyClient\obj\Debug\net5.0-windows7.0\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+```editorconfig
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net5.0-windows7.0
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DummyClient
+build_property.ProjectDir = C:\github\GameServer_Programming\DummyClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop =
+```
+
+## DummyClient\obj\Debug\net5.0-windows7.0\DummyClient.GlobalUsings.g.cs
+```cs
+// <auto-generated/>
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.Drawing;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::System.Windows.Forms;
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+```cs
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETCoreApp,Version=v6.0", FrameworkDisplayName = ".NET 6.0")]
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.csproj.BuildWithSkipAnalyzers
+```BuildWithSkipAnalyzers
+
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.csproj.FileListAbsolute.txt
+```txt
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.exe
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.deps.json
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.runtimeconfig.json
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net6.0-windows7.0\DummyClient.pdb
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.ChattingForm.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.DummyClient.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.LoginForm.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.csproj.GenerateResource.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.AssemblyInfoInputs.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.AssemblyInfo.cs
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.csproj.CoreCompileInputs.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.sourcelink.json
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\refint\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.pdb
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.genruntimeconfig.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net6.0-windows7.0\ref\DummyClient.dll
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.designer.deps.json
+```json
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {}
+  },
+  "libraries": {}
+}
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+```editorconfig
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net6.0-windows7.0
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DummyClient
+build_property.ProjectDir = C:\github\GameServer_Programming\DummyClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop =
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.GlobalUsings.g.cs
+```cs
+// <auto-generated/>
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.Drawing;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::System.Windows.Forms;
+```
+
+## DummyClient\obj\Debug\net6.0-windows7.0\DummyClient.sourcelink.json
+```json
+{"documents":{"C:\\github\\GameServer_Programming\\*":"https://raw.githubusercontent.com/rapidswap/GameServer_Programming/bcb4ea079adfcf5c0eca0b718694e0d7a054b67a/*"}}
+```
+
+## DummyClient\obj\Debug\net7.0-windows7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+```cs
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETCoreApp,Version=v7.0", FrameworkDisplayName = ".NET 7.0")]
+```
+
+## DummyClient\obj\Debug\net7.0-windows7.0\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+```editorconfig
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net7.0-windows7.0
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DummyClient
+build_property.ProjectDir = C:\github\GameServer_Programming\DummyClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop =
+```
+
+## DummyClient\obj\Debug\net7.0-windows7.0\DummyClient.GlobalUsings.g.cs
+```cs
+// <auto-generated/>
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.Drawing;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::System.Windows.Forms;
+```
+
+## DummyClient\obj\Debug\net8.0-windows\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+```cs
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETCoreApp,Version=v8.0", FrameworkDisplayName = ".NET 8.0")]
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.csproj.BuildWithSkipAnalyzers
+```BuildWithSkipAnalyzers
+
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.csproj.FileListAbsolute.txt
+```txt
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net8.0-windows\DummyClient.exe
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net8.0-windows\DummyClient.deps.json
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net8.0-windows\DummyClient.runtimeconfig.json
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net8.0-windows\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\bin\Debug\net8.0-windows\DummyClient.pdb
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.ChattingForm.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.DummyClient.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.LoginForm.resources
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.csproj.GenerateResource.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.AssemblyInfoInputs.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.AssemblyInfo.cs
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.csproj.CoreCompileInputs.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.sourcelink.json
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\refint\DummyClient.dll
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.pdb
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\DummyClient.genruntimeconfig.cache
+C:\github\GameServer_Programming\DummyClient\obj\Debug\net8.0-windows\ref\DummyClient.dll
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.designer.deps.json
+```json
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {}
+  },
+  "libraries": {}
+}
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+```editorconfig
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net8.0-windows
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DummyClient
+build_property.ProjectDir = C:\github\GameServer_Programming\DummyClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop =
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.GlobalUsings.g.cs
+```cs
+// <auto-generated/>
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.Drawing;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::System.Windows.Forms;
+```
+
+## DummyClient\obj\Debug\net8.0-windows\DummyClient.sourcelink.json
+```json
+{"documents":{"C:\\github\\GameServer_Programming\\*":"https://raw.githubusercontent.com/rapidswap/GameServer_Programming/8e3507c9f732037e3b7ff27868ce92c55273ddc7/*"}}
+```
+
+## DummyClient\obj\Debug\net8.0-windows7.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+```cs
+// <autogenerated />
+using System;
+using System.Reflection;
+[assembly: global::System.Runtime.Versioning.TargetFrameworkAttribute(".NETCoreApp,Version=v8.0", FrameworkDisplayName = ".NET 8.0")]
+```
+
+## DummyClient\obj\Debug\net8.0-windows7.0\DummyClient.GeneratedMSBuildEditorConfig.editorconfig
+```editorconfig
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net8.0-windows7.0
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DummyClient
+build_property.ProjectDir = C:\github\GameServer_Programming\DummyClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop =
+```
+
+## DummyClient\obj\Debug\net8.0-windows7.0\DummyClient.GlobalUsings.g.cs
+```cs
+// <auto-generated/>
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.Drawing;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Net.Http;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::System.Windows.Forms;
+```
+
+## DummyClient\Program.cs
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    internal static class Program
+    {
+        public static DummyClient mainForm_ = null;
+        public static ProgramState programState_= null;
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            mainForm_ = new DummyClient();
+            programState_=new ProgramState();
+            Application.Run(mainForm_);
+            Application.Exit();
+        }
+    }
+}
+```
+
+## DummyClient\Source\Chatting\ChatWnd.cs
+```cs
+癤퓎sing System;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    internal class ChatWnd
+    {
+        private enum TextView
+        {
+            LINE_MAX = 5000,
+        }
+
+        private RichTextBox outputView_;
+
+        public ChatWnd(RichTextBox richTextBox)
+        {
+            this.outputView_ = richTextBox;
+        }
+
+        private void chattingMessageResize()
+        {
+            String str = outputView_.Text;
+            int textLine = 0;
+
+            while (true)
+            {
+                int idx = str.IndexOf(Environment.NewLine);
+                if (idx < 0)
+                {
+                    break;
+                }
+                str = str.Substring(idx + Environment.NewLine.Length);
+                ++textLine;
+            }
+
+            if (textLine > (int)TextView.LINE_MAX)
+            {
+                String originalStr = outputView_.Text;
+
+                int idx = originalStr.IndexOf(Environment.NewLine);
+                originalStr = originalStr.Substring(idx + Environment.NewLine.Length);
+
+                outputView_.Text = originalStr;
+            }
+        }
+
+        public void textChanged(object sender, EventArgs e)
+        {
+            chattingMessageResize();
+
+            String str = outputView_.Text;
+            int len = str.LastIndexOf('\n');
+            if (len < 0)
+            {
+                return;
+            }
+            outputView_.SelectionStart = len;
+            outputView_.ScrollToCaret();
+        }
+
+        public void pushText(string text)
+        {
+            if (outputView_ == null)
+            {
+                return;
+            }
+            outputView_.AppendText(text + Environment.NewLine);
+            outputView_.ScrollToCaret();
+        }
+    }
+}
+```
+
+## DummyClient\Source\ContentsProcess.cs
+```cs
+癤퓎sing System.Windows.Forms;
+
+namespace DummyClient
+{
+    internal abstract class ContentsProcess
+    {
+//怨듯넻泥섎━
+    }
+}
+```
+
+## DummyClient\Source\CreateCharacter\CreateCharacterContents.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DummyClient
+{
+    class CreateCharacterContents : ContentsProcess
+    {
+        public void S_ANS_CREATECHARCTER(PacketInterface rowPacket)
+        {
+
+        }
+    }
+}
+```
+
+## DummyClient\Source\CreateCharacter\CreateCharacterProcess.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DummyClient
+{
+    class CreateCharacterProcess : PacketProcess
+    {
+        CreateCharacterContents contents_ = null;
+
+        public CreateCharacterProcess()
+        {
+            contents_ = new CreateCharacterContents();
+        }
+        public override void run(PacketInterface packet)
+        {
+        }
+    }
+}
+```
+
+## DummyClient\Source\Network\Packet.cs
+```cs
+癤퓎sing System;
+using System.IO;
+
+namespace DummyClient
+{
+    public interface PacketInterface
+    {
+        void encode();
+        void decode(byte[] packet, ref int offset);
+
+        Int64 type();
+        MemoryStream getStream();
+    }
+
+    public class PacketData
+    {
+        protected MemoryStream packet_ = new MemoryStream();
+
+        ~PacketData()
+        {
+            packet_ = null;
+        }
+    }
+}
+```
+
+## DummyClient\Source\Network\PacketObfuscation.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DummyClient
+{
+    static class PacketObfuscation
+    {
+        static Byte[] key_ = Encoding.ASCII.GetBytes(PacketMakeDate.stamp());
+
+        static private void CalcXor(ref Byte[] packet, int packetOffset, int packetLen)
+        {
+            int keyIdx = packetOffset % key_.Length;
+            for (int packetIdx = 0; packetIdx < packetLen; ++packetIdx)
+            {
+                packet[packetIdx] ^= key_[keyIdx++];
+                if (keyIdx == key_.Length)
+                {
+                    keyIdx = 0;
+                }
+            }
+        }
+
+        static public void encodingHeader(ref Byte[] packet, int packetLen)
+        {
+            CalcXor(ref packet, 0, packetLen);
+        }
+        static public void encodingData(ref Byte[] packet, int packetLen)
+        {
+            CalcXor(ref packet, sizeof(Int32), packetLen);
+        }
+
+        static public void decodingHeader(ref Byte[] packet, int packetLen)
+        {
+            CalcXor(ref packet, 0, packetLen);
+        }
+        static public void decodingData(ref Byte[] packet, int packetLen)
+        {
+            CalcXor(ref packet, sizeof(Int32), packetLen);
+        }
+    }
+}
+```
+
+## DummyClient\Source\PacketGen\PacketClass.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.IO;
+using System.Net.Sockets;
+
+namespace DummyClient
+{
+    public class PK_C_REQ_EXIT : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_EXIT; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_EXIT; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_S_ANS_EXIT : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_EXIT; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_EXIT; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_NOTIFY_TERMINAL : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_NOTIFY_TERMINAL; }
+        Int64 type() { return (Int64)PacketType.E_I_NOTIFY_TERMINAL; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_NOTIFY_HEARTBEAT : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_NOTIFY_HEARTBEAT; }
+        Int64 type() { return (Int64)PacketType.E_C_NOTIFY_HEARTBEAT; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_REQ_ID_PW : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_ID_PW; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_ID_PW; }
+        public string id_;
+        public string password_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, id_);
+            PacketUtil.encode(packet_, password_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            id_ = PacketUtil.decodestring(packet, ref offset);
+            password_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_S_ANS_ID_PW_FAIL : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_ID_PW_FAIL; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_ID_PW_FAIL; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_S_ANS_ID_PW_SUCCESS : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_ID_PW_SUCCESS; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_ID_PW_SUCCESS; }
+        public string ip_;
+        public UInt32 port_;
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, ip_);
+            PacketUtil.encode(packet_, port_);
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            ip_ = PacketUtil.decodestring(packet, ref offset);
+            port_ = PacketUtil.decodeUInt32(packet, ref offset);
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_DB_REQ_ID_PW : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_REQ_ID_PW; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_REQ_ID_PW; }
+        public UInt64 clientId_;
+        public string id_;
+        public string password_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, id_);
+            PacketUtil.encode(packet_, password_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            id_ = PacketUtil.decodestring(packet, ref offset);
+            password_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_DB_ANS_ID_PW : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_ANS_ID_PW; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_ANS_ID_PW; }
+        public UInt64 clientId_;
+        public UInt64 oidAccountId_;
+        public Byte result_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, oidAccountId_);
+            PacketUtil.encode(packet_, result_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            result_ = PacketUtil.decodeByte(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_CHTTING_NOTIFY_ID : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_CHTTING_NOTIFY_ID; }
+        Int64 type() { return (Int64)PacketType.E_I_CHTTING_NOTIFY_ID; }
+        public UInt64 clientId_;
+        public UInt64 oidAccountId_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, oidAccountId_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_DB_REQ_LOAD_DATA : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_REQ_LOAD_DATA; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_REQ_LOAD_DATA; }
+        public UInt64 clientId_;
+        public UInt64 oidAccountId_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, oidAccountId_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_DB_ANS_PARSE_DATA : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_ANS_PARSE_DATA; }
+        Int64 type() { return (Int64)PacketType.E_I_DB_ANS_PARSE_DATA; }
+        public UInt64 clientId_;
+        public string name_;
+        public Byte result_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, name_);
+            PacketUtil.encode(packet_, result_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            name_ = PacketUtil.decodestring(packet, ref offset);
+            result_ = PacketUtil.decodeByte(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_I_LOGIN_NOTIFY_ID_LOADED : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_I_LOGIN_NOTIFY_ID_LOADED; }
+        Int64 type() { return (Int64)PacketType.E_I_LOGIN_NOTIFY_ID_LOADED; }
+        public UInt64 clientId_;
+        public string name_;
+        public Byte result_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientId_);
+            PacketUtil.encode(packet_, name_);
+            PacketUtil.encode(packet_, result_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            name_ = PacketUtil.decodestring(packet, ref offset);
+            result_ = PacketUtil.decodeByte(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_REQ_REGIST_CHATTING_NAME : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_REGIST_CHATTING_NAME; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_REGIST_CHATTING_NAME; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_REQ_CHATTING : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_CHATTING; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_CHATTING; }
+        public string text_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, text_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            text_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_S_ANS_CHATTING : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CHATTING; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_CHATTING; }
+        public string name_;
+        public string text_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+            PacketUtil.encode(packet_, text_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+            text_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_NEW_USER_NOTIFY : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_NEW_USER_NOTIFY; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_NEW_USER_NOTIFY; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_USER_LIST : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_USER_LIST; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_USER_LIST; }
+
+        public List<string> names_ = new List<string>();
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+
+            PacketUtil.encode(packet_, (Int32)names_.Count);
+
+            foreach (string name in names_)
+            {
+                PacketUtil.encode(packet_, name);
+            }
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            Int32 count = PacketUtil.decodeInt32(packet, ref offset);
+
+            names_.Clear();
+
+            for (int i = 0; i < count; i++)
+            {
+                string name = PacketUtil.decodestring(packet, ref offset);
+                names_.Add(name);
+            }
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_EXIT_USER : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_EXIT_USER; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_EXIT_USER; }
+        public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+    public class PK_C_REQ_CHAT_EXIT : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_CHAT_EXIT; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_CHAT_EXIT; }
+        //public string name_;
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+           // PacketUtil.encode(packet_, name_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+           // name_ = PacketUtil.decodestring(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_CREATECHARACTER_OPEN : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_CREATECHARACTER_OPEN; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+}
+```
+
+## DummyClient\Source\PacketGen\PacketFactory.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.IO;
+using System.Net.Sockets;
+
+namespace DummyClient
+{
+    public static class PacketFactory
+    {
+        public static PacketInterface getPacket(Int64 packetType)
+        {
+            switch ((PacketType)packetType)
+            {
+                case PacketType.E_C_REQ_EXIT: return new PK_C_REQ_EXIT();
+                case PacketType.E_S_ANS_EXIT: return new PK_S_ANS_EXIT();
+                case PacketType.E_I_NOTIFY_TERMINAL: return new PK_I_NOTIFY_TERMINAL();
+                case PacketType.E_C_NOTIFY_HEARTBEAT: return new PK_C_NOTIFY_HEARTBEAT();
+                case PacketType.E_C_REQ_ID_PW: return new PK_C_REQ_ID_PW();
+                case PacketType.E_S_ANS_ID_PW_FAIL: return new PK_S_ANS_ID_PW_FAIL();
+                case PacketType.E_S_ANS_ID_PW_SUCCESS: return new PK_S_ANS_ID_PW_SUCCESS();
+                case PacketType.E_I_DB_REQ_ID_PW: return new PK_I_DB_REQ_ID_PW();
+                case PacketType.E_I_DB_ANS_ID_PW: return new PK_I_DB_ANS_ID_PW();
+                case PacketType.E_I_CHTTING_NOTIFY_ID: return new PK_I_CHTTING_NOTIFY_ID();
+                case PacketType.E_I_DB_REQ_LOAD_DATA: return new PK_I_DB_REQ_LOAD_DATA();
+                case PacketType.E_I_DB_ANS_PARSE_DATA: return new PK_I_DB_ANS_PARSE_DATA();
+                case PacketType.E_I_LOGIN_NOTIFY_ID_LOADED: return new PK_I_LOGIN_NOTIFY_ID_LOADED();
+                case PacketType.E_C_REQ_REGIST_CHATTING_NAME: return new PK_C_REQ_REGIST_CHATTING_NAME();
+                case PacketType.E_C_REQ_CHATTING: return new PK_C_REQ_CHATTING();
+                case PacketType.E_S_ANS_CHATTING: return new PK_S_ANS_CHATTING();
+                case PacketType.E_S_ANS_NEW_USER_NOTIFY:return new PK_S_ANS_NEW_USER_NOTIFY();
+                case PacketType.E_S_ANS_USER_LIST:return new PK_S_ANS_USER_LIST();
+                case PacketType.E_S_ANS_EXIT_USER:return new PK_S_ANS_EXIT_USER();
+                case PacketType.E_C_REQ_CHAT_EXIT:return new PK_C_REQ_CHAT_EXIT();
+                case PacketType.E_S_ANS_CREATECHARACTER_OPEN: return new PK_S_ANS_CREATECHARACTER_OPEN();
+            }
+            return null;
+        }
+    }
+}
+```
+
+## DummyClient\Source\PacketGen\PacketHeader.cs
+```cs
+癤퓎sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.IO;
+
+namespace DummyClient
+{
+    static class PacketMakeDate
+    {
+        static public string stamp()
+        {
+            return "2025/03/01 12:13:55";
+        }
+    }
+    enum PacketType : long
+    {
+        E_C_REQ_EXIT = 128,
+        E_S_ANS_EXIT = 129,
+        E_I_NOTIFY_TERMINAL = 130,
+        E_C_NOTIFY_HEARTBEAT = 131,
+        E_C_REQ_ID_PW = 132,
+        E_S_ANS_ID_PW_FAIL = 133,
+        E_S_ANS_ID_PW_SUCCESS = 134,
+        E_I_DB_REQ_ID_PW = 135,
+        E_I_DB_ANS_ID_PW = 136,
+        E_I_CHTTING_NOTIFY_ID = 137,
+        E_I_DB_REQ_LOAD_DATA = 138,
+        E_I_DB_ANS_PARSE_DATA = 139,
+        E_I_LOGIN_NOTIFY_ID_LOADED = 140,
+        E_C_REQ_REGIST_CHATTING_NAME = 141,
+        E_C_REQ_CHATTING = 142,
+        E_S_ANS_CHATTING = 143,
+        E_S_ANS_NEW_USER_NOTIFY = 144,
+        E_S_ANS_USER_LIST = 145,
+        E_S_ANS_EXIT_USER = 146,
+        E_C_REQ_CHAT_EXIT=147,
+        E_S_ANS_CREATECHARACTER_OPEN=148,
+        E_C_REQ_CREATECHARACTER=149,
+
+    }
+};
+```
+
+## DummyClient\Source\PacketProcess.cs
+```cs
+癤퓎sing System.Windows.Forms;
+
+namespace DummyClient
+{
+    internal abstract class PacketProcess
+    {
+        public bool defaultRun(PacketInterface packet)
+        {
+            PacketType type = (PacketType)packet.type();
+
+            return false;
+        }
+
+        public abstract void run(PacketInterface packet);
+    }
+}
+```
+
+## DummyClient\Source\ProgramState.cs
+```cs
+癤퓆amespace DummyClient
+{
+    internal enum PROGRAM_STATE
+    {
+        LOGIN,
+        CHATTING,
+        CREATECHARACTER,
+        MAX,
+    }
+
+    internal class ProgramState
+    {
+        private PROGRAM_STATE state_;
+        private FormState formState_ = null;
+        private string name_;
+
+        public delegate void putMessageDele(string msg);
+        public event putMessageDele putMessage_;
+
+        private void changeState()
+        {
+            switch (state_)
+            {
+                case PROGRAM_STATE.LOGIN:
+                    formState_ = new LoginFormState();
+                    break;
+
+                case PROGRAM_STATE.CHATTING:
+                    formState_ = new ChattingFormState();
+                    break;
+
+                case PROGRAM_STATE.CREATECHARACTER:
+                    formState_=new CreateCharacterState();
+                    break;
+            }
+        }
+
+        public void setState(PROGRAM_STATE state, string ip, uint port)
+        {
+            if (formState_ != null)
+                formState_.close();
+
+            state_ = state;
+            this.changeState();
+            formState_.open(ip, port);
+        }
+
+        public void setName(string name)
+        {
+            name_ = name;
+        }
+
+        public string name()
+        {
+            return name_;
+        }
+
+        public void sendPacket(PacketInterface packet)
+        {
+            this.formState_.sendPacket(ref packet);
+        }
+
+        public void putMessage(string msg)
+        {
+            putMessage_(msg);
+        }
+
+        public void close()
+        {
+            this.formState_.close();
+        }
+    }
+}
+```
+
+## LoginServer\LoginServer.cpp
+```cpp
+#include "stdafx.h"
+
+class SystemReport : public Work
+{
+	void tick()
+	{
+		Monitoring &moniter = Monitoring::getInstance();
+		SLog(L"### cpu usage : %2.2f%%, memory usage : %uByte", moniter.processCpuUsage(), moniter.processMemUsage());
+	}
+};
+
+void serverProcess()
+{
+	shared_ptr<Server> server(new IOCPServer(new LoginProcess()));
+	SystemReport systemReport;
+	const int MONITOR_REPORTING_SEC = 1;
+	TaskManager::getInstance().add(&systemReport, MONITOR_REPORTING_SEC, TICK_INFINTY);
+	if (!server->run()) {
+		SLog(L"! error: server start fail");
+		return;
+	}
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	shared_ptr<Thread> serverThread(new Thread(new thread_t(serverProcess), L"Server"));
+	return 0;
+}
+```
+
 ## LoginServer\Server\LoginProcess.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "LoginProcess.h"
 
 LoginProcess::LoginProcess()
@@ -559,27 +3385,26 @@ void LoginProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_LOGIN_NOTIFY_ID_LOADED);
 }
 
-//---------------------------------------------------------------//
-//패킷 처리 정의
-void LoginProcess::C_REQ_ID_PW(Session* session, Packet* rowPacket)
+
+void LoginProcess::C_REQ_ID_PW(Session *session, Packet *rowPacket)
 {
-	PK_C_REQ_ID_PW* packet = (PK_C_REQ_ID_PW*)rowPacket;
+	PK_C_REQ_ID_PW *packet = (PK_C_REQ_ID_PW *)rowPacket;
 
 	PK_I_DB_REQ_ID_PW dbPacket;
 	dbPacket.clientId_ = (UInt64)session->id();
 	dbPacket.id_ = packet->id_;
 	dbPacket.password_ = packet->password_;
 
-	Terminal* terminal = _terminal.get(L"DBAgent");
+	Terminal *terminal = _terminal.get(L"DBAgent");
 	terminal->sendPacket(&dbPacket);
 }
 
-void LoginProcess::I_DB_ANS_ID_PW(Session* session, Packet* rowPacket)
+void LoginProcess::I_DB_ANS_ID_PW(Session *session, Packet *rowPacket)
 {
-	PK_I_DB_ANS_ID_PW* packet = (PK_I_DB_ANS_ID_PW*)rowPacket;
+	PK_I_DB_ANS_ID_PW *packet = (PK_I_DB_ANS_ID_PW  *)rowPacket;
 	SLog(L"* id/ pw result = %d", packet->result_);
 
-	Session* clientSession = _session_manager.session(packet->clientId_);
+	Session *clientSession = _session_manager.session(packet->clientId_);
 	if (clientSession == nullptr) {
 		return;
 	}
@@ -590,30 +3415,30 @@ void LoginProcess::I_DB_ANS_ID_PW(Session* session, Packet* rowPacket)
 		clientSession->sendPacket(&ansPacket);
 		return;
 	}
-
+	
 	PK_I_CHTTING_NOTIFY_ID iPacket;
 	iPacket.oidAccountId_ = packet->oidAccountId_;
 	iPacket.clientId_ = packet->clientId_;
-	Terminal* terminal = _terminal.get(L"ChattingServer");
+	Terminal *terminal = _terminal.get(L"ChattingServer");
 	if (terminal == nullptr) {
 		SLog(L"! Chatting Server terminal is not connected");
 	}
 	terminal->sendPacket(&iPacket);
 }
 
-void LoginProcess::I_LOGIN_NOTIFY_ID_LOADED(Session* session, Packet* rowPacket)
+void LoginProcess::I_LOGIN_NOTIFY_ID_LOADED(Session *session, Packet *rowPacket)
 {
-	PK_I_LOGIN_NOTIFY_ID_LOADED* packet = (PK_I_LOGIN_NOTIFY_ID_LOADED*)rowPacket;
-
+	PK_I_LOGIN_NOTIFY_ID_LOADED *packet = (PK_I_LOGIN_NOTIFY_ID_LOADED *)rowPacket;
+	
 	const int dataNull = 0;
 	if (packet->result_ == dataNull) {
 		return;
 	}
-	Session* clientSession = _session_manager.session(packet->clientId_);
+	Session *clientSession = _session_manager.session(packet->clientId_);
 	if (clientSession == nullptr) {
 		return;
 	}
-	Terminal* terminal = _terminal.get(L"ChattingServer");
+	Terminal *terminal = _terminal.get(L"ChattingServer");
 	if (terminal == nullptr) {
 		SLog(L"! Chatting Server terminal is not connected");
 	}
@@ -630,7 +3455,7 @@ void LoginProcess::I_LOGIN_NOTIFY_ID_LOADED(Session* session, Packet* rowPacket)
 ## LoginServer\Server\LoginProcess.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class LoginProcess : public ContentsProcess
 {
@@ -638,10 +3463,43 @@ public:
 	LoginProcess();
 private:
 	void registSubPacketFunc();
-	static void C_REQ_ID_PW(Session* session, Packet* rowPacket);
-	static void I_DB_ANS_ID_PW(Session* session, Packet* rowPacket);
-	static void I_LOGIN_NOTIFY_ID_LOADED(Session* session, Packet* rowPacket);
+	static void C_REQ_ID_PW(Session *session, Packet *rowPacket);
+	static void I_DB_ANS_ID_PW(Session *session, Packet *rowPacket);
+	static void I_LOGIN_NOTIFY_ID_LOADED(Session *session, Packet *rowPacket);
 };
+```
+
+## LoginServer\stdafx.cpp
+```cpp
+// stdafx.cpp : source file that includes just the standard includes
+// LoginServer.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file
+```
+
+## LoginServer\stdafx.h
+```h
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include "targetver.h"
+
+#include <stdio.h>
+#include <tchar.h>
+
+
+// 종속 serverLibrary
+// TODO: reference additional headers your program requires here
+#include "ServerLibrary.h"
+#include "./Server/LoginProcess.h"
 ```
 
 ## LoginServer\targetver.h
@@ -662,16 +3520,6 @@ PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.41.34120:T
 Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
 ```
 
-## LoginServer\x64\Debug\LoginServer.vcxproj.FileListAbsolute.txt
-```txt
-
-```
-
-## ServerLibrary\.vs\ServerCore\v17\Browse.VC.db-wal
-```db-wal
-
-```
-
 ## ServerLibrary\.vs\ServerCore\v17\DocumentLayout.backup.json
 ```json
 {
@@ -679,155 +3527,288 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
   "WorkspaceRootPath": "C:\\github\\GameServer_Programming\\ServerLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\ADODatabase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\ADODatabase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\SMTPMail.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\SMTPMail.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketObfuscation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionMonitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Shutdown.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Shutdown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\CONTENTS\\CONTENTSPROCESS.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:CONTENTS\\CONTENTSPROCESS.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\QueryStatement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\Query.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\Database.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Iocp\\IOCPSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Iocp\\IOCPSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Iocp\\IOCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Iocp\\IOCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketObfuscation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Terminal\\TerminalSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Terminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Singleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\WinSocket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\WinSocket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\csv_parser\\csv_parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinystr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\csv_parser\\csv_parser.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxmlparser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -837,495 +3818,936 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SMTPMail.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h",
-              "RelativeDocumentMoniker": "Util\\SMTPMail.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h",
-              "RelativeToolTip": "Util\\SMTPMail.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:25:11.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SMTPMail.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp",
-              "RelativeDocumentMoniker": "Util\\SMTPMail.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp",
-              "RelativeToolTip": "Util\\SMTPMail.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:26:28.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServerLibrary.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
-              "RelativeDocumentMoniker": "ServerLibrary.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
-              "RelativeToolTip": "ServerLibrary.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Title": "PacketHeader.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketHeader.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h",
+              "RelativeToolTip": "Net\\Packet\\PacketHeader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:24:45.855Z",
+              "WhenOpened": "2025-02-17T10:08:49.845Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Lock.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
-              "RelativeDocumentMoniker": "Util\\Lock.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
-              "RelativeToolTip": "Util\\Lock.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:20:54.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SessionMonitor.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp",
-              "RelativeDocumentMoniker": "Net\\SessionMonitor.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp",
-              "RelativeToolTip": "Net\\SessionMonitor.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:08:04.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoginServer.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
-              "RelativeDocumentMoniker": "..\\LoginServer\\LoginServer.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
-              "RelativeToolTip": "..\\LoginServer\\LoginServer.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAASwBIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:06:36.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "config.xml",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
-              "RelativeDocumentMoniker": "..\\LoginServer\\config.xml",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
-              "RelativeToolTip": "..\\LoginServer\\config.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-29T08:06:20.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "thread.cpp",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "RelativeToolTip": "..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T07:54:24.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThreadJobQueue.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
-              "RelativeDocumentMoniker": "Util\\ThreadJobQueue.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
-              "RelativeToolTip": "Util\\ThreadJobQueue.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T07:52:27.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Clock.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
-              "RelativeDocumentMoniker": "Util\\Clock.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
-              "RelativeToolTip": "Util\\Clock.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:34:08.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Lock.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
-              "RelativeDocumentMoniker": "Util\\Lock.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
-              "RelativeToolTip": "Util\\Lock.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:33:35.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Memory_LowFragmentationHeap.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
-              "RelativeDocumentMoniker": "Util\\Memory_LowFragmentationHeap.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
-              "RelativeToolTip": "Util\\Memory_LowFragmentationHeap.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:32:31.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MemoryLeak.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
-              "RelativeDocumentMoniker": "Util\\MemoryLeak.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
-              "RelativeToolTip": "Util\\MemoryLeak.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:32:11.716Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ProgramValidation.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
-              "RelativeDocumentMoniker": "Util\\ProgramValidation.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
-              "RelativeToolTip": "Util\\ProgramValidation.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Title": "ADODatabase.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h",
+              "RelativeDocumentMoniker": "Database\\ADODatabase.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h",
+              "RelativeToolTip": "Database\\ADODatabase.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:31:51.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T09:32:10.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Task.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
-              "RelativeDocumentMoniker": "Util\\Task.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
-              "RelativeToolTip": "Util\\Task.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAASwCAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ADODatabase.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp",
+              "RelativeDocumentMoniker": "Database\\ADODatabase.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp",
+              "RelativeToolTip": "Database\\ADODatabase.cpp",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:31:09.45Z",
+              "WhenOpened": "2025-02-08T08:47:11.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Task.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
-              "RelativeDocumentMoniker": "Util\\Task.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
-              "RelativeToolTip": "Util\\Task.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PacketFactory.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketFactory.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h",
+              "RelativeToolTip": "Net\\Packet\\PacketFactory.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:31:01.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Thread.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
-              "RelativeDocumentMoniker": "Util\\Thread.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
-              "RelativeToolTip": "Util\\Thread.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:30:54.779Z",
+              "WhenOpened": "2025-02-17T10:07:05.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Thread.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
-              "RelativeDocumentMoniker": "Util\\Thread.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
-              "RelativeToolTip": "Util\\Thread.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "PacketClass.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketClass.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h",
+              "RelativeToolTip": "Net\\Packet\\PacketClass.h",
+              "ViewState": "AgIAADYBAAAAAAAAAAAAAM0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:43.424Z",
+              "WhenOpened": "2025-02-17T10:09:57.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Type.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
-              "RelativeDocumentMoniker": "Util\\Type.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
-              "RelativeToolTip": "Util\\Type.h",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Title": "QI_DB_REQ_ID_PW.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "RelativeToolTip": "..\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:28.56Z",
+              "WhenOpened": "2025-03-05T13:05:21.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Util.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
-              "RelativeDocumentMoniker": "Util\\Util.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
-              "RelativeToolTip": "Util\\Util.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:08.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Clock.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
-              "RelativeDocumentMoniker": "Util\\Clock.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
-              "RelativeToolTip": "Util\\Clock.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:04:20.887Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Config.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h",
-              "RelativeDocumentMoniker": "Util\\Config.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h",
-              "RelativeToolTip": "Util\\Config.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:57.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GameObject.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
-              "RelativeDocumentMoniker": "Util\\GameObject.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
-              "RelativeToolTip": "Util\\GameObject.h",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:42.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Logger.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
-              "RelativeDocumentMoniker": "Util\\Logger.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
-              "RelativeToolTip": "Util\\Logger.cpp",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:03:16.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Logger.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
-              "RelativeDocumentMoniker": "Util\\Logger.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
-              "RelativeToolTip": "Util\\Logger.h",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:08.281Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Minidump.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
-              "RelativeDocumentMoniker": "Util\\Minidump.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
-              "RelativeToolTip": "Util\\Minidump.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:02:35.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Minidump.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
-              "RelativeDocumentMoniker": "Util\\Minidump.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
-              "RelativeToolTip": "Util\\Minidump.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:02:27.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Monitoring.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
-              "RelativeDocumentMoniker": "Util\\Monitoring.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
-              "RelativeToolTip": "Util\\Monitoring.h",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:02:20.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Singleton.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h",
-              "RelativeDocumentMoniker": "Util\\Singleton.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h",
-              "RelativeToolTip": "Util\\Singleton.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:01:49.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Table.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
-              "RelativeDocumentMoniker": "Util\\Table.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
-              "RelativeToolTip": "Util\\Table.h",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAPgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:01:28.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SessionManager.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
-              "RelativeDocumentMoniker": "Net\\SessionManager.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
-              "RelativeToolTip": "Net\\SessionManager.cpp",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAowJcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T14:32:02.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Session.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
-              "RelativeDocumentMoniker": "Net\\Session.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
-              "RelativeToolTip": "Net\\Session.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAGwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T13:41:19.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Session.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
-              "RelativeDocumentMoniker": "Net\\Session.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
-              "RelativeToolTip": "Net\\Session.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T13:40:57.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Server.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
-              "RelativeDocumentMoniker": "Net\\Server.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
-              "RelativeToolTip": "Net\\Server.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T10:49:31.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Server.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h",
-              "RelativeDocumentMoniker": "Net\\Server.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h",
-              "RelativeToolTip": "Net\\Server.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T10:49:24.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LoginProcess.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
-              "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
-              "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T10:48:50.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "LoginProcess.cpp",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp",
               "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.cpp",
               "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp",
               "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T10:48:24.949Z"
+              "WhenOpened": "2025-01-29T09:29:53.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "DBAgentProcess.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp",
+              "RelativeDocumentMoniker": "..\\DBAgent\\DBAgentProcess.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp",
+              "RelativeToolTip": "..\\DBAgent\\DBAgentProcess.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T15:49:10.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ContentsProcess.cpp",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp",
               "RelativeDocumentMoniker": "Contents\\ContentsProcess.cpp",
               "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp",
               "RelativeToolTip": "Contents\\ContentsProcess.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T09:50:33.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:50:33.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserManager.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\UserManager.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\UserManager.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:17:11.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\User.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\User.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:16:04.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChattingProcess.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:07:44.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Package.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\Package.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h",
+              "RelativeToolTip": "Net\\Packet\\Package.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:52:32.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProgramValidation.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
+              "RelativeDocumentMoniker": "Util\\ProgramValidation.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
+              "RelativeToolTip": "Util\\ProgramValidation.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:39:08.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChattingServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\ChattingServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\ChattingServer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:00:40.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "stdafx.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\stdafx.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\stdafx.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:01:52.027Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "PacketObfuscation.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketObfuscation.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp",
+              "RelativeToolTip": "Net\\Packet\\PacketObfuscation.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:01:21.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChattingProcess.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\ChattingProcess.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\ChattingProcess.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:04:03.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "QI_DB_REQ_LOAD_DATA.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "RelativeToolTip": "..\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T13:05:27.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginProcess.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
+              "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:30:08.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
+              "RelativeDocumentMoniker": "..\\LoginServer\\LoginServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
+              "RelativeToolTip": "..\\LoginServer\\LoginServer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:24:19.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ServerLibrary.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
+              "RelativeDocumentMoniker": "ServerLibrary.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
+              "RelativeToolTip": "ServerLibrary.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAGUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T08:24:45.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Shutdown.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp",
+              "RelativeDocumentMoniker": "Shutdown.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp",
+              "RelativeToolTip": "Shutdown.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:47:18.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Shutdown.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h",
+              "RelativeDocumentMoniker": "Shutdown.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h",
+              "RelativeToolTip": "Shutdown.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:47:12.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "ContentsProcess.h",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h",
               "RelativeDocumentMoniker": "Contents\\ContentsProcess.h",
               "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h",
               "RelativeToolTip": "Contents\\ContentsProcess.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T09:44:32.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:44:32.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "QueryStatement.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h",
+              "RelativeDocumentMoniker": "Database\\QueryStatement.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h",
+              "RelativeToolTip": "Database\\QueryStatement.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:49:39.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\main.cpp",
+              "RelativeDocumentMoniker": "..\\DBAgent\\main.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\main.cpp",
+              "RelativeToolTip": "..\\DBAgent\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T06:28:51.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Query.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h",
+              "RelativeDocumentMoniker": "Database\\Query.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h",
+              "RelativeToolTip": "Database\\Query.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:49:14.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Database.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h",
+              "RelativeDocumentMoniker": "Database\\Database.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h",
+              "RelativeToolTip": "Database\\Database.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T06:06:06.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IOCPSession.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPSession.cpp",
+              "RelativeDocumentMoniker": "Net\\IOCP\\IOCPSession.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPSession.cpp",
+              "RelativeToolTip": "Net\\IOCP\\IOCPSession.cpp",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:03:16.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PacketObfuscation.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketObfuscation.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h",
+              "RelativeToolTip": "Net\\Packet\\PacketObfuscation.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T13:02:53.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TerminalSession.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp",
+              "RelativeDocumentMoniker": "Net\\Terminal\\TerminalSession.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp",
+              "RelativeToolTip": "Net\\Terminal\\TerminalSession.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:00:44.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Server.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
+              "RelativeDocumentMoniker": "Net\\Server.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
+              "RelativeToolTip": "Net\\Server.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:00:13.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Session.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
+              "RelativeDocumentMoniker": "Net\\Session.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
+              "RelativeToolTip": "Net\\Session.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:59:59.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SessionManager.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
+              "RelativeDocumentMoniker": "Net\\SessionManager.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
+              "RelativeToolTip": "Net\\SessionManager.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-01T11:42:00.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SessionManager.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h",
+              "RelativeDocumentMoniker": "Net\\SessionManager.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h",
+              "RelativeToolTip": "Net\\SessionManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:50:26.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IOCPServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPServer.cpp",
+              "RelativeDocumentMoniker": "Net\\IOCP\\IOCPServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPServer.cpp",
+              "RelativeToolTip": "Net\\IOCP\\IOCPServer.cpp",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAH0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:01:01.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "WinSocket.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Winsocket.h",
+              "RelativeDocumentMoniker": "Net\\Winsocket.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Winsocket.h",
+              "RelativeToolTip": "Net\\Winsocket.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-01T11:42:02.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Clock.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
+              "RelativeDocumentMoniker": "Util\\Clock.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
+              "RelativeToolTip": "Util\\Clock.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:51:06.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Clock.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
+              "RelativeDocumentMoniker": "Util\\Clock.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
+              "RelativeToolTip": "Util\\Clock.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:38:39.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
+              "RelativeDocumentMoniker": "Util\\GameObject.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
+              "RelativeToolTip": "Util\\GameObject.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:58:43.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Logger.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
+              "RelativeDocumentMoniker": "Util\\Logger.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
+              "RelativeToolTip": "Util\\Logger.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:51:36.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Logger.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
+              "RelativeDocumentMoniker": "Util\\Logger.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
+              "RelativeToolTip": "Util\\Logger.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T17:03:08.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Memory_LowFragmentationHeap.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
+              "RelativeDocumentMoniker": "Util\\Memory_LowFragmentationHeap.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
+              "RelativeToolTip": "Util\\Memory_LowFragmentationHeap.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:10.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Terminal.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp",
+              "RelativeDocumentMoniker": "Net\\Terminal\\Terminal.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp",
+              "RelativeToolTip": "Net\\Terminal\\Terminal.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T08:33:23.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "MemoryLeak.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
+              "RelativeDocumentMoniker": "Util\\MemoryLeak.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
+              "RelativeToolTip": "Util\\MemoryLeak.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:17.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Session.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
+              "RelativeDocumentMoniker": "Net\\Session.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
+              "RelativeToolTip": "Net\\Session.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:50:02.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Minidump.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
+              "RelativeDocumentMoniker": "Util\\Minidump.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
+              "RelativeToolTip": "Util\\Minidump.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T12:57:32.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Monitoring.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
+              "RelativeDocumentMoniker": "Util\\Monitoring.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
+              "RelativeToolTip": "Util\\Monitoring.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:43.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Table.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
+              "RelativeDocumentMoniker": "Util\\Table.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
+              "RelativeToolTip": "Util\\Table.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:11.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Task.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
+              "RelativeDocumentMoniker": "Util\\Task.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
+              "RelativeToolTip": "Util\\Task.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:53:22.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Task.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
+              "RelativeDocumentMoniker": "Util\\Task.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
+              "RelativeToolTip": "Util\\Task.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:31.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Thread.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
+              "RelativeDocumentMoniker": "Util\\Thread.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
+              "RelativeToolTip": "Util\\Thread.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:53:38.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Lock.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
+              "RelativeDocumentMoniker": "Util\\Lock.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
+              "RelativeToolTip": "Util\\Lock.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T08:20:54.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Lock.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
+              "RelativeDocumentMoniker": "Util\\Lock.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
+              "RelativeToolTip": "Util\\Lock.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:14:54.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Thread.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
+              "RelativeDocumentMoniker": "Util\\Thread.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
+              "RelativeToolTip": "Util\\Thread.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:56:42.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Type.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
+              "RelativeDocumentMoniker": "Util\\Type.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
+              "RelativeToolTip": "Util\\Type.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:56.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ThreadJobQueue.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
+              "RelativeDocumentMoniker": "Util\\ThreadJobQueue.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
+              "RelativeToolTip": "Util\\ThreadJobQueue.h",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:56:01.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Minidump.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
+              "RelativeDocumentMoniker": "Util\\Minidump.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
+              "RelativeToolTip": "Util\\Minidump.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:38.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Util.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
+              "RelativeDocumentMoniker": "Util\\Util.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
+              "RelativeToolTip": "Util\\Util.h",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:54:06.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "csv_parser.hpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp",
+              "RelativeDocumentMoniker": "Util\\csv_parser\\csv_parser.hpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp",
+              "RelativeToolTip": "Util\\csv_parser\\csv_parser.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAABhwAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:00.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "xutility",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "ViewState": "AgIAABgFAAAAAAAAAAAuwDAFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-01T11:34:26.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "xhash",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "ViewState": "AgIAAKwDAAAAAAAAAAAuwL0DAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-01T11:34:32.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "csv_parser.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp",
+              "RelativeDocumentMoniker": "Util\\csv_parser\\csv_parser.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp",
+              "RelativeToolTip": "Util\\csv_parser\\csv_parser.cpp",
+              "ViewState": "AgIAADIBAAAAAAAAAIBZwDgBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:00:59.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "tinystr.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinystr.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h",
+              "RelativeToolTip": "Util\\tinyXml\\tinystr.h",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAYwLQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:02.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "tinyxml.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxml.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxml.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAawEYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:01:11.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "tinyxml.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxml.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxml.h",
+              "ViewState": "AgIAAP4BAAAAAAAAAAAawA4CAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:14.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
+              "RelativeDocumentMoniker": "..\\LoginServer\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
+              "RelativeToolTip": "..\\LoginServer\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-15T05:54:00.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\config.xml",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\config.xml",
+              "RelativeToolTip": "..\\ChattingServer\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-15T05:52:47.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\targetver.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h",
+              "RelativeToolTip": "..\\ChattingServer\\targetver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:02:10.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h",
+              "RelativeToolTip": "..\\ChattingServer\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:02:00.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h",
+              "RelativeToolTip": "..\\DBAgent\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T06:56:16.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h",
+              "RelativeToolTip": "..\\LoginServer\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T10:21:27.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\config.xml",
+              "RelativeDocumentMoniker": "..\\DBAgent\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\config.xml",
+              "RelativeToolTip": "..\\DBAgent\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-01-29T10:15:25.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "tinyxmlparser.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxmlparser.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxmlparser.cpp",
+              "ViewState": "AgIAAAACAAAAAAAAAAAqwA0CAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T10:00:18.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp",
+              "RelativeDocumentMoniker": "..\\LoginServer\\pch.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp",
+              "RelativeToolTip": "..\\LoginServer\\pch.cpp",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:29:22.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\targetver.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\targetver.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\targetver.h",
+              "RelativeToolTip": "..\\LoginServer\\targetver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:28:42.604Z"
             }
           ]
         }
@@ -1342,155 +4764,288 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
   "WorkspaceRootPath": "C:\\github\\GameServer_Programming\\ServerLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketClass.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\ADODatabase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\ADODatabase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Contents\\ContentsProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketObfuscation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\ProgramValidation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\SMTPMail.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\SMTPMail.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionMonitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:ServerLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Shutdown.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Shutdown.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1C820BC-E4C9-418A-AFC3-4415D8CFA778}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\CONTENTS\\CONTENTSPROCESS.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:CONTENTS\\CONTENTSPROCESS.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\QueryStatement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\Query.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Database\\Database.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Iocp\\IOCPSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Iocp\\IOCPSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Iocp\\IOCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Iocp\\IOCPServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Packet\\PacketObfuscation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Terminal\\TerminalSession.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Terminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Server.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Singleton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\Session.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6E110469-40CF-47F8-B4C3-DF093D50164C}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\SessionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\WinSocket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Net\\WinSocket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Clock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Lock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Memory_LowFragmentationHeap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\MemoryLeak.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Minidump.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Monitoring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Thread.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\ThreadJobQueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\csv_parser\\csv_parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9687045-9147-4B36-816E-71C68E01C7EB}|..\\ChattingServer\\ChattingServer.vcxproj|C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinystr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\csv_parser\\csv_parser.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{043F7836-D119-4491-88F1-DB6334219A32}|ServerLibrary.vcxproj|solutionrelative:Util\\tinyXml\\tinyxmlparser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\config.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88085C2-D120-4E12-AA30-C848FF4B36AB}|..\\DBAgent\\DBAgent.vcxproj|C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1515F39A-0956-4F01-A163-2960DC0B49F3}|..\\LoginServer\\LoginServer.vcxproj|C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -1500,502 +5055,932 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SMTPMail.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h",
-              "RelativeDocumentMoniker": "Util\\SMTPMail.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.h",
-              "RelativeToolTip": "Util\\SMTPMail.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABXAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PacketHeader.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketHeader.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketHeader.h",
+              "RelativeToolTip": "Net\\Packet\\PacketHeader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:25:11.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SMTPMail.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp",
-              "RelativeDocumentMoniker": "Util\\SMTPMail.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\SMTPMail.cpp",
-              "RelativeToolTip": "Util\\SMTPMail.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:26:28.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ServerLibrary.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
-              "RelativeDocumentMoniker": "ServerLibrary.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
-              "RelativeToolTip": "ServerLibrary.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:24:45.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Lock.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
-              "RelativeDocumentMoniker": "Util\\Lock.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
-              "RelativeToolTip": "Util\\Lock.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T08:20:54.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SessionMonitor.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp",
-              "RelativeDocumentMoniker": "Net\\SessionMonitor.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionMonitor.cpp",
-              "RelativeToolTip": "Net\\SessionMonitor.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:08:04.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoginServer.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
-              "RelativeDocumentMoniker": "..\\LoginServer\\LoginServer.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
-              "RelativeToolTip": "..\\LoginServer\\LoginServer.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAASwBIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T08:06:36.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "config.xml",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
-              "RelativeDocumentMoniker": "..\\LoginServer\\config.xml",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
-              "RelativeToolTip": "..\\LoginServer\\config.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-01-29T08:06:20.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "thread.cpp",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "RelativeToolTip": "..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Source\\10.0.26100.0\\ucrt\\startup\\thread.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-29T07:54:24.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ThreadJobQueue.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
-              "RelativeDocumentMoniker": "Util\\ThreadJobQueue.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
-              "RelativeToolTip": "Util\\ThreadJobQueue.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-29T07:52:27.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Clock.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
-              "RelativeDocumentMoniker": "Util\\Clock.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
-              "RelativeToolTip": "Util\\Clock.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:34:08.825Z"
+              "WhenOpened": "2025-02-17T10:08:49.845Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Lock.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
-              "RelativeDocumentMoniker": "Util\\Lock.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
-              "RelativeToolTip": "Util\\Lock.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:33:35.451Z",
-              "EditorCaption": ""
+              "Title": "ADODatabase.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h",
+              "RelativeDocumentMoniker": "Database\\ADODatabase.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.h",
+              "RelativeToolTip": "Database\\ADODatabase.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:32:10.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Memory_LowFragmentationHeap.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
-              "RelativeDocumentMoniker": "Util\\Memory_LowFragmentationHeap.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
-              "RelativeToolTip": "Util\\Memory_LowFragmentationHeap.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:32:31.374Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "ADODatabase.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp",
+              "RelativeDocumentMoniker": "Database\\ADODatabase.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\ADODatabase.cpp",
+              "RelativeToolTip": "Database\\ADODatabase.cpp",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T08:47:11.348Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MemoryLeak.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
-              "RelativeDocumentMoniker": "Util\\MemoryLeak.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h*",
-              "RelativeToolTip": "Util\\MemoryLeak.h*",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADkAAAAeAAAAAAAAAA==",
+              "Title": "PacketFactory.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketFactory.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketFactory.h",
+              "RelativeToolTip": "Net\\Packet\\PacketFactory.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:32:11.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProgramValidation.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
-              "RelativeDocumentMoniker": "Util\\ProgramValidation.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
-              "RelativeToolTip": "Util\\ProgramValidation.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:31:51.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Task.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
-              "RelativeDocumentMoniker": "Util\\Task.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
-              "RelativeToolTip": "Util\\Task.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAASwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:31:09.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Task.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
-              "RelativeDocumentMoniker": "Util\\Task.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
-              "RelativeToolTip": "Util\\Task.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:31:01.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Thread.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
-              "RelativeDocumentMoniker": "Util\\Thread.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
-              "RelativeToolTip": "Util\\Thread.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:30:54.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Thread.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
-              "RelativeDocumentMoniker": "Util\\Thread.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
-              "RelativeToolTip": "Util\\Thread.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:43.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Type.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
-              "RelativeDocumentMoniker": "Util\\Type.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
-              "RelativeToolTip": "Util\\Type.h",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:28.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Util.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
-              "RelativeDocumentMoniker": "Util\\Util.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
-              "RelativeToolTip": "Util\\Util.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:30:08.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Clock.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
-              "RelativeDocumentMoniker": "Util\\Clock.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
-              "RelativeToolTip": "Util\\Clock.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:04:20.887Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Config.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h",
-              "RelativeDocumentMoniker": "Util\\Config.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Config.h",
-              "RelativeToolTip": "Util\\Config.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:57.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameObject.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
-              "RelativeDocumentMoniker": "Util\\GameObject.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
-              "RelativeToolTip": "Util\\GameObject.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:42.827Z",
+              "WhenOpened": "2025-02-17T10:07:05.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Logger.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
-              "RelativeDocumentMoniker": "Util\\Logger.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
-              "RelativeToolTip": "Util\\Logger.cpp",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:03:16.108Z",
-              "EditorCaption": ""
+              "Title": "PacketClass.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketClass.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketClass.h",
+              "RelativeToolTip": "Net\\Packet\\PacketClass.h",
+              "ViewState": "AgIAADYBAAAAAAAAAAAAAM0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-17T10:09:57.755Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Logger.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
-              "RelativeDocumentMoniker": "Util\\Logger.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
-              "RelativeToolTip": "Util\\Logger.h",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Title": "QI_DB_REQ_ID_PW.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "RelativeToolTip": "..\\DBAgent\\Query\\QI_DB_REQ_ID_PW.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:03:08.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T13:05:21.978Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Minidump.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
-              "RelativeDocumentMoniker": "Util\\Minidump.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
-              "RelativeToolTip": "Util\\Minidump.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T17:02:35.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Minidump.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
-              "RelativeDocumentMoniker": "Util\\Minidump.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
-              "RelativeToolTip": "Util\\Minidump.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:02:27.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Monitoring.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
-              "RelativeDocumentMoniker": "Util\\Monitoring.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
-              "RelativeToolTip": "Util\\Monitoring.h",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:02:20.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Singleton.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h",
-              "RelativeDocumentMoniker": "Util\\Singleton.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Singleton.h",
-              "RelativeToolTip": "Util\\Singleton.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:01:49.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Table.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
-              "RelativeDocumentMoniker": "Util\\Table.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
-              "RelativeToolTip": "Util\\Table.h",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAPgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T17:01:28.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SessionManager.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
-              "RelativeDocumentMoniker": "Net\\SessionManager.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
-              "RelativeToolTip": "Net\\SessionManager.cpp",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAowJcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T14:32:02.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Session.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
-              "RelativeDocumentMoniker": "Net\\Session.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
-              "RelativeToolTip": "Net\\Session.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAGwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-28T13:41:19.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Session.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
-              "RelativeDocumentMoniker": "Net\\Session.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
-              "RelativeToolTip": "Net\\Session.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-28T13:40:57.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Server.cpp",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
-              "RelativeDocumentMoniker": "Net\\Server.cpp",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
-              "RelativeToolTip": "Net\\Server.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T10:49:31.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Server.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h",
-              "RelativeDocumentMoniker": "Net\\Server.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.h",
-              "RelativeToolTip": "Net\\Server.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T10:49:24.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "LoginProcess.h",
-              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
-              "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.h",
-              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
-              "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T10:48:50.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
               "Title": "LoginProcess.cpp",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp",
               "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.cpp",
               "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.cpp",
               "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T10:48:24.949Z"
+              "WhenOpened": "2025-01-29T09:29:53.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "DBAgentProcess.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp",
+              "RelativeDocumentMoniker": "..\\DBAgent\\DBAgentProcess.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\DBAgentProcess.cpp",
+              "RelativeToolTip": "..\\DBAgent\\DBAgentProcess.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T15:49:10.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ContentsProcess.cpp",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp",
               "RelativeDocumentMoniker": "Contents\\ContentsProcess.cpp",
               "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.cpp",
               "RelativeToolTip": "Contents\\ContentsProcess.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T09:50:33.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:50:33.079Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "UserManager.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\UserManager.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\UserManager.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\UserManager.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:17:11.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\User.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\User.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\User.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:16:04.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChattingProcess.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\ChattingProcess.cpp",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:07:44.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Package.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\Package.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\Package.h",
+              "RelativeToolTip": "Net\\Packet\\Package.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:52:32.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProgramValidation.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
+              "RelativeDocumentMoniker": "Util\\ProgramValidation.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ProgramValidation.h",
+              "RelativeToolTip": "Util\\ProgramValidation.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:39:08.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChattingServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\ChattingServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\ChattingServer.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\ChattingServer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:00:40.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "stdafx.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\stdafx.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.cpp",
+              "RelativeToolTip": "..\\ChattingServer\\stdafx.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-08T07:01:52.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PacketObfuscation.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketObfuscation.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.cpp",
+              "RelativeToolTip": "Net\\Packet\\PacketObfuscation.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:01:21.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChattingProcess.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\Server\\ChattingProcess.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\Server\\ChattingProcess.h",
+              "RelativeToolTip": "..\\ChattingServer\\Server\\ChattingProcess.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:04:03.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "QI_DB_REQ_LOAD_DATA.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "RelativeToolTip": "..\\DBAgent\\Query\\QI_DB_REQ_LOAD_DATA.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T13:05:27.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginProcess.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\Server\\LoginProcess.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\Server\\LoginProcess.h",
+              "RelativeToolTip": "..\\LoginServer\\Server\\LoginProcess.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:30:08.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
+              "RelativeDocumentMoniker": "..\\LoginServer\\LoginServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\LoginServer.cpp",
+              "RelativeToolTip": "..\\LoginServer\\LoginServer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:24:19.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ServerLibrary.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
+              "RelativeDocumentMoniker": "ServerLibrary.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\ServerLibrary.h",
+              "RelativeToolTip": "ServerLibrary.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAGUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T08:24:45.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Shutdown.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp",
+              "RelativeDocumentMoniker": "Shutdown.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.cpp",
+              "RelativeToolTip": "Shutdown.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:47:18.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Shutdown.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h",
+              "RelativeDocumentMoniker": "Shutdown.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Shutdown.h",
+              "RelativeToolTip": "Shutdown.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:47:12.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "ContentsProcess.h",
               "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h",
               "RelativeDocumentMoniker": "Contents\\ContentsProcess.h",
               "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Contents\\ContentsProcess.h",
               "RelativeToolTip": "Contents\\ContentsProcess.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-23T09:44:32.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T09:44:32.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "QueryStatement.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h",
+              "RelativeDocumentMoniker": "Database\\QueryStatement.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\QueryStatement.h",
+              "RelativeToolTip": "Database\\QueryStatement.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:49:39.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\main.cpp",
+              "RelativeDocumentMoniker": "..\\DBAgent\\main.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\main.cpp",
+              "RelativeToolTip": "..\\DBAgent\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T06:28:51.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Query.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h",
+              "RelativeDocumentMoniker": "Database\\Query.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Query.h",
+              "RelativeToolTip": "Database\\Query.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:49:14.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Database.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h",
+              "RelativeDocumentMoniker": "Database\\Database.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Database\\Database.h",
+              "RelativeToolTip": "Database\\Database.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T06:06:06.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IOCPSession.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPSession.cpp",
+              "RelativeDocumentMoniker": "Net\\IOCP\\IOCPSession.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPSession.cpp",
+              "RelativeToolTip": "Net\\IOCP\\IOCPSession.cpp",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:03:16.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PacketObfuscation.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h",
+              "RelativeDocumentMoniker": "Net\\Packet\\PacketObfuscation.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Packet\\PacketObfuscation.h",
+              "RelativeToolTip": "Net\\Packet\\PacketObfuscation.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T13:02:53.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TerminalSession.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp",
+              "RelativeDocumentMoniker": "Net\\Terminal\\TerminalSession.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\TerminalSession.cpp",
+              "RelativeToolTip": "Net\\Terminal\\TerminalSession.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:00:44.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Server.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
+              "RelativeDocumentMoniker": "Net\\Server.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Server.cpp",
+              "RelativeToolTip": "Net\\Server.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T13:00:13.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Session.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
+              "RelativeDocumentMoniker": "Net\\Session.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.h",
+              "RelativeToolTip": "Net\\Session.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:59:59.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SessionManager.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
+              "RelativeDocumentMoniker": "Net\\SessionManager.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.cpp",
+              "RelativeToolTip": "Net\\SessionManager.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-01T11:42:00.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SessionManager.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h",
+              "RelativeDocumentMoniker": "Net\\SessionManager.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\SessionManager.h",
+              "RelativeToolTip": "Net\\SessionManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:50:26.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IOCPServer.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPServer.cpp",
+              "RelativeDocumentMoniker": "Net\\IOCP\\IOCPServer.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\IOCP\\IOCPServer.cpp",
+              "RelativeToolTip": "Net\\IOCP\\IOCPServer.cpp",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAH0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:01:01.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "WinSocket.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Winsocket.h",
+              "RelativeDocumentMoniker": "Net\\Winsocket.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Winsocket.h",
+              "RelativeToolTip": "Net\\Winsocket.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-01T11:42:02.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Clock.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
+              "RelativeDocumentMoniker": "Util\\Clock.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.cpp",
+              "RelativeToolTip": "Util\\Clock.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:51:06.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Clock.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
+              "RelativeDocumentMoniker": "Util\\Clock.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Clock.h",
+              "RelativeToolTip": "Util\\Clock.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:38:39.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
+              "RelativeDocumentMoniker": "Util\\GameObject.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\GameObject.h",
+              "RelativeToolTip": "Util\\GameObject.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:58:43.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Logger.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
+              "RelativeDocumentMoniker": "Util\\Logger.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.cpp",
+              "RelativeToolTip": "Util\\Logger.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:51:36.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Logger.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
+              "RelativeDocumentMoniker": "Util\\Logger.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Logger.h",
+              "RelativeToolTip": "Util\\Logger.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T17:03:08.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Memory_LowFragmentationHeap.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
+              "RelativeDocumentMoniker": "Util\\Memory_LowFragmentationHeap.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Memory_LowFragmentationHeap.h",
+              "RelativeToolTip": "Util\\Memory_LowFragmentationHeap.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:10.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Terminal.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp",
+              "RelativeDocumentMoniker": "Net\\Terminal\\Terminal.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Terminal\\Terminal.cpp",
+              "RelativeToolTip": "Net\\Terminal\\Terminal.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T08:33:23.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "MemoryLeak.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
+              "RelativeDocumentMoniker": "Util\\MemoryLeak.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\MemoryLeak.h",
+              "RelativeToolTip": "Util\\MemoryLeak.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:17.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Session.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
+              "RelativeDocumentMoniker": "Net\\Session.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Net\\Session.cpp",
+              "RelativeToolTip": "Net\\Session.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:50:02.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Minidump.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
+              "RelativeDocumentMoniker": "Util\\Minidump.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.cpp",
+              "RelativeToolTip": "Util\\Minidump.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-05T12:57:32.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Monitoring.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
+              "RelativeDocumentMoniker": "Util\\Monitoring.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Monitoring.h",
+              "RelativeToolTip": "Util\\Monitoring.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:43.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Table.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
+              "RelativeDocumentMoniker": "Util\\Table.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Table.h",
+              "RelativeToolTip": "Util\\Table.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:11.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Task.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
+              "RelativeDocumentMoniker": "Util\\Task.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.cpp",
+              "RelativeToolTip": "Util\\Task.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:53:22.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Task.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
+              "RelativeDocumentMoniker": "Util\\Task.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Task.h",
+              "RelativeToolTip": "Util\\Task.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:31.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Thread.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
+              "RelativeDocumentMoniker": "Util\\Thread.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.cpp",
+              "RelativeToolTip": "Util\\Thread.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-06T07:53:38.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Lock.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
+              "RelativeDocumentMoniker": "Util\\Lock.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.h",
+              "RelativeToolTip": "Util\\Lock.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T08:20:54.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Lock.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
+              "RelativeDocumentMoniker": "Util\\Lock.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Lock.cpp",
+              "RelativeToolTip": "Util\\Lock.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:14:54.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Thread.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
+              "RelativeDocumentMoniker": "Util\\Thread.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Thread.h",
+              "RelativeToolTip": "Util\\Thread.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:56:42.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Type.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
+              "RelativeDocumentMoniker": "Util\\Type.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Type.h",
+              "RelativeToolTip": "Util\\Type.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:53:56.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ThreadJobQueue.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
+              "RelativeDocumentMoniker": "Util\\ThreadJobQueue.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\ThreadJobQueue.h",
+              "RelativeToolTip": "Util\\ThreadJobQueue.h",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-05T12:56:01.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Minidump.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
+              "RelativeDocumentMoniker": "Util\\Minidump.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Minidump.h",
+              "RelativeToolTip": "Util\\Minidump.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:52:38.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Util.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
+              "RelativeDocumentMoniker": "Util\\Util.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\Util.h",
+              "RelativeToolTip": "Util\\Util.h",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T07:54:06.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "csv_parser.hpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp",
+              "RelativeDocumentMoniker": "Util\\csv_parser\\csv_parser.hpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.hpp",
+              "RelativeToolTip": "Util\\csv_parser\\csv_parser.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAABhwAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:00.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "xutility",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xutility",
+              "ViewState": "AgIAABgFAAAAAAAAAAAuwDAFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-01T11:34:26.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "xhash",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\xhash",
+              "ViewState": "AgIAAKwDAAAAAAAAAAAuwL0DAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-01T11:34:32.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "csv_parser.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp",
+              "RelativeDocumentMoniker": "Util\\csv_parser\\csv_parser.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\csv_parser\\csv_parser.cpp",
+              "RelativeToolTip": "Util\\csv_parser\\csv_parser.cpp",
+              "ViewState": "AgIAADIBAAAAAAAAAIBZwDgBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:00:59.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "tinystr.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinystr.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinystr.h",
+              "RelativeToolTip": "Util\\tinyXml\\tinystr.h",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAYwLQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:02.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "tinyxml.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxml.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.cpp",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxml.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAawEYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:01:11.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "tinyxml.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxml.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxml.h",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxml.h",
+              "ViewState": "AgIAAP4BAAAAAAAAAAAawA4CAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:01:14.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
+              "RelativeDocumentMoniker": "..\\LoginServer\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\config.xml",
+              "RelativeToolTip": "..\\LoginServer\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-15T05:54:00.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\config.xml",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\config.xml",
+              "RelativeToolTip": "..\\ChattingServer\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-15T05:52:47.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\targetver.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\targetver.h",
+              "RelativeToolTip": "..\\ChattingServer\\targetver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:02:10.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\ChattingServer\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ChattingServer\\stdafx.h",
+              "RelativeToolTip": "..\\ChattingServer\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T07:02:00.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\DBAgent\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\stdafx.h",
+              "RelativeToolTip": "..\\DBAgent\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-08T06:56:16.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\stdafx.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\stdafx.h",
+              "RelativeToolTip": "..\\LoginServer\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T10:21:27.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "config.xml",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\DBAgent\\config.xml",
+              "RelativeDocumentMoniker": "..\\DBAgent\\config.xml",
+              "ToolTip": "C:\\github\\GameServer_Programming\\DBAgent\\config.xml",
+              "RelativeToolTip": "..\\DBAgent\\config.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAACBjwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-01-29T10:15:25.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "tinyxmlparser.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp",
+              "RelativeDocumentMoniker": "Util\\tinyXml\\tinyxmlparser.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\ServerLibrary\\Util\\tinyXml\\tinyxmlparser.cpp",
+              "RelativeToolTip": "Util\\tinyXml\\tinyxmlparser.cpp",
+              "ViewState": "AgIAAAACAAAAAAAAAAAqwA0CAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T10:00:18.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp",
+              "RelativeDocumentMoniker": "..\\LoginServer\\pch.cpp",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\pch.cpp",
+              "RelativeToolTip": "..\\LoginServer\\pch.cpp",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T09:29:22.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\github\\GameServer_Programming\\LoginServer\\targetver.h",
+              "RelativeDocumentMoniker": "..\\LoginServer\\targetver.h",
+              "ToolTip": "C:\\github\\GameServer_Programming\\LoginServer\\targetver.h",
+              "RelativeToolTip": "..\\LoginServer\\targetver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T09:28:42.604Z"
             }
           ]
         }
@@ -2008,7 +5993,7 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
 ## ServerLibrary\Contents\ContentsProcess.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ContentsProcess.h"
 
 ContentsProcess::ContentsProcess()
@@ -2030,14 +6015,14 @@ ContentsProcess::~ContentsProcess()
 	runFuncTable_.clear();
 }
 
-void ContentsProcess::initialize(xml_t* config)
+void ContentsProcess::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Contents");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Contents");
 	if (!root) {
 		SErrLog(L"* not exist process setting");
 		return;
 	}
-	xmlNode_t* elem = root->FirstChildElement("ThreadCount");
+	xmlNode_t *elem = root->FirstChildElement("ThreadCount");
 	int processCount = 0;
 	sscanf_s(elem->GetText(), "%d", &processCount);
 
@@ -2046,7 +6031,7 @@ void ContentsProcess::initialize(xml_t* config)
 		return;
 	}
 
-	packageQueue_ = new ThreadJobQueue<Package*>(L"ContentsProcessQueue");
+	packageQueue_ = new ThreadJobQueue<Package *> (L"ContentsProcessQueue");
 	for (int i = 0; i < processCount; ++i) {
 		threadPool_[i] = MAKE_THREAD(ContentsProcess, process);
 	}
@@ -2060,17 +6045,17 @@ void ContentsProcess::registDefaultPacketFunc()
 	runFuncTable_.insert(make_pair(E_C_REQ_EXIT, &ContentsProcess::C_REQ_EXIT));
 }
 
-void ContentsProcess::putPackage(Package* package)
+void ContentsProcess::putPackage(Package *package)
 {
 	packageQueue_->push(package);
 }
 
-void ContentsProcess::run(Package* package)
+void ContentsProcess::run(Package *package)
 {
 	PacketType type = package->packet_->type();
 	auto itr = runFuncTable_.find(type);
 	if (itr == runFuncTable_.end()) {
-		SLog(L"! invaild packet runFunction. type[%d]", type);
+		SLog(L"! invalid packet runFunction. type[%d]", type);
 		package->session_->onClose();
 		return;
 	}
@@ -2083,13 +6068,13 @@ void ContentsProcess::run(Package* package)
 
 void ContentsProcess::execute()
 {
-	Package* package = nullptr;
+	Package *package = nullptr;
 	if (packageQueue_->pop(package) == false) {
 		return;
 	}
 
 	this->run(package);
-
+	
 	SAFE_DELETE(package);
 }
 
@@ -2101,9 +6086,7 @@ void ContentsProcess::process()
 	}
 }
 
-//--------------------------------------------------------------//
-// 기본 패킷 기능 구현
-void ContentsProcess::Packet_HeartBeat(Session* session, Packet* rowPacket)
+void ContentsProcess::Packet_HeartBeat(Session *session, Packet *rowPacket)
 {
 	if (session->type() != SESSION_TYPE_CLIENT) {
 		return;
@@ -2111,17 +6094,18 @@ void ContentsProcess::Packet_HeartBeat(Session* session, Packet* rowPacket)
 	session->updateHeartBeat();
 }
 
-void ContentsProcess::Packet_Notify_Terminal(Session* session, Packet* rowPacket)
+void ContentsProcess::Packet_Notify_Terminal(Session *session, Packet *rowPacket)
 {
 	session->setType(SESSION_TYPE_TERMINAL);
 	SLog(L"* [%s] Terminal accepted.", session->clientAddress().c_str());
 }
 
-void ContentsProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
+void ContentsProcess::C_REQ_EXIT(Session *session, Packet *rowPacket)
 {
-	//클라이언트 read thread 를 종료시켜 주기 위해 처리
-	PK_C_REQ_EXIT* packet = (PK_C_REQ_EXIT*)rowPacket;
+	PK_C_REQ_EXIT *packet = (PK_C_REQ_EXIT *)rowPacket;
 	PK_S_ANS_EXIT ansPacket;
+
+	SLog(L"ContentsPro!!!test!!!");
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
 }
@@ -2130,47 +6114,43 @@ void ContentsProcess::C_REQ_EXIT(Session* session, Packet* rowPacket)
 ## ServerLibrary\Contents\ContentsProcess.h
 ```h
 #pragma once
-#include "pch.h"
-
-// 컨텐츠를 여기서 파생해서 구현합니다.
+#include "stdafx.h"
 
 #define MAX_PACKET_THREAD_		SIZE_64
 class ContentsProcess
 {
 private:
-	array<Thread*, MAX_PACKET_THREAD_> threadPool_;
-	ThreadJobQueue<Package*>* packageQueue_;
+	array<Thread *, MAX_PACKET_THREAD_> threadPool_;
+	ThreadJobQueue<Package *> *packageQueue_;
 
 protected:
-	typedef void(*RunFunc)(Session* session, Packet* rowPacket);
+	typedef void(*RunFunc)(Session *session, Packet *rowPacket);
 	unordered_map<PacketType, RunFunc> runFuncTable_;
 
 private:
-	void initialize(xml_t* config);
+	void initialize(xml_t *config);
 	void registDefaultPacketFunc();
-	void run(Package* package);
+	void run(Package *package);
 	void execute();
 
 	void process();
 public:
 	ContentsProcess();
 	~ContentsProcess();
-
-	void putPackage(Package* package);
+	void putPackage(Package *package);
 
 	virtual void registSubPacketFunc() = 0;
 
-	//--------------------------------------------------------------//
-	// 기본 패킷 기능 구현
-	static void Packet_HeartBeat(Session* session, Packet* rowPacket);
-	static void Packet_Notify_Terminal(Session* session, Packet* rowPacket);
-	static void C_REQ_EXIT(Session* session, Packet* rowPacket);
+
+	static void Packet_HeartBeat(Session *session, Packet *rowPacket);
+	static void Packet_Notify_Terminal(Session *session, Packet *rowPacket);
+	static void C_REQ_EXIT(Session *session, Packet *rowPacket);
 };
 ```
 
 ## ServerLibrary\Database\ADODatabase.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 #include "QueryStatement.h"
 #include "DBManager.h"
@@ -2178,37 +6158,37 @@ public:
 ADODatabase::ADODatabase()
 {
 	::CoInitialize(NULL);
-	state_ = DB_STOP;
+    state_ = DB_STOP;
 
 	dbConnection_.CreateInstance(__uuidof(ADODB::Connection));
 	if (dbConnection_ == NULL) {
 		SErrLog(L"! Database init fail");
 	}
-	const int TIME_OUT = 30;
-	this->setConnectTimeOut(TIME_OUT);
+    const int TIME_OUT = 30;
+    this->setConnectTimeOut(TIME_OUT);
 }
 
 ADODatabase::~ADODatabase()
 {
-	this->disconnect();
-	if (dbConnection_) {
-		dbConnection_.Release();
-	}
+    this->disconnect();
+    if (dbConnection_) {
+        dbConnection_.Release();
+    }
 	SAFE_DELETE(thread_);
 	::CoUninitialize();
 }
 
-HRESULT ADODatabase::setConnectTimeOut(long second)
+HRESULT	ADODatabase::setConnectTimeOut(long second)
 {
-	if (!dbConnection_) {
+	if (!dbConnection_){
 		return S_FALSE;
 	}
 	return dbConnection_->put_ConnectionTimeout(second);
 }
 
-void ADODatabase::comError(const WCHAR* actionName, _com_error& e)
+void ADODatabase::comError(const WCHAR *actionName, _com_error &e)
 {
-	SLog(L"! [%s]DB [%s] fail [%s]", dbName_.c_str(), actionName, (WCHAR*)e.Description());
+    SLog(L"! [%s]DB [%s] fail [%s]", dbName_.c_str(), actionName, (WCHAR *)e.Description());
 }
 
 bool ADODatabase::connect()
@@ -2216,19 +6196,22 @@ bool ADODatabase::connect()
 	if (!dbConnection_) {
 		return false;
 	}
-
+	
 	try {
 		HRESULT hr = dbConnection_->Open(connectionStr_.c_str(), _T(""), _T(""), NULL);
 		if (SUCCEEDED(hr)) {
+			
 			dbConnection_->PutCursorLocation(ADODB::adUseClient);
 			SLog(L"* [%s]DB connection success", dbName_.c_str());
 			state_ = DB_STANDBY;
 			return true;
 		}
 	}
-	catch (_com_error& e) {
-		this->comError(L"connection", e);
+	catch (_com_error &e) {
+		this->comError(L"connction", e);
+		
 	}
+
 	return false;
 }
 
@@ -2236,10 +6219,11 @@ bool ADODatabase::connect(const WCHAR* provider, const WCHAR* serverName, const 
 {
 	array<WCHAR, SIZE_128> buffer;
 	snwprintf(buffer, L"Provider=%s;Server=%s;Database=%s;Uid=%s;Pwd=%s;", provider, serverName, dbName, id, password);
-	connectionStr_ = buffer.data();
-	SLog(L"* [%s]DB try connection provider = %s", dbName_.c_str(), provider);
 
-	return this->connect();
+	connectionStr_ = buffer.data();
+
+	SLog(L"* [%s]DB try connection provider = %s", dbName_.c_str(), provider);
+	return this->connect(); // 실제 연결 메서드 호출
 }
 
 bool ADODatabase::connect(const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password)
@@ -2247,26 +6231,33 @@ bool ADODatabase::connect(const WCHAR* serverName, const WCHAR* dbName, const WC
 	dbName_ = dbName;
 	SLog(L"* connect try: %s, %s, %s", dbName, id, password);
 
-	for (int index = 10; index < 20; index++) {
-		array<WCHAR, SIZE_64> mssqlName;
-		snwprintf(mssqlName, L"SQLNCLI%d", index);
-		if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
-			SLog(L"* database %s : %s connect", mssqlName, dbName);
+	// SQLNCLI 프로바이더 연결 시도
+	//for (int index = 10; index < 20; ++index) {
+	//	array<WCHAR, SIZE_64> mssqlName;
+	//	snwprintf(mssqlName, L"SQLNCLI%d", index);
+	//	if (this->connect(mssqlName.data(), serverName, dbName, id, password)) {
+	//		SLog(L"* database %s : %s connect", mssqlName.data(), dbName);
+	//		return true;
+	//	}
+	//}
+
+	// SQLOLEDB 프로바이더로 연결 시도
+	//if (this->connect(L"SQLOLEDB", serverName, dbName, id, password)) {
+	//	SLog(L"* database SQLOLEDB : %s connect", dbName);
+	//	return true;
+	//}
+	if (this->connect(L"SQLNCLI11", serverName, dbName, id, password)) {
+			SLog(L"* database SQLNCLI11 : %s connect", dbName);
 			return true;
 		}
-	}
 
-	// mssql 2005, 2008
-	if (this->connect(L"SQLNCLI", serverName, dbName, id, password)) {
-		SLog(L"* database SQLNCLI : %s connect", dbName);
-		return true;
-	}
 	return false;
 }
 
+
 bool ADODatabase::connected()
 {
-	return dbConnection_->State != ADODB::adStateClosed ? true : false;
+    return dbConnection_->State != ADODB::adStateClosed ? true : false;
 }
 
 bool ADODatabase::disconnect()
@@ -2274,42 +6265,41 @@ bool ADODatabase::disconnect()
 	if (!dbConnection_) {
 		return false;
 	}
-	if (state_ == DB_STOP) {
-		return true;
-	}
+    if (state_ == DB_STOP) {
+        return true;
+    }
 	try {
-		this->execute();
+        this->execute();
 
-		if (!dbConnection_) {
-			return true;
-		}
+        if (!dbConnection_) {
+            return true;
+        }
 		dbConnection_->Close();
-		state_ = DB_STOP;
+        state_ = DB_STOP;
 
-		connectionStr_.clear();
-		dbName_.clear();
-		SLog(L"* database close");
+        connectionStr_.clear();
+        dbName_.clear();
+        SLog(L"* database close");
 		return true;
-	}
-	catch (...) {
-		SLog(L"! Database[%s] disconnect fail", dbName_.c_str());
+	} catch (...) {
+        SLog(L"! Database[%s] disconnect fail", dbName_.c_str());
 	}
 	return false;
 }
 
 void ADODatabase::execute()
 {
-	if (DBManager::getInstance().runQueryCount() == 0) {
+	if (DBManager::getInstance().runQueryCount() == 0){
 		return;
 	}
 
-	Query* query = nullptr;
+	Query *query = nullptr;
 	if (DBManager::getInstance().popQuery(&query) == false) {
 		return;
 	}
-	QueryStatement* statement = query->statement();
+	QueryStatement *statement = query->statement();
 
-	const WCHAR* sqlQuery = statement->query();
+	const WCHAR *sqlQuery = statement->query();
 	try {
 		state_ = DB_RUNNING;
 		QueryRecord record;
@@ -2320,7 +6310,7 @@ void ADODatabase::execute()
 		command->CommandType = ADODB::adCmdText;
 		command->CommandText = sqlQuery;
 		_variant_t resultVal;
-		
+
 		switch (statement->type()) {
 		case QUERY_NOT_RETURN:
 			record = command->Execute(&resultVal, NULL, ADODB::adCmdText | ADODB::adExecuteNoRecords);
@@ -2334,22 +6324,22 @@ void ADODatabase::execute()
 		}
 
 		if (record.isEof()) {
-			int queryResultVal = atol((char*)((_bstr_t)resultVal));
-
-			if (queryResultVal < 1) {
-				SLog(L"* query : [%s] have error code [%d]", sqlQuery, queryResultVal);
+			int quertResultVal = atol((char*)((_bstr_t)resultVal));
+			
+			if (quertResultVal < 1) {
+				SLog(L"* query : [%s] have error code [%d] ", sqlQuery, quertResultVal);
 			}
 			else {
-				record.setResultVal(queryResultVal);
+				record.setResultVal(quertResultVal);
 			}
 		}
-
+		
 		query->result() = record;
 		state_ = DB_STANDBY;
 
-		SLog(L"*Run query [%s] result [%d]", sqlQuery, record.resultVal());
+		SLog(L"* Run query [%s] result [%d]", sqlQuery, record.resultVal());
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->comError(L"execute", e);
 	}
 
@@ -2358,7 +6348,7 @@ void ADODatabase::execute()
 
 void ADODatabase::process()
 {
-	while (_shutdown == false) {
+    while (_shutdown == false) {
 		if (!this->connected()) {
 			SLog(L"! db[%s] connection disconnect", dbName_.c_str());
 			ASSERT(FALSE);
@@ -2366,7 +6356,7 @@ void ADODatabase::process()
 		this->execute();
 
 		CONTEXT_SWITCH;
-	}
+    }
 }
 
 void ADODatabase::run()
@@ -2378,53 +6368,51 @@ void ADODatabase::run()
 ## ServerLibrary\Database\ADODatabase.h
 ```h
 #pragma once
-
-#include "pch.h"
-#include <ole2.h>
-#include <comdef.h>
-#include <comutil.h>
-#include <conio.h>
+#include "stdafx.h"
 
 #import "C:\Program Files\Common Files\System\ado\msado15.dll"	rename("EOF", "EndOfFile")
 #include "Database.h"
 
-typedef ADODB::_ConnectionPtr	dbConnectionPtr;
-typedef ADODB::_CommandPtr		commandPtr;
-typedef ADODB::_RecordsetPtr	recordPtr;
+typedef ADODB::_ConnectionPtr           dbConnectionPtr;
+typedef ADODB::_CommandPtr				commandPtr;
+typedef ADODB::_RecordsetPtr			recordPtr;
 
 class ADODatabase : public Database
 {
-	dbConnectionPtr		dbConnection_;
-	wstr_t				connectionStr_;
-	wstr_t				dbName_;
-
-	Thread				*thread_;
+    dbConnectionPtr   			dbConnection_;
+	wstr_t			            connectionStr_;
+    wstr_t			            dbName_;
+	
+	Thread						*thread_;
 
 public:
 	ADODatabase();
 	virtual ~ADODatabase();
 
-	HRESULT setConnectTimeOut(long second);
-	void comError(const WCHAR* actionName, _com_error& e);
+	HRESULT	setConnectTimeOut(long second);
+	void comError(const WCHAR *actionName, _com_error &e);
 
-	bool connect(const WCHAR* provider, const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password);
-	bool connect(const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password);
-	bool connect();
-	bool connected();
-	bool disconnect();
-
+    bool connect(const WCHAR *provider, const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password);
+    bool connect(const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password);
+    bool connect();
+    bool connected();
+    bool disconnect();
+    
 	void run();
 
 private:
-	void execute();
-	void process();
+    void execute();
+    void process();
 };
 ```
 
 ## ServerLibrary\Database\Database.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
+#include <oledb.h> 
+#include <comdef.h>
+#include <comutil.h>
 
 typedef enum
 {
@@ -2446,19 +6434,19 @@ public:
     {
     }
 
-    virtual bool connect(const WCHAR* serverName, const WCHAR* dbName, const WCHAR* id, const WCHAR* password) = 0;
+    virtual bool connect(const WCHAR *serverName, const WCHAR *dbName, const WCHAR *id, const WCHAR *password) = 0;
     virtual bool connect() = 0;
     virtual bool connected() = 0;
     virtual bool disconnect() = 0;
 
     virtual void run() = 0;
-    DB_STATE& state() { return state_; }
+    DB_STATE &state() { return state_; }
 };
 ```
 
 ## ServerLibrary\Database\DBManager.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 
 DBManager::DBManager()
 {
@@ -2470,38 +6458,38 @@ DBManager::DBManager()
 	this->initialize(&config);
 }
 
-void DBManager::initialize(xml_t* config)
+void DBManager::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("DataBase");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("DataBase");
 	if (!root) {
 		SLog(L"@ not exist database setting");
 		return;
 	}
-	xmlNode_t* elem = root->FirstChildElement("ThreadCount");
+	xmlNode_t *elem = root->FirstChildElement("ThreadCount");
 	sscanf_s(elem->GetText(), "%d", &workerCount_);
 
 	array<WCHAR, SIZE_256> tmp;
 	elem = root->FirstChildElement("ServerName");
-	StrConvA2W((char*)elem->GetText(), tmp.data(), tmp.max_size());
+	StrConvA2W((char *) elem->GetText(), tmp.data(), tmp.max_size());
 	serverName_ = tmp.data();
 
 	elem = root->FirstChildElement("DB");
-	StrConvA2W((char*)elem->GetText(), tmp.data(), tmp.max_size());
+	StrConvA2W((char *) elem->GetText(), tmp.data(), tmp.max_size());
 	dbName_ = tmp.data();
 
 	elem = root->FirstChildElement("Login");
-	StrConvA2W((char*)elem->GetText(), tmp.data(), tmp.max_size());
+	StrConvA2W((char *) elem->GetText(), tmp.data(), tmp.max_size());
 	login_ = tmp.data();
 
 	elem = root->FirstChildElement("Password");
-	StrConvA2W((char*)elem->GetText(), tmp.data(), tmp.max_size());
+	StrConvA2W((char *) elem->GetText(), tmp.data(), tmp.max_size());
 	password_ = tmp.data();
 
-	queryPool_ = new ThreadJobQueue<Query*>(L"DBQueueJob");
+	queryPool_ = new ThreadJobQueue<Query *>(L"DBQueueJob");
 
 	for (int i = 0; i < workerCount_; ++i) {
 		array<WCHAR, SIZE_128> patch = { 0, };
-		ADODatabase* adodb = new ADODatabase();
+		ADODatabase *adodb = new ADODatabase();
 		dbPool_.push_back(adodb);
 	}
 	this->run();
@@ -2511,10 +6499,10 @@ DBManager::~DBManager()
 {
 	SAFE_DELETE(queryPool_);
 
-	for (auto db : dbPool_) {
-		db->disconnect();
-		SAFE_DELETE(db);
-	}
+    for (auto db : dbPool_) {
+        db->disconnect();
+        SAFE_DELETE(db);
+    }
 }
 
 size_t DBManager::runQueryCount()
@@ -2522,35 +6510,35 @@ size_t DBManager::runQueryCount()
 	return queryPool_->size();
 }
 
-void DBManager::pushQuery(Query* query)
+void DBManager::pushQuery(Query *query)
 {
-	queryPool_->push(query);
+    queryPool_->push(query);
 }
 
-bool DBManager::popQuery(Query** query)
+bool DBManager::popQuery(Query **query)
 {
-	return queryPool_->pop(*query);
+    return queryPool_->pop(*query);
 }
 
 void DBManager::run()
 {
-	for (auto db : dbPool_) {
-		if (db->state() != DB_STOP) {
-			continue;
-		}
+    for (auto db : dbPool_) {
+        if (db->state() != DB_STOP) {
+            continue;
+        }
 
 		if (!db->connect(serverName_.c_str(), dbName_.c_str(), login_.c_str(), password_.c_str())) {
 			SErrLog(L"! db[%s] connection error", dbName_.c_str());
 		}
-		db->run();
-	}
+        db->run();
+    }
 }
 ```
 
 ## ServerLibrary\Database\DBManager.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 #define _db_manager		DBManager::getInstance()
@@ -2558,23 +6546,23 @@ void DBManager::run()
 class DBManager : public Singleton < DBManager >
 {
 	int                                 workerCount_;
-	std::vector<Database*>             dbPool_;
+	std::vector<Database *>             dbPool_;
 
 	wstr_t								serverName_;
 	wstr_t								dbName_;
 	wstr_t								login_;
 	wstr_t								password_;
-	ThreadJobQueue<Query*>* queryPool_;
+	ThreadJobQueue<Query *>				*queryPool_;
 
 public:
 	DBManager();
 	virtual ~DBManager();
 
-	void initialize(xml_t* config);
+	void initialize(xml_t *config);
 
 	size_t runQueryCount();
-	void pushQuery(Query* query);
-	bool popQuery(Query** query);
+	void pushQuery(Query *query);
+	bool popQuery(Query **query);
 
 	void run();
 };
@@ -2583,7 +6571,7 @@ public:
 ## ServerLibrary\Database\Query.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "QueryStatement.h"
 #include "QueryRecord.h"
 #include "Query.h"
@@ -2610,7 +6598,7 @@ QueryRecord& Query::result()
 	return record_;
 }
 
-void Query::setStatement(QueryStatement* statement)
+void Query::setStatement(QueryStatement *statement)
 {
 	statement_ = statement;
 }
@@ -2624,7 +6612,7 @@ QueryStatement* Query::statement()
 ## ServerLibrary\Database\Query.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 #include "QueryRecord.h"
@@ -2632,79 +6620,78 @@ QueryStatement* Query::statement()
 class Query
 {
 protected:
-	QueryStatement* statement_;
+	QueryStatement		*statement_;
 	QueryRecord			record_;
 public:
 	Query();
 	virtual ~Query();
-
+	
 	void setResult(recordPtr record);
-	QueryRecord& result();
+	QueryRecord &result();
 
-	void setStatement(QueryStatement* statement);
-	QueryStatement* statement();
-
-
+	void setStatement(QueryStatement *statement);
+	QueryStatement *statement();
+		
 };
 ```
 
 ## ServerLibrary\Database\QueryRecord.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "QueryRecord.h"
 
 QueryRecord::QueryRecord()
 {
-	record_.CreateInstance(__uuidof(ADODB::Recordset));
+    record_.CreateInstance(__uuidof(ADODB::Recordset));
 }
 
 QueryRecord::~QueryRecord()
 {
-	if (record_ == nullptr) {
-		return;
-	}
-	record_.Release();
-	record_ = nullptr;
+    if (record_ == nullptr) {
+        return;
+    }
+    record_.Release();
+    record_ = nullptr;
 }
 
-void QueryRecord::errorReport(_com_error& e) {
-	SLog(L"* Query error = %S", e.Description());
+void QueryRecord::errorReport(_com_error &e) {
+    SLog(L"* Query error = %S", e.Description());
 }
 
-recordPtr& QueryRecord::resultRecord()
+recordPtr &QueryRecord::resultRecord()
 {
-	return record_;
+    return record_;
 }
 
-void QueryRecord::operator = (QueryRecord& lvalue)
+void QueryRecord::operator = (QueryRecord &lvalue)
 {
 	record_ = lvalue.resultRecord();
 }
 
-void QueryRecord::operator = (recordPtr& lvalue)
+void QueryRecord::operator = (recordPtr &lvalue)
 {
-	record_ = lvalue;
+    record_ = lvalue;
 }
 
 void QueryRecord::setRecord(recordPtr record)
 {
-	record_ = record;
+    record_ = record;
 }
 
 bool QueryRecord::opened()
 {
-	return record_->State == ADODB::adStateOpen ? true : false;
+    return record_->State == ADODB::adStateOpen ? true : false;
 }
 
 void QueryRecord::close()
 {
-	try {
-		if (record_ != nullptr && this->opened())
-			record_->Close();
-	}
-	catch (_com_error& e) {
-		this->errorReport(e);
-	}
+    try{
+        if (record_ != nullptr && this->opened())
+            record_->Close();
+    }
+    catch (_com_error &e){
+        this->errorReport(e);
+    }
 }
 
 int QueryRecord::resultVal()
@@ -2725,7 +6712,7 @@ bool QueryRecord::isEof()
 	try {
 		return record_->EndOfFile ? true : false;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return false;
@@ -2736,7 +6723,7 @@ HRESULT QueryRecord::moveNext()
 	try {
 		return record_->MoveNext();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -2747,7 +6734,7 @@ HRESULT QueryRecord::movePrevious()
 	try {
 		return record_->MovePrevious();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -2758,7 +6745,7 @@ HRESULT QueryRecord::moveFirst()
 	try {
 		return record_->MoveFirst();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -2769,7 +6756,7 @@ HRESULT QueryRecord::moveLast()
 	try {
 		return record_->MoveLast();
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 	}
 	return S_FALSE;
@@ -2783,7 +6770,7 @@ bool QueryRecord::get(char* fieldName, char* fieldValue)
 		sprintf_s(fieldValue, DB_PARAM_SIZE, "%s", (LPCSTR)((_bstr_t)vtValue.bstrVal));
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2798,7 +6785,7 @@ bool QueryRecord::get(char* fieldName, wchar_t* fieldValue)
 		swprintf_s(fieldValue, DB_PARAM_SIZE, L"%s", (LPWSTR)((_bstr_t)vtValue.bstrVal));
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2813,7 +6800,7 @@ bool QueryRecord::get(char* fieldName, int32_t& fieldValue)
 		fieldValue = vtValue.intVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2828,7 +6815,7 @@ bool QueryRecord::get(char* fieldName, int64_t& fieldValue)
 		fieldValue = vtValue.intVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2843,7 +6830,7 @@ bool QueryRecord::get(char* fieldName, float& fieldValue)
 		fieldValue = vtValue.fltVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2858,7 +6845,7 @@ bool QueryRecord::get(char* fieldName, double& fieldValue)
 		fieldValue = vtValue.dblVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2873,7 +6860,7 @@ bool QueryRecord::get(char* fieldName, long& fieldValue)
 		fieldValue = vtValue.lVal;
 		return true;
 	}
-	catch (_com_error& e) {
+	catch (_com_error &e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}
@@ -2884,26 +6871,26 @@ bool QueryRecord::get(char* fieldName, long& fieldValue)
 ## ServerLibrary\Database\QueryRecord.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 class QueryRecord
 {
-	recordPtr		record_;
+    recordPtr		record_;
 	int				resultVal_;		//쿼리 결과값
-public:
-	QueryRecord();
-	~QueryRecord();
+public:	
+    QueryRecord();
+    ~QueryRecord();
 
-	void errorReport(_com_error& e);
+    void errorReport(_com_error &e);
 
-	void operator = (QueryRecord& lvalue);
-	void operator = (recordPtr& lvalue);
-	recordPtr& resultRecord();
+    void operator = (QueryRecord &lvalue);
+    void operator = (recordPtr &lvalue);
+    recordPtr &resultRecord();
 
-	bool        opened();
-	void        close();
-	void        setRecord(recordPtr record);
+    bool        opened();
+    void        close();
+    void        setRecord(recordPtr record);
 	bool		isEof();
 
 	int			resultVal();
@@ -2927,7 +6914,7 @@ public:
 ## ServerLibrary\Database\QueryStatement.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 #include "QueryRecord.h"
 #include "QueryStatement.h"
@@ -2942,7 +6929,7 @@ QueryStatement::~QueryStatement()
 {
 }
 
-void QueryStatement::setQuery(WCHAR* query, QUERY_TYPE type)
+void QueryStatement::setQuery(WCHAR *query, QUERY_TYPE type)
 {
 	query_ = query;
 	type_ = type;
@@ -2959,7 +6946,7 @@ QUERY_TYPE QueryStatement::type()
 
 //------------------ 파라메터 추가 -----------------/
 template<typename T>
-void QueryStatement::addArg(WCHAR* fmt, T value)
+void QueryStatement::addArg(WCHAR *fmt, T value)
 {
 	array<WCHAR, DB_PARAM_SIZE> buffer;
 	snwprintf(buffer, fmt, value);
@@ -2972,12 +6959,12 @@ void QueryStatement::addArg(WCHAR* fmt, T value)
 	query_ += buffer.data();
 }
 
-void QueryStatement::addParam(CHAR* value)
+void QueryStatement::addParam(CHAR *value)
 {
 	this->addArg(L"'%S'", value);
 }
 
-void QueryStatement::addParam(WCHAR* value)
+void QueryStatement::addParam(WCHAR *value)
 {
 	this->addArg(L"'%s'", value);
 }
@@ -3016,14 +7003,14 @@ void QueryStatement::addParam(DOUBLE value)
 ## ServerLibrary\Database\QueryStatement.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "ADODatabase.h"
 
 typedef enum
 {
-    QUERY_NOT_RETURN,				//리턴없는 쿼리
-    QUERY_WAIT_RETURN,				//DB응답을 꼭 기다린뒤 처리하는 쿼리
-    QUERY_CALL_BACK,				//DB응답을 기다리지 않지만 뒷처리는 있는 쿼리
+    QUERY_NOT_RETURN,				
+    QUERY_WAIT_RETURN,				
+    QUERY_CALL_BACK,				
 }QUERY_TYPE;
 
 class QueryStatement
@@ -3038,17 +7025,17 @@ public:
     QueryStatement();
     ~QueryStatement();
 
-    void setQuery(WCHAR* query, QUERY_TYPE type = QUERY_NOT_RETURN);
+    void setQuery(WCHAR *query, QUERY_TYPE type = QUERY_NOT_RETURN);
 
-    const WCHAR* query();
+    const WCHAR *query();
     QUERY_TYPE type();
 
     //------------------ 파라메터 추가 -----------------/
     template<typename T>
-    void addArg(WCHAR* fmt, T value);
+    void addArg(WCHAR *fmt, T value);
 
-    void addParam(CHAR* value);
-    void addParam(WCHAR* value);
+    void addParam(CHAR *value);
+    void addParam(WCHAR *value);
     void addParam(INT32 value);
     void addParam(UINT32 value);
     void addParam(INT64 value);
@@ -3069,12 +7056,12 @@ public:
 
 ## ServerLibrary\Net\IOCP\IOCPServer.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "IOCPServer.h"
 #include "IOCPSession.h"
 
-IOCPServer::IOCPServer(ContentsProcess* contentsProcess)
-	:Server(contentsProcess)
+IOCPServer::IOCPServer(ContentsProcess *contentsProcess)
+:Server(contentsProcess)
 {
 }
 
@@ -3085,37 +7072,37 @@ IOCPServer::~IOCPServer()
 
 bool IOCPServer::createListenSocket()
 {
-	listenSocket_ = WSASocket(AF_INET, SOCK_STREAM, NULL, NULL, 0, WSA_FLAG_OVERLAPPED);
-	if (listenSocket_ == INVALID_SOCKET) {
-		SErrLog(L"! listenSocket fail");
-		return false;
-	}
+    listenSocket_ = WSASocket(AF_INET, SOCK_STREAM, NULL, NULL, 0, WSA_FLAG_OVERLAPPED);
+    if (listenSocket_ == INVALID_SOCKET) {
+        SErrLog(L"! listenSocket fail");
+        return false;
+    }
 
-	SOCKADDR_IN serverAddr;
-	serverAddr.sin_family = AF_INET;
+    SOCKADDR_IN serverAddr;
+    serverAddr.sin_family = AF_INET;
 	serverAddr.sin_port = htons((u_short)port_);
 	inet_pton(AF_INET, ip_, &(serverAddr.sin_addr));
 
 	int reUseAddr = 1;
-	setsockopt(listenSocket_, SOL_SOCKET, SO_REUSEADDR, (char*)&reUseAddr, (int)sizeof(reUseAddr));
+	setsockopt(listenSocket_, SOL_SOCKET, SO_REUSEADDR, (char *)&reUseAddr, (int)sizeof(reUseAddr));
 
-	int retval = ::bind(listenSocket_, (SOCKADDR*)&serverAddr, sizeof(serverAddr));
-	if (retval == SOCKET_ERROR) {
-		SErrLog(L"! bind fail");
-		return false;
-	}
+    int retval = ::bind(listenSocket_, (SOCKADDR *)&serverAddr, sizeof(serverAddr));
+    if (retval == SOCKET_ERROR) {
+        SErrLog(L"! bind fail");
+        return false;
+    }
 
-	const int BACK_SOCKETS = 5;
-	retval = ::listen(listenSocket_, BACK_SOCKETS);
-	if (retval == SOCKET_ERROR) {
-		SErrLog(L"! listen fail");
-		return false;
-	}
+    const int BACK_SOCKETS = 5;
+    retval = ::listen(listenSocket_, BACK_SOCKETS);
+    if (retval == SOCKET_ERROR) {
+        SErrLog(L"! listen fail");
+        return false;
+    }
 
 	array<char, SIZE_64> ip;
 	inet_ntop(AF_INET, &(serverAddr.sin_addr), ip.data(), ip.size());
 	SLog(L"* server listen socket created, ip: %S, port: %d", ip.data(), port_);
-	return true;
+    return true;
 }
 
 bool IOCPServer::run()
@@ -3130,7 +7117,7 @@ bool IOCPServer::run()
 		return false;
 	}
 	this->createListenSocket();
-
+	
 	acceptThread_ = MAKE_THREAD(IOCPServer, acceptThread);
 	for (int i = 0; i < workerThreadCount_; ++i) {
 		workerThread_[i] = MAKE_THREAD(IOCPServer, workerThread);
@@ -3149,17 +7136,17 @@ bool IOCPServer::run()
 
 SOCKET IOCPServer::listenSocket()
 {
-	return listenSocket_;
+    return listenSocket_;
 }
 
 HANDLE IOCPServer::iocp()
 {
-	return iocp_;
+    return iocp_;
 }
 
 void IOCPServer::onAccept(SOCKET accepter, SOCKADDR_IN addrInfo)
 {
-	IOCPSession* session = new IOCPSession();
+    IOCPSession *session = new IOCPSession();
 	if (session == nullptr) {
 		SLog(L"! accept session create fail");
 		return;
@@ -3174,25 +7161,25 @@ void IOCPServer::onAccept(SOCKET accepter, SOCKADDR_IN addrInfo)
 	}
 	session->ioData_[IO_READ].clear();
 
-	HANDLE handle = CreateIoCompletionPort((HANDLE)accepter, this->iocp(), (ULONG_PTR) & (*session), NULL);
+	HANDLE handle = CreateIoCompletionPort((HANDLE)accepter, this->iocp(), (ULONG_PTR)&(*session), NULL);
 	if (!handle) {
 		SAFE_DELETE(session);
 		return;
 	}
-
-	SLog(L"* client accecpt from [%s]", session->clientAddress().c_str());
+    
+    SLog(L"* client accecpt from [%s]", session->clientAddress().c_str());
 	session->recvStandBy();
 }
 
 DWORD WINAPI IOCPServer::acceptThread(LPVOID serverPtr)
 {
-	IOCPServer* server = (IOCPServer*)serverPtr;
-
-	while (!_shutdown) {
+	IOCPServer	*server = (IOCPServer *)serverPtr;
+	
+    while (!_shutdown) {
 		SOCKET		acceptSocket = INVALID_SOCKET;
 		SOCKADDR_IN recvAddr;
 		static int addrLen = sizeof(recvAddr);
-		acceptSocket = WSAAccept(server->listenSocket(), (struct sockaddr*)&recvAddr, &addrLen, NULL, 0);
+		acceptSocket = WSAAccept(server->listenSocket(), (struct sockaddr *)&recvAddr, &addrLen, NULL, 0);
 		if (acceptSocket == SOCKET_ERROR) {
 			if (!server->status() == SERVER_STOP) {
 				SLog(L"! Accept fail");
@@ -3210,14 +7197,14 @@ DWORD WINAPI IOCPServer::acceptThread(LPVOID serverPtr)
 
 DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 {
-	IOCPServer* server = (IOCPServer*)serverPtr;
+	IOCPServer *server = (IOCPServer *)serverPtr;
 
 	while (!_shutdown) {
-		IoData* ioData = nullptr;
-		IOCPSession* session = nullptr;
+		IoData			*ioData = nullptr;
+		IOCPSession	*session = nullptr;
 		DWORD			transferSize;
 
-		BOOL ret = GetQueuedCompletionStatus(server->iocp(), &transferSize, (PULONG_PTR)&session, (LPOVERLAPPED*)&ioData, INFINITE);
+		BOOL ret = GetQueuedCompletionStatus(server->iocp(), &transferSize, (PULONG_PTR)&session, (LPOVERLAPPED *)&ioData, INFINITE);
 		if (!ret) {
 			continue;
 		}
@@ -3237,13 +7224,13 @@ DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 			continue;
 
 		case IO_READ:
-		{
-			Package* package = session->onRecv((size_t)transferSize);
-			if (package != nullptr) {
-				server->putPackage(package);
+			{
+				Package *package = session->onRecv((size_t)transferSize);
+				if (package != nullptr) {
+					server->putPackage(package);
+				}
 			}
-		}
-		continue;
+			continue;
 
 		case IO_ERROR:
 			SLog(L"* close by client error [%d][%s]", session->id(), session->clientAddress().c_str());
@@ -3258,39 +7245,39 @@ DWORD WINAPI IOCPServer::workerThread(LPVOID serverPtr)
 ## ServerLibrary\Net\IOCP\IOCPServer.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "../Server.h"
 
 #define MAX_IOCP_THREAD		SIZE_64
 
 class IOCPServer : public Server, public Singleton<IOCPServer>
 {
-	SOCKET					listenSocket_;
-	HANDLE					iocp_;
-	Thread* acceptThread_;
-	array<Thread*, SIZE_64> workerThread_;
+    SOCKET					listenSocket_;
+    HANDLE					iocp_;
+	Thread					*acceptThread_;
+	array<Thread *, SIZE_64> workerThread_;
 
 private:
 	bool					createListenSocket();
 
-	static DWORD WINAPI		acceptThread(LPVOID serverPtr);
+    static DWORD WINAPI		acceptThread(LPVOID serverPtr);
 	static DWORD WINAPI		workerThread(LPVOID serverPtr);
 
 public:
-	IOCPServer(ContentsProcess* contentsProcess);
-	virtual ~IOCPServer();
+	IOCPServer(ContentsProcess *contentsProcess);
+    virtual ~IOCPServer();
 
 	bool					run();
 
-	SOCKET					listenSocket();
-	HANDLE					iocp();
+    SOCKET					listenSocket();
+    HANDLE					iocp();
 	void					onAccept(SOCKET accepter, SOCKADDR_IN addrInfo);
 };
 ```
 
 ## ServerLibrary\Net\IOCP\IOCPSession.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "../Session.h"
 #include "IOCPSession.h"
 #include "../SessionManager.h"
@@ -3300,7 +7287,7 @@ IoData::IoData()
 {
 	ZeroMemory(&overlapped_, sizeof(overlapped_));
 	ioType_ = IO_ERROR;
-
+	
 	this->clear();
 }
 
@@ -3325,7 +7312,7 @@ int32_t IoData::setupTotalBytes()
 	packet_size_t offset = 0;
 	packet_size_t packetLen[1] = { 0, };
 	if (totalBytes_ == 0) {
-		memcpy_s((void*)packetLen, sizeof(packetLen), (void*)buffer_.data(), sizeof(packetLen));
+		memcpy_s((void *)packetLen, sizeof(packetLen), (void *)buffer_.data(), sizeof(packetLen));
 		PacketObfuscation::getInstance().decodingHeader((Byte*)&packetLen, sizeof(packetLen));
 
 		totalBytes_ = (size_t)packetLen[0];
@@ -3339,7 +7326,7 @@ size_t IoData::totalByte()
 	return totalBytes_;
 }
 
-IO_OPERATION& IoData::type()
+IO_OPERATION &IoData::type()
 {
 	return ioType_;
 }
@@ -3354,7 +7341,7 @@ char* IoData::data()
 	return buffer_.data();
 }
 
-bool IoData::setData(Stream& stream)
+bool IoData::setData(Stream &stream)
 {
 	this->clear();
 
@@ -3366,18 +7353,14 @@ bool IoData::setData(Stream& stream)
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 	packet_size_t offset = 0;
 
-	char* buf = buffer_.data();
-	//									 head size  + real data size
+	char *buf = buffer_.data();
 	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
-	// insert packet len
-	memcpy_s(buf + offset, buffer_.max_size(), (void*)packetLen, packetHeaderSize);
+	memcpy_s(buf + offset, buffer_.max_size(), (void *)packetLen, packetHeaderSize);
 	offset += packetHeaderSize;
 
-	// packet obfuscation
 	PacketObfuscation::getInstance().encodingHeader((Byte*)buf, packetHeaderSize);
 	PacketObfuscation::getInstance().encodingData((Byte*)stream.data(), stream.size());
 
-	// insert packet data
 	memcpy_s(buf + offset, buffer_.max_size(), stream.data(), (int32_t)stream.size());
 	offset += (packet_size_t)stream.size();
 
@@ -3400,7 +7383,7 @@ WSABUF IoData::wsabuf()
 
 //-----------------------------------------------------------------//
 IOCPSession::IOCPSession()
-	: Session()
+: Session()
 {
 	this->initialize();
 }
@@ -3416,7 +7399,7 @@ void IOCPSession::checkErrorIO(DWORD ret)
 {
 	if (ret == SOCKET_ERROR
 		&& (WSAGetLastError() != ERROR_IO_PENDING)) {
-		SLog(L"! socket error: %d", WSAGetLastError());
+        SLog(L"! socket error: %d", WSAGetLastError());
 	}
 }
 
@@ -3463,23 +7446,23 @@ void IOCPSession::onSend(size_t transferSize)
 	}
 }
 
-void IOCPSession::sendPacket(Packet* packet)
+void IOCPSession::sendPacket(Packet *packet)
 {
 	Stream stream;
 	packet->encode(stream);
 	if (!ioData_[IO_WRITE].setData(stream)) {
 		return;
 	}
-
+	
 	WSABUF wsaBuf;
 	wsaBuf.buf = ioData_[IO_WRITE].data();
-	wsaBuf.len = (ULONG)stream.size();
+	wsaBuf.len = (ULONG) stream.size();
 
 	this->send(wsaBuf);
-	this->recvStandBy();
+    this->recvStandBy();
 }
 
-Package* IOCPSession::onRecv(size_t transferSize)
+Package *IOCPSession::onRecv(size_t transferSize)
 {
 	packet_size_t offset = 0;
 	offset += ioData_[IO_READ].setupTotalBytes();
@@ -3490,10 +7473,10 @@ Package* IOCPSession::onRecv(size_t transferSize)
 
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 	packet_size_t packetDataSize = (packet_size_t)(ioData_[IO_READ].totalByte() - packetHeaderSize);
-	Byte* packetData = (Byte*)ioData_[IO_READ].data() + offset;
+	Byte *packetData = (Byte*) ioData_[IO_READ].data() + offset;
 
 	PacketObfuscation::getInstance().decodingData(packetData, packetDataSize);
-	Packet* packet = PacketAnalyzer::getInstance().analyzer((const char*)packetData, packetDataSize);
+	Packet *packet = PacketAnalyzer::getInstance().analyzer((const char *)packetData, packetDataSize);
 	if (packet == nullptr) {
 		SLog(L"! invaild packet");
 		this->onClose(true);
@@ -3502,7 +7485,7 @@ Package* IOCPSession::onRecv(size_t transferSize)
 
 	this->recvStandBy();
 
-	Package* package = new Package(this, packet);
+	Package *package = new Package(this, packet);
 	return package;
 }
 ```
@@ -3510,7 +7493,7 @@ Package* IOCPSession::onRecv(size_t transferSize)
 ## ServerLibrary\Net\IOCP\IOCPSession.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 class Session;
 class SessionManager;
 class Package;
@@ -3526,7 +7509,7 @@ class IoData
 {
 	OVERLAPPED		overlapped_;
 	IO_OPERATION	ioType_;
-	size_t  		totalBytes_;
+    size_t  		totalBytes_;
 	size_t			currentBytes_;
 	array<char, SOCKET_BUF_SIZE> buffer_;
 
@@ -3539,12 +7522,12 @@ public:
 	int32_t setupTotalBytes();
 	size_t totalByte();
 
-	IO_OPERATION& type();
+	IO_OPERATION &type();
 	void setType(IO_OPERATION type);
 
 	WSABUF wsabuf();
-	char* data();
-	bool setData(Stream& stream);
+	char *data();
+	bool setData(Stream &stream);
 	LPWSAOVERLAPPED overlapped();
 };
 
@@ -3565,13 +7548,13 @@ private:
 	void			send(WSABUF wsaBuf);
 
 public:
-	IOCPSession();
+    IOCPSession();
 
 	void			onSend(size_t transferSize);
-	void		    sendPacket(Packet* packet);
-
-	Package* onRecv(size_t transferSize);
-	void			recvStandBy();
+	void		    sendPacket(Packet *packet);
+	
+	Package*		onRecv(size_t transferSize);
+    void			recvStandBy();
 
 };
 ```
@@ -3579,16 +7562,16 @@ public:
 ## ServerLibrary\Net\Packet\Package.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Session;
 class Package
 {
 public:
-	Session* session_;
-	Packet* packet_;
+	Session *session_;
+	Packet *packet_;
 
-	Package(Session* session, Packet* packet)
+	Package(Session *session, Packet *packet)
 	{
 		session_ = session;
 		packet_ = packet;
@@ -3605,22 +7588,22 @@ public:
 ## ServerLibrary\Net\Packet\PacketAnalyzer.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "PacketClass.h"
 #include "PacketAnalyzer.h"
 #include "PacketFactory.h"
 
-Packet* PacketAnalyzer::analyzer(const char* rowPacket, size_t size)
+Packet* PacketAnalyzer::analyzer(const char *rowPacket, size_t size)
 {
 	size_t offset = 0;
 	PacketType type[1] = { (PacketType)0, };
-	memcpy_s((void*)type, sizeof(type), (void*)rowPacket, sizeof(type));
+	memcpy_s((void *)type, sizeof(type), (void *)rowPacket, sizeof(type));
 	offset += sizeof(type);
 
-	Packet* packet = _packet_factory.getPacket(type[0]);
+	Packet *packet = _packet_factory.getPacket(type[0]);
 	if (packet) {
 		if (offset < size) {
-			Stream stream((UCHAR*)(rowPacket + offset), size - offset);
+			Stream stream((UCHAR *)(rowPacket + offset), size - offset);
 			packet->decode(stream);
 		}
 	}
@@ -3632,27 +7615,27 @@ Packet* PacketAnalyzer::analyzer(const char* rowPacket, size_t size)
 ## ServerLibrary\Net\Packet\PacketAnalyzer.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class PacketAnalyzer : public Singleton < PacketAnalyzer >
 {
 public:
-	Packet* analyzer(const char* rowPacket, size_t size);
+	Packet* analyzer(const char *rowPacket, size_t size);
 };
 ```
 
 ## ServerLibrary\Net\Packet\PacketClass.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "packetHeader.h"
 #include "Stream.h"
 
 class Packet {
 public:
     virtual PacketType type() = 0;
-    virtual void encode(Stream& stream) { stream << (Int64)this->type(); };
-    virtual void decode(Stream& stream) { };
+    virtual void encode(Stream &stream) { stream << (Int64) this->type(); };
+    virtual void decode(Stream &stream) { };
 };
 
 class PK_C_REQ_EXIT : public Packet
@@ -3664,6 +7647,7 @@ public:
 
 class PK_S_ANS_EXIT : public Packet
 {
+
 public:
     PacketType type() { return E_S_ANS_EXIT; }
 
@@ -3691,13 +7675,13 @@ public:
     std::string     id_;
     std::string     password_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << id_;
         stream << password_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &id_;
         stream >> &password_;
     }
@@ -3719,14 +7703,14 @@ public:
     UInt32     port_;
     std::string     name_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << ip_;
         stream << port_;
         stream << name_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &ip_;
         stream >> &port_;
         stream >> &name_;
@@ -3742,14 +7726,14 @@ public:
     std::string     id_;
     std::string     password_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << id_;
         stream << password_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &id_;
         stream >> &password_;
@@ -3765,14 +7749,14 @@ public:
     UInt64     oidAccountId_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
         stream >> &result_;
@@ -3787,13 +7771,13 @@ public:
     UInt64     clientId_;
     UInt64     oidAccountId_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
     }
@@ -3807,13 +7791,13 @@ public:
     UInt64     clientId_;
     UInt64     oidAccountId_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
     }
@@ -3828,14 +7812,14 @@ public:
     std::string     name_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << name_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &name_;
         stream >> &result_;
@@ -3851,14 +7835,14 @@ public:
     std::string     name_;
     Byte     result_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << clientId_;
         stream << name_;
         stream << result_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &name_;
         stream >> &result_;
@@ -3872,12 +7856,12 @@ public:
 
     std::string     name_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << name_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &name_;
     }
 };
@@ -3889,12 +7873,12 @@ public:
 
     std::string     text_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << text_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &text_;
     }
 };
@@ -3907,15 +7891,92 @@ public:
     std::string     name_;
     std::string     text_;
 
-    void encode(Stream& stream) {
-        stream << (Int64)this->type();
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
         stream << name_;
         stream << text_;
     }
 
-    void decode(Stream& stream) {
+    void decode(Stream &stream) {
         stream >> &name_;
         stream >> &text_;
+    }
+};
+
+class PK_S_ANS_NEW_USER_NOTIFY :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_NEW_USER_NOTIFY; }
+
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
+};
+
+class PK_S_ANS_USER_LIST :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_USER_LIST; }
+
+    std::vector<std::string> names_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << (Int32)names_.size();
+        for (const auto& name : names_) {
+            stream << name;
+        }
+    }
+
+    void decode(Stream& stream) {
+        Int32 size;
+        stream >> &size;
+
+        names_.clear();
+        for (Int32 i = 0; i < size; i++) {
+            std::string name;
+            stream >> &name;
+            names_.push_back(name);
+        }
+    }
+};
+
+class PK_S_ANS_EXIT_USER :public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_EXIT_USER; }
+
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
+    }
+};
+class PK_C_REQ_CHAT_EXIT :public Packet
+{
+public:
+    PacketType type() { return E_C_REQ_CHAT_EXIT; }
+    std::string name_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << name_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &name_;
     }
 };
 ```
@@ -3923,7 +7984,7 @@ public:
 ## ServerLibrary\Net\Packet\PacketFactory.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "packetHeader.h"
 #include "packetClass.h"
 
@@ -3932,25 +7993,29 @@ public:
 class PacketFactory : public Singleton<PacketFactory>
 {
 public:
-    Packet* getPacket(Int64 packetType)
+    Packet* getPacket(Int64 packetType) 
     {
         switch (packetType) {
-        case E_C_REQ_EXIT:    return new PK_C_REQ_EXIT();
-        case E_S_ANS_EXIT:    return new PK_S_ANS_EXIT();
-        case E_I_NOTIFY_TERMINAL:    return new PK_I_NOTIFY_TERMINAL();
-        case E_C_NOTIFY_HEARTBEAT:    return new PK_C_NOTIFY_HEARTBEAT();
-        case E_C_REQ_ID_PW:    return new PK_C_REQ_ID_PW();
-        case E_S_ANS_ID_PW_FAIL:    return new PK_S_ANS_ID_PW_FAIL();
-        case E_S_ANS_ID_PW_SUCCESS:    return new PK_S_ANS_ID_PW_SUCCESS();
-        case E_I_DB_REQ_ID_PW:    return new PK_I_DB_REQ_ID_PW();
-        case E_I_DB_ANS_ID_PW:    return new PK_I_DB_ANS_ID_PW();
-        case E_I_CHTTING_NOTIFY_ID:    return new PK_I_CHTTING_NOTIFY_ID();
-        case E_I_DB_REQ_LOAD_DATA:    return new PK_I_DB_REQ_LOAD_DATA();
-        case E_I_DB_ANS_PARSE_DATA:    return new PK_I_DB_ANS_PARSE_DATA();
-        case E_I_LOGIN_NOTIFY_ID_LOADED:    return new PK_I_LOGIN_NOTIFY_ID_LOADED();
-        case E_C_REQ_REGIST_CHATTING_NAME:    return new PK_C_REQ_REGIST_CHATTING_NAME();
-        case E_C_REQ_CHATTING:    return new PK_C_REQ_CHATTING();
-        case E_S_ANS_CHATTING:    return new PK_S_ANS_CHATTING();
+            case E_C_REQ_EXIT:    return new PK_C_REQ_EXIT();
+            case E_S_ANS_EXIT:    return new PK_S_ANS_EXIT();
+            case E_I_NOTIFY_TERMINAL:    return new PK_I_NOTIFY_TERMINAL();
+            case E_C_NOTIFY_HEARTBEAT:    return new PK_C_NOTIFY_HEARTBEAT();
+            case E_C_REQ_ID_PW:    return new PK_C_REQ_ID_PW();
+            case E_S_ANS_ID_PW_FAIL:    return new PK_S_ANS_ID_PW_FAIL();
+            case E_S_ANS_ID_PW_SUCCESS:    return new PK_S_ANS_ID_PW_SUCCESS();
+            case E_I_DB_REQ_ID_PW:    return new PK_I_DB_REQ_ID_PW();
+            case E_I_DB_ANS_ID_PW:    return new PK_I_DB_ANS_ID_PW();
+            case E_I_CHTTING_NOTIFY_ID:    return new PK_I_CHTTING_NOTIFY_ID();
+            case E_I_DB_REQ_LOAD_DATA:    return new PK_I_DB_REQ_LOAD_DATA();
+            case E_I_DB_ANS_PARSE_DATA:    return new PK_I_DB_ANS_PARSE_DATA();
+            case E_I_LOGIN_NOTIFY_ID_LOADED:    return new PK_I_LOGIN_NOTIFY_ID_LOADED();
+            case E_C_REQ_REGIST_CHATTING_NAME:    return new PK_C_REQ_REGIST_CHATTING_NAME();
+            case E_C_REQ_CHATTING:    return new PK_C_REQ_CHATTING();
+            case E_S_ANS_CHATTING:    return new PK_S_ANS_CHATTING();
+            case E_S_ANS_NEW_USER_NOTIFY: return new PK_S_ANS_NEW_USER_NOTIFY();
+            case E_S_ANS_USER_LIST: return new PK_S_ANS_USER_LIST();
+            case E_S_ANS_EXIT_USER:return new PK_S_ANS_EXIT_USER();
+            case E_C_REQ_CHAT_EXIT:return new PK_C_REQ_CHAT_EXIT();
         }
         return nullptr;
     }
@@ -3960,43 +8025,47 @@ public:
 ## ServerLibrary\Net\Packet\PacketHeader.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
-#define PACKET_MAKE_DATE "2015/03/14 13:14:41" 
+#define PACKET_MAKE_DATE "2025/03/01 12:13:55" 
 enum PacketType : Int64 {
-    /*128*/    E_C_REQ_EXIT = 128,
-    /*129*/    E_S_ANS_EXIT = 129,
-    /*130*/    E_I_NOTIFY_TERMINAL = 130,
-    /*131*/    E_C_NOTIFY_HEARTBEAT = 131,
-    /*132*/    E_C_REQ_ID_PW = 132,
-    /*133*/    E_S_ANS_ID_PW_FAIL = 133,
-    /*134*/    E_S_ANS_ID_PW_SUCCESS = 134,
-    /*135*/    E_I_DB_REQ_ID_PW = 135,
-    /*136*/    E_I_DB_ANS_ID_PW = 136,
-    /*137*/    E_I_CHTTING_NOTIFY_ID = 137,
-    /*138*/    E_I_DB_REQ_LOAD_DATA = 138,
-    /*139*/    E_I_DB_ANS_PARSE_DATA = 139,
-    /*140*/    E_I_LOGIN_NOTIFY_ID_LOADED = 140,
-    /*141*/    E_C_REQ_REGIST_CHATTING_NAME = 141,
-    /*142*/    E_C_REQ_CHATTING = 142,
-    /*143*/    E_S_ANS_CHATTING = 143,
+    E_C_REQ_EXIT = 128,
+    E_S_ANS_EXIT = 129,
+    E_I_NOTIFY_TERMINAL = 130,
+    E_C_NOTIFY_HEARTBEAT = 131,
+    E_C_REQ_ID_PW = 132,
+    E_S_ANS_ID_PW_FAIL = 133,
+    E_S_ANS_ID_PW_SUCCESS = 134,
+    E_I_DB_REQ_ID_PW = 135,
+    E_I_DB_ANS_ID_PW = 136,
+    E_I_CHTTING_NOTIFY_ID = 137,
+    E_I_DB_REQ_LOAD_DATA = 138,
+    E_I_DB_ANS_PARSE_DATA = 139,
+    E_I_LOGIN_NOTIFY_ID_LOADED = 140,
+    E_C_REQ_REGIST_CHATTING_NAME = 141,
+    E_C_REQ_CHATTING = 142,
+    E_S_ANS_CHATTING = 143,
+    E_S_ANS_NEW_USER_NOTIFY = 144,
+    E_S_ANS_USER_LIST = 145,
+    E_S_ANS_EXIT_USER=146,
+    E_C_REQ_CHAT_EXIT=147,
+
 };
 ```
 
 ## ServerLibrary\Net\Packet\PacketObfuscation.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "PacketObfuscation.h"
 
 XorObfuscation::XorObfuscation()
 {
-	//암호 선택에 대해서는 조금 고민해 볼것.
 	key_ = PACKET_MAKE_DATE;
 	keyLength_ = (int)key_.length();
 }
 
-void XorObfuscation::CalcXor(Byte* packet, int packetOffset, size_t packetLen)
+void XorObfuscation::CalcXor(Byte *packet, int packetOffset, size_t packetLen)
 {
 	int keyIdx = packetOffset % keyLength_;
 	for (int packetIdx = 0; packetIdx < packetLen; ++packetIdx) {
@@ -4008,29 +8077,28 @@ void XorObfuscation::CalcXor(Byte* packet, int packetOffset, size_t packetLen)
 	}
 }
 
-void XorObfuscation::encodingHeader(Byte* packet, size_t packetLen)
+void XorObfuscation::encodingHeader(Byte *packet, size_t packetLen)
 {
 	this->CalcXor(packet, 0, packetLen);
 }
 
-void XorObfuscation::encodingData(Byte* packet, size_t packetLen)
+void XorObfuscation::encodingData(Byte *packet, size_t packetLen)
 {
 	this->CalcXor(packet, sizeof(packet_size_t), packetLen);
 }
 
-void XorObfuscation::decodingHeader(Byte* packet, size_t packetLen)
+void XorObfuscation::decodingHeader(Byte *packet, size_t packetLen)
 {
 	this->CalcXor(packet, 0, packetLen);
 }
 
-void XorObfuscation::decodingData(Byte* packet, size_t packetLen)
+void XorObfuscation::decodingData(Byte *packet, size_t packetLen)
 {
 	this->CalcXor(packet, sizeof(packet_size_t), packetLen);
 }
 //--------------------------------------------------------//
 PacketObfuscation::PacketObfuscation()
 {
-	//Todo : xor 말고 다른 알고리즘도 만들어서 config xml에서 선택하게 하기
 	obfuscation_ = new XorObfuscation();
 }
 
@@ -4039,22 +8107,22 @@ PacketObfuscation::~PacketObfuscation()
 	SAFE_DELETE(obfuscation_);
 }
 
-void PacketObfuscation::encodingHeader(Byte* packet, size_t len)
+void PacketObfuscation::encodingHeader(Byte *packet, size_t len)
 {
 	obfuscation_->encodingHeader(packet, len);
 }
 
-void PacketObfuscation::encodingData(Byte* packet, size_t len)
+void PacketObfuscation::encodingData(Byte *packet, size_t len)
 {
 	obfuscation_->encodingData(packet, len);
 }
 
-void PacketObfuscation::decodingHeader(Byte* packet, size_t len)
+void PacketObfuscation::decodingHeader(Byte *packet, size_t len)
 {
 	obfuscation_->decodingHeader(packet, len);
 }
 
-void PacketObfuscation::decodingData(Byte* packet, size_t len)
+void PacketObfuscation::decodingData(Byte *packet, size_t len)
 {
 	obfuscation_->decodingData(packet, len);
 }
@@ -4063,18 +8131,18 @@ void PacketObfuscation::decodingData(Byte* packet, size_t len)
 ## ServerLibrary\Net\Packet\PacketObfuscation.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
-//--------------------------------------------------------//
+
 // 난독화 최상위, 다른 난독화 알고리즘은 이 클래스를 상속 받을것
 class Obfuscation
 {
 public:
-	virtual void encodingHeader(Byte* packet, size_t packetLen) = 0;
-	virtual void encodingData(Byte* packet, size_t packetLen) = 0;
-
-	virtual void decodingHeader(Byte* packet, size_t packetLen) = 0;
-	virtual void decodingData(Byte* packet, size_t packetLen) = 0;
+	virtual void encodingHeader(Byte *packet, size_t packetLen) = 0;
+	virtual void encodingData(Byte *packet, size_t packetLen) = 0;
+	
+	virtual void decodingHeader(Byte *packet, size_t packetLen) = 0;
+	virtual void decodingData(Byte *packet, size_t packetLen) = 0;
 };
 
 //--------------------------------------------------------//
@@ -4086,36 +8154,36 @@ class XorObfuscation : public Obfuscation
 public:
 	XorObfuscation();
 private:
-	void CalcXor(Byte* packet, int packetOffset, size_t packetLen);
+	void CalcXor(Byte *packet, int packetOffset, size_t packetLen);
 
-	void encodingHeader(Byte* packet, size_t packetLen);
-	void encodingData(Byte* packet, size_t packetLen);
+	void encodingHeader(Byte *packet, size_t packetLen);
+	void encodingData(Byte *packet, size_t packetLen);
 
-	void decodingHeader(Byte* packet, size_t packetLen);
-	void decodingData(Byte* packet, size_t packetLen);
+	void decodingHeader(Byte *packet, size_t packetLen);
+	void decodingData(Byte *packet, size_t packetLen);
 };
 
 //--------------------------------------------------------//
 // 패킷 난독화용
 class PacketObfuscation : public Singleton < PacketObfuscation >
 {
-	Obfuscation* obfuscation_;
+	Obfuscation		*obfuscation_;
 public:
 	PacketObfuscation();
 	~PacketObfuscation();
 
-	void encodingHeader(Byte* packet, size_t packetLen);
-	void encodingData(Byte* packet, size_t packetLen);
+	void encodingHeader(Byte *packet, size_t packetLen);
+	void encodingData(Byte *packet, size_t packetLen);
 
-	void decodingHeader(Byte* packet, size_t packetLen);
-	void decodingData(Byte* packet, size_t packetLen);
+	void decodingHeader(Byte *packet, size_t packetLen);
+	void decodingData(Byte *packet, size_t packetLen);
 };
 ```
 
 ## ServerLibrary\Net\Packet\Stream.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "Stream.h"
 
 Stream::Stream()
@@ -4123,7 +8191,7 @@ Stream::Stream()
 	this->initialize();
 }
 
-Stream::Stream(UCHAR* stream, size_t size)
+Stream::Stream(UCHAR *stream, size_t size)
 {
 	this->initialize();
 	this->set(stream, size);
@@ -4136,7 +8204,7 @@ void Stream::initialize()
 	ZeroMemory(&stream_, sizeof(stream_));
 }
 
-UCHAR* Stream::data()
+UCHAR *Stream::data()
 {
 	return stream_.data();
 }
@@ -4146,15 +8214,15 @@ size_t Stream::size()
 	return offset_;
 }
 
-void Stream::operator = (Stream& stream)
+void Stream::operator = (Stream &stream)
 {
 	this->set(stream.data(), stream.size());
 }
 
-void Stream::set(UCHAR* data, size_t size)
+void Stream::set(UCHAR *data, size_t size)
 {
 	this->offset_ = size;
-	memcpy_s(this->stream_.data(), stream_.size(), (void*)data, size);
+	memcpy_s(this->stream_.data(), stream_.size(), (void *)data, size);
 }
 
 // write
@@ -4178,48 +8246,48 @@ bool Stream::checkWriteBound(size_t len)
 	offset_ += size;
 
 template<class T>
-void Stream::operator << (const T& value)
+void Stream::operator << (const T &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const bool& value)
+void Stream::operator << (const bool &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT8& value)
+void Stream::operator << (const INT8 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT8& value)
+void Stream::operator << (const UINT8 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT16& value)
+void Stream::operator << (const INT16 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT16& value)
+void Stream::operator << (const UINT16 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT32& value)
+void Stream::operator << (const INT32 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT32& value)
+void Stream::operator << (const UINT32 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const INT64& value)
+void Stream::operator << (const INT64 &value)
 {
 	STREAM_WRITE(value);
 }
-void Stream::operator << (const UINT64& value)
+void Stream::operator << (const UINT64 &value)
 {
 	STREAM_WRITE(value);
 }
 
-void Stream::operator << (const std::vector<wstr_t>& value)
+void Stream::operator << (const std::vector<wstr_t> &value)
 {
 	*this << value.size();
 	for (auto i : value) {
@@ -4256,9 +8324,9 @@ bool Stream::checkReadBound(size_t len)
 	return true;
 }
 
-void Stream::read(void* retVal, size_t len)
+void Stream::read(void *retVal, size_t len)
 {
-	memcpy_s(retVal, len, (void*)(stream_.data() + readPt_), len);
+	memcpy_s(retVal, len, (void *)(stream_.data() + readPt_), len);
 	readPt_ += len;
 }
 
@@ -4270,49 +8338,49 @@ void Stream::read(void* retVal, size_t len)
 	this->read((void *)(retVal), size);	
 
 template<class T>
-void Stream::operator >> (T* retVal)
+void Stream::operator >> (T *retVal)
 {
 	STREAM_READ(T, retVal);
 }
 
-void Stream::operator >> (bool* retVal)
+void Stream::operator >> (bool *retVal)
 {
 	STREAM_READ(bool, retVal);
 }
-void Stream::operator >> (INT8* retVal)
+void Stream::operator >> (INT8 *retVal)
 {
 	STREAM_READ(INT8, retVal);
 }
-void Stream::operator >> (UINT8* retVal)
+void Stream::operator >> (UINT8 *retVal)
 {
 	STREAM_READ(UINT8, retVal);
 }
-void Stream::operator >> (INT16* retVal)
+void Stream::operator >> (INT16 *retVal)
 {
 	STREAM_READ(INT16, retVal);
 }
-void Stream::operator >> (UINT16* retVal)
+void Stream::operator >> (UINT16 *retVal)
 {
 	STREAM_READ(UINT16, retVal);
 }
-void Stream::operator >> (INT32* retVal)
+void Stream::operator >> (INT32 *retVal)
 {
 	STREAM_READ(INT32, retVal);
 }
-void Stream::operator >> (UINT32* retVal)
+void Stream::operator >> (UINT32 *retVal)
 {
 	STREAM_READ(UINT32, retVal);
 }
-void Stream::operator >> (INT64* retVal)
+void Stream::operator >> (INT64 *retVal)
 {
 	STREAM_READ(INT64, retVal);
 }
-void Stream::operator >> (UINT64* retVal)
+void Stream::operator >> (UINT64 *retVal)
 {
 	STREAM_READ(UINT64, retVal);
 }
 
-void Stream::operator >> (std::vector<wstr_t>* retVal)
+void Stream::operator >> (std::vector<wstr_t> *retVal)
 {
 	size_t size;
 	*this >> &size;
@@ -4324,7 +8392,7 @@ void Stream::operator >> (std::vector<wstr_t>* retVal)
 	}
 }
 
-void Stream::operator >> (str_t* retVal)
+void Stream::operator >> (str_t *retVal)
 {
 	INT32 size;
 	*this >> &size;
@@ -4332,8 +8400,8 @@ void Stream::operator >> (str_t* retVal)
 		return;
 	}
 
-	char* buf = new char[size + 1];
-	this->read((void*)(buf), size * sizeof(CHAR));
+	char *buf = new char[size + 1];
+	this->read((void *)(buf), size * sizeof(CHAR));
 	buf[size] = '\0';
 
 	retVal->clear();
@@ -4342,7 +8410,7 @@ void Stream::operator >> (str_t* retVal)
 	delete buf;
 }
 
-void Stream::operator >> (wstr_t* retVal)
+void Stream::operator >> (wstr_t *retVal)
 {
 	INT32 size;
 	*this >> &size;
@@ -4350,8 +8418,8 @@ void Stream::operator >> (wstr_t* retVal)
 		return;
 	}
 
-	WCHAR* buf = new WCHAR[size + 1];
-	this->read((void*)(buf), size * sizeof(WCHAR));
+	WCHAR *buf = new WCHAR[size + 1];
+	this->read((void *)(buf), size * sizeof(WCHAR));
 	buf[size] = '\0';
 
 	retVal->clear();
@@ -4364,7 +8432,7 @@ void Stream::operator >> (wstr_t* retVal)
 ## ServerLibrary\Net\Packet\Stream.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Stream
 {
@@ -4374,14 +8442,14 @@ class Stream
 
 public:
 	Stream();
-	Stream(UCHAR* stream, size_t size);
+	Stream(UCHAR *stream, size_t size);
 	void initialize();
 
-	UCHAR* data();
+	UCHAR *data();
 	size_t size();
 
-	void operator = (Stream& stream);
-	void set(UCHAR* stream, size_t size);
+	void operator = (Stream &stream);
+	void set(UCHAR *stream, size_t size);
 
 	// write
 	//------------------------------------------------------------------------//
@@ -4389,18 +8457,18 @@ public:
 
 
 	template<class T>
-	void operator << (const T& value);
-	void operator << (const bool& value);
-	void operator << (const INT8& value);
-	void operator << (const UINT8& value);
-	void operator << (const INT16& value);
-	void operator << (const UINT16& value);
-	void operator << (const INT32& value);
-	void operator << (const UINT32& value);
-	void operator << (const INT64& value);
-	void operator << (const UINT64& value);
+	void operator << (const T &value);
+	void operator << (const bool &value);
+	void operator << (const INT8 &value);
+	void operator << (const UINT8 &value);
+	void operator << (const INT16 &value);
+	void operator << (const UINT16 &value);
+	void operator << (const INT32 &value);
+	void operator << (const UINT32 &value);
+	void operator << (const INT64 &value);
+	void operator << (const UINT64 &value);
 
-	void operator << (const std::vector<wstr_t>& value);
+	void operator << (const std::vector<wstr_t> &value);
 
 	void operator << (const str_t value);
 	void operator << (const wstr_t value);
@@ -4408,37 +8476,171 @@ public:
 	// read
 	//------------------------------------------------------------------------//
 	bool checkReadBound(size_t len);
-	void read(void* retVal, size_t len);
+	void read(void *retVal, size_t len);
 
 	template<class T>
-	void operator >> (T* retVal);
+	void operator >> (T *retVal);
 
-	void operator >> (bool* retVal);
-	void operator >> (INT8* retVal);
-	void operator >> (UINT8* retVal);
-	void operator >> (INT16* retVal);
-	void operator >> (UINT16* retVal);
-	void operator >> (INT32* retVal);
-	void operator >> (UINT32* retVal);
-	void operator >> (INT64* retVal);
-	void operator >> (UINT64* retVal);
+	void operator >> (bool *retVal);
+	void operator >> (INT8 *retVal);
+	void operator >> (UINT8 *retVal);
+	void operator >> (INT16 *retVal);
+	void operator >> (UINT16 *retVal);
+	void operator >> (INT32 *retVal);
+	void operator >> (UINT32 *retVal);
+	void operator >> (INT64 *retVal);
+	void operator >> (UINT64 *retVal);
 
-	void operator >> (std::vector<wstr_t>* retVal);
+	void operator >> (std::vector<wstr_t> *retVal);
 
-	void operator >> (str_t* retVal);
-	void operator >> (wstr_t* retVal);
+	void operator >> (str_t *retVal);
+	void operator >> (wstr_t *retVal);
+};
+```
+
+## ServerLibrary\Net\Packet.h
+```h
+#include "packetHeader.h"
+#include "Stream.h"
+
+struct Packet {
+    void encode(Stream &stream) {}
+    void decode(Stream &stream) {}
+};
+
+struct PK_C_REQ_ID_PW : Packet
+{
+    int packetType() { return E_C_REQ_ID_PW; }
+    std::string     id;
+    std::string     password;
+
+    void encode(Stream &stream) {
+        stream << id;
+        stream << password;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &id;
+        stream >> &password;
+    }
+};
+
+struct PK_S_REQ_ID_ID_PW : Packet
+{
+    int packetType() { return E_S_REQ_ID_ID_PW; }
+    bool     result;
+
+    void encode(Stream &stream) {
+        stream << result;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &result;
+    }
+};
+
+struct PK_C_NOTIFY_HEARTBEET : Packet
+{
+    int packetType() { return E_C_NOTIFY_HEARTBEET; }
+};
+
+struct PK_C_REQ_CHATTING : Packet
+{
+    int packetType() { return E_C_REQ_CHATTING; }
+    std::string     text;
+
+    void encode(Stream &stream) {
+        stream << text;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &text;
+    }
+};
+
+struct PK_S_REQ_CHATTING : Packet
+{
+    int packetType() { return E_S_REQ_CHATTING; }
+    std::string     id;
+    std::string     text;
+
+    void encode(Stream &stream) {
+        stream << id;
+        stream << text;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &id;
+        stream >> &text;
+    }
+};
+```
+
+## ServerLibrary\Net\PacketHeader.h
+```h
+#pragma once
+#include "../stdafx.h"
+
+enum EPacket {
+    /*0*/    E_C_REQ_ID_PW,
+    /*1*/    E_S_REQ_ID_ID_PW,
+    /*2*/    E_C_NOTIFY_HEARTBEET,
+    /*3*/    E_C_REQ_CHATTING,
+    /*4*/    E_S_REQ_CHATTING,
+};
+```
+
+## ServerLibrary\Net\PacketManager.h
+```h
+#pragma once
+#include "stdafx.h"
+
+class Packet
+{
+	void encode()
+	{
+		
+
+	}
+
+	void decode()
+	{
+
+	}
+};
+
+class PacketManager
+{
+	ThreadJobQueue<Packet *> packetQueue_;
+
+public:
+	bool inputPacket(Packet *packet)
+	{
+		packetQueue_.push(packet);
+	}
+
+	// 큐에서 하나 뽑아서 워커에게 나눠준다.
+	Packet *getPacket()
+	{
+		Packet *packet;
+		if (!packetQueue_.pop(packet)) {
+			packetQueue_.swap();
+			return nullptr;
+		}
+		return packet;
+	}
 };
 ```
 
 ## ServerLibrary\Net\Server.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Server.h"
 
-Server::Server(ContentsProcess* contentsProcess)
+Server::Server(ContentsProcess *contentsProcess)
 {
 	SLog(L"# Initialze network base");
-
+	
 	contentsProcess_ = contentsProcess;
 	status_ = SERVER_STOP;
 
@@ -4448,7 +8650,7 @@ Server::Server(ContentsProcess* contentsProcess)
 	}
 	this->initialize(&config);
 
-	// db 초기화
+
 	_db_manager;
 }
 
@@ -4462,21 +8664,19 @@ Server::~Server()
 	SLog(L"# End network base");
 }
 
-void Server::initialize(xml_t* config)
+void Server::initialize(xml_t *config)
 {
-	//터미널 설정
 	_terminal.run(this);
 
-	//테스크 설정
 	TaskManager::getInstance();
 
 	//서버 설정
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Server");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Server");
 	if (!root) {
 		SLog(L"@ not exist server setting");
 		return;
 	}
-	xmlNode_t* elem = root->FirstChildElement("IP");
+	xmlNode_t *elem = root->FirstChildElement("IP");
 	strcpy_s(ip_, elem->GetText());
 
 	elem = root->FirstChildElement("Port");
@@ -4494,12 +8694,12 @@ void Server::initialize(xml_t* config)
 	SLog(L"### %S start!!! ###", elem->GetText());
 }
 
-SERVER_STATUS& Server::status()
+SERVER_STATUS &Server::status()
 {
 	return status_;
 }
 
-void Server::putPackage(Package* package)
+void Server::putPackage(Package *package)
 {
 	contentsProcess_->putPackage(package);
 }
@@ -4508,7 +8708,7 @@ void Server::putPackage(Package* package)
 ## ServerLibrary\Net\Server.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionManager.h"
 
 // 서버의 공통 모듈 처리
@@ -4527,26 +8727,26 @@ protected:
 	int						workerThreadCount_;
 
 	SERVER_STATUS			status_;
-	ContentsProcess* contentsProcess_;
+	ContentsProcess			*contentsProcess_;
 
 public:
-	Server(ContentsProcess* contentsProcess);
+	Server(ContentsProcess *contentsProcess);
 	virtual ~Server();
 
-	virtual void			initialize(xml_t* config);
+	virtual void			initialize(xml_t *config);
 
 	virtual bool			run() = 0;
-	SERVER_STATUS& status();
+	SERVER_STATUS			&status();
 
-	void					putPackage(Package* package);
+	void					putPackage(Package *package);
 };
 ```
 
 ## ServerLibrary\Net\Session.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Session.h"
-#include "./IOCP/IOCPServer.h"
+#include "./Iocp/IOCPServer.h"
 
 Session::Session()
 {
@@ -4587,8 +8787,8 @@ bool Session::setSocketOpt()
 #else
 	tcp_keepalive keepAliveSet = { 0 }, returned = { 0 };
 	keepAliveSet.onoff = 1;
-	keepAliveSet.keepalivetime = 3000;        // Keep Alive in 3 sec.
-	keepAliveSet.keepaliveinterval = 3000;    // Resend if No-Reply
+	keepAliveSet.keepalivetime = 3000;        
+	keepAliveSet.keepaliveinterval = 3000;    
 
 	DWORD dwBytes;
 	if (WSAIoctl(socketData_.socket_, SIO_KEEPALIVE_VALS, &keepAliveSet, sizeof(keepAliveSet), &returned, sizeof(returned), &dwBytes, NULL, NULL) != 0) {
@@ -4602,7 +8802,7 @@ bool Session::onAccept(SOCKET socket, SOCKADDR_IN addrInfo)
 {
 	socketData_.socket_ = socket;
 	int addrLen;
-	getpeername(socketData_.socket_, (struct sockaddr*)&socketData_.addrInfo_, &addrLen);
+	getpeername(socketData_.socket_, (struct sockaddr *)&socketData_.addrInfo_, &addrLen);
 	socketData_.addrInfo_ = addrInfo;
 	if (!this->setSocketOpt()) {
 		return false;
@@ -4671,7 +8871,8 @@ void Session::updateHeartBeat()
 ## ServerLibrary\Net\Session.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
+
 
 struct SOCKET_DATA {
 	SOCKET				socket_;
@@ -4693,21 +8894,21 @@ protected:
 	bool				setSocketOpt();
 
 public:
-	Session();
-	virtual ~Session();
+    Session();
+    virtual ~Session();
 
 	virtual bool		onAccept(SOCKET socket, SOCKADDR_IN addrInfo);
 
 	virtual void		onSend(size_t transferSize) = 0;
-	virtual void		sendPacket(Packet* packet) = 0;
-
-	virtual Package* onRecv(size_t transferSize) = 0;
+	virtual void		sendPacket(Packet *packet) = 0;
+	
+	virtual Package*	onRecv(size_t transferSize) = 0;
 	virtual void		recvStandBy() {};
 
-	virtual void		onClose(bool force = false);
+    virtual void		onClose(bool force = false);
 
-	SOCKET& socket();
-	wstr_t				clientAddress();
+	SOCKET&				socket();
+    wstr_t				clientAddress();
 
 	oid_t				id();
 	void				setId(oid_t id);
@@ -4722,9 +8923,9 @@ public:
 
 ## ServerLibrary\Net\SessionManager.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionManager.h"
-#include "./IOCP/IOCPServer.h"
+#include "./Iocp/IOCPServer.h"
 
 SessionManager::SessionManager(int maxConnection)
 	: lock_(L"SessionManager")
@@ -4736,7 +8937,7 @@ SessionManager::SessionManager(int maxConnection)
 
 SessionManager::~SessionManager()
 {
-	vector<Session*> removeSessionVec;
+	vector<Session *> removeSessionVec;
 	removeSessionVec.resize(sessionList_.size());
 	std::copy(sessionList_.begin(), sessionList_.end(), removeSessionVec.begin());
 	for (auto session : removeSessionVec) {
@@ -4755,7 +8956,7 @@ oid_t SessionManager::createSessionId()
 	return sessionSeed_++;
 }
 
-bool SessionManager::addSession(Session* session)
+bool SessionManager::addSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	auto findSession = std::find(sessionList_.begin(), sessionList_.end(), session);
@@ -4773,8 +8974,8 @@ bool SessionManager::addSession(Session* session)
 	return true;
 }
 
-//소켓을 닫으라는 클라이언트에게 보냅니다.
-bool SessionManager::closeSession(Session* session)
+
+bool SessionManager::closeSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	if (session == nullptr) {
@@ -4782,7 +8983,7 @@ bool SessionManager::closeSession(Session* session)
 	}
 	auto findSession = std::find(sessionList_.begin(), sessionList_.end(), session);
 	if (findSession != sessionList_.end()) {
-		Session* delSession = *findSession;
+		Session *delSession = *findSession;
 		SLog(L"* detected close by client [%s]", delSession->clientAddress().c_str());
 		::closesocket(delSession->socket());
 
@@ -4794,27 +8995,27 @@ bool SessionManager::closeSession(Session* session)
 	return false;
 }
 
-//소켓을 강제로 닫습니다.
-void SessionManager::forceCloseSession(Session* session)
+
+void SessionManager::forceCloseSession(Session *session)
 {
 	SAFE_LOCK(lock_);
 	if (!session) {
 		return;
 	}
 
-	//우아한 종료 유도. 원래는 클라이언트에서 서버 접속을 종료하도록 유도해야 한다.
+	//우아한 종료 유도. 
 	LINGER linger;
 	linger.l_onoff = 1;   //사용
 	linger.l_linger = 0;  //대기시간, 0일시 완료 안된 패킷 버리고 즉시 종료.
 
-	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char*)&linger, sizeof(linger));
+	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char *)&linger, sizeof(linger));
 	this->closeSession(session);
 }
 
 Session* SessionManager::session(oid_t id)
 {
 	SAFE_LOCK(lock_);
-	Session* findSession = nullptr;
+	Session *findSession = nullptr;
 
 	for (auto session : sessionList_) {
 		if (session->id() == id) {
@@ -4822,7 +9023,7 @@ Session* SessionManager::session(oid_t id)
 			break;
 		}
 	}
-
+	
 	return findSession;
 }
 
@@ -4850,19 +9051,19 @@ void SessionManager::runCommand(wstr_t cmdLine)
 	}
 }
 
-// 서버에서 내리는 치트키 정의
+// 치트키
 void SessionManager::commandFuncInitialize()
 {
 #if 0
-	//기본적인 3개만 생성, 이후 늘어나면 별도 클래스로 분리
-	auto notiyFunc = [](SessionList* sessionList, wstr_t* arg) {
-		auto eachFunc = [arg](void* atom) {
-			Session* session = (Session*)atom;
+
+    auto notiyFunc = [](SessionList *sessionList, wstr_t *arg) {
+        auto eachFunc = [arg](void *atom) {
+            Session *session = (Session*)atom;
 			if (session->type() == SESSION_TYPE_TERMINAL) {
 				return;
 			}
-			array<CHAR, SIZE_256> tmpBuf;
-			StrConvW2A((WCHAR*)arg->c_str(), tmpBuf.data(), tmpBuf.size());
+            array<CHAR, SIZE_256> tmpBuf;
+            StrConvW2A((WCHAR*)arg->c_str(), tmpBuf.data(), tmpBuf.size());
 
 			PK_S_ANS_CHATTING retPacket;
 			retPacket.id_ = "Server";
@@ -4870,17 +9071,17 @@ void SessionManager::commandFuncInitialize()
 			retPacket.text_ += tmpBuf.data();
 
 			session->sendPacket(&retPacket);
-			};
+        };
 
 		for (auto session : *sessionList) {
 			eachFunc(session);
 		}
-		};
+    };
 
-	auto kickoffFunc = [](SessionList* sessionList, wstr_t* arg) {
-		vector<Session*> removeSessionVec;
-		auto eachFunc = [&removeSessionVec, arg](void* atom) {
-			Session* session = (Session*)atom;
+    auto kickoffFunc = [](SessionList *sessionList, wstr_t *arg){
+        vector<Session *> removeSessionVec;
+        auto eachFunc = [&removeSessionVec, arg](void *atom) {
+            Session *session = (Session*)atom;
 			if (session->type() == SESSION_TYPE_TERMINAL) {
 				return;
 			}
@@ -4890,23 +9091,23 @@ void SessionManager::commandFuncInitialize()
 			retPacket.text_ = "! Kick off by Server";
 			session->sendPacket(&retPacket);
 
-			removeSessionVec.push_back(session);
-			};
+            removeSessionVec.push_back(session);
+        }; 
 		for (auto session : *sessionList) {
 			eachFunc(session);
 		}
 
-		for (auto session : removeSessionVec) {
+        for (auto session : removeSessionVec) {
 			session->onClose();
-		}
-		};
+        }
+    };
 
-	auto exitFunc = [](SessionList* sessionList, wstr_t* arg) {
-		_shutdown = true;
-		};
+    auto exitFunc = [](SessionList *sessionList, wstr_t *arg){
+        _shutdown = true;
+    };
 
-	//명령어 등록
-	serverCommand_.insert(make_pair(L"/notify", notiyFunc));
+    //명령어 등록
+    serverCommand_.insert(make_pair(L"/notify", notiyFunc));
 	serverCommand_.insert(make_pair(L"/kickoff", kickoffFunc));
 	serverCommand_.insert(make_pair(L"/exit", exitFunc));
 #endif
@@ -4916,49 +9117,53 @@ void SessionManager::commandFuncInitialize()
 ## ServerLibrary\Net\SessionManager.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "Session.h"
-#define SESSION_CAPACITY	(5000) // 최대 동점 5000명
-#define _session_manager	SessionManager::getInstance()
-class SessionManager :public Singleton<SessionManager>
+
+
+
+#define SESSION_CAPACITY		(5000)
+#define _session_manager		SessionManager::getInstance()
+
+class SessionManager : public Singleton<SessionManager>
 {
-	typedef list<Session*>SessionList;
+    typedef list<Session*>		SessionList;
 
-	SessionList		 sessionList_;
-	int				 sessionCount_;
-	int				 maxConnection_;
-	Lock			 lock_;
+    SessionList		            sessionList_;
+	int									sessionCount_;
+	int									maxConnection_;
+    Lock								lock_;
 
-	oid_t			 sessionSeed_;
+	oid_t								sessionSeed_;			
 
 	// 서버 수동 명령어
-	typedef std::function<void(SessionList* sessionList, wstr_t* arg)> cmdFunc;
-	unordered_map<wstr_t, cmdFunc> serverCommand_;
+    typedef std::function<void (SessionList *sessionList, wstr_t *arg)> cmdFunc;
+	unordered_map<wstr_t, cmdFunc>   serverCommand_;
 
 public:
 	SessionManager(int maxConnection = SESSION_CAPACITY);
 	~SessionManager();
 	oid_t				createSessionId();
 
-	bool				addSession(Session* session);
-	
-	list<Session*>&		sessionList();
-	bool				closeSession(Session* session);
-	void				forceCloseSession(Session* session);
+	bool				addSession(Session *session);
 
-	Session*			session(oid_t id);
+	list<Session*>		&sessionList();
+	bool				closeSession(Session *session);
+	void				forceCloseSession(Session *session);
 
-	void				runCommand(wstr_t cmd);
-	void				commandFuncInitialize();
+	Session				*session(oid_t id);
+
+    void                runCommand(wstr_t cmd);
+    void                commandFuncInitialize();
 };
 ```
 
 ## ServerLibrary\Net\SessionMonitor.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "SessionMonitor.h"
 
-SessionMonitor::SessionMonitor()
+SessionMonitor::SessionMonitor() 
 {
 	static bool init = false;
 	if (init) {
@@ -4994,24 +9199,194 @@ void SessionMonitor::tick()
 ## ServerLibrary\Net\SessionMonitor.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class SessionMonitor : public Work
 {
-public:
+public :
 	SessionMonitor();
 	void tick();
 };
 static SessionMonitor sessionMonitor;
 ```
 
+## ServerLibrary\Net\Stream.h
+```h
+#pragma once
+#include "stdafx.h"
+using namespace std;
+
+class Stream
+{
+	size_t offset_;
+	size_t readPt_;
+	array <UCHAR, SOCKET_BUF_SIZE> stream_;
+
+public:
+	Stream()
+	{
+		readPt_ = 0;
+		offset_ = 0;
+		ZeroMemory(&stream_, sizeof(stream_));
+	}
+
+	UCHAR *stream()
+	{
+		return stream_.data();
+	}
+
+	size_t size()
+	{
+		return offset_;
+	}
+
+	void operator = (Stream &stream)
+	{
+		this->set(stream.stream(), stream.size());
+	}
+
+	void set(UCHAR *stream, size_t size)
+	{
+		this->offset_ = size;
+		memcpy_s(this->stream_.data(), stream_.size(), (void *)stream, size);
+	}
+
+	// write
+	//------------------------------------------------------------------------//
+	bool checkWriteBound(size_t len)
+	{
+		if (offset_ + len > sizeof(stream_)) {
+			SLog(L"! socket stream over.");
+			ASSERT(FALSE);
+			return false;
+		}
+		return true;
+	}
+
+	template<typename T>
+	void operator << (const T &value)
+	{
+		size_t size = sizeof(value);
+		if (this->checkWriteBound(size) == false) {
+			return;
+		}
+		
+		memcpy_s((void *)(stream_.data() + offset_), stream_.size() - offset_, (const void *)&value, size);
+		offset_ += size;
+	}
+
+	template<class T>
+	void operator << (const std::vector<T> &value)
+	{
+		*this << value.size();
+		for (auto i : value) {
+			*this << i;
+		}
+	}
+
+	void operator << (std::string value)
+	{
+		*this << value.length();
+		for (auto i : value) {
+			*this << i;
+		}
+	}
+
+	void operator << (wstr_t value)
+	{
+		*this << (value.length());
+		for (auto i : value) {
+			*this << i;
+		}
+	}
+
+	// read
+	//------------------------------------------------------------------------//
+	bool checkReadBound(size_t len) 
+	{
+		if (readPt_ + len > offset_) {
+			SLog(L"! readOffset : %d, size: %d, totalOffset = %d", readPt_, len, offset_);
+			SLog(L"! socket stream has not more memory.");
+			ASSERT(FALSE);
+			return false;
+		}
+		return true;
+	}
+
+	void read(void *retVal, size_t len)
+	{
+		memcpy_s(retVal, len, (void *)(stream_.data() + readPt_), len);
+		readPt_ += len;
+	}
+
+	template<typename T>
+	void operator >> (T *retVal)
+	{
+		size_t size = sizeof(*retVal);
+		if (this->checkReadBound(size) == false) {
+			return;
+		}
+		this->read((void *)(retVal), sizeof(T));
+	}
+
+	void operator >> (std::string *retVal)
+	{
+		size_t size;
+		*this >> &size;
+		if (this->checkReadBound(size) == false) {
+			return;
+		}
+
+		char *buf = new char[size + 1];
+		this->read((void *)(buf), size * sizeof(CHAR));
+		buf[size] = '\0';
+
+		retVal->clear();
+		*retVal = buf;
+
+		delete buf;
+	}
+
+	void operator >> (wstr_t *retVal)
+	{
+		size_t size;
+		*this >> &size;
+		if (this->checkReadBound(size) == false) {
+			return;
+		}
+
+		WCHAR *buf = new WCHAR[size + 1];
+		this->read((void *)(buf), size * sizeof(WCHAR));
+		buf[size] = '\0';
+
+		retVal->clear();
+		*retVal = buf;
+
+		delete buf;
+	}
+
+	template<class T>
+	void operator >> (std::vector<T> *retVal)
+	{
+		size_t size;
+		*this >> &size;
+
+		for (size_t i = 0; i < size; ++i) {
+			T tmp;
+			*this >> &tmp;
+			retVal->push_back(tmp);
+		}
+	}
+};
+```
+
 ## ServerLibrary\Net\Terminal\Terminal.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Terminal.h"
 #include "../Packet/PacketAnalyzer.h"
 
-Terminal::Terminal(Server* server, wstr_t name)
+Terminal::Terminal(Server *server, wstr_t name)
 {
 	server_ = server;
 	name_ = name;
@@ -5022,9 +9397,9 @@ Terminal::~Terminal()
 	status_ = TERMINAL_STOP;
 }
 
-void Terminal::initialize(xmlNode_t* config)
+void Terminal::initialize(xmlNode_t *config)
 {
-	xmlNode_t* elem;
+	xmlNode_t *elem;
 
 	elem = config->FirstChildElement("IP");
 	strcpy_s(ip_, elem->GetText());
@@ -5040,14 +9415,14 @@ TERMINAL_STATUS& Terminal::status()
 	return status_;
 }
 
-void Terminal::sendPacket(Packet* packet)
+void Terminal::sendPacket(Packet *packet)
 {
 	if (status_ == TERMINAL_READY) {
 		session_.sendPacket(packet);
 	}
 }
 
-const char* Terminal::ip()
+const char *Terminal::ip()
 {
 	return ip_;
 }
@@ -5066,7 +9441,7 @@ CONNECT_START:
 			break;
 		}
 		SLog(L"* try connect [%s] server[%S]:[%d]... [%d]", name_.c_str(), ip_, port_, tryCount++);
-		Sleep(1000);        // 1초마다 연결 시도
+		Sleep(1000);        
 	}
 	status_ = TERMINAL_READY;
 
@@ -5076,10 +9451,10 @@ CONNECT_START:
 
 	SLog(L"* [%s]terminal connect [%S]:[%d] ready", name_.c_str(), ip_, port_);
 	while (_shutdown == false) {
-		Package* package = session_.onRecv(0);
+		Package *package = session_.onRecv(0);
 
 		if (package == nullptr) {
-			SLog(L"! termnal [%s] disconnected !", name_.c_str());
+			SLog(L"! termnal [%s] disconnected ! IP[%S] Port[%d]", name_.c_str(),ip_,port_);
 			session_.onClose();
 			goto CONNECT_START;
 		}
@@ -5097,7 +9472,7 @@ void Terminal::run()
 ## ServerLibrary\Net\Terminal\Terminal.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 // 터미널 쓰레드, 타 서버와 연결해서 데이터 송수신에 사용한다.
 enum TERMINAL_STATUS {
@@ -5109,7 +9484,7 @@ class Server;
 class Terminal
 {
 protected:
-	Server* server_;
+	Server					*server_;
 	wstr_t					name_;
 	TERMINAL_STATUS			status_;
 
@@ -5118,16 +9493,16 @@ protected:
 
 	TerminalSession			session_;
 
-	Thread* processThread_;
+	Thread					*processThread_;
 
 public:
-	Terminal(Server* server, wstr_t name);
+	Terminal(Server *server, wstr_t name);
 	virtual ~Terminal();
-	TERMINAL_STATUS& status();
+	TERMINAL_STATUS &status();
 
-	void		initialize(xmlNode_t* config);
-	void		sendPacket(Packet* packet);
-	const char* ip();
+	void		initialize(xmlNode_t *config);
+	void		sendPacket(Packet *packet);
+	const char *ip();
 	int			port();
 
 private:
@@ -5139,7 +9514,7 @@ private:
 ## ServerLibrary\Net\Terminal\TerminalManager.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 TerminalManager::TerminalManager()
 {
@@ -5153,21 +9528,21 @@ TerminalManager::~TerminalManager()
 	}
 }
 
-void TerminalManager::initialize(xml_t* config)
+void TerminalManager::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Terminal");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Terminal");
 	xmlHandle_t terminalNode = TiXmlHandle(root);
 	if (!root) {
 		SLog(L"@ not exist terminal setting");
 		return;
 	}
 
-	xmlNode_t* elem = terminalNode.FirstChildElement().Element();
+	xmlNode_t *elem = terminalNode.FirstChildElement().Element();
 	while (elem) {
 		array<WCHAR, _MAX_PATH> terminalName;
-		StrConvA2W((char*)elem->Value(), terminalName.data(), terminalName.max_size());
+		StrConvA2W((char *)elem->Value(), terminalName.data(), terminalName.max_size());
 
-		Terminal* terminal = new Terminal(server_, terminalName.data());
+		Terminal *terminal = new Terminal(server_, terminalName.data());
 		terminal->initialize(elem);
 		this->put(terminalName.data(), terminal);
 
@@ -5177,7 +9552,7 @@ void TerminalManager::initialize(xml_t* config)
 	SLog(L"### Terminal set ###");
 }
 
-void TerminalManager::put(wstr_t serverName, Terminal* terminal)
+void TerminalManager::put(wstr_t serverName, Terminal *terminal)
 {
 	terminalPool_.insert(make_pair(serverName, terminal));
 }
@@ -5191,7 +9566,7 @@ Terminal* TerminalManager::get(wstr_t name)
 	return terminalPool_.at(name);
 }
 
-bool TerminalManager::isTerminal(const char* ip)
+bool TerminalManager::isTerminal(const char *ip)
 {
 	for (auto terminal : terminalPool_) {
 		if (!strcmp(terminal.second->ip(), ip)) {
@@ -5201,7 +9576,7 @@ bool TerminalManager::isTerminal(const char* ip)
 	return false;
 }
 
-void TerminalManager::run(Server* server)
+void TerminalManager::run(Server *server)
 {
 	server_ = server;
 
@@ -5216,7 +9591,7 @@ void TerminalManager::run(Server* server)
 ## ServerLibrary\Net\Terminal\TerminalManager.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #define _terminal			TerminalManager::getInstance()
 
@@ -5224,28 +9599,28 @@ void TerminalManager::run(Server* server)
 class TerminalManager : public Singleton<TerminalManager>
 {
 	unordered_map<wstr_t, Terminal*> terminalPool_;
-	Server* server_;
+	Server						*server_;
 
 public:
 	TerminalManager();
 	virtual ~TerminalManager();
 
-	void initialize(xml_t* config);
+	void initialize(xml_t *config);
 
-	void put(wstr_t serverName, Terminal* terminal);
+	void put(wstr_t serverName, Terminal *terminal);
 	Terminal* get(wstr_t name);
-
-	bool isTerminal(const char* ip);
-	void run(Server* server);
+	
+	bool isTerminal(const char *ip);
+	void run(Server *server);
 };
 ```
 
 ## ServerLibrary\Net\Terminal\TerminalSession.cpp
 ```cpp
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
-bool TerminalSession::connectTo(char* ip, int port)
+bool TerminalSession::connectTo(char *ip, int port)
 {
 	socketData_.socket_ = ::socket(AF_INET, SOCK_STREAM, 0);
 	if (socketData_.socket_ == INVALID_SOCKET) {
@@ -5256,10 +9631,10 @@ bool TerminalSession::connectTo(char* ip, int port)
 	socketData_.addrInfo_.sin_family = AF_INET;
 	socketData_.addrInfo_.sin_port = htons(port);
 	inet_pton(AF_INET, ip, &(socketData_.addrInfo_.sin_addr));
-
+	
 	this->setSocketOpt();
 
-	int ret = ::connect(socketData_.socket_, (sockaddr*)&socketData_.addrInfo_, sizeof(socketData_.addrInfo_));
+	int ret = ::connect(socketData_.socket_, (sockaddr *)&socketData_.addrInfo_, sizeof(socketData_.addrInfo_));
 	if (ret == SOCKET_ERROR) {
 		SLog(L"! terminal socket connect fail");
 		return false;
@@ -5269,10 +9644,9 @@ bool TerminalSession::connectTo(char* ip, int port)
 
 void TerminalSession::onSend(size_t transferSize)
 {
-	//Noting
 }
 
-void TerminalSession::sendPacket(Packet* packet)
+void TerminalSession::sendPacket(Packet *packet)
 {
 	Stream stream;
 	packet->encode(stream);
@@ -5281,17 +9655,14 @@ void TerminalSession::sendPacket(Packet* packet)
 	array<char, SOCKET_BUF_SIZE> buffer;
 	const size_t packetHeaderSize = sizeof(packet_size_t);
 
-	//									 head size  + real data size
+
 	packet_size_t packetLen[1] = { (packet_size_t)packetHeaderSize + (packet_size_t)stream.size(), };
-	// insert packet len
-	memcpy_s(buffer.data() + offset, buffer.max_size(), (void*)packetLen, packetHeaderSize);
+	memcpy_s(buffer.data() + offset, buffer.max_size(), (void *)packetLen, packetHeaderSize);
 	offset += packetHeaderSize;
 
-	// packet obfuscation
 	PacketObfuscation::getInstance().encodingHeader((Byte*)buffer.data(), packetHeaderSize);
 	PacketObfuscation::getInstance().encodingData((Byte*)stream.data(), stream.size());
 
-	// insert packet data
 	memcpy_s(buffer.data() + offset, buffer.max_size(), stream.data(), packetLen[0]);
 	offset += (packet_size_t)stream.size();
 
@@ -5301,33 +9672,31 @@ void TerminalSession::sendPacket(Packet* packet)
 Package* TerminalSession::onRecv(size_t transferSize)
 {
 	array<Byte, SOCKET_BUF_SIZE> rowData;
-	int ret = ::recv(socketData_.socket_, (char*)rowData.data(), (int)rowData.size(), 0);
+	int ret = ::recv(socketData_.socket_, (char *)rowData.data(), (int)rowData.size(), 0);
 	if (ret <= 0) {
 		return nullptr;
 	}
-
-	//패킷 길이 가지고 오기      
+    
 	packet_size_t offset = 0;
 	packet_size_t packetLen[1] = { 0, };
 
-	memcpy_s((void*)packetLen, sizeof(packetLen), (void*)rowData.data(), sizeof(packetLen));
+	memcpy_s((void *)packetLen, sizeof(packetLen), (void *)rowData.data(), sizeof(packetLen));
 	PacketObfuscation::getInstance().decodingHeader((Byte*)packetLen, sizeof(packetLen));
 
 	while (ret < (int)packetLen[0]) {
 		int len = ret;
-		ret += ::recv(socketData_.socket_, (char*)rowData.data() + len, (int)rowData.size() - len, 0);
+		ret += ::recv(socketData_.socket_, (char *)rowData.data() + len, (int)rowData.size() - len, 0);
 	}
 
 	offset += sizeof(packetLen);
 	PacketObfuscation::getInstance().decodingData((Byte*)rowData.data() + offset, packetLen[0] - offset);
 
-	//서버간 패킷 처리
-	Packet* packet = PacketAnalyzer::getInstance().analyzer((char*)rowData.data() + offset, packetLen[0]);
+	Packet *packet = PacketAnalyzer::getInstance().analyzer((char *)rowData.data() + offset, packetLen[0]);
 	if (packet == nullptr) {
 		return nullptr;
 	}
 
-	Package* package = new Package(this, packet);
+	Package *package = new Package(this, packet);
 	return package;
 }
 ```
@@ -5335,23 +9704,23 @@ Package* TerminalSession::onRecv(size_t transferSize)
 ## ServerLibrary\Net\Terminal\TerminalSession.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class TerminalSession : public Session
 {
 public:
-	bool		connectTo(char* ip, int port);
+	bool		connectTo(char *ip, int port);
 	void		onSend(size_t transferSize);
-	void		sendPacket(Packet* packet);
+	void		sendPacket(Packet *packet);
 
-	Package* onRecv(size_t transferSize);
+	Package*	onRecv(size_t transferSize);
 };
 ```
 
 ## ServerLibrary\Net\Winsocket.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class WinSocket
 {
@@ -5388,6 +9757,11 @@ PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.41.34120:T
 Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
 ```
 
+## ServerLibrary\ServerLibrary\x64\Debug\ServerLibrary.tlog\unsuccessfulbuild
+```
+
+```
+
 ## ServerLibrary\ServerLibrary\x64\Debug\ServerLibrary.vcxproj.FileListAbsolute.txt
 ```txt
 
@@ -5396,7 +9770,7 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
 ## ServerLibrary\ServerLibrary.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "mswsock.lib")
@@ -5432,14 +9806,14 @@ Debug|x64|C:\github\GameServer_Programming\ServerLibrary\|
 #include <random>
 #include <typeinfo>    //typeinfo
 // TODO: 공용 매크로
-//#define CONTEXT_SWITCH     std::this_thread::sleep_for(std::chrono::nanoseconds(1))
+
 #if _DEBUG
 #define CONTEXT_SWITCH		Sleep(1)
 #else
 #define CONTEXT_SWITCH		::SwitchToThread()
 #endif
 
-typedef void(*Function)(void*);
+typedef void(*Function)(void *);
 
 //기타 유틸
 #include "./Util/csv_parser/csv_parser.hpp"
@@ -5453,7 +9827,6 @@ typedef void(*Function)(void*);
 
 #include "./Util/GameObject.h"
 #include "./Util/Singleton.h"
-#include "./Util/RandomMT.h"
 
 #include "./Util/Clock.h"
 #include "./Util/Logger.h"
@@ -5469,7 +9842,6 @@ typedef void(*Function)(void*);
 #include "./Util/Memory_LowFragmentationHeap.h"
 #include "./Util/Minidump.h"
 
-#include "./Util/SMTPMail.h"
 #include "./Util/Config.h"
 #include "./Util/Monitoring.h"
 #include "./util/ProgramValidation.h"
@@ -5509,264 +9881,9 @@ typedef void(*Function)(void*);
 #include "Shutdown.h"
 ```
 
-## ServerLibrary\ServerLibrary.vcxproj
-```vcxproj
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
-  <PropertyGroup Label="Globals">
-    <VCProjectVersion>17.0</VCProjectVersion>
-    <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6e110469-40cf-47f8-b4c3-df093d50164c}</ProjectGuid>
-    <RootNamespace>ServerLibrary</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);C:\Program Files\Common Files\System\ado;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);D:\boost_1_56_0\lib64-msvc-12.0;D:\boost_1_56_0\libs;</LibraryPath>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1;</PreprocessorDefinitions>
-      <ConformanceMode>Default</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libcrypto.lib;libssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Contents\ContentsProcess.cpp" />
-    <ClCompile Include="Database\ADODatabase.cpp" />
-    <ClCompile Include="Database\DBManager.cpp" />
-    <ClCompile Include="Database\Query.cpp" />
-    <ClCompile Include="Database\QueryRecord.cpp" />
-    <ClCompile Include="Database\QueryStatement.cpp" />
-    <ClCompile Include="Net\IOCP\IOCPServer.cpp" />
-    <ClCompile Include="Net\IOCP\IOCPSession.cpp" />
-    <ClCompile Include="Net\Packet\PacketAnalyzer.cpp" />
-    <ClCompile Include="Net\Packet\PacketObfuscation.cpp" />
-    <ClCompile Include="Net\Packet\Stream.cpp" />
-    <ClCompile Include="Net\Server.cpp" />
-    <ClCompile Include="Net\Session.cpp" />
-    <ClCompile Include="Net\SessionManager.cpp" />
-    <ClCompile Include="Net\SessionMonitor.cpp" />
-    <ClCompile Include="Net\Terminal\Terminal.cpp" />
-    <ClCompile Include="Net\Terminal\TerminalSession.cpp" />
-    <ClCompile Include="Net\Terminal\TerminalManager.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Shutdown.cpp" />
-    <ClCompile Include="Util\Assert.cpp" />
-    <ClCompile Include="Util\Clock.cpp" />
-    <ClCompile Include="Util\Config.cpp" />
-    <ClCompile Include="Util\csv_parser\csv_parser.cpp" />
-    <ClCompile Include="Util\Lock.cpp" />
-    <ClCompile Include="Util\Logger.cpp" />
-    <ClCompile Include="Util\Minidump.cpp" />
-    <ClCompile Include="Util\SMTPMail.cpp" />
-    <ClCompile Include="Util\Task.cpp" />
-    <ClCompile Include="Util\Thread.cpp" />
-    <ClCompile Include="Util\tinyXml\tinystr.cpp" />
-    <ClCompile Include="Util\tinyXml\tinyxml.cpp" />
-    <ClCompile Include="Util\tinyXml\tinyxmlerror.cpp" />
-    <ClCompile Include="Util\tinyXml\tinyxmlparser.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Contents\ContentsProcess.h" />
-    <ClInclude Include="Database\ADODatabase.h" />
-    <ClInclude Include="Database\Database.h" />
-    <ClInclude Include="Database\DBManager.h" />
-    <ClInclude Include="Database\Query.h" />
-    <ClInclude Include="Database\QueryRecord.h" />
-    <ClInclude Include="Database\QueryStatement.h" />
-    <ClInclude Include="Net\IOCP\IOCPSession.h" />
-    <ClInclude Include="Net\Packet\Package.h" />
-    <ClInclude Include="Net\Packet\PacketAnalyzer.h" />
-    <ClInclude Include="Net\Packet\PacketClass.h" />
-    <ClInclude Include="Net\Packet\PacketFactory.h" />
-    <ClInclude Include="Net\Packet\PacketHeader.h" />
-    <ClInclude Include="Net\Packet\PacketObfuscation.h" />
-    <ClInclude Include="Net\Packet\Stream.h" />
-    <ClInclude Include="Net\Server.h" />
-    <ClInclude Include="Net\IOCP\IOCPServer.h" />
-    <ClInclude Include="Net\Session.h" />
-    <ClInclude Include="Net\SessionManager.h" />
-    <ClInclude Include="Net\SessionMonitor.h" />
-    <ClInclude Include="Net\Terminal\Terminal.h" />
-    <ClInclude Include="Net\Terminal\TerminalManager.h" />
-    <ClInclude Include="Net\Terminal\TerminalSession.h" />
-    <ClInclude Include="Net\Winsocket.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="ServerLibrary.h" />
-    <ClInclude Include="Shutdown.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="tinyXml\tinystr.h" />
-    <ClInclude Include="Util\Assert.h" />
-    <ClInclude Include="Util\Clock.h" />
-    <ClInclude Include="Util\Config.h" />
-    <ClInclude Include="Util\csv_parser\csv_parser.hpp" />
-    <ClInclude Include="Util\GameObject.h" />
-    <ClInclude Include="Util\Lock.h" />
-    <ClInclude Include="Util\Logger.h" />
-    <ClInclude Include="Util\MemoryLeak.h" />
-    <ClInclude Include="Util\Memory_LowFragmentationHeap.h" />
-    <ClInclude Include="Util\Minidump.h" />
-    <ClInclude Include="Util\Monitoring.h" />
-    <ClInclude Include="Util\ProgramValidation.h" />
-    <ClInclude Include="Util\RandomMt.h" />
-    <ClInclude Include="Util\Singleton.h" />
-    <ClInclude Include="Util\SMTPMail.h" />
-    <ClInclude Include="Util\Table.h" />
-    <ClInclude Include="Util\Task.h" />
-    <ClInclude Include="Util\Thread.h" />
-    <ClInclude Include="Util\ThreadJobQueue.h" />
-    <ClInclude Include="Util\tinyXml\tinystr.h" />
-    <ClInclude Include="Util\tinyXml\tinyxml.h" />
-    <ClInclude Include="Util\Type.h" />
-    <ClInclude Include="Util\Util.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="item.csv" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="Util\config.xml" />
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
-</Project>
-```
-
 ## ServerLibrary\Shutdown.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Shutdown.h"
 
 bool _shutdown = false;
@@ -5774,21 +9891,44 @@ void shutdownServer()
 {
 	SLog(L"### server shutdown!!! ###");
 
-	//현재 접속중 모든 유저들 세션 종료
-	//서버 데이터 정리 (랭킹이나 ...)
-	// std::thread core();
-	// core.join();
-	//DB 커넥션 종료
 }
 ```
 
 ## ServerLibrary\Shutdown.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 //-------------------------------------------------------------------//
 extern bool _shutdown;
 extern void shutdownServer();
+```
+
+## ServerLibrary\stdafx.cpp
+```cpp
+// stdafx.cpp : source file that includes just the standard includes
+// ServerLibrary.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file
+```
+
+## ServerLibrary\stdafx.h
+```h
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include "targetver.h"
+
+#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+
+#include "ServerLibrary.h"
 ```
 
 ## ServerLibrary\targetver.h
@@ -5805,7 +9945,7 @@ extern void shutdownServer();
 
 ## ServerLibrary\Util\Assert.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Assert.h"
 
 void Assert(int condition, LPCWSTR conditionStr, LPCWSTR fileName, int lineNo)
@@ -5833,7 +9973,7 @@ void Assert(int condition, LPCWSTR conditionStr, LPCWSTR fileName, int lineNo)
 ## ServerLibrary\Util\Assert.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #undef ASSERT
 #define ASSERT(x)	            Assert(x, _W(#x), _W(__FILE__), __LINE__)				   				
@@ -5843,7 +9983,7 @@ void Assert(int condition, LPCWSTR conditionStr, LPCWSTR fileName, int lineNo);
 
 ## ServerLibrary\Util\Clock.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Clock.h"
 
 Clock::Clock()
@@ -5855,7 +9995,7 @@ Clock::~Clock()
 {
 }
 
-tick_t Clock::strToTick(wstr_t str, WCHAR* fmt)
+tick_t Clock::strToTick(wstr_t str, WCHAR *fmt)
 {
     int	year = 0;
     int	month = 0;
@@ -5866,7 +10006,7 @@ tick_t Clock::strToTick(wstr_t str, WCHAR* fmt)
 
     swscanf_s(str.c_str(), fmt, &year, &month, &day, &hour, &minute, &second);
 
-
+   
     tm time = { second, minute, hour, day, month - 1, year - 1900 };
 
     return mktime(&time);
@@ -5882,7 +10022,7 @@ tick_t Clock::systemTick()
     return system_clock::to_time_t(system_clock::now());
 }
 
-wstr_t Clock::tickToStr(tick_t tick, WCHAR* fmt)
+wstr_t Clock::tickToStr(tick_t tick, WCHAR *fmt)
 {
     array<WCHAR, SIZE_128> timeStr;
 
@@ -5893,33 +10033,33 @@ wstr_t Clock::tickToStr(tick_t tick, WCHAR* fmt)
     return timeStr.data();
 }
 
-wstr_t Clock::nowTime(WCHAR* fmt)
+wstr_t Clock::nowTime(WCHAR *fmt)
 {
     return this->tickToStr(this->systemTick(), fmt);
 }
 
-wstr_t Clock::nowTimeWithMilliSec(WCHAR* fmt)
+wstr_t Clock::nowTimeWithMilliSec(WCHAR *fmt)
 {
 #if 0
     timePoint now = system_clock::now();
     timePoint oldSecond = system_clock::from_time_t(this->systemTick());
 
     duration<double> milliSecond = now - oldSecond;
-    array<WCHAR, SIZE_8> milliStr;
-    snwprintf(milliStr, L"%03d", (int)(milliSecond.count() * 1000));
+	array<WCHAR, SIZE_8> milliStr;
+	snwprintf(milliStr, L"%03d", (int)(milliSecond.count() * 1000));
 #else
-    high_resolution_clock::time_point point = high_resolution_clock::now();
-    milliseconds ms = duration_cast<milliseconds>(point.time_since_epoch());
+	high_resolution_clock::time_point point = high_resolution_clock::now();
+	milliseconds ms = duration_cast<milliseconds>(point.time_since_epoch());
 
-    seconds s = duration_cast<seconds>(ms);
-    tick_t t = s.count();
-    std::size_t fractionalSeconds = ms.count() % 1000;
-    array<WCHAR, SIZE_8> milliStr;
-    snwprintf(milliStr, L"%03d", (int)(fractionalSeconds));
+	seconds s = duration_cast<seconds>(ms);
+	tick_t t = s.count();
+	std::size_t fractionalSeconds = ms.count() % 1000;
+	array<WCHAR, SIZE_8> milliStr;
+	snwprintf(milliStr, L"%03d", (int)(fractionalSeconds));
 #endif
     wstr_t timeString = this->tickToStr(this->systemTick(), fmt);
     timeString += L".";
-    timeString += milliStr.data();
+	timeString += milliStr.data();
     return timeString;
 }
 
@@ -5950,7 +10090,7 @@ DayOfTheWeek Clock::todayOfTheWeek()
 ## ServerLibrary\Util\Clock.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <chrono>
 #include <ctime>
 
@@ -5972,13 +10112,13 @@ DayOfTheWeek Clock::todayOfTheWeek()
 #define DAY_TO_TICK(x)          (x * TICK_DAY)
 
 typedef enum {
-    DAY_SUNDAY = 0,
-    DAY_MONDAY = 1,        
-    DAY_TUESDAY = 2,        
-    DAY_WEDNESDAY = 3,        
-    DAY_THURSDAY = 4,
-    DAY_FRIDAY = 5,
-    DAY_SATURDAY = 6,
+    DAY_SUNDAY      = 0,
+    DAY_MONDAY      = 1,        
+    DAY_TUESDAY     = 2,        
+    DAY_WEDNESDAY   = 3,        
+    DAY_THURSDAY    = 4,
+    DAY_FRIDAY      = 5,
+    DAY_SATURDAY    = 6,
 }DayOfTheWeek;
 
 #define DATETIME_FORMAT         L"D%Y-%m-%dT%H:%M:%S"
@@ -5993,8 +10133,8 @@ typedef system_clock::time_point timePoint;
 class Clock : public Singleton<Clock>
 {
     tick_t	serverStartTick_;
-
-    wstr_t	tickToStr(tick_t tick, WCHAR* fmt = DATETIME_FORMAT);
+    
+    wstr_t	tickToStr(tick_t tick, WCHAR *fmt = DATETIME_FORMAT);
 
 public:
     Clock();
@@ -6002,25 +10142,25 @@ public:
 
     tick_t	serverStartTick();
     tick_t	systemTick();
-    tick_t	strToTick(wstr_t str, WCHAR* fmt = DB_TIME_FORMAT);
-
-    wstr_t	nowTime(WCHAR* fmt = DATETIME_FORMAT);
-    wstr_t	nowTimeWithMilliSec(WCHAR* fmt = DATETIME_FORMAT);
+    tick_t	strToTick(wstr_t str, WCHAR *fmt = DB_TIME_FORMAT);
+    
+    wstr_t	nowTime(WCHAR *fmt = DATETIME_FORMAT);
+    wstr_t	nowTimeWithMilliSec(WCHAR *fmt = DATETIME_FORMAT);
 
     wstr_t today();
     wstr_t tomorrow();
     wstr_t yesterday();
-
+    
     DayOfTheWeek todayOfTheWeek();
 };
 ```
 
 ## ServerLibrary\Util\Config.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Config.h"
 
-bool loadConfig(xml_t* config)
+bool loadConfig(xml_t *config)
 {
 	if (!config->LoadFile("./config.xml")) {
 		printf("! not exist config file.");
@@ -6033,16 +10173,16 @@ bool loadConfig(xml_t* config)
 ## ServerLibrary\Util\Config.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
-extern bool loadConfig(xml_t* config);
+extern bool loadConfig(xml_t *config);
 ```
 
 ## ServerLibrary\Util\csv_parser\csv_parser.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 /* INCLUDING HEADER FILES */
-#pragma warning(disable:4996) 
+//#include <csv_parser/csv_parser.hpp>
 
 
 /* BEGIN DEFINITION FOR PUBLIC METHODS */
@@ -6052,7 +10192,7 @@ bool csv_parser::init(FILE * input_file_pointer)
 
 	if (input_fp == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to open input file from file pointer\n");
+		fprintf(stderr, "Fatal error : unable to open input file from file pointer");
 
 		return false;
 	}
@@ -6073,7 +10213,7 @@ bool csv_parser::init(const char * input_file)
 
 	if (!filename_length)
 	{
-		fprintf(stderr, "Fatal error : invalid input file %s\n", input_file);
+		fprintf(stderr, "Fatal error : invalid input file %s", input_file);
 
 		return false;
 	}
@@ -6082,20 +10222,20 @@ bool csv_parser::init(const char * input_file)
 
 	if (input_filename == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to allocate memory for file name buffer %s\n", input_file);
+		fprintf(stderr, "Fatal error : unable to allocate memory for file name buffer %s", input_file);
 
 		return false;
 	}
 
 	memset(input_filename, 0, filename_length + 1);
 
-	strcpy(input_filename, input_file);
+    strcpy_s(input_filename, filename_length + 1, input_file);
 
-	input_fp = fopen(input_file, "r");
+    fopen_s(&input_fp, input_file, "r");
 
 	if (input_fp == NULL)
 	{
-		fprintf(stderr, "Fatal error : unable to open input file %s\n", input_file);
+		fprintf(stderr, "Fatal error : unable to open input file %s", input_file);
 
 		CSV_PARSER_FREE_BUFFER_PTR(input_filename);
 
@@ -6521,7 +10661,7 @@ void csv_parser::_read_single_line(char ** buffer, unsigned int * buffer_len)
 
 	if (length_of_row > 0)
 	{
-		*buffer_len = length_of_row * sizeof(char) + 1;
+        *buffer_len = (unsigned int)(length_of_row * sizeof(char)+1);
 
 		*buffer = (char *) realloc(*buffer, *buffer_len);
 
@@ -7120,7 +11260,7 @@ protected :
 ## ServerLibrary\Util\GameObject.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Object
 {
@@ -7132,7 +11272,7 @@ class NameObject
 {
 	wstr_t name_;
 public:
-	wstr_t& name()
+	wstr_t& name() 
 	{
 		return name_;
 	}
@@ -7159,8 +11299,7 @@ class GameObject : public NameObject, public Work
 	float		direction_;
 
 public:
-	// 클래스 이름 마다 소멸자 이름이 다르므로, free로 통일 시키자
-	virtual ~GameObject()
+	virtual ~GameObject() 
 	{
 		this->free();
 	}
@@ -7171,7 +11310,7 @@ public:
 
 ## ServerLibrary\Util\Lock.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Lock.h"
 #include "Thread.h"
 
@@ -7181,7 +11320,7 @@ public:
 
 const int INVALID_LINE = -1;
 
-Lock::Lock(WCHAR* name)
+Lock::Lock(WCHAR *name)
 {
 	lockId_ = LockManager::getInstance().generalId();
 	name_ = name;
@@ -7195,7 +11334,7 @@ Lock::~Lock()
 	name_.clear();
 }
 
-const WCHAR* Lock::name()
+const WCHAR* Lock::name() 
 {
 	return name_.c_str();
 }
@@ -7236,10 +11375,8 @@ threadId_t Lock::threadId()
 	return threadId_;
 }
 //-------------------------------------------------------//
-// 생성자에서 락을 걸고, 스코프 빠져나가는 객체 해제시 락을 푼다.
-// std::lock_guard<lock_t> guard(lock) 과 같은거지만, 
-// 데드락 감지를 위해 직접 구현한다.
-LockSafeScope::LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo)
+
+LockSafeScope::LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo)
 {
 	if (lock == nullptr) {
 		return;
@@ -7249,7 +11386,7 @@ LockSafeScope::LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo)
 	}
 
 	lock_ = lock;
-	Lock* deadLock = LockManager::getInstance().checkDeadLock(lock_);
+	Lock *deadLock = LockManager::getInstance().checkDeadLock(lock_);
 	if (deadLock != nullptr) {
 #ifdef STERN_MODE
 		SErrLog(L"! [%s]lock and [%s]lock is dead detecting!", deadLock->name(), lock->name());
@@ -7282,30 +11419,20 @@ LockManager::LockManager()
 	idSeed_ = 0;
 }
 
-/*
-http://www.npteam.net/849
-http://www.boost.org/doc/libs/1_46_1/libs/graph/doc/astar_visitor.html
-http://includestdio.tistory.com/m/post/12
 
-http://www.bogotobogo.com/cplusplus/multithreaded4_cplusplus11B.php#nested_lock
-락은 자신이 걸린 threadId를,
-Thread에서는 걸고있는 Lock 번호가 있음.
-이들을 따라가 보다가 자신이 걸려는 lock이 나오면 lock 순환
-즉 데드락 처리.
-*/
-Lock* LockManager::searchLockCycle(Lock* newLock)
+Lock* LockManager::searchLockCycle(Lock *newLock)
 {
-	//list 따라 lock 이름을 비교해 본다.
-	Thread* thread = ThreadManager::getInstance().at(GET_CURRENT_THREAD_ID());
+
+	Thread *thread = ThreadManager::getInstance().at(GET_CURRENT_THREAD_ID());
 	if (!thread) {
 		return nullptr;
 	}
-	std::vector<Lock*> trace;		// 데드락 탐지시, 걸린 락 stact 추척
+	std::vector<Lock *> trace;		// 데드락 탐지시, 걸린 락 stact 추척
 	trace.push_back(newLock);
 
-	Lock* deadLock = nullptr;
+	Lock *deadLock = nullptr;
 	while (true) {
-		Lock* threadLock = thread->lock();
+		Lock *threadLock = thread->lock();
 		if (threadLock == nullptr) {
 			break;
 		}
@@ -7323,9 +11450,9 @@ Lock* LockManager::searchLockCycle(Lock* newLock)
 	return deadLock;
 }
 
-Lock* LockManager::checkDeadLock(Lock* newLock)
+Lock* LockManager::checkDeadLock(Lock *newLock)
 {
-	Lock* deadLock = this->searchLockCycle(newLock);
+	Lock *deadLock = this->searchLockCycle(newLock);
 	if (deadLock) {
 		return deadLock;
 	}
@@ -7343,7 +11470,7 @@ size_t LockManager::generalId()
 ## ServerLibrary\Util\Lock.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class Lock
 {
@@ -7373,9 +11500,9 @@ public:
 
 class LockSafeScope
 {
-	Lock* lock_;
+	Lock          *lock_;
 public:
-	LockSafeScope(Lock* lock, LPCWSTR fileName, int lineNo);
+	LockSafeScope(Lock *lock, LPCWSTR fileName, int lineNo);
 	~LockSafeScope();
 };
 
@@ -7389,8 +11516,8 @@ class LockManager : public Singleton < LockManager >
 public:
 	LockManager();
 
-	Lock* searchLockCycle(Lock* newLock);
-	Lock* checkDeadLock(Lock* lock);
+	Lock* searchLockCycle(Lock *newLock);
+	Lock* checkDeadLock(Lock *lock);
 
 	size_t generalId();
 };
@@ -7398,98 +11525,101 @@ public:
 
 ## ServerLibrary\Util\Logger.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Logger.h"
+
 LogPrintf::LogPrintf()
 {
-	printf("* Log create : printf log mode\n");
+    printf("* Log create : printf log mode\n");
 }
 
-void LogPrintf::log(WCHAR* logStr)
+void LogPrintf::log(WCHAR *logStr)
 {
-	printf("%ws", logStr);
+    printf("%ws", logStr);
 }
 
-LogFile::LogFile(xml_t* config)
+
+LogFile::LogFile(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Log");
-	xmlNode_t* elem = root->FirstChildElement("Path");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Log");
+	xmlNode_t *elem = root->FirstChildElement("Path");
 
 	array<WCHAR, _MAX_PATH> logFilePath;
-	StrConvA2W((char*)elem->GetText(), logFilePath.data(), logFilePath.max_size());
+	StrConvA2W((char *)elem->GetText(), logFilePath.data(), logFilePath.max_size());
 	printf("* Log create : [%ws]file log mode\n", logFilePath.data());
 	this->initialize(logFilePath.data());
 }
 
 LogFile::~LogFile()
 {
-	fs_.close();
-	fs_.clear();
+    fs_.close();
+    fs_.clear();
 
-	std::size_t found = fileName_.find(L".log");
-	if (found == wstr_t::npos) {
-		return;
-	}
+    std::size_t found = fileName_.find(L".log");
+    if (found == wstr_t::npos){
+        return;
+    }
 
-	//뒤에 로그파일이 붙으면 종료시, 종료시각을 파일이름 뒤에 붙여줍니다.
-	wstr_t closeFileName = fileName_.substr(0, found);
-	closeFileName += CLOCK.nowTime(L"_%Y%m%d-%H%M%S.log");
-	_wrename(fileName_.c_str(), closeFileName.c_str());
+
+    wstr_t closeFileName = fileName_.substr(0, found);
+    closeFileName += CLOCK.nowTime(L"_%Y%m%d-%H%M%S.log");
+    _wrename(fileName_.c_str(), closeFileName.c_str());
 }
 
-void LogFile::initialize(WCHAR* logFileName)
+void LogFile::initialize(WCHAR *logFileName)
 {
-	fileName_ = logFileName;
-	fs_.open(logFileName, std::ios::out | std::ios::trunc);
-	if (fs_.bad()) {
-		printf("! logfile error, file open fail.\n");
-		assert(false);
-	}
+    fileName_ = logFileName;
+    fs_.open(logFileName, std::ios::out | std::ios::trunc);
+    if (fs_.bad()) {
+        printf("! logfile error, file open fail.\n");
+        assert(false);
+    }
 }
 
-void LogFile::log(WCHAR* logStr)
+void LogFile::log(WCHAR *logStr)
 {
-	printf("%ws", logStr);
+    printf("%ws", logStr);
 
-	fs_ << logStr;
-	fs_.flush();
+    fs_ << logStr;
+    fs_.flush();
 }
+
 
 LogWriter::LogWriter()
 {
-	base_ = nullptr;
+    base_ = nullptr;
 }
 
 LogWriter::~LogWriter()
 {
-	prefix_.clear();
+    prefix_.clear();
 
 	SAFE_DELETE(base_);
 };
 
-void LogWriter::setLogger(LogBase* base, const WCHAR* logPrefix)
+void LogWriter::setLogger(LogBase *base, const WCHAR *logPrefix)
 {
-	prefix_.clear();
-	prefix_ = logPrefix;
+    prefix_.clear();     
+    prefix_ = logPrefix;
 
-	if (base_) {
-		LogBase* old = base_;
-		base_ = nullptr;
-		old->unInitialize();
+    if (base_) {
+        LogBase *old = base_;
+        base_ = nullptr;
+        old->unInitialize();
+        
+        SAFE_DELETE(old);
+    }
 
-		SAFE_DELETE(old);
-	}
-
-	base_ = base;
-	base_->initialize();
+    base_ = base;
+    base_->initialize();
 }
 
-LogBase* LogWriter::logger()
+LogBase *LogWriter::logger()
 {
-	return base_;
+    return base_;
 }
 
-void LogWriter::log(WCHAR* fmt, ...)
+void LogWriter::log(WCHAR *fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
@@ -7499,15 +11629,15 @@ void LogWriter::log(WCHAR* fmt, ...)
 	va_end(args);
 }
 
-void LogWriter::log(WCHAR* fmt, va_list args)
+void LogWriter::log(WCHAR *fmt, va_list args)
 {
 	wstr_t logMessage = CLOCK.nowTimeWithMilliSec();
 	threadId_t threadId = GET_CURRENT_THREAD_ID();
 
 	logMessage += L"\t";
 
-	// 쓰레드 정보 넣기
-	Thread* thread = ThreadManager::getInstance().at(threadId);
+
+	Thread *thread = ThreadManager::getInstance().at(threadId);
 	if (thread) {
 		logMessage += thread->name();
 	}
@@ -7521,7 +11651,7 @@ void LogWriter::log(WCHAR* fmt, va_list args)
 
 	logMessage += logStr.data();
 	logMessage += L"\n";
-	base_->log((WCHAR*)logMessage.c_str());
+    base_->log((WCHAR *)logMessage.c_str());
 }
 
 SystemLog::SystemLog()
@@ -7539,25 +11669,25 @@ SystemLog::~SystemLog()
 {
 }
 
-void SystemLog::initialize(xml_t* config)
+void SystemLog::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Log");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Log");
 	if (!root) {
 		printf("@ not exist log setting");
-		LogBase* base = new LogPrintf();
+		LogBase *base = new LogPrintf();
 		logWrite_.setLogger(base, L"testServer");
 		return;
 	}
-	xmlNode_t* elem = root->FirstChildElement("Path");
+	xmlNode_t *elem = root->FirstChildElement("Path");
 
 	array<WCHAR, SIZE_256> tmp;
 	elem = root->FirstChildElement("Prefix");
-	StrConvA2W((char*)elem->GetText(), tmp.data(), tmp.max_size());
+	StrConvA2W((char *)elem->GetText(), tmp.data(), tmp.max_size());
 	wstr_t prefix = tmp.data();
 
-	LogBase* base;
+	LogBase *base;
 	elem = root->FirstChildElement("Type");
-	const char* type = (char*)elem->GetText();
+	const char *type = (char *)elem->GetText();
 	if (!strcmp(type, "WithFile")) {
 		base = new LogFile(config);
 	}
@@ -7568,11 +11698,11 @@ void SystemLog::initialize(xml_t* config)
 	logWrite_.setLogger(base, prefix.c_str());
 }
 
-void SystemLog::log(WCHAR* fmt, ...)
+void SystemLog::log(WCHAR *fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
-	logWrite_.log(fmt, args);
+    logWrite_.log(fmt, args);
 	va_end(args);
 }
 ```
@@ -7580,7 +11710,7 @@ void SystemLog::log(WCHAR* fmt, ...)
 ## ServerLibrary\Util\Logger.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <fstream>
 #include "Singleton.h"
 #include "Type.h"
@@ -7588,21 +11718,22 @@ void SystemLog::log(WCHAR* fmt, ...)
 #define SLog(arg, ...)				SystemLog::getInstance().log(arg, __VA_ARGS__);
 #define SErrLog(arg, ...)			SystemLog::getInstance().log(arg, __VA_ARGS__); ::ExitProcess(0);
 
+
 class LogBase
 {
 public:
-    LogBase() {}
-    virtual ~LogBase() {}
+    LogBase(){}
+    virtual ~LogBase(){}
     virtual void initialize() {}
     virtual void unInitialize() {}
-    virtual void log(WCHAR* logStr) = 0;
+    virtual void log(WCHAR *logStr) = 0;
 };
 
 class LogPrintf : public LogBase
 {
 public:
     LogPrintf();
-    void log(WCHAR* logStr);
+    void log(WCHAR *logStr);
 };
 
 class LogFile : public LogBase
@@ -7610,28 +11741,28 @@ class LogFile : public LogBase
     std::wfstream   fs_;
     wstr_t			fileName_;
 public:
-    LogFile(xml_t* config);
+    LogFile(xml_t *config);
     virtual ~LogFile();
 
-    void initialize() {}
-    void initialize(WCHAR* logFileName);
-    void log(WCHAR* logStr);
+    void initialize(){}
+    void initialize(WCHAR *logFileName);
+    void log(WCHAR *logStr);
 };
 // 로그 쓰는 주체
 class LogWriter
 {
 private:
-    LogBase* base_;
+    LogBase			*base_;
     wstr_t			prefix_;
 public:
     LogWriter();
     virtual ~LogWriter();
 
-    void setLogger(LogBase* base, const WCHAR* logPrefix);
-    LogBase* logger();
+    void setLogger(LogBase *base, const WCHAR *logPrefix);
+    LogBase *logger();
 
-    void log(WCHAR* fmt, ...);
-    void log(WCHAR* fmt, va_list args);
+    void log(WCHAR *fmt, ...);
+	void log(WCHAR *fmt, va_list args);
 };
 typedef LogWriter* LogWriterPtr;
 
@@ -7641,18 +11772,18 @@ class SystemLog : public Singleton<SystemLog>
 private:
     LogWriter   logWrite_;
 public:
-    SystemLog();
+	SystemLog();
     virtual ~SystemLog();
-
-    void initialize(xml_t* config);
-    void log(WCHAR* fmt, ...);
+	
+	void initialize(xml_t *config);
+	void log(WCHAR *fmt, ...);
 };
 ```
 
 ## ServerLibrary\Util\Memory_LowFragmentationHeap.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 class LowFragmentationHeap
 {
@@ -7686,16 +11817,17 @@ static LowFragmentationHeap lfh;
 ## ServerLibrary\Util\MemoryLeak.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #ifndef _DEBUG
 #define USE_VISUAL_LEAK_DETECTOR
 #endif
 
 #ifdef USE_VISUAL_LEAK_DETECTOR
-#else //USE_VISUAL_LEAK_DETECTOR
+#include <vld.h>
 
-//메모리 누수 이슈
+#else 
+
 
 #define _CRTDBG_MAP_ALLOC
 #include "crtdbg.h"
@@ -7732,7 +11864,7 @@ public:
         _CrtSetReportMode(_CRT_ASSERT, _CRTDBG_MODE_FILE);
         _CrtSetReportFile(_CRT_ASSERT, _CRTDBG_FILE_STDOUT);
 
-        //_CrtSetBreakAlloc(1903); // <- 메모리 릭 검출 지점 브레이킹
+
     }
 
     ~MemoryLeckDetct()
@@ -7748,18 +11880,17 @@ public:
 
 ## ServerLibrary\Util\Minidump.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "MiniDump.h"
 
 MiniDump::MiniDump()
 {
-    ::SetUnhandledExceptionFilter(execptionFilter);
-    printf("* Dump filter setting complte!\n");
+	::SetUnhandledExceptionFilter(execptionFilter);
+	printf("* Dump filter setting complte!\n");
 }
 
-LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
+LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS *exceptionInfo)
 {
-    //우선 종료 처리부터 하고
     shutdownServer();
 
     _CrtMemDumpAllObjectsSince(NULL);
@@ -7767,8 +11898,8 @@ LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
     HMODULE dumpDll = nullptr;
     dumpDll = ::LoadLibraryA("DBGHELP.DLL");
     if (!dumpDll) {
-        printf("! DBGHelp.dll not loaded\n");
-        return 0;
+		printf("! DBGHelp.dll not loaded\n");
+		return 0;
     }
 
     wstr_t dumpPatch;
@@ -7777,18 +11908,18 @@ LONG WINAPI MiniDump::execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo)
 
     HANDLE file = ::CreateFile(dumpPatch.c_str(), GENERIC_WRITE, FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if (file == INVALID_HANDLE_VALUE) {
-        printf("! dump file not making\n");
+		printf("! dump file not making\n");
         return 0;
     }
 
     _MINIDUMP_EXCEPTION_INFORMATION info;
-    info.ThreadId = ::GetCurrentThreadId();
+	info.ThreadId = ::GetCurrentThreadId();
     info.ExceptionPointers = exceptionInfo;
     info.ClientPointers = NULL;
 
     WRITEDUMP dumpFunc = (WRITEDUMP)::GetProcAddress(dumpDll, "MiniDumpWriteDump");
     if (dumpFunc(GetCurrentProcess(), GetCurrentProcessId(), file, MiniDumpNormal, &info, NULL, NULL) == FALSE) {
-        printf("! dump file saving error\n");
+		printf("! dump file saving error\n");
         return 0;
     }
     ::CloseHandle(file);
@@ -7802,11 +11933,11 @@ static MiniDump minidump;
 ## ServerLibrary\Util\Minidump.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "dbghelp.h"
 
 //dump 함수 포인터
-typedef BOOL(WINAPI* WRITEDUMP)(
+typedef BOOL(WINAPI *WRITEDUMP)(
     _In_  HANDLE hProcess,
     _In_  DWORD ProcessId,
     _In_  HANDLE hFile,
@@ -7819,16 +11950,16 @@ typedef BOOL(WINAPI* WRITEDUMP)(
 class MiniDump : public Singleton<MiniDump>
 {
 public:
-    MiniDump();
+	MiniDump();
 
-    static LONG WINAPI execptionFilter(struct _EXCEPTION_POINTERS* exceptionInfo);
+	static LONG WINAPI execptionFilter(struct _EXCEPTION_POINTERS *exceptionInfo);
 };
 ```
 
 ## ServerLibrary\Util\Monitoring.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include "psapi.h"
 
 class Monitoring : public Singleton<Monitoring>
@@ -7838,7 +11969,7 @@ class Monitoring : public Singleton<Monitoring>
 	HANDLE self;
 
 public:
-	Monitoring()
+	Monitoring() 
 	{
 		SYSTEM_INFO sysInfo;
 		FILETIME ftime, fsys, fuser;
@@ -7855,7 +11986,7 @@ public:
 		memcpy(&lastUserCPU, &fuser, sizeof(FILETIME));
 	}
 
-	double processCpuUsage()
+	double processCpuUsage() 
 	{
 		FILETIME ftime, fsys, fuser;
 		ULARGE_INTEGER now, sys, user;
@@ -7870,9 +12001,6 @@ public:
 		percent = (double)((sys.QuadPart - lastSysCPU.QuadPart) + (user.QuadPart - lastUserCPU.QuadPart));
 		percent /= (now.QuadPart - lastCPU.QuadPart);
 		percent /= numProcessors;
-		//		lastCPU = now;
-		//		lastUserCPU = user;
-		//		lastSysCPU = sys;
 		percent = percent * 100;
 		return fixInRange(0, percent, 100);
 	}
@@ -7881,7 +12009,7 @@ public:
 	{
 		PROCESS_MEMORY_COUNTERS pmc;
 		GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
-		return (size_t)pmc.WorkingSetSize;
+		return (size_t) pmc.WorkingSetSize;
 	}
 
 	SIZE_T physyicMemUsage()
@@ -7890,7 +12018,7 @@ public:
 		memInfo.dwLength = sizeof(MEMORYSTATUSEX);
 		GlobalMemoryStatusEx(&memInfo);
 
-		return (size_t)memInfo.ullTotalPhys - memInfo.ullAvailPhys;
+		return (size_t) memInfo.ullTotalPhys - memInfo.ullAvailPhys;
 	}
 };
 ```
@@ -7900,7 +12028,7 @@ public:
 #pragma once
 
 // 만약 바이너리가 유출 되었을때를 대비한 안전장치 (서버 검증 장치)
-#include "pch.h"
+#include "stdafx.h"
 #include <locale>
 #include <iostream>
 #include <sstream>
@@ -7908,16 +12036,16 @@ public:
 
 class ProgramValidation
 {
-	void checkSMTP()
-	{
-		SOCKET smtpSocket;
-		if (!connectSMTP(&smtpSocket)) {
-			SLog(L"! The smtp server is not loaded.");
-#ifndef _DEBUG
-			exit(1);
-#endif //_DEBUG
-		}
-	}
+//	void checkSMTP()
+//	{
+//		SOCKET smtpSocket;
+//		if (!connectSMTP(&smtpSocket)) {
+//			SLog(L"! The smtp server is not loaded.");
+//#ifndef _DEBUG
+//			exit(1);
+//#endif //_DEBUG
+//		}
+//	}
 
 	class ProgramExpire
 	{
@@ -7928,10 +12056,10 @@ class ProgramValidation
 			tick_t expireTick = serverBirthTick_ + DAY_TO_TICK(30);
 			tick_t now = CLOCK.systemTick();
 			if (!isInRange(serverBirthTick_, now, expireTick)) {
-				sendMail("serverAlert@server.com",
-					"serverProgramer@server.com",
-					"[EXPIRE] 서버 유효성 체크 실패",
-					"IP주소, port 번호등...");
+				//sendMail("serverAlert@server.com",
+				//	"serverProgramer@server.com",
+				//	"[EXPIRE] 서버 유효성 체크 실패",
+				//	"IP주소, port 번호등...");
 #ifndef _DEBUG
 				exit(1);
 #endif //_DEBUG
@@ -7947,12 +12075,12 @@ class ProgramValidation
 			struct tm t;
 			memset(&t, 0, sizeof(struct tm));
 
-			birthDate << __DATE__;		//컴파일 날짜
+			birthDate << __DATE__;		
 			birthDate.imbue(loc);
 			basic_istream<char>::_Iter i = use_facet
 				<time_get <char> >
 				(loc).get_date(basic_istream<char>::_Iter(birthDate.rdbuf()),
-					basic_istream<char>::_Iter(0), birthDate, st, &t);
+				basic_istream<char>::_Iter(0), birthDate, st, &t);
 
 			if (st & ios_base::failbit) {
 				cout << "time_get::get_time(" << birthDate.rdbuf()->str() << ") FAILED on char: " << *i << endl;
@@ -7970,13 +12098,13 @@ class ProgramValidation
 			this->checkExpire();
 		}
 	};
-
+	
 
 public:
 	ProgramValidation()
 	{
 		ProgramExpire checkExpire;
-		this->checkSMTP();
+
 	}
 };
 
@@ -7986,7 +12114,7 @@ static ProgramValidation programValidation;
 ## ServerLibrary\Util\Singleton.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 template <class T>
 class Singleton
@@ -7997,7 +12125,7 @@ protected:
 
 public:
     Singleton(const Singleton&);
-    Singleton& operator = (const Singleton&);
+    Singleton& operator = (const Singleton &);
 
     static T& getInstance()
     {
@@ -8007,93 +12135,10 @@ public:
 };
 ```
 
-## ServerLibrary\Util\SMTPMail.cpp
-```cpp
-#include "pch.h"
-#include "SMTPMail.h"
-
-void smtpWriteLine(SOCKET sock, const char* str, const char* arg)
-{
-    array<char, SIZE_4096> buf;
-    if (arg != NULL) {
-        snprintf(buf, str, arg);
-    }
-    else {
-        snprintf(buf, str);
-    }
-
-    ::send(sock, buf.data(), (int)buf.size(), 0);
-}
-
-bool connectSMTP(SOCKET* sock)
-{
-
-    *sock = ::socket(AF_INET, SOCK_STREAM, 0);
-    if (*sock == SOCKET_ERROR) {
-        SLog(L"! mail socket make fail");
-        return false;
-    }
-
-    const int SMTP_PORT = 25;
-    struct sockaddr_in serverAddr;
-    serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons((u_short)SMTP_PORT);
-    inet_pton(AF_INET, "127.0.0.1", &(serverAddr.sin_addr));
-
-    if (::connect(*sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
-        return false;
-    }
-    return true;
-}
-
-bool sendMail(const char* from, const char* to, const char* subject, const char* body)
-{
-    SOCKET sock;
-    if (!connectSMTP(&sock)) {
-        SLog(L"! smtp mail port connect fail, mail :[%S] body => %S", subject, body);
-        
-        int errorCode = WSAGetLastError();
-        SLog(L"! mail socket make fail, error code: %d", errorCode);
-
-        return false;
-    }
-
-    smtpWriteLine(sock, "HELO %s", from);
-    smtpWriteLine(sock, "MAIL FROM: %s", from);
-    smtpWriteLine(sock, "RCPT TO: %s", to);
-    smtpWriteLine(sock, "DATA", NULL);
-
-    smtpWriteLine(sock, "From: %s", from);
-    smtpWriteLine(sock, "To: %s", to);
-    smtpWriteLine(sock, "Subject: %s", subject);
-
-    smtpWriteLine(sock, "\n", NULL);
-
-    smtpWriteLine(sock, "%s", body);
-
-    smtpWriteLine(sock, ".", NULL);
-    smtpWriteLine(sock, "QUIT", NULL);
-
-    closesocket(sock);
-    SLog(L"* send mail [%S]", subject);
-
-    return true;
-}
-```
-
-## ServerLibrary\Util\SMTPMail.h
-```h
-#pragma once
-#include "pch.h"
-
-bool connectSMTP(SOCKET* sock);
-bool sendMail(const char* from, const char* to, const char* subject, const char* body);
-```
-
 ## ServerLibrary\Util\Table.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <unordered_map>
 #include <map>
 #include <unordered_set>
@@ -8106,8 +12151,8 @@ bool sendMail(const char* from, const char* to, const char* subject, const char*
 #include <algorithm>
 #include <functional>
 
-typedef std::function<void(void*)> EachFunction;
-typedef std::function<void(void*, void*)> PairFunction;
+typedef std::function<void(void *)> EachFunction;
+typedef std::function<void(void *, void *)> PairFunction;
 
 #if 0
 template <typename KEY, typename VALUE>
@@ -8120,13 +12165,13 @@ class hash_map
 
     MAP     map_;
 public:
-    MAP& map() { return map_; }
+    MAP&    map()           { return map_; }
 
-    void    clear() { map_.clear(); }
-    size_t  size() { return map_.size(); }
-    bool    empty() { return map_.empty(); }
-    ITER    begin() { return map_.begin(); }
-    ITER    end() { return map_.end(); }
+    void    clear()         { map_.clear(); }
+    size_t  size()          { return map_.size(); }
+    bool    empty()         { return map_.empty(); }
+    ITER    begin()         { return map_.begin(); }
+    ITER    end()           { return map_.end(); }
 
     VALUE   front()
     {
@@ -8148,8 +12193,8 @@ public:
 
     void    push(KEY key, VALUE value)
     {
-        std::pair<KEY, VALUE> node(key, value);
-        map_.insert(node);
+		std::pair<KEY, VALUE> node(key, value);
+		map_.insert(node);
     }
 
     VALUE    pop(KEY key)
@@ -8165,14 +12210,14 @@ public:
 
     VALUE   get(KEY key)
     {
-        if (this->empty()) {
-            return (VALUE) nullptr;
-        }
+		if (this->empty()) {
+			return (VALUE) nullptr;
+		}
         auto iter = map_.find(key);
         return (iter == this->end()) ? (VALUE) nullptr : iter->second;
     }
 
-    VALUE   next(KEY key, KEY& key2)
+    VALUE   next(KEY key, KEY &key2)
     {
         if (this->empty()) {
             return (VALUE) nullptr;
@@ -8187,32 +12232,32 @@ public:
 
     void    clearObjects(EachFunction func)
     {
-        for (auto iter : map_) {
+		for (auto iter : map_) {
             if (func) {
                 func(iter.second);
                 continue;
             }
-            SAFE_DELETE(iter.second);
+			SAFE_DELETE(iter.second);
         }
         this->clear();
     }
 
-    void	clearObjects()
-    {
-        for (auto iter : map_) {
-            SAFE_DELETE(iter.second);
+	void	clearObjects()
+	{
+		for (auto iter : map_) {
+			SAFE_DELETE(iter.second);
         }
         this->clear();
-    }
+	}
 
-    void    doEach(EachFunction func)
-    {
+	void    doEach(EachFunction func)
+	{
         if (!func) {
             return;
         }
-        for (auto iter : map_) {
-            func(iter.second);
-        }
+		for (auto iter : map_) {
+			func(iter.second);
+		}
     }
 
     void    doPair(PairFunction func)
@@ -8220,12 +12265,15 @@ public:
         if (!func) {
             return;
         }
-        for (auto iter : map_) {
-            func(iter.second);
+		for (auto iter : map_) {
+			func(iter.second);
         }
     }
 };
 
+//-----------------------------------------------------------------//
+//리스트 재 정의
+//-----------------------------------------------------------------//
 template <typename VALUE>
 class List
 {
@@ -8237,7 +12285,7 @@ public:
 private:
     LIST    	list_;
     DWORD		currentPos_;
-    VALUE* instance_;
+    VALUE			*instance_;
 
 public:
     List() {
@@ -8246,15 +12294,15 @@ public:
     }
 
     //기본 조작
-    inline ITER		begin() { return list_.begin(); }
-    inline ITER		end() { return list_.end(); }
-    inline RITER	rbegin() { return list_.rbegin(); }
-    inline RITER	rend() { return list_.rend(); }
+    inline ITER		begin()	    			{ return list_.begin(); }
+    inline ITER		end()					{ return list_.end(); }
+    inline RITER	rbegin()				{ return list_.rbegin(); }
+    inline RITER	rend()					{ return list_.rend(); }
 
-    inline bool		next(ITER& pos, VALUE*& ptr)
+    inline bool		next(ITER &pos, VALUE*& ptr)
     {
         ptr = nullptr;
-        if (this->end() == pos) {
+        if (this->end() == pos)	{
             return false;
         }
 
@@ -8263,25 +12311,25 @@ public:
         return true;
     }
 
-    inline ITER		erase(ITER& pos)
+    inline ITER		erase(ITER &pos)	
     {
-        if (this->end() == pos) {
+        if (this->end() == pos)	{
             return pos;
         }
         return list_.erase(pos);
     }
-    inline void		remove(VALUE data) { list_.remove(data); }
+    inline void		remove(VALUE data)			{ list_.remove(data); }
 
-    inline void		pushFront(VALUE& data) { list_.push_front(data); }
-    inline void		pushBack(VALUE& data) { list_.push_back(data); }
-    inline void		pushBackCopy(VALUE t) { PushBack(t); }
+    inline void		pushFront(VALUE &data)		{ list_.push_front(data); }
+    inline void		pushBack(VALUE &data)		{ list_.push_back(data); }
+    inline void		pushBackCopy(VALUE t)		{ PushBack(t); }
 
-    inline VALUE& front() { return list_.front(); }
-    inline VALUE& back() { return list_.back(); }
+    inline VALUE&		front()					{ return list_.front(); }
+    inline VALUE&		back()					{ return list_.back(); }
 
-    inline void		popFront() { list_.pop_front(); }
-    inline void		popBack() { list_.pop_back(); }
-    inline bool		pop(VALUE& data)
+    inline void		popFront()				{ list_.pop_front(); }
+    inline void		popBack()				{ list_.pop_back(); }
+    inline bool		pop(VALUE &data)
     {
         ITER iter = this->find(data);
         if (iter != this->end()) {
@@ -8290,16 +12338,16 @@ public:
         }
         return false;
     }
-    inline bool		rpop(VALUE& data)
+    inline bool		rpop(VALUE &data)
     {
-        RITER iter = this->rbegin();
-        for (; iter != this->rend(); ++iter) {
-            if (*iter = data) {
-                this->erase((++iter).base());
+		RITER iter = this->rbegin();
+		for (; iter != this->rend(); ++iter) {
+			if (*iter = data) {
+				this->erase((++iter).base());
                 return true;
             }
         }
-
+        
         return false;
     }
 
@@ -8309,25 +12357,24 @@ public:
         for (; iter != this->end(); ++iter) {
             if (func) {
                 func(*iter);
-            }
-            else {
+            } else {
                 SAFE_DELETE(*iter);
             }
         }
         this->clear();
     }
-    inline void		clear() { list_.clear(); }
+    inline void		clear()					{ list_.clear(); }
 
-    inline size_t	size()	const { return list_.size(); }
-    inline bool		empty()	const { return (bool)list_.empty(); }
+    inline size_t	size()	const			{ return list_.size(); }
+    inline bool		empty()	const			{ return (bool)list_.empty(); }
 
     void	doEach(EachFunction func)
     {
         if (!func) {
             return;
         }
-        for (auto iter : list_) {
-            func(iter);
+		for (auto iter : list_) {
+			func(iter);
         }
     }
     void    doPair(PairFunction func)
@@ -8335,31 +12382,32 @@ public:
         if (!func) {
             return;
         }
-        for (auto iter : list_) {
-            func(iter);
+		for (auto iter : list_) {
+			func(iter);
         }
     }
 
+    //-----------------------------------------------------------------//
     // 알고리즘
-    VALUE	find(VALUE& aVal)
-    {
-        auto iter = std::find(this->begin(), this->end(), aVal);
-        if (iter == this->end()) {
-            return (VALUE) nullptr;
-        }
-        return (VALUE)*iter;
-    }
-    LIST& listData() { return list_; }
+    VALUE	find(VALUE &aVal)
+	{
+		auto iter = std::find(this->begin(), this->end(), aVal); 
+		if (iter == this->end()) {
+			return (VALUE) nullptr;
+		}
+		return (VALUE)*iter;
+	}
+    LIST	&listData()					    { return list_; }
 };
 #endif
 ```
 
 ## ServerLibrary\Util\Task.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Task.h"
 
-TaskNode::TaskNode(Work* workObject, int freqSec, int durationSec)
+TaskNode::TaskNode(Work *workObject, int freqSec, int durationSec)
 {
 	workObject_ = workObject;
 	freqSec_ = freqSec;
@@ -8388,8 +12436,8 @@ bool TaskNode::expired()
 		}
 	}
 	return false;
-
 }
+
 void TaskNode::tick()
 {
 	if (nextTick_ < NOW_TICK()) {
@@ -8398,7 +12446,7 @@ void TaskNode::tick()
 	}
 }
 
-Task::Task(int id)
+Task::Task(int id) 
 {
 	id_ = id;
 }
@@ -8410,12 +12458,12 @@ Task::~Task()
 	}
 }
 
-void Task::add(TaskNode* taskNode)
+void Task::add(TaskNode *taskNode)
 {
 	taskList_.push_back(taskNode);
 }
 
-void Task::remove(TaskNode* taskNode)
+void Task::remove(TaskNode *taskNode)
 {
 	taskList_.remove(taskNode);
 }
@@ -8423,7 +12471,7 @@ void Task::remove(TaskNode* taskNode)
 void Task::process()
 {
 	while (!_shutdown) {
-		std::vector<TaskNode*> deleteNodes;
+		std::vector<TaskNode *> deleteNodes;
 		for (auto taskNode : taskList_) {
 			if (taskNode->expired()) {
 				deleteNodes.push_back(taskNode);
@@ -8453,18 +12501,18 @@ TaskManager::TaskManager()
 	this->initialize(&config);
 }
 
-void TaskManager::initialize(xml_t* config)
+void TaskManager::initialize(xml_t *config)
 {
-	xmlNode_t* root = config->FirstChildElement("App")->FirstChildElement("Task");
+	xmlNode_t *root = config->FirstChildElement("App")->FirstChildElement("Task");
 	if (!root) {
 		SLog(L"@ not exist task setting");
 		return;
 	}
-	xmlNode_t* elem = root->FirstChildElement("ThreadCount");
+	xmlNode_t *elem = root->FirstChildElement("ThreadCount");
 	sscanf_s(elem->GetText(), "%d", &threadCount_);
 
 	for (int i = 0; i < threadCount_; ++i) {
-		Task* task = new Task(i);
+		Task *task = new Task(i);
 		taskPool_.push_back(task);
 		task->run();
 	}
@@ -8478,17 +12526,17 @@ TaskManager::~TaskManager()
 	}
 }
 
-void TaskManager::add(Work* workObject, int freqSec, int durationSec)
+void TaskManager::add(Work *workObject, int freqSec, int durationSec)
 {
 	const int MINIMAL_THREAD_COUNT = 1;
 	if (threadCount_ < MINIMAL_THREAD_COUNT) {
 		return;
 	}
 	static int nodeCount = 0;
-
-	TaskNode* node = new TaskNode(workObject, freqSec, durationSec);
+	
+	TaskNode *node = new TaskNode(workObject, freqSec, durationSec);
 	int index = nodeCount % threadCount_;
-	Task* task = taskPool_[index];
+	Task *task = taskPool_[index];
 	task->add(node);
 
 	++nodeCount;
@@ -8498,20 +12546,20 @@ void TaskManager::add(Work* workObject, int freqSec, int durationSec)
 ## ServerLibrary\Util\Task.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #define TICK_INFINTY		0
 
 class Work;
 class TaskNode
 {
-	Work* workObject_;
+	Work		*workObject_;
 	int			freqSec_;
 	int			durationSec_;
 
 	tick_t		nextTick_;
 public:
-	TaskNode(Work* workObject, int freqSec, int durationSec);
+	TaskNode(Work *workObject, int freqSec, int durationSec);
 	~TaskNode();
 
 	void nextTick();
@@ -8522,15 +12570,15 @@ public:
 
 class Task
 {
-	std::list<TaskNode*> taskList_;
-	Thread* thread_;
+	std::list<TaskNode *> taskList_;
+	Thread		*thread_;
 	int			id_;
 
 public:
 	Task(int id);
 	~Task();
-	void add(TaskNode* taskNode);
-	void remove(TaskNode* taskNode);
+	void add(TaskNode *taskNode);
+	void remove(TaskNode *taskNode);
 
 	void process();
 	void run();
@@ -8539,25 +12587,25 @@ public:
 class TaskManager : public Singleton <TaskManager>
 {
 	int                     threadCount_;
-	std::vector<Task*>     taskPool_;
+	std::vector<Task *>     taskPool_;
 
 public:
 	TaskManager();
 	virtual ~TaskManager();
 
-	void initialize(xml_t* config);
+	void initialize(xml_t *config);
 
-	void add(Work* workObject, int freqSec, int durationSec);
+	void add(Work *workObject, int freqSec, int durationSec);
 };
 ```
 
 ## ServerLibrary\Util\Thread.cpp
 ```cpp
-#include "pch.h"
+#include "stdafx.h"
 #include "Thread.h"
 #include "Lock.h"
 
-Thread::Thread(thread_t* thread, wstr_t name)
+Thread::Thread(thread_t *thread, wstr_t name)
 {
 	name_ = name;
 	thread_ = thread;
@@ -8578,12 +12626,12 @@ threadId_t Thread::id()
 	return id_;
 }
 
-wstr_t& Thread::name()
+wstr_t &Thread::name()
 {
 	return name_;
 }
 
-void Thread::setLock(Lock* lock)
+void Thread::setLock(Lock *lock)
 {
 	lock_ = lock;
 }
@@ -8593,17 +12641,16 @@ Lock* Thread::lock()
 	return lock_;
 }
 
-
 ThreadManager::~ThreadManager()
 {
-	for (auto thread : threadPool_) {
+	for (auto thread : threadPool_){
 		SAFE_DELETE(thread.second);
 	}
 }
 
-void ThreadManager::put(Thread* thread)
+void ThreadManager::put(Thread *thread)
 {
-	std::pair<threadId_t, Thread*> node(thread->id(), thread);
+	std::pair<threadId_t, Thread *> node(thread->id(), thread);
 	threadPool_.insert(node);
 	SLog(L"* create thread : id[0x%X] name[%s], pool size[%d]", thread->id(), thread->name().c_str(), threadPool_.size());
 }
@@ -8635,29 +12682,29 @@ Thread* ThreadManager::at(threadId_t id)
 ## ServerLibrary\Util\Thread.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 
 #define MAKE_THREAD(className, process)	(new Thread(new thread_t(&className##::##process, this), L#className))
 #define GET_CURRENT_THREAD_ID		std::this_thread::get_id
 class Lock;
-typedef std::function<void(void*)> ThreadFunction;
+typedef std::function<void(void *)> ThreadFunction;
 
 class Thread
 {
 	threadId_t				id_;
 	wstr_t					name_;
-	thread_t* thread_;
-	Lock* lock_;			//지금 걸린 락
-
+	thread_t				*thread_;
+	Lock					*lock_;			//지금 걸린 락
+	
 public:
-	Thread(thread_t* thread, wstr_t name);
-	~Thread();
+	Thread(thread_t *thread, wstr_t name);
+	~Thread();	
 
 	threadId_t id();
-	wstr_t& name();
+	wstr_t &name();
 
-	void setLock(Lock* lock);
-	Lock* lock();
+	void setLock(Lock *lock);
+	Lock *lock();
 };
 
 //#define THREAD_POOL_HASHMAP
@@ -8666,22 +12713,22 @@ class ThreadManager : public Singleton < ThreadManager >
 #ifdef THREAD_POOL_HASHMAP
 	hash_map <threadId_t, Thread*> threadPool_;
 #else //THREAD_POOL_HASHMAP
-	map <threadId_t, Thread*> threadPool_;
+	map <threadId_t, Thread *> threadPool_;
 #endif //THREAD_POOL_HASHMAP
 
 public:
 	~ThreadManager();
 
-	void put(Thread* thread);
+	void put(Thread *thread);
 	void remove(threadId_t id);
-	Thread* at(threadId_t id);
+	Thread *at(threadId_t id);
 };
 ```
 
 ## ServerLibrary\Util\ThreadJobQueue.h
 ```h
 #pragma once
-#include "pch.h"
+#include "stdafx.h"
 #include <queue>
 #include <stdexcept>   
 
@@ -8696,8 +12743,8 @@ private:
     };
     std::queue<T>		queue_[MAX_QUEUE];
 
-    std::queue<T>* writeQueue_;	//input 용 여러 쓰레드에서 입력을 받음
-    std::queue<T>* readQueue_;	//output 용. 한 쓰레드에서 출력을 함
+    std::queue<T>		*writeQueue_;	
+    std::queue<T>		*readQueue_;	
 
     Lock		        lock_;
 
@@ -8709,32 +12756,32 @@ public:
         readQueue_ = &queue_[READ_QUEUE];
     }
 
-    ~ThreadJobQueue()
-    {
-        readQueue_->empty();
-        writeQueue_->empty();
-    }
+	~ThreadJobQueue()
+	{
+		readQueue_->empty();
+		writeQueue_->empty();
+	}
 
-    inline void push(const T& t)
+    inline void push(const T &t)
     {
         SAFE_LOCK(lock_);
         writeQueue_->push(t);
     }
 
-    inline bool pop(T& t)
-    {
-        SAFE_LOCK(lock_);
-        size_t size = this->size();
-        if (size == 0) {
-            return false;
-        }
-        if (readQueue_->empty()) {
-            this->swap();
-        }
-        t = readQueue_->front();
-        readQueue_->pop();
-        return true;
-    }
+	inline bool pop(T &t)
+	{
+		SAFE_LOCK(lock_);
+		size_t size = this->size();
+		if (size == 0) {
+			return false;
+		}
+		if (readQueue_->empty()) {
+			this->swap();
+		}
+		t = readQueue_->front();
+		readQueue_->pop();
+		return true;
+	}
 
     inline void swap()
     {
@@ -8742,19 +12789,18 @@ public:
         if (writeQueue_ == &queue_[WRITE_QUEUE]) {
             writeQueue_ = &queue_[READ_QUEUE];
             readQueue_ = &queue_[WRITE_QUEUE];
-        }
-        else {
+        } else {
             writeQueue_ = &queue_[WRITE_QUEUE];
             readQueue_ = &queue_[READ_QUEUE];
         }
     }
 
-    inline bool isEmpty() { return readQueue_->empty(); }
+    inline bool isEmpty()   { return readQueue_->empty(); }
     inline size_t size()
     {
         SAFE_LOCK(lock_);
-        size_t size = (size_t)(queue_[WRITE_QUEUE].size() + queue_[READ_QUEUE].size());
-        return size;
+		size_t size = (size_t)(queue_[WRITE_QUEUE].size() + queue_[READ_QUEUE].size()); 
+		return size;
     }
 };
 ```
@@ -8783,11 +12829,11 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source
 distribution.
 */
-#include "pch.h"
+#include "stdafx.h"
 
 #ifndef TIXML_USE_STL
-#include "tinystr.h"
 
+#include "tinystr.h"
 
 // Error value for find primitive
 const TiXmlString::size_type TiXmlString::npos = static_cast< TiXmlString::size_type >(-1);
@@ -8898,8 +12944,8 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source
 distribution.
 */
-#include "pch.h"
 
+#include "stdafx.h"
 #ifndef TIXML_USE_STL
 
 #ifndef TIXML_STRING_INCLUDED
@@ -9208,7 +13254,7 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source
 distribution.
 */
-#include "pch.h"
+#include "stdafx.h"
 #include <ctype.h>
 
 #ifdef TIXML_USE_STL
@@ -11098,7 +15144,7 @@ must not be misrepresented as being the original software.
 distribution.
 */
 
-#include "pch.h"
+#include "stdafx.h"
 #ifndef TINYXML_INCLUDED
 #define TINYXML_INCLUDED
 
@@ -12906,7 +16952,7 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source
 distribution.
 */
-#include "pch.h"
+#include "stdafx.h"
 #include "tinyxml.h"
 
 // The goal of the seperate error file is to make the first
@@ -12962,7 +17008,7 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source 
 distribution.
 */
-#include "pch.h"
+#include "stdafx.h"
 #include <ctype.h>
 #include <stddef.h>
 
@@ -14576,4 +18622,149 @@ bool TiXmlText::Blank() const
 			return false;
 	return true;
 }
+```
+
+## ServerLibrary\Util\Type.h
+```h
+#pragma once
+#include "stdafx.h"
+#include <atomic>
+
+// 타입 정의
+typedef UINT64					object_t;
+typedef UINT64					oid_t;
+typedef int32_t					packet_size_t;
+
+typedef std::time_t				tick_t;
+typedef std::thread				thread_t;
+typedef std::thread::id			threadId_t;
+
+typedef std::recursive_mutex	lock_t;
+
+typedef std::string				str_t;
+typedef std::wstring			wstr_t;
+
+// 크기 정의
+#define SIZE_8				8
+#define SIZE_64				64
+#define SIZE_128			128
+#define SIZE_256			256
+#define SIZE_1024			1024
+#define SIZE_4096			4096
+#define SIZE_8192			8192
+
+#define DB_PARAM_SIZE		8192
+#define SOCKET_BUF_SIZE		1024 * 10
+
+// 패킷을 type을 맞추기 위한 재정의 C# 기준
+typedef unsigned char		Byte;
+typedef char				Char;
+typedef INT16				Int16;
+typedef UINT16				UInt16;
+typedef INT32				Int32;
+typedef UINT32				UInt32;
+typedef INT64				Int64;
+typedef UINT64				UInt64;
+typedef float				Float;
+
+//for xml
+typedef TiXmlDocument		xml_t;
+typedef TiXmlElement		xmlNode_t;
+typedef TiXmlHandle			xmlHandle_t;
+```
+
+## ServerLibrary\Util\Util.h
+```h
+#pragma once
+#include <algorithm>
+
+
+#define UNDEFINE_NAME		L"Undefine_Name"
+
+
+#define snprintf(dst, format, ...)     _snprintf_s(dst.data(), dst.size(), _TRUNCATE, format, __VA_ARGS__)
+#define snwprintf(dst, format, ...)    _snwprintf_s(dst.data(), dst.size(), _TRUNCATE, format, __VA_ARGS__)
+
+//범위 보정 및 체크
+#define fixInRange(minimum, x, maximum)     min(maximum, max(x, minimum)) 
+#define isInRange(minimum, x, maximum)      (x == fixInRange(minimum, x, maximum)) ? true : false
+
+//overflow 체크
+inline bool isOverFlower_uint(unsigned int original, unsigned int add)
+{
+	unsigned int before = original;
+	unsigned int after = original + add;
+    if ((original & 0x80000000) != (after & 0x80000000)) {
+        return false;
+    }
+    return true;
+}
+
+
+#define __W(x)              L##x
+#define _W(x)               __W(x)
+
+
+inline void StrConvA2T(CHAR *src, TCHAR *dest, size_t destLen) {
+#ifdef  UNICODE                     
+    if (destLen < 1) {
+        return;
+    }
+    MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int) destLen - 1);
+#endif
+}
+
+inline void StrConvT2A(TCHAR *src, CHAR *dest, size_t destLen) {
+#ifdef  UNICODE                     
+    if (destLen < 1) {
+        return;
+    }
+	WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int) destLen, NULL, FALSE);
+#endif
+}
+
+inline void StrConvA2W(CHAR *src, WCHAR *dest, size_t destLen) {
+    if (destLen < 1) {
+        return;
+    }
+	MultiByteToWideChar(CP_ACP, 0, src, -1, dest, (int) destLen - 1);
+}
+inline void StrConvW2A(WCHAR *src, CHAR *dest, size_t destLen) {
+    if (destLen < 1) {
+        return;
+    }
+	WideCharToMultiByte(CP_ACP, 0, src, -1, dest, (int) destLen, NULL, FALSE);
+}
+
+// delete object
+#undef	SAFE_DELETE
+#define SAFE_DELETE(obj)						\
+{												\
+	if ((obj)) delete(obj);		    			\
+    (obj) = 0L;									\
+}
+// delete object array
+#undef SAFE_DELETE_ARRAY
+#define SAFE_DELETE_ARRAY(arr)					\
+{												\
+	if ((arr)) delete [] (arr);		    		\
+    (arr) = 0L;									\
+}
+
+// delete gameObject
+#define SAFE_FREE(obj)							\
+{												\
+	if ((obj)) obj->free();						\
+    (obj) = 0L;									\
+}
+
+#define SAFE_RELEASE(obj)                       \
+{                                               \
+	if (obj) { obj.release(); }                 \
+}
+```
+
+## ServerLibrary\x64\Debug\ServerLibrary.vcxproj.FileListAbsolute.txt
+```txt
+
 ```

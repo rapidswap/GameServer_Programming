@@ -9,4 +9,5 @@ private:
 	void registSubPacketFunc();
 	static void I_DB_REQ_ID_PW(Session *session, Packet *rowPacket);
 	static void I_DB_REQ_LOAD_DATA(Session *session, Packet *rowPacket);
+	static void I_DB_REQ_CHARACTER(Session* session, Packet* rowPacket);
 };

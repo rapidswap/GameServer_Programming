@@ -85,4 +85,25 @@ namespace DummyClient
             network_.setPacketProcess(new ChattingPacketProcess());
         }
     }
+
+    internal class CreateCharacterState : FormState
+    {
+        private string loginIp_ = "127.0.0.1";
+        private uint loginPort_ = 9000;
+        public override void open(string ip, uint port)
+        {
+            form_ = new CreateCharacter();
+            setForm();
+            if (!base.connectToServer(loginIp_, loginPort_))
+            {
+                var result = MessageBox.Show("로그인 서버 연결에 실패. 다시 연결 시도 해볼까요?",
+                                             "error", MessageBoxButtons.RetryCancel);
+                if (result != DialogResult.Retry)
+                {
+                    form_.Close();
+                    Application.Exit();
+                }
+            }
+        }
+    }
 }

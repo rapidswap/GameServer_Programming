@@ -52,6 +52,7 @@
             CreateButton.TabIndex = 0;
             CreateButton.Text = "회원가입";
             CreateButton.UseVisualStyleBackColor = true;
+            CreateButton.Click += Create_click;
             // 
             // BackButton
             // 
@@ -61,6 +62,7 @@
             BackButton.TabIndex = 1;
             BackButton.Text = "뒤로가기";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += Back_click;
             // 
             // Id_Text
             // 
@@ -112,7 +114,6 @@
             label1.Size = new Size(19, 15);
             label1.TabIndex = 8;
             label1.Text = "ID";
-            label1.Click += this.label1_Click;
             // 
             // label2
             // 

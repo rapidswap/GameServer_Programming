@@ -166,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="DBAgentProcess.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="Query\QI_DB_REQ_CREATE_USER.h" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

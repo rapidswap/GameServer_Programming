@@ -457,6 +457,9 @@ namespace DummyClient
         public UInt64 clientId_;
         public string id_;
         public string password_;
+        public UInt64 oidAccountId_;
+        public UInt32 level_;
+        public UInt64 exp_;
         public string name_;
 
         void PacketInterface.encode()
@@ -465,6 +468,9 @@ namespace DummyClient
             PacketUtil.encode(packet_, clientId_);
             PacketUtil.encode(packet_, id_);
             PacketUtil.encode(packet_, password_);
+            PacketUtil.encode(packet_, oidAccountId_);
+            PacketUtil.encode(packet_, level_);
+            PacketUtil.encode(packet_, exp_);
             PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
@@ -472,6 +478,9 @@ namespace DummyClient
             clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
             id_ = PacketUtil.decodestring(packet, ref offset);
             password_ = PacketUtil.decodestring(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet,ref offset);
+            level_ = PacketUtil.decodeUInt32(packet, ref offset);
+            exp_= PacketUtil.decodeUInt64(packet, ref offset);
             name_= PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
@@ -487,14 +496,19 @@ namespace DummyClient
         public UInt64 clientId_;
         public string id_;
         public string password_;
+        public UInt64 oidAccountId_;
+        public UInt32 level_;
+        public UInt64 exp_;
         public string name_;
-
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
             PacketUtil.encode(packet_, clientId_);
             PacketUtil.encode(packet_, id_);
             PacketUtil.encode(packet_, password_);
+            PacketUtil.encode(packet_, oidAccountId_);
+            PacketUtil.encode(packet_, level_);
+            PacketUtil.encode(packet_, exp_);
             PacketUtil.encode(packet_, name_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
@@ -502,6 +516,9 @@ namespace DummyClient
             clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
             id_ = PacketUtil.decodestring(packet, ref offset);
             password_ = PacketUtil.decodestring(packet, ref offset);
+            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            level_ = PacketUtil.decodeUInt32(packet, ref offset);
+            exp_= PacketUtil.decodeUInt64(packet, ref offset);
             name_= PacketUtil.decodestring(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()

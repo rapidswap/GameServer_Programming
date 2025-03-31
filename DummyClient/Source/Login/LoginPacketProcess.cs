@@ -28,7 +28,7 @@ namespace DummyClient
                     contents_.S_ANS_ID_PW_SUCCESS(packet);
                     return;
                 case PacketType.E_S_ANS_EXIT:
-                    contents_.S_ANS_EXIT(packet);
+                    //contents_.S_ANS_EXIT(packet);
                     return;
             }
             if (base.defaultRun(packet) == false)

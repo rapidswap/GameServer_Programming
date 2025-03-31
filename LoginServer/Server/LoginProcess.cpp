@@ -38,6 +38,9 @@ void LoginProcess::C_REQ_CREATE_CHARACTER(Session* session, Packet* rowPacket)
 	dbPacket.clientId_ = (UInt64)session->id();
 	dbPacket.id_ = packet->id_;
 	dbPacket.password_ = packet->password_;
+	dbPacket.oidAccountId_ = packet->oidAccountId_;
+	dbPacket.level_ = packet->level_;
+	dbPacket.exp_ = packet->exp_;
 	dbPacket.name_ = packet->name_;
 
 	Terminal* terminal = _terminal.get(L"DBAgent");

@@ -33,13 +33,22 @@ void DBAgentProcess::I_DB_REQ_CHARACTER(Session* session, Packet* rowPacket)
 {
 	PK_I_DB_REQ_CHARACTER* packet = (PK_I_DB_REQ_CHARACTER*)rowPacket;
 
-	QI_DB_REQ_CREATE_CHARACTER* query = new QI_DB_REQ_CREATE_CHARACTER();
+	QI_DB_REQ_CREATE_USER* query = new QI_DB_REQ_CREATE_USER();
+	QI_DB_REQ_CREATE_CHARACTER* query2 = new QI_DB_REQ_CREATE_CHARACTER();
 	query->clientId_ = packet->clientId_;
+	query2->clientId_ = packet->clientId_;
 
 	QueryStatement* statement = query->statement();
+	QueryStatement* statement2 = query2->statement();
 	statement->addParam((char*)packet->id_.c_str());
 	statement->addParam((char*)packet->password_.c_str());
-	statement->addParam((char*)packet->name_.c_str());
+	statement2->addParam((UInt64)packet->oidAccountId_);
+	statement2->addParam((char*)packet->name_.c_str());
+	statement2->addParam((UInt32)packet->level_);
+	statement2->addParam((UInt64)packet->exp_);
+
+	DBManager::getInstance().pushQuery(query);
+	DBManager::getInstance().pushQuery(query2);
 }
 
 void DBAgentProcess::I_DB_REQ_LOAD_DATA(Session *session, Packet *rowPacket)

@@ -360,6 +360,9 @@ public:
     UInt64     clientId_;
     std::string     id_;
     std::string     password_;
+    UInt64          oidAccountId_;
+    UInt32          level_;
+    UInt64          exp_;
     std::string     name_;
 
     void encode(Stream& stream) {
@@ -367,6 +370,9 @@ public:
         stream << clientId_;
         stream << id_;
         stream << password_;
+        stream << oidAccountId_;
+        stream << level_;
+        stream << exp_;
         stream << name_;
     }
 
@@ -374,6 +380,9 @@ public:
         stream >> &clientId_;
         stream >> &id_;
         stream >> &password_;
+        stream >> &oidAccountId_;
+        stream >> &level_;
+        stream >> &exp_;
         stream >> &name_;
     }
 };
@@ -387,6 +396,9 @@ public:
     UInt64     clientId_;
     std::string     id_;
     std::string     password_;
+    UInt64          oidAccountId_;
+    UInt32          level_;
+    UInt64          exp_;
     std::string     name_;
 
     void encode(Stream& stream) {
@@ -394,6 +406,9 @@ public:
         stream << clientId_;
         stream << id_;
         stream << password_;
+        stream << oidAccountId_;
+        stream << level_;
+        stream << exp_;
         stream << name_;
     }
 
@@ -401,6 +416,9 @@ public:
         stream >> &clientId_;
         stream >> &id_;
         stream >> &password_;
+        stream >> &oidAccountId_;
+        stream >> &level_;
+        stream >> &exp_;
         stream >> &name_;
     }
 };

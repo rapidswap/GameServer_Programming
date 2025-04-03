@@ -92,7 +92,7 @@
 - **DBAgent**  
   - **E_I_DB_REQ_ID_PW:** 클라이언트의 ID와 비밀번호 요청 처리  
   - **E_I_DB_REQ_LOAD_DATA:** 요청 패킷에서 클라이언트 ID와 계정 ID 추출 후, 쿼리 생성 및 DB 매니저에 등록
-  - **E_I_DB_REQ_CREATE_CHRACTER:** 클라이언트의 ID와 비밀번호 요청 처리, 유저의 캐릭터 정보를 정상적으로 저장했음을 알림 
+  - **E_I_DB_REQ_CREATE_CHRACTER, E_I_DB_REQ_CHARACTER:** 클라이언트의 ID와 비밀번호 요청 처리, 유저의 캐릭터 정보를 정상적으로 저장했음을 알림 
 
 ### 6. 채팅 서버
 

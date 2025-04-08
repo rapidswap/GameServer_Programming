@@ -26,7 +26,4 @@ enum PacketType : Int64 {
     E_C_REQ_CREATE_CHARACTER=148,
     E_I_DB_REQ_CHARACTER=149,
     E_I_DB_ANS_CREATE_CHARACTER=150,
-
-
-
 };

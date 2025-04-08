@@ -38,15 +38,43 @@ void LoginProcess::C_REQ_CREATE_CHARACTER(Session* session, Packet* rowPacket)
 	dbPacket.clientId_ = (UInt64)session->id();
 	dbPacket.id_ = packet->id_;
 	dbPacket.password_ = packet->password_;
+	Terminal* terminal = _terminal.get(L"DBAgent");
+	terminal->sendPacket(&dbPacket);
+
 	dbPacket.oidAccountId_ = packet->oidAccountId_;
 	dbPacket.level_ = packet->level_;
 	dbPacket.exp_ = packet->exp_;
 	dbPacket.name_ = packet->name_;
 
-	Terminal* terminal = _terminal.get(L"DBAgent");
-	terminal->sendPacket(&dbPacket);
+	
 }
 
+void LoginProcess::I_DB_ANS_USER_ID_PW(Session* session, Packet* rowPacket)
+{
+	PK_I_DB_ANS_USER_ID_PW* packet = (PK_I_DB_ANS_USER_ID_PW*)rowPacket;
+	SLog(L"* id/ pw result = %d", packet->result_);
+
+	Session* clientSession = _session_manager.session(packet->clientId_);
+	if (clientSession == nullptr) {
+		return;
+	}
+
+	const int authFail = 0;
+	if (packet->result_ == authFail) {
+		PK_S_ANS_ID_PW_FAIL ansPacket;
+		clientSession->sendPacket(&ansPacket);
+		return;
+	}
+
+	PK_I_CREATE_NOTIFY_ID iPacket;
+	iPacket.oidAccountId_ = packet->oidAccountId_;
+	iPacket.clientId_ = packet->clientId_;
+	Terminal* terminal = _terminal.get(L"LoginServer");
+	if (terminal == nullptr) {
+		SLog(L"! Chatting Server terminal is not connected");
+	}
+	terminal->sendPacket(&iPacket);
+}
 void LoginProcess::I_DB_ANS_ID_PW(Session *session, Packet *rowPacket)
 {
 	PK_I_DB_ANS_ID_PW *packet = (PK_I_DB_ANS_ID_PW  *)rowPacket;

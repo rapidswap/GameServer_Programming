@@ -29,11 +29,21 @@ void DBAgentProcess::I_DB_REQ_ID_PW(Session *session, Packet *rowPacket)
 	
 	DBManager::getInstance().pushQuery(query);
 }
+void DBAgentProcess::I_DB_REQ_CREATE_USER(Session* session, Packet* rowPacket)
+{
+	PK_I_DB_REQ_CERATE_USER* packet = (PK_I_DB_REQ_USER*)rowPacket;
+	QI_DB_REQ_CREATE_USER* query = new QI_DB_REQ_CREATE_USER();
+	query->clientId_ = packet->clientId_;
+	QueryStatement* statement = query->statement();
+	statement->addParam((char*)packet->id_.c_str());
+	statement->addParam((char*)packet->password_.c_str());
+	DBManager::getInstance().pushQuery(query);
+}
 void DBAgentProcess::I_DB_REQ_CHARACTER(Session* session, Packet* rowPacket)
 {
 	PK_I_DB_REQ_CHARACTER* packet = (PK_I_DB_REQ_CHARACTER*)rowPacket;
 
-	QI_DB_REQ_CREATE_USER* query = new QI_DB_REQ_CREATE_USER();
+	QI_DB_REQ_ID_PW* query = new QI_DB_REQ_ID_PW();
 	QI_DB_REQ_CREATE_CHARACTER* query2 = new QI_DB_REQ_CREATE_CHARACTER();
 	query->clientId_ = packet->clientId_;
 	query2->clientId_ = packet->clientId_;
@@ -42,12 +52,14 @@ void DBAgentProcess::I_DB_REQ_CHARACTER(Session* session, Packet* rowPacket)
 	QueryStatement* statement2 = query2->statement();
 	statement->addParam((char*)packet->id_.c_str());
 	statement->addParam((char*)packet->password_.c_str());
+	DBManager::getInstance().pushQuery(query);
+
 	statement2->addParam((UInt64)packet->oidAccountId_);
 	statement2->addParam((char*)packet->name_.c_str());
 	statement2->addParam((UInt32)packet->level_);
 	statement2->addParam((UInt64)packet->exp_);
 
-	DBManager::getInstance().pushQuery(query);
+	
 	DBManager::getInstance().pushQuery(query2);
 }
 

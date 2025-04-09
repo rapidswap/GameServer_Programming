@@ -1,24 +1,25 @@
 #pragma once
 #include "stdafx.h"
 
-class QI_DB_REQ_CREATE_CHARACTER : public Query
+class QI_DB_REQ_CREATE_CHARACTER_ID_PW : public Query
 {
 public:
 	oid_t clientId_;
-
+	std::string name_;
 	WCHAR* procedure()
 	{
-		return L"p_Character_Insert";
+		return L"p_AccountData_Select";
 	}
 
-	QI_DB_REQ_CREATE_CHARACTER() {
+	QI_DB_REQ_CREATE_CHARACTER_ID_PW() {
 		statement_->setQuery(this->procedure(), QUERY_CALL_BACK);
 	}
 
-	~QI_DB_REQ_CREATE_CHARACTER() {
-		PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS iPacket;
+	~QI_DB_REQ_CREATE_CHARACTER_ID_PW() {
+		PK_I_DB_ANS_CREATE_CHARACTER iPacket;
 		iPacket.clientId_ = (UInt64)clientId_;
 		iPacket.result_ = FALSE;
+		iPacket.name_ = name_;
 		if (!record_.isEof()) {
 			record_.moveFirst();
 		}

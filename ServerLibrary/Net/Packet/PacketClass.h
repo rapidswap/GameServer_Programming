@@ -11,12 +11,6 @@ public:
     virtual void encode(Stream &stream) { stream << (Int64) this->type(); };
     virtual void decode(Stream &stream) { };
 
-    enum class EServerType :UInt16 {
-        Login = 0,
-        Chatting = 1,
-
-    };
-
 };
 
 class PK_C_REQ_EXIT : public Packet
@@ -106,7 +100,6 @@ public:
     UInt64     clientId_;
     std::string     id_;
     std::string     password_;
-    EServerType destServer_;
 
 
     void encode(Stream &stream) {
@@ -114,14 +107,12 @@ public:
         stream << clientId_;
         stream << id_;
         stream << password_;
-        stream << destServer_;
     }
 
     void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &id_;
         stream >> &password_;
-        stream >> &destServer_;
     }
 };
 
@@ -133,21 +124,18 @@ public:
     UInt64     clientId_;
     UInt64     oidAccountId_;
     Byte     result_;
-    EServerType destServer_;
 
     void encode(Stream &stream) {
         stream << (Int64) this->type();
         stream << clientId_;
         stream << oidAccountId_;
         stream << result_;
-        stream << destServer_;
     }
 
     void decode(Stream &stream) {
         stream >> &clientId_;
         stream >> &oidAccountId_;
         stream >> &result_;
-        stream >> &destServer_;
     }
 };
 
@@ -404,37 +392,35 @@ public:
 };
 
 
-class PK_I_DB_REQ_CHARACTER : public Packet
+class PK_I_DB_REQ_CREATE_CHARACTER : public Packet
 {
 public:
-    PacketType type() { return E_I_DB_REQ_CHARACTER; }
+    PacketType type() { return E_I_DB_REQ_CREATE_CHARACTER; }
 
     UInt64     clientId_;
-    std::string     id_;
-    std::string     password_;
     UInt64          oidAccountId_;
-    UInt32          level_;
-    UInt64          exp_;
+    //UInt32          level_;
+    //UInt64          exp_;
     std::string     name_;
 
     void encode(Stream& stream) {
         stream << (Int64)this->type();
         stream << clientId_;
-        stream << id_;
-        stream << password_;
+        //stream << id_;
+        //stream << password_;
         stream << oidAccountId_;
-        stream << level_;
-        stream << exp_;
+        //stream << level_;
+        //stream << exp_;
         stream << name_;
     }
 
     void decode(Stream& stream) {
         stream >> &clientId_;
-        stream >> &id_;
-        stream >> &password_;
+        //stream >> &id_;
+        //stream >> &password_;
         stream >> &oidAccountId_;
-        stream >> &level_;
-        stream >> &exp_;
+        //stream >> &level_;
+        //stream >> &exp_;
         stream >> &name_;
     }
 };
@@ -446,6 +432,178 @@ public:
 
     UInt64     clientId_;
     UInt64     oidAccountId_;
+    std::string name_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << oidAccountId_;
+        stream << name_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &oidAccountId_;
+        stream >> &name_;
+        stream >> &result_;
+    }
+};
+
+class PK_C_REQ_CREATE_USER :public Packet
+{
+public:
+    PacketType type() { return E_C_REQ_CREATE_USER; }
+
+    UInt64     clientId_;
+    std::string id_;
+    std::string password_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &result_;
+    }
+};
+
+class PK_I_DB_REQ_CREATE_USER :public Packet
+{
+public:
+    PacketType type() { return E_I_DB_REQ_CREATE_USER; }
+
+    UInt64     clientId_;
+    UInt64 oidAccoundId_;
+    std::string id_;
+    std::string password_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << oidAccoundId_;
+        stream << id_;
+        stream << password_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &oidAccoundId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &result_;
+    }
+};
+
+class PK_I_DB_ANS_CREATE_USER :public Packet
+{
+public:
+    PacketType type() { return E_I_DB_ANS_CREATE_USER; }
+
+    UInt64     clientId_;
+    UInt64 oidAccountId_;
+    std::string name_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << oidAccountId_;
+        stream << name_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &oidAccountId_;
+        stream >> &name_;
+        stream >> &result_;
+    }
+};
+
+class PK_C_REQ_CREATE_CHARACTER_ID_PW :public Packet
+{
+public:
+    PacketType type() { return E_I_DB_REQ_CREATE_USER; }
+
+    UInt64     clientId_;
+    std::string id_;
+    std::string password_;
+    std::string name_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << name_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &name_;
+        stream >> &result_;
+    }
+};
+
+class PK_I_DB_REQ_CREATE_CHARACTER_ID_PW :public Packet
+{
+public:
+    PacketType type() { return E_I_DB_REQ_CREATE_USER; }
+
+    UInt64     clientId_;
+    std::string id_;
+    std::string password_;
+    std::string name_;
+    Byte     result_;
+
+    void encode(Stream& stream) {
+        stream << (Int64)this->type();
+        stream << clientId_;
+        stream << id_;
+        stream << password_;
+        stream << name_;
+        stream << result_;
+    }
+
+    void decode(Stream& stream) {
+        stream >> &clientId_;
+        stream >> &id_;
+        stream >> &password_;
+        stream >> &name_;
+        stream >> &result_;
+    }
+};
+
+class PK_S_ANS_CREATE_FAIL : public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_CREATE_FAIL; }
+
+};
+
+class PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS :public Packet
+{
+public:
+    PacketType type() { return E_I_DB_ANS_CREATE_CHARACTER_SUCCESS; }
+
+    UInt64     clientId_;
+    UInt64 oidAccountId_;
     Byte     result_;
 
     void encode(Stream& stream) {

@@ -11,9 +11,13 @@ void LoginProcess::registSubPacketFunc()
 #define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &LoginProcess::##type))
 
 	INSERT_PACKET_PROCESS(C_REQ_ID_PW);
+	INSERT_PACKET_PROCESS(C_REQ_CREATE_USER);
 	INSERT_PACKET_PROCESS(I_DB_ANS_ID_PW);
 	INSERT_PACKET_PROCESS(I_LOGIN_NOTIFY_ID_LOADED);
-	INSERT_PACKET_PROCESS(C_REQ_CREATE_CHARACTER);
+	INSERT_PACKET_PROCESS(C_REQ_CREATE_CHARACTER_ID_PW);
+	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER);
+	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_USER);
+	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER_SUCCESS);
 }
 
 
@@ -30,28 +34,69 @@ void LoginProcess::C_REQ_ID_PW(Session *session, Packet *rowPacket)
 	terminal->sendPacket(&dbPacket);
 }
 
-void LoginProcess::C_REQ_CREATE_CHARACTER(Session* session, Packet* rowPacket)
+void LoginProcess::C_REQ_CREATE_USER(Session* session, Packet* rowPacket)
 {
-	PK_C_REQ_CREATE_CHARACTER* packet = (PK_C_REQ_CREATE_CHARACTER*)rowPacket;
+	PK_C_REQ_CREATE_USER* packet = (PK_C_REQ_CREATE_USER*)rowPacket;
 
-	PK_I_DB_REQ_CHARACTER dbPacket;
+	PK_I_DB_REQ_CREATE_USER dbPacket;
 	dbPacket.clientId_ = (UInt64)session->id();
 	dbPacket.id_ = packet->id_;
 	dbPacket.password_ = packet->password_;
 	Terminal* terminal = _terminal.get(L"DBAgent");
 	terminal->sendPacket(&dbPacket);
 
-	dbPacket.oidAccountId_ = packet->oidAccountId_;
-	dbPacket.level_ = packet->level_;
-	dbPacket.exp_ = packet->exp_;
-	dbPacket.name_ = packet->name_;
-
-	
+	//dbPacket.oidAccountId_ = packet->oidAccountId_;
+	//dbPacket.level_ = packet->level_;
+	//dbPacket.exp_ = packet->exp_;
+	//dbPacket.name_ = packet->name_;
 }
 
-void LoginProcess::I_DB_ANS_USER_ID_PW(Session* session, Packet* rowPacket)
+void LoginProcess::I_DB_ANS_CREATE_USER(Session* session, Packet* rowPacket)
 {
-	PK_I_DB_ANS_USER_ID_PW* packet = (PK_I_DB_ANS_USER_ID_PW*)rowPacket;
+	PK_I_DB_ANS_CREATE_USER* packet = (PK_I_DB_ANS_CREATE_USER*)rowPacket;
+	SLog(L"* id/ pw result = %d", packet->result_);
+
+	Session* clientSession = _session_manager.session(packet->clientId_);
+	if (clientSession == nullptr) {
+		return;
+	}
+
+	const int authFail = 0;
+	if (packet->result_ == authFail) {
+		PK_S_ANS_CREATE_FAIL ansPacket;
+		clientSession->sendPacket(&ansPacket);
+		return;
+	}
+}
+
+void LoginProcess::C_REQ_CREATE_CHARACTER_ID_PW(Session* session, Packet* rowPacket)
+{
+	PK_C_REQ_CREATE_CHARACTER_ID_PW* packet = (PK_C_REQ_CREATE_CHARACTER_ID_PW*)rowPacket;
+
+	PK_I_DB_REQ_CREATE_CHARACTER_ID_PW dbPacket;
+	dbPacket.clientId_ = (UInt64)session->id();
+	dbPacket.id_ = packet->id_;
+	dbPacket.password_ = packet->password_;
+	dbPacket.name_ = packet->name_;
+	Terminal* terminal = _terminal.get(L"DBAgent");
+	terminal->sendPacket(&dbPacket);
+}
+
+void LoginProcess::I_DB_ANS_CREATE_CHARACTER(Session* session, Packet* rowPacket)
+{
+	PK_I_DB_ANS_CREATE_CHARACTER* packet = (PK_I_DB_ANS_CREATE_CHARACTER*)rowPacket;
+
+	PK_I_DB_REQ_CREATE_CHARACTER dbPacket;
+	dbPacket.clientId_ = (UInt64)session->id();
+	dbPacket.oidAccountId_ = packet->oidAccountId_;
+	dbPacket.name_ = packet->name_;
+
+	Terminal* terminal = _terminal.get(L"DBAgent");
+}
+
+void LoginProcess::I_DB_ANS_CREATE_CHARACTER_SUCCESS(Session* session, Packet* rowPacket)
+{
+	PK_I_DB_ANS_CREATE_CHARACTER* packet = (PK_I_DB_ANS_CREATE_CHARACTER*)rowPacket;
 	SLog(L"* id/ pw result = %d", packet->result_);
 
 	Session* clientSession = _session_manager.session(packet->clientId_);
@@ -65,16 +110,8 @@ void LoginProcess::I_DB_ANS_USER_ID_PW(Session* session, Packet* rowPacket)
 		clientSession->sendPacket(&ansPacket);
 		return;
 	}
-
-	PK_I_CREATE_NOTIFY_ID iPacket;
-	iPacket.oidAccountId_ = packet->oidAccountId_;
-	iPacket.clientId_ = packet->clientId_;
-	Terminal* terminal = _terminal.get(L"LoginServer");
-	if (terminal == nullptr) {
-		SLog(L"! Chatting Server terminal is not connected");
-	}
-	terminal->sendPacket(&iPacket);
 }
+
 void LoginProcess::I_DB_ANS_ID_PW(Session *session, Packet *rowPacket)
 {
 	PK_I_DB_ANS_ID_PW *packet = (PK_I_DB_ANS_ID_PW  *)rowPacket;

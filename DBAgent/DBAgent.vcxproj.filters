@@ -45,6 +45,9 @@
     <ClInclude Include="Query\QI_DB_REQ_USER_ID_PW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Query\QI_DB_REQ_CREATE_CHARACTER_ID_PW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

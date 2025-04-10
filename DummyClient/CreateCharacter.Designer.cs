@@ -77,8 +77,8 @@
             Pw_Text.Name = "Pw_Text";
             Pw_Text.Size = new Size(100, 23);
             Pw_Text.TabIndex = 3;
-            // 
-            // Oid_Text
+            //
+            //// Oid_Text
             // 
             Oid_Text.Location = new Point(152, 127);
             Oid_Text.Name = "Oid_Text";

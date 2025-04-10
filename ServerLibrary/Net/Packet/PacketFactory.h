@@ -32,8 +32,15 @@ public:
             case E_S_ANS_EXIT_USER:return new PK_S_ANS_EXIT_USER();
             case E_C_REQ_CHAT_EXIT:return new PK_C_REQ_CHAT_EXIT();
             case E_C_REQ_CREATE_CHARACTER:return new PK_C_REQ_CREATE_CHARACTER();
-            case E_I_DB_REQ_CHARACTER: return new PK_I_DB_REQ_CHARACTER();
+            case E_I_DB_REQ_CREATE_CHARACTER: return new PK_I_DB_REQ_CREATE_CHARACTER();
             case E_I_DB_ANS_CREATE_CHARACTER: return new PK_I_DB_ANS_CREATE_CHARACTER();
+            case E_C_REQ_CREATE_USER:return new PK_C_REQ_CREATE_USER();
+            case E_I_DB_REQ_CREATE_USER:return new PK_I_DB_REQ_CREATE_USER();
+            case E_I_DB_ANS_CREATE_USER:return new PK_I_DB_ANS_CREATE_USER();
+            case E_C_REQ_CREATE_CHARACTER_ID_PW:return new PK_C_REQ_CREATE_CHARACTER_ID_PW();
+            case E_I_DB_REQ_CREATE_CHARACTER_ID_PW:return new PK_I_DB_REQ_CREATE_CHARACTER_ID_PW();
+            case E_S_ANS_CREATE_FAIL:return new PK_S_ANS_CREATE_FAIL();
+            case E_I_DB_ANS_CREATE_CHARACTER_SUCCESS:return new PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS();
         }
         return nullptr;
     }

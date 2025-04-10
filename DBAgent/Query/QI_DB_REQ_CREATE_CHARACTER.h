@@ -16,7 +16,7 @@ public:
 	}
 
 	~QI_DB_REQ_CREATE_CHARACTER() {
-		PK_I_DB_ANS_CREATE_CHARACTER iPacket;
+		PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS iPacket;
 		iPacket.clientId_ = (UInt64)clientId_;
 		iPacket.result_ = FALSE;
 		if (!record_.isEof()) {

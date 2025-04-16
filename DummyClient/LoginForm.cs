@@ -36,5 +36,10 @@ namespace DummyClient
         {
             Program.programState_.setState(PROGRAM_STATE.CREATECHARACTER, null, 0);
         }
+
+        private void Cerate_User(object sender, EventArgs e)
+        {
+            Program.programState_.setState(PROGRAM_STATE.CREATEUSER, null, 0);
+        }
     }
 }

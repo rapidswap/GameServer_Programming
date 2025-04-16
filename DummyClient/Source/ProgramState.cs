@@ -5,6 +5,7 @@
         LOGIN,
         CHATTING,
         CREATECHARACTER,
+        CREATEUSER,
         MAX,
     }
 
@@ -31,6 +32,9 @@
 
                 case PROGRAM_STATE.CREATECHARACTER:
                     formState_=new CreateCharacterState();
+                    break;
+                case PROGRAM_STATE.CREATEUSER:
+                    formState_= new CreateUserState();
                     break;
             }
         }

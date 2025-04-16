@@ -20,9 +20,9 @@ public:
 		PK_I_DB_REQ_CREATE_USER iPacket;
 		iPacket.clientId_ = (UInt64)clientId_;
 		iPacket.result_ = FALSE;
-		if (!record_.isEof()) {
-			record_.moveFirst();
-		}
+		//if (!record_.isEof()) {
+		//	record_.moveFirst();
+		//}
 
 		//while (!record_.isEof()) {
 		//	int oidAccount = 0;

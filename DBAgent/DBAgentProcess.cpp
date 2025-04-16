@@ -38,7 +38,7 @@ void DBAgentProcess::I_DB_REQ_CREATE_CHARACTER_ID_PW(Session* session, Packet* r
 
 	QI_DB_REQ_CREATE_CHARACTER_ID_PW* query = new QI_DB_REQ_CREATE_CHARACTER_ID_PW();
 	query->clientId_ = packet->clientId_;
-
+	query->name_ = packet->name_;
 	QueryStatement* statement = query->statement();
 	statement->addParam((char*)packet->id_.c_str());
 	statement->addParam((char*)packet->password_.c_str());

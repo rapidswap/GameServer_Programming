@@ -535,7 +535,7 @@ public:
 class PK_C_REQ_CREATE_CHARACTER_ID_PW :public Packet
 {
 public:
-    PacketType type() { return E_I_DB_REQ_CREATE_USER; }
+    PacketType type() { return E_C_REQ_CREATE_CHARACTER_ID_PW; }
 
     UInt64     clientId_;
     std::string id_;
@@ -564,7 +564,7 @@ public:
 class PK_I_DB_REQ_CREATE_CHARACTER_ID_PW :public Packet
 {
 public:
-    PacketType type() { return E_I_DB_REQ_CREATE_USER; }
+    PacketType type() { return E_I_DB_REQ_CREATE_CHARACTER_ID_PW; }
 
     UInt64     clientId_;
     std::string id_;

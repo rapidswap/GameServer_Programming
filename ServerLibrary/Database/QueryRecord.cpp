@@ -168,15 +168,20 @@ bool QueryRecord::get(char* fieldName, int32_t& fieldValue)
 	return false;
 }
 
-bool QueryRecord::get(char* fieldName, int64_t& fieldValue)
+bool QueryRecord::get(char* fieldName, uint64_t& fieldValue)
 {
 	try {
-		_variant_t  vtValue;
+		_variant_t vtValue;
 		vtValue = record_->Fields->GetItem(fieldName)->GetValue();
-		fieldValue = vtValue.intVal;
+		if (vtValue.vt == VT_I8 || vtValue.vt == VT_UI8) {
+			fieldValue = vtValue.ullVal;
+		}
+		else {
+			fieldValue = static_cast<uint64_t>(vtValue);
+		}
 		return true;
 	}
-	catch (_com_error &e) {
+	catch (_com_error& e) {
 		this->errorReport(e);
 		SLog(L"! error query field : %S", fieldName);
 	}

@@ -35,6 +35,7 @@
             button_login_ = new Button();
             button_quit_ = new Button();
             button1 = new Button();
+            Create_User = new Button();
             SuspendLayout();
             // 
             // textBox_id_
@@ -96,13 +97,23 @@
             // 
             // button1
             // 
-            button1.Location = new Point(201, 113);
+            button1.Location = new Point(201, 133);
             button1.Name = "button1";
             button1.Size = new Size(75, 30);
             button1.TabIndex = 6;
             button1.Text = "캐릭터생성";
             button1.UseVisualStyleBackColor = true;
             button1.Click += Character_Click;
+            // 
+            // Create_User
+            // 
+            Create_User.Location = new Point(201, 104);
+            Create_User.Name = "Create_User";
+            Create_User.Size = new Size(75, 23);
+            Create_User.TabIndex = 7;
+            Create_User.Text = "유저 생성";
+            Create_User.UseVisualStyleBackColor = true;
+            Create_User.Click += Cerate_User;
             // 
             // LoginForm
             // 
@@ -111,6 +122,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(288, 175);
+            Controls.Add(Create_User);
             Controls.Add(button1);
             Controls.Add(button_quit_);
             Controls.Add(button_login_);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button button_login_;
         private System.Windows.Forms.Button button_quit_;
         private Button button1;
+        private Button Create_User;
     }
 }

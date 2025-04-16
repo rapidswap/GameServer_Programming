@@ -92,6 +92,7 @@ void LoginProcess::I_DB_ANS_CREATE_CHARACTER(Session* session, Packet* rowPacket
 	dbPacket.name_ = packet->name_;
 
 	Terminal* terminal = _terminal.get(L"DBAgent");
+	terminal->sendPacket(&dbPacket);
 }
 
 void LoginProcess::I_DB_ANS_CREATE_CHARACTER_SUCCESS(Session* session, Packet* rowPacket)

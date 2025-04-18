@@ -19,13 +19,10 @@ namespace DummyClient
 
         private void Create_click(object sender, EventArgs e)
         {
-            PK_C_REQ_CREATE_CHARACTER packet = new PK_C_REQ_CREATE_CHARACTER();
+            PK_C_REQ_CREATE_CHARACTER_ID_PW packet = new PK_C_REQ_CREATE_CHARACTER_ID_PW();
             packet.id_=Id_Text.Text;
-            packet.name_=Name_Text.Text;
             packet.password_=Pw_Text.Text;
-            packet.oidAccountId_=Convert.ToUInt64(Oid_Text.Text);
-            packet.exp_=Convert.ToUInt64(Exp_Text.Text);
-            packet.level_=Convert.ToUInt32(Lv_Text.Text);
+            packet.name_=Name_Text.Text;
             Program.programState_.sendPacket(packet);
         }
 

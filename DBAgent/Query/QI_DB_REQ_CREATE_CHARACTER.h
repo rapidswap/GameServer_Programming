@@ -16,26 +16,24 @@ public:
 	}
 
 	~QI_DB_REQ_CREATE_CHARACTER() {
-		PK_I_DB_ANS_CREATE_CHARACTER iPacket;
+		PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS iPacket;
 		iPacket.clientId_ = (UInt64)clientId_;
 		iPacket.result_ = FALSE;
-		if (!record_.isEof()) {
-			record_.moveFirst();
-		}
 
-		while (!record_.isEof()) {
-			int oidAccount = 0;
-			if (record_.get("oidAccount", oidAccount)) {
-				iPacket.oidAccountId_ = oidAccount;
-				iPacket.result_ = TRUE;
-				break;
-			}
-			else {
-				SLog(L"* this query [%s] have error", this->procedure());
-				break;
-			}
-			record_.moveNext();
-		}
+		//if (!record_.isEof()) {
+		//	record_.moveFirst();
+		//	int oidAccount = 0;
+		//	if (record_.get("oidAccount", oidAccount)) {
+		//		iPacket.oidAccountId_ = oidAccount;
+		//		iPacket.result_ = TRUE;
+		//	}
+		//	else {
+		//		SLog(L"* Insert result [%s] parsing 실패", this->procedure());
+		//	}
+		//}
+		//else {
+		//	SLog(L"* Insert 실패 또는 결과 없음 [%s]", this->procedure());
+		//}
 
 		Terminal* terminal = _terminal.get(L"LoginServer");
 		terminal->sendPacket(&iPacket);

@@ -47,6 +47,7 @@ namespace DummyClient
         E_I_DB_REQ_CREATE_CHARACTER_ID_PW = 155,
         E_S_ANS_CREATE_FAIL = 156,
         E_I_DB_ANS_CREATE_CHARACTER_SUCCESS = 157,
+        E_S_ANS_CREATE_CHARACTER_SUCCESS=158,
 
     }
 };

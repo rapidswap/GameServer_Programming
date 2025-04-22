@@ -27,6 +27,12 @@ namespace DummyClient
                 case PacketType.E_S_ANS_ID_PW_SUCCESS:
                     contents_.S_ANS_ID_PW_SUCCESS(packet);
                     return;
+                case PacketType.E_I_DB_ANS_CREATE_USER:
+                    contents_.I_DB_ANS_CREATE_USER(packet);
+                    return;
+                case PacketType.E_S_ANS_CREATE_CHARACTER_SUCCESS:
+                    contents_.S_ANS_CREATE_CHARACTER_SUCCESS(packet);
+                    return;
                 case PacketType.E_S_ANS_EXIT:
                     //contents_.S_ANS_EXIT(packet);
                     return;

@@ -603,19 +603,26 @@ public:
     PacketType type() { return E_I_DB_ANS_CREATE_CHARACTER_SUCCESS; }
 
     UInt64     clientId_;
-    UInt64 oidAccountId_;
+    //UInt64 oidAccountId_;
     Byte     result_;
 
     void encode(Stream& stream) {
         stream << (Int64)this->type();
         stream << clientId_;
-        stream << oidAccountId_;
+        //stream << oidAccountId_;
         stream << result_;
     }
 
     void decode(Stream& stream) {
         stream >> &clientId_;
-        stream >> &oidAccountId_;
+        //stream >> &oidAccountId_;
         stream >> &result_;
     }
+};
+
+class PK_S_ANS_CREATE_CHARACTER_SUCCESS : public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_CREATE_CHARACTER_SUCCESS; }
+
 };

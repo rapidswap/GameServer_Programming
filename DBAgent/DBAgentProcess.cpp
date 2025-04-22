@@ -16,6 +16,7 @@ void DBAgentProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_DB_REQ_CREATE_USER);
 	INSERT_PACKET_PROCESS(I_DB_REQ_CREATE_CHARACTER_ID_PW);
 	INSERT_PACKET_PROCESS(I_DB_REQ_CREATE_CHARACTER);
+	
 }
 
 void DBAgentProcess::I_DB_REQ_ID_PW(Session *session, Packet *rowPacket)

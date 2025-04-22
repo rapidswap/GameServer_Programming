@@ -104,6 +104,7 @@ namespace DummyClient
                     Application.Exit();
                 }
             }
+            network_.setPacketProcess(new LoginPacketProcess());
         }
     }
 
@@ -125,6 +126,7 @@ namespace DummyClient
                     Application.Exit();
                 }
             }
+            network_.setPacketProcess(new LoginPacketProcess());
         }
     }
 }

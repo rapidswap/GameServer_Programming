@@ -738,20 +738,20 @@ namespace DummyClient
         Int64 PacketInterface.type() { return (Int64)PacketType.E_I_DB_ANS_CREATE_CHARACTER_SUCCESS; }
         Int64 type() { return (Int64)PacketType.E_I_DB_ANS_CREATE_CHARACTER_SUCCESS; }
         public UInt64 clientId_;
-        public UInt64 oidAccountId_;
+        //public UInt64 oidAccountId_;
         public Byte result_;
 
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
             PacketUtil.encode(packet_, clientId_);
-            PacketUtil.encode(packet_, oidAccountId_);
+            //PacketUtil.encode(packet_, oidAccountId_);
             PacketUtil.encode(packet_, result_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
             clientId_ = PacketUtil.decodeUInt64(packet, ref offset);
-            oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
+            //oidAccountId_ = PacketUtil.decodeUInt64(packet, ref offset);
             result_ = PacketUtil.decodeByte(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
@@ -760,4 +760,20 @@ namespace DummyClient
         }
     }
 
+    public class PK_S_ANS_CREATE_CHARACTER_SUCCESS : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CREATE_CHARACTER_SUCCESS; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_CREATE_CHARACTER_SUCCESS; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
 }

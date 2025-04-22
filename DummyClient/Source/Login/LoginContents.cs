@@ -30,5 +30,20 @@ namespace DummyClient
         {
             MessageBox.Show("종료 됨", "확인", MessageBoxButtons.OK);
         }
+
+        public void I_DB_ANS_CREATE_USER(PacketInterface rowPacket)
+        {
+            MessageBox.Show("유저 생성을 성공하였습니다.", "확인", MessageBoxButtons.OK);
+            Program.programState_.setState(PROGRAM_STATE.LOGIN, null, 0);
+        }
+
+
+        public void S_ANS_CREATE_CHARACTER_SUCCESS(PacketInterface rowPacket)
+        {
+            MessageBox.Show("캐릭터 생성을 성공하였습니다.", "확인", MessageBoxButtons.OK);
+            Program.programState_.setState(PROGRAM_STATE.LOGIN, null, 0);
+        }
+
+
     }
 }

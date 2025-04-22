@@ -67,6 +67,7 @@ void LoginProcess::I_DB_ANS_CREATE_USER(Session* session, Packet* rowPacket)
 		clientSession->sendPacket(&ansPacket);
 		return;
 	}
+	clientSession->sendPacket(packet);
 }
 
 void LoginProcess::C_REQ_CREATE_CHARACTER_ID_PW(Session* session, Packet* rowPacket)
@@ -85,32 +86,37 @@ void LoginProcess::C_REQ_CREATE_CHARACTER_ID_PW(Session* session, Packet* rowPac
 void LoginProcess::I_DB_ANS_CREATE_CHARACTER(Session* session, Packet* rowPacket)
 {
 	PK_I_DB_ANS_CREATE_CHARACTER* packet = (PK_I_DB_ANS_CREATE_CHARACTER*)rowPacket;
+	//PK_S_ANS_CREATE_CHARACTER_SUCCESS ansPacket;
 
 	PK_I_DB_REQ_CREATE_CHARACTER dbPacket;
-	dbPacket.clientId_ = (UInt64)session->id();
+	//Session* clientSession = _session_manager.session(packet->clientId_);
+
+	dbPacket.clientId_ = (UInt64)packet->clientId_;
 	dbPacket.oidAccountId_ = packet->oidAccountId_;
 	dbPacket.name_ = packet->name_;
 
 	Terminal* terminal = _terminal.get(L"DBAgent");
 	terminal->sendPacket(&dbPacket);
+	//clientSession->sendPacket(&ansPacket);
 }
 
 void LoginProcess::I_DB_ANS_CREATE_CHARACTER_SUCCESS(Session* session, Packet* rowPacket)
 {
-	PK_I_DB_ANS_CREATE_CHARACTER* packet = (PK_I_DB_ANS_CREATE_CHARACTER*)rowPacket;
+	PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS* packet = (PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS*)rowPacket;
+	PK_S_ANS_CREATE_CHARACTER_SUCCESS dbPacket;
 	SLog(L"* id/ pw result = %d", packet->result_);
 
 	Session* clientSession = _session_manager.session(packet->clientId_);
 	if (clientSession == nullptr) {
 		return;
 	}
-
 	const int authFail = 0;
 	if (packet->result_ == authFail) {
-		PK_S_ANS_ID_PW_FAIL ansPacket;
+		PK_S_ANS_CREATE_FAIL ansPacket;
 		clientSession->sendPacket(&ansPacket);
 		return;
 	}
+	clientSession->sendPacket(&dbPacket);
 }
 
 void LoginProcess::I_DB_ANS_ID_PW(Session *session, Packet *rowPacket)

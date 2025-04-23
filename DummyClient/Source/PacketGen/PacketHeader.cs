@@ -48,6 +48,8 @@ namespace DummyClient
         E_S_ANS_CREATE_FAIL = 156,
         E_I_DB_ANS_CREATE_CHARACTER_SUCCESS = 157,
         E_S_ANS_CREATE_CHARACTER_SUCCESS=158,
+        E_S_ANS_CREATE_CHARACTER_FAIL=159,
+
 
     }
 };

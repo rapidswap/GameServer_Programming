@@ -626,3 +626,8 @@ public:
     PacketType type() { return E_S_ANS_CREATE_CHARACTER_SUCCESS; }
 
 };
+
+class PK_S_ANS_CREATE_CHARACTER_FAIL :public Packet
+{
+    PacketType type() { return E_S_ANS_CREATE_CHARACTER_FAIL; }
+};

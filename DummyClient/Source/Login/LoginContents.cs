@@ -11,7 +11,7 @@ namespace DummyClient
     {
         public void S_ANS_ID_PW_FAIL(PacketInterface rowPacket)
         {
-            MessageBox.Show("로그인 실패", "로그인", MessageBoxButtons.OK);
+            MessageBox.Show("로그인 실패, 아이디와 패스워드를 확인해주세요.", "로그인", MessageBoxButtons.OK);
         }
 
         public void S_ANS_ID_PW_SUCCESS(PacketInterface rowPacket)
@@ -44,6 +44,16 @@ namespace DummyClient
             Program.programState_.setState(PROGRAM_STATE.LOGIN, null, 0);
         }
 
+        public void S_ANS_CREATE_CHARACTER_FAIL(PacketInterface rowPacket)
+        {
+            MessageBox.Show("캐릭터 생성을 실패하였습니다. 다른 이름을 사용하세요.", "확인", MessageBoxButtons.OK);
+           
+        }
+
+        public void S_ANS_CREATE_FAIL(PacketInterface rowPacket)
+        {
+            MessageBox.Show("유저 생성을 실패하였습니다. 다른 아이디를 이용하세요.", "확인", MessageBoxButtons.OK);
+        }
 
     }
 }

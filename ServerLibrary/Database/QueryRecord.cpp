@@ -26,7 +26,11 @@ recordPtr &QueryRecord::resultRecord()
 
 void QueryRecord::operator = (QueryRecord &lvalue)
 {
-	record_ = lvalue.resultRecord();
+	if (this == &lvalue) {
+		return;
+	}
+	record_ = lvalue.record_;
+	resultVal_ = lvalue.resultVal_;
 }
 
 void QueryRecord::operator = (recordPtr &lvalue)

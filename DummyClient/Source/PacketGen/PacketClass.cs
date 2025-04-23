@@ -776,4 +776,21 @@ namespace DummyClient
             return packet_;
         }
     }
+
+    public class PK_S_ANS_CREATE_CHARACTER_FAIL : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_CREATE_CHARACTER_FAIL; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_CREATE_CHARACTER_FAIL; }
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
 }

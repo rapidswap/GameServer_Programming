@@ -22,7 +22,7 @@
 - **Type**  
   - 서버에서 사용될 타입들을 선언
 
-- **싱글 턴**  
+- **Singleton**  
   - 단일 인스턴스 패턴을 통해 자원을 효율적으로 관리
 
 - **Clock**  
@@ -84,21 +84,24 @@
 ‼️**주요 변경점:** 로그인에서의 비정상 혹은 정상 종료시 이루어지는 컨텐츠가 없어서 로그인 클라이언트에서 ContentsProcess 부분에서 퇴장시 부분을 더욱 명확하게 변경. 회원가입 기능을 넣어 새로운 유저가 들어왔을때 데이터베이스 관리를 설정함.
 
 - **로그인 처리 흐름**  
-  - **E_C_REQ_ID_PW:** 클라이언트가 ID/PW 전송  
-  - **E_I_DB_ANS_DB_ID_PW:** DB에서 ID/PW 검증 후 성공/실패 응답  
-  - **E_I_LOGIN_NOTIFY_ID_LOADED:** 로그인 성공 시, 해당 정보를 채팅서버에 전달
-  - **E_C_REQ_CREATE_CHARACTER:** 유저의 로그인 정보와 캐릭터정보를 저장 함을 전달
+  - **C_REQ_ID_PW:** 클라이언트가 ID/PW 전송
+  - **I_DB_ANS_ID_PW:** DB에서 ID/PW 검증 후 성공/실패 응답
+  - ‼️**C_REQ_CREATE_USER:** 클라이언트에서 새롭게 생성할 User의 ID와 PW를 DB서버에 전달
+  - ‼️**I_DB_ANS_CREATE_USER:** DB서버에서 실행된 프로시저의 완료/실패 정보
+  - ‼️**C_REQ_CREATE_CHARACTER_ID_PW:** 클라이언트에서 캐릭터를 생성하기 위해 ID와PW 먼저 검증
+  - ‼️**I_DB_ANS_CREATE_CHARACTER:** DB서버에서 검증이 완료된 User의 캐릭터의 정보를 DB에 전달
+  - ‼️**I_DB_ANS_CREATE_CHARACTER_SUCCESS:** DB서버에서 실행된 프로시저의 완료/실패 정보
+  - **I_LOGIN_NOTIFY_ID_LOADED:** 로그인 성공 시, 해당 정보를 채팅서버에 전달
+ 
 
 - **DBAgent**  
-  - **E_I_DB_REQ_ID_PW:** 클라이언트의 ID와 비밀번호 요청 처리  
-  - **E_I_DB_REQ_LOAD_DATA:** 요청 패킷에서 클라이언트 ID와 계정 ID 추출 후, 쿼리 생성 및 DB 매니저에 등록
-  - **E_I_DB_REQ_CREATE_CHRACTER, E_I_DB_REQ_CHARACTER:** 클라이언트의 ID와 비밀번호 요청 처리, 유저의 캐릭터 정보를 정상적으로 저장했음을 알림 
+  - **I_DB_REQ_ID_PW:** 클라이언트의 ID와 비밀번호 요청 처리  
+  - **I_DB_REQ_LOAD_DATA:** 요청 패킷에서 클라이언트 ID와 계정 ID 추출 후, 쿼리 생성 및 DB 매니저에 등록
+  - ‼️**I_DB_REQ_CREATE_USER, I_DB_REQ_CREATE_CHARACTER_ID_PW, I_DB_REQ_CREATE_CHARACTER:** 클라이언트의 ID와 비밀번호 요청 처리, 유저의 캐릭터 정보를 정상적으로 저장했음을 알림 
 
 ### 6. 채팅 서버
 
 ‼️**주요 변경점:** 클라이언트 비정상 혹은 정상 종료시에 이루어지는 컨텐츠가 없어서 채팅 클라이언트에서 ContentsProcess 부분에서 퇴장시 부분을 더욱 명확하게 변경, UserManager에서 특정 ID(oid_t id)를 가진 유저 객체를 찾는 함수를 unordered_map, lower_bound(error 발생)를 사용하지 않고 map을 사용하는 방법으로 변경(map, find() 사용시 정확한 키 일치 보장). 
-
-각종 **INSERT_PACKET_PROCESS** 함수가 채팅 관련 이벤트를 처리합니다:
 
 - **I_CHTTING_NOTIFY_ID:**  
   - 클라이언트의 채팅 알림 수신 후, DB 요청 패킷 생성 및 DBAgent에 전송

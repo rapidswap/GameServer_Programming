@@ -8,7 +8,12 @@ LoginProcess::LoginProcess()
 
 void LoginProcess::registSubPacketFunc()
 {
-#define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &LoginProcess::##type))
+//#define INSERT_PACKET_PROCESS(type)		runFuncTable_.insert(make_pair(E_##type, &LoginProcess::##type))
+
+#define INSERT_PACKET_PROCESS(type) do { \
+    runFuncTable_.insert(make_pair(E_##type, &LoginProcess::##type)); \
+    runFuncArray_[E_##type] = &LoginProcess::##type; \
+} while(0)
 
 	INSERT_PACKET_PROCESS(C_REQ_ID_PW);
 	INSERT_PACKET_PROCESS(C_REQ_CREATE_USER);
@@ -18,6 +23,9 @@ void LoginProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER);
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_USER);
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER_SUCCESS);
+
+
+
 }
 
 

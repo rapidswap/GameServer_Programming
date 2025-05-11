@@ -187,6 +187,7 @@
     <ClInclude Include="PacketPool.h">
       <Filter>Network\Packet</Filter>
     </ClInclude>
+    <ClInclude Include="Net\SendBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

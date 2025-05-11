@@ -66,6 +66,18 @@ public:
         }
     }
 
+    bool tryPop(T& item) {
+        std::lock_guard<std::mutex> lock(mutex_);
+        if (queue_.empty()) {
+            return false;
+        }
+
+        item = queue_.front();
+        queue_.pop();
+        return true;
+    }
+
+
     inline bool isEmpty()   { return readQueue_->empty(); }
     inline size_t size()
     {

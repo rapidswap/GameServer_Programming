@@ -9,6 +9,8 @@ ContentsProcess::ContentsProcess()
 		return;
 	}
 	this->initialize(&config);
+
+	runFuncArray_.fill(&ContentsProcess::handleInvalidPacket);
 }
 
 ContentsProcess::~ContentsProcess()
@@ -49,6 +51,10 @@ void ContentsProcess::registDefaultPacketFunc()
 	runFuncTable_.insert(make_pair(E_C_NOTIFY_HEARTBEAT, &ContentsProcess::Packet_HeartBeat));
 	runFuncTable_.insert(make_pair(E_I_NOTIFY_TERMINAL, &ContentsProcess::Packet_Notify_Terminal));
 	runFuncTable_.insert(make_pair(E_C_REQ_EXIT, &ContentsProcess::C_REQ_EXIT));
+
+	runFuncArray_[E_C_NOTIFY_HEARTBEAT] = &ContentsProcess::Packet_HeartBeat;
+	runFuncArray_[E_I_NOTIFY_TERMINAL] = &ContentsProcess::Packet_Notify_Terminal;
+	runFuncArray_[E_C_REQ_EXIT] = &ContentsProcess::C_REQ_EXIT;
 }
 
 void ContentsProcess::putPackage(Package *package)
@@ -56,20 +62,32 @@ void ContentsProcess::putPackage(Package *package)
 	packageQueue_->push(package);
 }
 
-void ContentsProcess::run(Package *package)
+void ContentsProcess::run(Package* package)
 {
 	PacketType type = package->packet_->type();
-	auto itr = runFuncTable_.find(type);
-	if (itr == runFuncTable_.end()) {
-		SLog(L"! invalid packet runFunction. type[%d]", type);
-		package->session_->onClose();
-		return;
-	}
-	RunFunc runFunction = itr->second;
+
+	// 배열 인덱싱으로 직접 접근 (안전 검사 포함)
+	if (type >= 0 && type < MAX_PACKET_TYPE_NUM) {
+		RunFunc runFunction = runFuncArray_[type];
 #ifdef _DEBUG
-	SLog(L"*** [%d] packet run ***", type);
+		SLog(L"*** [%d] packet run ***", type);
 #endif //_DEBUG
-	runFunction(package->session_, package->packet_);
+		runFunction(package->session_, package->packet_);
+	}
+	else {
+		// 범위를 벗어난 경우 기존 방식으로 폴백
+		auto itr = runFuncTable_.find(type);
+		if (itr == runFuncTable_.end()) {
+			SLog(L"! invalid packet runFunction. type[%d]", type);
+			package->session_->onClose();
+			return;
+		}
+		RunFunc runFunction = itr->second;
+#ifdef _DEBUG
+		SLog(L"*** [%d] packet run ***", type);
+#endif //_DEBUG
+		runFunction(package->session_, package->packet_);
+	}
 }
 
 void ContentsProcess::execute()
@@ -86,11 +104,36 @@ void ContentsProcess::execute()
 
 void ContentsProcess::process()
 {
+	const int BATCH_SIZE = 16; // 적절한 배치 크기
+	std::vector<Package*> batch(BATCH_SIZE);
+
 	while (_shutdown == false) {
-		this->execute();
-		CONTEXT_SWITCH;
+		int processedCount = 0;
+
+		// 배치 단위로 한 번에 여러 작업 가져오기
+		for (int i = 0; i < BATCH_SIZE; i++) {
+			Package* package = nullptr;
+			if (packageQueue_->pop(package)) {
+				batch[processedCount++] = package;
+			}
+			else {
+				break;
+			}
+		}
+
+		// 가져온 작업 처리
+		for (int i = 0; i < processedCount; i++) {
+			this->run(batch[i]);
+			SAFE_DELETE(batch[i]);
+		}
+
+		// 처리할 작업이 없을 때만 컨텍스트 스위칭
+		if (processedCount == 0) {
+			CONTEXT_SWITCH;
+		}
 	}
 }
+
 
 void ContentsProcess::Packet_HeartBeat(Session *session, Packet *rowPacket)
 {
@@ -114,4 +157,10 @@ void ContentsProcess::C_REQ_EXIT(Session *session, Packet *rowPacket)
 	SLog(L"ContentsPro!!!test!!!");
 	SLog(L"* recv exit packet by [%s]", session->clientAddress().c_str());
 	session->sendPacket(&ansPacket);
+}
+
+void ContentsProcess::handleInvalidPacket(Session* session, Packet* rowPacket) {
+	PacketType type = rowPacket->type();
+	SLog(L"! invalid packet runFunction. type[%d]", type);
+	session->onClose();
 }

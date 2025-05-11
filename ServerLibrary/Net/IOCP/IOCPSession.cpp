@@ -104,9 +104,9 @@ WSABUF IoData::wsabuf()
 
 //-----------------------------------------------------------------//
 IOCPSession::IOCPSession()
-: Session()
+: Session(), isBufferingEnabled_(true)
 {
-	this->initialize();
+    this->initialize();
 }
 
 void IOCPSession::initialize()
@@ -165,23 +165,72 @@ void IOCPSession::onSend(size_t transferSize)
 	if (ioData_[IO_WRITE].needMoreIO(transferSize)) {
 		this->send(ioData_[IO_WRITE].wsabuf());
 	}
+	
+	if (sendBuffer_.size() > 0) {
+		int sent = sendBuffer_.flush(this->socket());
+		if (sent <= 0 && WSAGetLastError() != WSAEWOULDBLOCK) {
+			// 오류 처리
+			SLog(L"! IOCPSession::onSend flush failed. error:%d", WSAGetLastError());
+			this->onClose();
+		}
+	}
 }
 
-void IOCPSession::sendPacket(Packet *packet)
+void IOCPSession::sendPacket(Packet* packet)
 {
-	Stream stream;
-	packet->encode(stream);
-	if (!ioData_[IO_WRITE].setData(stream)) {
+	if (!isBufferingEnabled_) {
+		// 기존 즉시 전송 로직 유지
+		Stream stream;
+		packet->encode(stream);
+
+		// postSend 또는 기존 전송 메서드 호출
+		if (!this->postSend(stream.data(), stream.size())) {
+			SLog(L"! IOCPSession::sendPacket failed. error:%d", WSAGetLastError());
+			this->onClose();
+		}
 		return;
 	}
-	
-	WSABUF wsaBuf;
-	wsaBuf.buf = ioData_[IO_WRITE].data();
-	wsaBuf.len = (ULONG) stream.size();
 
-	this->send(wsaBuf);
-    this->recvStandBy();
+	// 버퍼링 활성화 시 패킷을 버퍼에 추가
+	bool shouldFlush = sendBuffer_.addPacket(packet);
+
+	if (shouldFlush) {
+		// 임계값 초과 시 즉시 전송
+		if (!this->postSend(reinterpret_cast<UCHAR*>(const_cast<char*>(sendBuffer_.data())),
+			static_cast<DWORD>(sendBuffer_.size()))) {
+			SLog(L"! IOCPSession::sendPacket flush failed. error:%d", WSAGetLastError());
+			this->onClose();
+		}
+	}
 }
+
+bool IOCPSession::postSend(UCHAR* data, DWORD length)
+{
+	// 기존 데이터 송신 중이면 현재 데이터는 버퍼에 추가
+	if (ioData_[IO_WRITE].totalByte() > 0) {
+		// 버퍼가 비어있지 않으면 현재 송신 중인 데이터가 있음
+		// 이 경우 sendBuffer_에 추가하고 true 반환
+		return true;
+	}
+
+	// Stream 객체 생성
+	Stream stream(data, length);
+
+	// IoData에 스트림 데이터 설정
+	if (!ioData_[IO_WRITE].setData(stream)) {
+		SLog(L"! Failed to set data for sending");
+		return false;
+	}
+
+	// WSABUF 준비
+	WSABUF wsaBuf = ioData_[IO_WRITE].wsabuf();
+
+	// 비동기 송신 시작
+	this->send(wsaBuf);
+
+	return true;
+}
+
 
 Package *IOCPSession::onRecv(size_t transferSize)
 {

@@ -83,7 +83,7 @@ typedef void(*Function)(void *);
 #include "./Net/Packet/PacketFactory.h"
 #include "./Net/Packet/Package.h"
 #include "./Net/Packet/PacketObfuscation.h"
-#include "./Net/Packet/PacketPool.h"
+
 
 //ÄÁÅÙÃ÷ °ü·Ã
 #include "./Contents/ContentsProcess.h"
@@ -93,6 +93,7 @@ typedef void(*Function)(void *);
 #include "./Net/SessionManager.h"
 #include "./Net/Server.h"
 
+#include "./Net/SendBuffer.h"
 #include "./Net/Iocp/IOCPServer.h"
 #include "./Net/Iocp/IOCPSession.h"
 #include "./Net/SessionMonitor.h"

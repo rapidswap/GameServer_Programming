@@ -23,6 +23,8 @@ public:
 	bool checkWriteBound(size_t len);
 
 
+
+
 	template<class T>
 	void operator << (const T &value);
 	void operator << (const bool &value);

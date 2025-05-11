@@ -46,6 +46,9 @@ public:
 private:
 	void			initialize();
 
+	SendBuffer sendBuffer_;
+	bool isBufferingEnabled_=true;
+
 	void			checkErrorIO(DWORD ret);
 
 	void			recv(WSABUF wsaBuf);
@@ -54,8 +57,13 @@ private:
 	void			send(WSABUF wsaBuf);
 
 public:
-    IOCPSession();
+	IOCPSession();
 
+	void setPacketBuffering(bool enabled) {
+		isBufferingEnabled_ = enabled;
+	}
+
+	bool			postSend(UCHAR* data, DWORD length);
 	void			onSend(size_t transferSize);
 	void		    sendPacket(Packet *packet);
 	

@@ -46,7 +46,6 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CREATE_FAIL: return new PK_S_ANS_CREATE_FAIL();
                 case PacketType.E_I_DB_ANS_CREATE_CHARACTER_SUCCESS: return new PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS();
                 case PacketType.E_S_ANS_CREATE_CHARACTER_SUCCESS:return new PK_S_ANS_CREATE_CHARACTER_SUCCESS();
-                case PacketType.E_S_ANS_CREATE_CHARACTER_FAIL: return new PK_S_ANS_CREATE_CHARACTER_FAIL();
             }
             return null;
         }

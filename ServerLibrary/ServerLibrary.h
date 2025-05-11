@@ -92,7 +92,6 @@ typedef void(*Function)(void *);
 #include "./Net/SessionManager.h"
 #include "./Net/Server.h"
 
-#include "./Net/SendBuffer.h"
 #include "./Net/Iocp/IOCPServer.h"
 #include "./Net/Iocp/IOCPSession.h"
 #include "./Net/SessionMonitor.h"

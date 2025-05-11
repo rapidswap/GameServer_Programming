@@ -178,7 +178,6 @@
     <ClInclude Include="Net\Packet\PacketHeader.h" />
     <ClInclude Include="Net\Packet\PacketObfuscation.h" />
     <ClInclude Include="Net\Packet\Stream.h" />
-    <ClInclude Include="Net\SendBuffer.h" />
     <ClInclude Include="Net\Server.h" />
     <ClInclude Include="Net\Session.h" />
     <ClInclude Include="Net\SessionManager.h" />

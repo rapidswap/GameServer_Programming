@@ -18,6 +18,7 @@ void LoginProcess::registSubPacketFunc()
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER);
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_USER);
 	INSERT_PACKET_PROCESS(I_DB_ANS_CREATE_CHARACTER_SUCCESS);
+	INSERT_PACKET_PROCESS(C_REQ_PING);
 }
 
 
@@ -169,4 +170,27 @@ void LoginProcess::I_LOGIN_NOTIFY_ID_LOADED(Session *session, Packet *rowPacket)
 
 	SLog(L"* loaded [%S] user name, from [%s]", ansPacket.name_.c_str(), session->clientAddress().c_str());
 	clientSession->sendPacket(&ansPacket);
+}
+
+void LoginProcess::C_REQ_PING(Session *session, Packet *rowPacket)
+{
+	PK_C_REQ_PING *packet = (PK_C_REQ_PING *)rowPacket;
+	
+	// Get current server timestamp
+	UInt64 serverTimestamp = GetTickCount64();
+	
+	// Calculate latency (server time - client time)
+	UInt64 latency = serverTimestamp - packet->clientTimestamp_;
+	
+	// Log the ping information
+	SLog(L"[LOGIN_PING] Session %llu - Seq: %u, Latency: %llu ms", 
+		(UInt64)session->id(), packet->sequenceNumber_, latency);
+	
+	// Send pong response
+	PK_S_ANS_PONG pongPacket;
+	pongPacket.clientTimestamp_ = packet->clientTimestamp_;
+	pongPacket.serverTimestamp_ = serverTimestamp;
+	pongPacket.sequenceNumber_ = packet->sequenceNumber_;
+	
+	session->sendPacket(&pongPacket);
 }

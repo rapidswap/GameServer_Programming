@@ -312,16 +312,19 @@ namespace DummyClient
     {
         Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_CHATTING; }
         Int64 type() { return (Int64)PacketType.E_C_REQ_CHATTING; }
-        public string text_;
+        public string text_ = "";
+        public UInt64 clientTimestamp_ = 0; // 클라이언트가 메시지를 보낸 시간 (명시적 초기화)
 
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
             PacketUtil.encode(packet_, text_);
+            PacketUtil.encode(packet_, clientTimestamp_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
             text_ = PacketUtil.decodestring(packet, ref offset);
+            clientTimestamp_ = PacketUtil.decodeUInt64(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {
@@ -334,17 +337,20 @@ namespace DummyClient
         Int64 type() { return (Int64)PacketType.E_S_ANS_CHATTING; }
         public string name_;
         public string text_;
+        public UInt64 serverTimestamp_; // 서버가 응답을 보낸 시간
 
         void PacketInterface.encode()
         {
             PacketUtil.encodeHeader(packet_, this.type());
             PacketUtil.encode(packet_, name_);
             PacketUtil.encode(packet_, text_);
+            PacketUtil.encode(packet_, serverTimestamp_);
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
             name_ = PacketUtil.decodestring(packet, ref offset);
             text_ = PacketUtil.decodestring(packet, ref offset);
+            serverTimestamp_ = PacketUtil.decodeUInt64(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {
@@ -770,6 +776,59 @@ namespace DummyClient
         }
         void PacketInterface.decode(byte[] packet, ref int offset)
         {
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_C_REQ_PING : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_C_REQ_PING; }
+        Int64 type() { return (Int64)PacketType.E_C_REQ_PING; }
+        
+        public UInt64 clientTimestamp_;    // Client timestamp when ping was sent
+        public UInt32 sequenceNumber_;     // Sequence number for tracking
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientTimestamp_);
+            PacketUtil.encode(packet_, sequenceNumber_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientTimestamp_ = PacketUtil.decodeUInt64(packet, ref offset);
+            sequenceNumber_ = PacketUtil.decodeUInt32(packet, ref offset);
+        }
+        MemoryStream PacketInterface.getStream()
+        {
+            return packet_;
+        }
+    }
+
+    public class PK_S_ANS_PONG : PacketData, PacketInterface
+    {
+        Int64 PacketInterface.type() { return (Int64)PacketType.E_S_ANS_PONG; }
+        Int64 type() { return (Int64)PacketType.E_S_ANS_PONG; }
+        
+        public UInt64 clientTimestamp_;    // Original client timestamp
+        public UInt64 serverTimestamp_;    // Server timestamp when received
+        public UInt32 sequenceNumber_;     // Sequence number for tracking
+
+        void PacketInterface.encode()
+        {
+            PacketUtil.encodeHeader(packet_, this.type());
+            PacketUtil.encode(packet_, clientTimestamp_);
+            PacketUtil.encode(packet_, serverTimestamp_);
+            PacketUtil.encode(packet_, sequenceNumber_);
+        }
+        void PacketInterface.decode(byte[] packet, ref int offset)
+        {
+            clientTimestamp_ = PacketUtil.decodeUInt64(packet, ref offset);
+            serverTimestamp_ = PacketUtil.decodeUInt64(packet, ref offset);
+            sequenceNumber_ = PacketUtil.decodeUInt32(packet, ref offset);
         }
         MemoryStream PacketInterface.getStream()
         {

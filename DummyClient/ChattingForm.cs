@@ -37,8 +37,11 @@ namespace DummyClient
                 richTextBox_view_.Text += inputStr;
                 textBox_input_.Clear();
 
+                UInt64 sendTime = (UInt64)Environment.TickCount64;
                 PK_C_REQ_CHATTING packet = new PK_C_REQ_CHATTING();
                 packet.text_ = inputStr;
+                packet.clientTimestamp_ = sendTime; // 서버 지연시간 측정을 위한 타임스탬프
+                
                 Program.programState_.sendPacket(packet);
                 packet = null;
 
@@ -60,7 +63,6 @@ namespace DummyClient
             // Program.programState_.sendPacket(exitPacket);
             Application.Exit();
         }
-
 
     }
 }

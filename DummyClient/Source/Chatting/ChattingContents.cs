@@ -5,6 +5,8 @@
         public void recvChatting(PacketInterface rowPacket)
         {
             PK_S_ANS_CHATTING packet=(PK_S_ANS_CHATTING)rowPacket;
+            
+            // 기존 방식대로 단순하게 메시지만 표시
             Program.programState_.putMessage(packet.name_+packet.text_);
         }
 

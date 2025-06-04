@@ -42,7 +42,6 @@ public:
             case E_S_ANS_CREATE_FAIL:return new PK_S_ANS_CREATE_FAIL();
             case E_I_DB_ANS_CREATE_CHARACTER_SUCCESS:return new PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS();
             case E_S_ANS_CREATE_CHARACTER_SUCCESS:return new PK_S_ANS_CREATE_CHARACTER_SUCCESS();
-            case E_S_ANS_CREATE_CHARACTER_FAIL:return new PK_S_ANS_CREATE_CHARACTER_FAIL();
         }
         return nullptr;
     }

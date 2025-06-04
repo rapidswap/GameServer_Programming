@@ -248,14 +248,17 @@ public:
     PacketType type() { return E_C_REQ_CHATTING; }
 
     std::string     text_;
+    UInt64          clientTimestamp_; // 클라이언트가 메시지를 보낸 시간
 
     void encode(Stream &stream) {
         stream << (Int64) this->type();
         stream << text_;
+        stream << clientTimestamp_;
     }
 
     void decode(Stream &stream) {
         stream >> &text_;
+        stream >> &clientTimestamp_;
     }
 };
 
@@ -266,16 +269,19 @@ public:
 
     std::string     name_;
     std::string     text_;
+    UInt64          serverTimestamp_; // 서버가 응답을 보낸 시간
 
     void encode(Stream &stream) {
         stream << (Int64) this->type();
         stream << name_;
         stream << text_;
+        stream << serverTimestamp_;
     }
 
     void decode(Stream &stream) {
         stream >> &name_;
         stream >> &text_;
+        stream >> &serverTimestamp_;
     }
 };
 
@@ -627,7 +633,45 @@ public:
 
 };
 
-class PK_S_ANS_CREATE_CHARACTER_FAIL :public Packet
+class PK_C_REQ_PING : public Packet
 {
-    PacketType type() { return E_S_ANS_CREATE_CHARACTER_FAIL; }
+public:
+    PacketType type() { return E_C_REQ_PING; }
+
+    UInt64 clientTimestamp_;    // Client timestamp when ping was sent
+    UInt32 sequenceNumber_;     // Sequence number for tracking
+
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
+        stream << clientTimestamp_;
+        stream << sequenceNumber_;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &clientTimestamp_;
+        stream >> &sequenceNumber_;
+    }
+};
+
+class PK_S_ANS_PONG : public Packet
+{
+public:
+    PacketType type() { return E_S_ANS_PONG; }
+
+    UInt64 clientTimestamp_;    // Original client timestamp
+    UInt64 serverTimestamp_;    // Server timestamp when received
+    UInt32 sequenceNumber_;     // Sequence number for tracking
+
+    void encode(Stream &stream) {
+        stream << (Int64) this->type();
+        stream << clientTimestamp_;
+        stream << serverTimestamp_;
+        stream << sequenceNumber_;
+    }
+
+    void decode(Stream &stream) {
+        stream >> &clientTimestamp_;
+        stream >> &serverTimestamp_;
+        stream >> &sequenceNumber_;
+    }
 };

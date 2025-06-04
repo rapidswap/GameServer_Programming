@@ -39,6 +39,12 @@
     <ClInclude Include="Query\QI_DB_REQ_CREATE_USER.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Query\QI_DB_CREATE_LOAD_DATA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Query\QI_DB_REQ_USER_ID_PW.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Query\QI_DB_REQ_CREATE_CHARACTER_ID_PW.h">
       <Filter>Header Files</Filter>
     </ClInclude>

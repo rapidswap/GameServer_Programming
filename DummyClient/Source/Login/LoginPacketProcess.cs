@@ -33,12 +33,6 @@ namespace DummyClient
                 case PacketType.E_S_ANS_CREATE_CHARACTER_SUCCESS:
                     contents_.S_ANS_CREATE_CHARACTER_SUCCESS(packet);
                     return;
-                case PacketType.E_S_ANS_CREATE_FAIL:
-                    contents_.S_ANS_CREATE_FAIL(packet);
-                    return;
-                case PacketType.E_S_ANS_CREATE_CHARACTER_FAIL:
-                    contents_.S_ANS_CREATE_CHARACTER_FAIL(packet);
-                    return;
                 case PacketType.E_S_ANS_EXIT:
                     //contents_.S_ANS_EXIT(packet);
                     return;

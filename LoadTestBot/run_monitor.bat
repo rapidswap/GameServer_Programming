@@ -1,36 +1,37 @@
 @echo off
-REM 서버 모니터링 도구 실행 스크립트
+chcp 65001 >nul
+REM Server Monitoring Tool
 
-echo 서버 모니터링을 시작합니다...
+echo Starting Server Monitoring...
 echo.
 
-REM Python 설치 확인
+REM Check Python installation
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
-    echo 오류: Python이 설치되어 있지 않습니다.
-    echo Python 3.7 이상을 설치해주세요.
+    echo Error: Python is not installed.
+    echo Please install Python 3.7 or higher.
     pause
     exit /b 1
 )
 
-REM 서버 프로세스 확인
-echo ChattingServer.exe 프로세스를 찾는 중...
+REM Check server process
+echo Looking for ChattingServer.exe process...
 tasklist /FI "IMAGENAME eq ChattingServer.exe" 2>NUL | find /I /N "ChattingServer.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo 서버 프로세스를 찾았습니다.
+    echo Server process found.
 ) else (
-    echo 경고: ChattingServer.exe 프로세스를 찾을 수 없습니다.
-    echo 서버가 실행 중인지 확인해주세요.
+    echo Warning: ChattingServer.exe process not found.
+    echo Please make sure the server is running.
     echo.
 )
 
-REM 필요한 패키지 설치 확인
-echo 필요한 패키지를 확인하고 설치합니다...
+REM Install required packages
+echo Checking and installing required packages...
 pip install -r requirements.txt
 
 echo.
-echo 서버 모니터링을 시작합니다.
-echo Ctrl+C로 중지할 수 있습니다.
+echo Starting server monitoring.
+echo Press Ctrl+C to stop.
 echo.
 
 python server_monitor.py --process ChattingServer.exe --interval 1.0

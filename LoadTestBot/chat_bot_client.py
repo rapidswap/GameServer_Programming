@@ -93,9 +93,9 @@ class ChatBotClient:
             self.message_thread = threading.Thread(target=self._message_loop, daemon=True)
             self.message_thread.start()
             
-            # 핑 스레드 시작
-            self.ping_thread = threading.Thread(target=self._ping_loop, daemon=True)
-            self.ping_thread.start()
+            # 하트비트 스레드 시작
+            self.heartbeat_thread = threading.Thread(target=self._heartbeat_loop, daemon=True)
+            self.heartbeat_thread.start()
             
             return True
             
@@ -141,8 +141,17 @@ class ChatBotClient:
             return
             
         try:
+            # 소켓 상태 확인
+            if self.socket.fileno() == -1:
+                self.logger.warning(f"Bot {self.name} socket closed, marking as disconnected")
+                self.connected = False
+                return
+                
             data = packet.encode()
             self.socket.send(data)
+        except (ConnectionResetError, ConnectionAbortedError, OSError) as e:
+            self.logger.warning(f"Bot {self.name} connection lost: {e}")
+            self.connected = False
         except Exception as e:
             self.logger.error(f"Bot {self.name} failed to send packet: {e}")
             self.connected = False
@@ -153,8 +162,14 @@ class ChatBotClient:
         
         while self.running and self.connected:
             try:
+                # 소켓 상태 확인
+                if self.socket.fileno() == -1:
+                    self.logger.warning(f"Bot {self.name} socket closed during receive")
+                    break
+                    
                 data = self.socket.recv(4096)
                 if not data:
+                    self.logger.info(f"Bot {self.name} received empty data, connection closed")
                     break
                     
                 buffer += data
@@ -191,6 +206,9 @@ class ChatBotClient:
                         
             except socket.timeout:
                 continue
+            except (ConnectionResetError, ConnectionAbortedError, OSError) as e:
+                self.logger.warning(f"Bot {self.name} connection lost during receive: {e}")
+                break
             except Exception as e:
                 if self.running:
                     self.logger.error(f"Bot {self.name} receive error: {e}")
@@ -248,6 +266,25 @@ class ChatBotClient:
             except Exception as e:
                 if self.running:
                     self.logger.error(f"Bot {self.name} message loop error: {e}")
+                break
+    
+    def _heartbeat_loop(self):
+        """하트비트 전송 루프 (1초마다)"""
+        while self.running and self.connected:
+            try:
+                time.sleep(1.0)  # 1초마다 전송
+                
+                if not self.running or not self.connected:
+                    break
+                
+                # 하트비트 전송
+                from packets import HeartbeatPacket
+                heartbeat_packet = HeartbeatPacket()
+                self._send_packet(heartbeat_packet)
+                
+            except Exception as e:
+                if self.running:
+                    self.logger.error(f"Bot {self.name} heartbeat loop error: {e}")
                 break
     
     def _ping_loop(self):

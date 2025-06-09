@@ -1,30 +1,31 @@
 @echo off
-REM 채팅서버 부하테스트 봇 실행 스크립트
+chcp 65001 >nul
+REM Chat Server Load Test Bot
 
-echo 채팅서버 부하테스트 봇을 시작합니다...
+echo Starting Chat Server Load Test Bot...
 echo.
 
-REM Python 설치 확인
+REM Check Python installation
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
-    echo 오류: Python이 설치되어 있지 않습니다.
-    echo Python 3.7 이상을 설치해주세요.
+    echo Error: Python is not installed.
+    echo Please install Python 3.7 or higher.
     pause
     exit /b 1
 )
 
-REM 필요한 패키지 설치 확인
-echo 필요한 패키지를 확인하고 설치합니다...
+REM Install required packages
+echo Checking and installing required packages...
 pip install -r requirements.txt
 
 echo.
-echo 부하테스트 봇을 실행합니다.
-echo 사용 가능한 명령어:
-echo   start ^<봇수^> [테스트시간(초)] - 부하테스트 시작
-echo   stop                          - 부하테스트 중지  
-echo   stats                         - 현재 통계 표시
-echo   broadcast ^<메시지^>            - 모든 봇에게 메시지 전송
-echo   quit                          - 프로그램 종료
+echo Load Test Bot is starting.
+echo Available commands:
+echo   start ^<bots^> [duration] - Start load test
+echo   stop                      - Stop load test  
+echo   stats                     - Show current stats
+echo   broadcast ^<message^>      - Send message to all bots
+echo   quit                      - Exit program
 echo.
 
 python main.py --interactive

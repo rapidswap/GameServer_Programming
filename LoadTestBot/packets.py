@@ -38,31 +38,17 @@ class ChatNameRegistrationPacket(PacketInterface):
     def get_type(self) -> int:
         return PacketType.E_C_REQ_REGIST_CHATTING_NAME
     
+    def encode_raw(self) -> bytes:
+        """순수 패킷 데이터 생성 (암호화 없음)"""
+        stream = BytesIO()
+        PacketUtil.encode_header(stream, self.get_type())
+        PacketUtil.encode_string(stream, self.name)
+        return stream.getvalue()
+    
     def encode(self) -> bytes:
-        """패킷 인코딩 (올바른 형식)"""
-        # 패킷 데이터 생성
-        data_stream = BytesIO()
-        PacketUtil.encode_header(data_stream, self.get_type())
-        PacketUtil.encode_string(data_stream, self.name)
-        packet_data = data_stream.getvalue()
-        
-        # 패킷 길이 계산 (4바이트 헤더 + 데이터 크기)
-        packet_length = 4 + len(packet_data)
-        
-        # 최종 패킷 조립
-        from packet_obfuscation import PacketObfuscation
-        final_stream = BytesIO()
-        
-        # 1. 패킷 길이 헤더 (암호화)
-        header_bytes = struct.pack('<i', packet_length)
-        encrypted_header = PacketObfuscation.encoding_header(header_bytes)
-        final_stream.write(encrypted_header)
-        
-        # 2. 패킷 데이터 (암호화)
-        encrypted_data = PacketObfuscation.encoding_data(packet_data)
-        final_stream.write(encrypted_data)
-        
-        return final_stream.getvalue()
+        """완전한 네트워크 패킷 생성 (C# 방식)"""
+        from network_packet import create_network_packet
+        return create_network_packet(self)
     
     def decode(self, data: bytes, offset: list):
         self.name = PacketUtil.decode_string(data, offset)
@@ -236,6 +222,44 @@ class PingPacket(PacketInterface):
     def decode(self, data: bytes, offset: list):
         self.client_timestamp = PacketUtil.decode_uint64(data, offset)
         self.sequence_number = PacketUtil.decode_uint32(data, offset)
+
+
+class HeartbeatPacket(PacketInterface):
+    """하트비트 패킷"""
+    
+    def __init__(self):
+        pass
+    
+    def get_type(self) -> int:
+        return PacketType.E_C_NOTIFY_HEARTBEAT
+    
+    def encode(self) -> bytes:
+        """패킷 인코딩 (올바른 형식)"""
+        # 패킷 데이터 생성
+        data_stream = BytesIO()
+        PacketUtil.encode_header(data_stream, self.get_type())
+        packet_data = data_stream.getvalue()
+        
+        # 패킷 길이 계산
+        packet_length = 4 + len(packet_data)
+        
+        # 최종 패킷 조립
+        from packet_obfuscation import PacketObfuscation
+        final_stream = BytesIO()
+        
+        # 1. 패킷 길이 헤더 (암호화)
+        header_bytes = struct.pack('<i', packet_length)
+        encrypted_header = PacketObfuscation.encoding_header(header_bytes)
+        final_stream.write(encrypted_header)
+        
+        # 2. 패킷 데이터 (암호화)
+        encrypted_data = PacketObfuscation.encoding_data(packet_data)
+        final_stream.write(encrypted_data)
+        
+        return final_stream.getvalue()
+    
+    def decode(self, data: bytes, offset: list):
+        pass
 
 
 class PongPacket(PacketInterface):

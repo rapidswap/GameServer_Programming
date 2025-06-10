@@ -128,26 +128,60 @@ class LoadTestManager:
         self.logger.info("Load test stopped")
     
     def _connect_bots_gradually(self):
-        """봇들을 점진적으로 연결"""
-        for i, bot in enumerate(self.bots):
+        """봇들을 점진적으로 연결 (봇 수에 따른 적응적 배치)"""
+        total_bots = len(self.bots)
+        
+        # 봇 수에 따른 배치 크기 조정
+        if total_bots <= 10:
+            batch_size = 2  # 10개 이하는 2개씩
+            batch_delay = 3.0  # 3초 대기
+            bot_delay = 1.0  # 1초 대기
+        elif total_bots <= 50:
+            batch_size = 5  # 50개 이하는 5개씩
+            batch_delay = 2.0  # 2초 대기
+            bot_delay = 0.5  # 0.5초 대기
+        else:
+            batch_size = 10  # 50개 이상은 10개씩
+            batch_delay = 1.0  # 1초 대기
+            bot_delay = 0.3  # 0.3초 대기
+        
+        self.logger.info(f"Connecting {total_bots} bots in batches of {batch_size} (delays: batch={batch_delay}s, bot={bot_delay}s)")
+        
+        for i in range(0, len(self.bots), batch_size):
             if not self.test_running:
                 break
             
-            try:
-                if bot.connect():
-                    self.connected_bots += 1
-                    self.logger.info(f"Bot {bot.bot_id} connected ({self.connected_bots}/{len(self.bots)})")
-                else:
-                    self.error_count += 1
-                    self.logger.error(f"Bot {bot.bot_id} failed to connect")
+            # 현재 배치의 봇들
+            batch_end = min(i + batch_size, len(self.bots))
+            current_batch = self.bots[i:batch_end]
+            
+            self.logger.info(f"Connecting batch {i//batch_size + 1}: bots {i+1}-{batch_end}")
+            
+            # 배치 내 봇들을 순차적으로 연결
+            for bot in current_batch:
+                if not self.test_running:
+                    break
                 
-                # 연결 간격 (서버 부하 방지)
-                if i < len(self.bots) - 1:  # 마지막 봇이 아니면 대기
-                    time.sleep(0.1)  # 100ms 간격
+                try:
+                    if bot.connect():
+                        self.connected_bots += 1
+                        self.logger.info(f"Bot {bot.bot_id} connected ({self.connected_bots}/{len(self.bots)})")
+                    else:
+                        self.error_count += 1
+                        self.logger.error(f"Bot {bot.bot_id} failed to connect")
                     
-            except Exception as e:
-                self.logger.error(f"Error connecting bot {bot.bot_id}: {e}")
-                self.error_count += 1
+                    # 봇 간 대기 (마지막 봇이 아닌 경우)
+                    if bot != current_batch[-1]:
+                        time.sleep(bot_delay)
+                        
+                except Exception as e:
+                    self.logger.error(f"Error connecting bot {bot.bot_id}: {e}")
+                    self.error_count += 1
+            
+            # 배치 간 대기 (마지막 배치가 아닌 경우)
+            if batch_end < len(self.bots) and self.test_running:
+                self.logger.info(f"Waiting {batch_delay}s before next batch...")
+                time.sleep(batch_delay)
     
     def _monitor_loop(self):
         """모니터링 루프"""

@@ -8,6 +8,7 @@ from io import BytesIO
 from abc import ABC, abstractmethod
 from packet_types import PacketType
 from packet_util import PacketUtil
+from windows_time import get_server_timestamp
 
 
 class PacketInterface(ABC):
@@ -59,7 +60,8 @@ class ChatMessagePacket(PacketInterface):
     
     def __init__(self, text: str = "", client_timestamp: int = 0):
         self.text = text
-        self.client_timestamp = client_timestamp if client_timestamp else int(time.time() * 1000)
+        # 서버와 호환되는 타임스탬프 사용
+        self.client_timestamp = client_timestamp if client_timestamp else get_server_timestamp()
     
     def get_type(self) -> int:
         return PacketType.E_C_REQ_CHATTING
@@ -206,7 +208,8 @@ class PingPacket(PacketInterface):
     """핑 패킷"""
     
     def __init__(self, client_timestamp: int = 0, sequence_number: int = 0):
-        self.client_timestamp = client_timestamp if client_timestamp else int(time.time() * 1000)
+        # 서버와 호환되는 타임스탬프 사용
+        self.client_timestamp = client_timestamp if client_timestamp else get_server_timestamp()
         self.sequence_number = sequence_number
     
     def get_type(self) -> int:

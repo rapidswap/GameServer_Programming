@@ -45,9 +45,15 @@ class ChatBotClient:
         self.last_ping_time = 0
         self.ping_responses = {}
         
-        # 봇 설정
-        self.message_interval = random.uniform(3.0, 8.0)  # 3-8초 랜덤 간격
-        self.ping_interval = 30.0  # 30초마다 핑
+        # 봇 설정 (봇 수에 따른 조정)
+        if bot_id <= 10:
+            # 10개 이하 봇: 매우 안전한 간격
+            self.message_interval = random.uniform(15.0, 25.0)  # 15-25초
+            self.ping_interval = 120.0  # 2분마다
+        else:
+            # 많은 봇: 기본 간격
+            self.message_interval = random.uniform(10.0, 20.0)  # 10-20초
+            self.ping_interval = 60.0  # 60초마다
         
         # 로깅
         self.logger = logging.getLogger(f"Bot_{bot_id}")
@@ -75,7 +81,14 @@ class ChatBotClient:
         """서버에 연결"""
         try:
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.socket.settimeout(10.0)  # 10초 타임아웃
+            self.socket.settimeout(15.0)  # 15초 타임아웃 (늘림)
+            # TCP 소켓 옵션 설정
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            self.socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+            # 소켓 버퍼 크기 설정
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 8192)
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 8192)
+            
             self.socket.connect((self.server_host, self.server_port))
             self.connected = True
             self.running = True
@@ -96,6 +109,10 @@ class ChatBotClient:
             # 하트비트 스레드 시작
             self.heartbeat_thread = threading.Thread(target=self._heartbeat_loop, daemon=True)
             self.heartbeat_thread.start()
+            
+            # 핑 스레드는 서버 안정성을 위해 비활성화
+            # self.ping_thread = threading.Thread(target=self._ping_loop, daemon=True)
+            # self.ping_thread.start()
             
             return True
             
@@ -225,7 +242,9 @@ class ChatBotClient:
                 
         elif isinstance(packet, PongPacket):
             if packet.sequence_number in self.ping_responses:
-                current_time = int(time.time() * 1000)
+                # 서버와 호환되는 시간 계산
+                from windows_time import get_server_timestamp
+                current_time = get_server_timestamp()
                 latency = current_time - packet.client_timestamp
                 del self.ping_responses[packet.sequence_number]
                 
@@ -250,18 +269,25 @@ class ChatBotClient:
                 if not self.running or not self.connected:
                     break
                 
-                # 랜덤 메시지 선택
-                message = random.choice(self.chat_messages)
-                if random.random() < 0.3:  # 30% 확률로 봇 정보 추가
-                    message += f" (Bot #{self.bot_id})"
+                # 사용자 정의 메시지 함수가 있으면 사용, 없으면 기본 메시지
+                if hasattr(self, 'get_custom_message'):
+                    message = self.get_custom_message()
+                else:
+                    # 랜덤 메시지 선택
+                    message = random.choice(self.chat_messages)
+                    if random.random() < 0.3:  # 30% 확률로 봇 정보 추가
+                        message += f" (Bot #{self.bot_id})"
                 
                 # 채팅 메시지 전송
                 chat_packet = ChatMessagePacket(message)
                 self._send_packet(chat_packet)
                 self.messages_sent += 1
                 
-                # 다음 메시지 간격 재설정
-                self.message_interval = random.uniform(3.0, 8.0)
+                # 다음 메시지 간격 재설정 (봇 수에 따른 조정)
+                if self.bot_id <= 10:
+                    self.message_interval = random.uniform(15.0, 25.0)  # 10개 이하: 15-25초
+                else:
+                    self.message_interval = random.uniform(10.0, 20.0)  # 많은 봇: 10-20초
                 
             except Exception as e:
                 if self.running:
@@ -269,10 +295,13 @@ class ChatBotClient:
                 break
     
     def _heartbeat_loop(self):
-        """하트비트 전송 루프 (1초마다)"""
+        """하트비트 전송 루프 (봇 수에 따른 조정)"""
+        # 10개 이하 봇은 더 긴 간격
+        heartbeat_interval = 10.0 if self.bot_id <= 10 else 5.0
+        
         while self.running and self.connected:
             try:
-                time.sleep(1.0)  # 1초마다 전송
+                time.sleep(heartbeat_interval)  # 봇 수에 따른 간격
                 
                 if not self.running or not self.connected:
                     break

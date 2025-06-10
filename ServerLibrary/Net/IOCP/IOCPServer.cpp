@@ -34,7 +34,7 @@ bool IOCPServer::createListenSocket()
         return false;
     }
 
-    const int BACK_SOCKETS = 5;
+    const int BACK_SOCKETS = 200;  // 100개 봇 연결을 위해 증가
     retval = ::listen(listenSocket_, BACK_SOCKETS);
     if (retval == SOCKET_ERROR) {
         SErrLog(L"! listen fail");

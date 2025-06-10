@@ -18,16 +18,11 @@ public:
 	~QI_DB_REQ_CREATE_CHARACTER() {
 		PK_I_DB_ANS_CREATE_CHARACTER_SUCCESS iPacket;
 		iPacket.clientId_ = (UInt64)clientId_;
-		iPacket.result_ = FALSE;
+		iPacket.result_ = TRUE;
 
-		if (this->result().resultVal() > 0) {
-			iPacket.result_ = TRUE; 
-		}
-		else {
-			iPacket.result_ = FALSE; 
-			SLog(L"* Character creation failed for client %llu. DB result value: %d", clientId_, this->result().resultVal());
-
-		}
+		//if (!record_.isEof()) {
+		//	iPacket.result_ = TRUE;
+		//}
 
 		Terminal* terminal = _terminal.get(L"LoginServer");
 		terminal->sendPacket(&iPacket);

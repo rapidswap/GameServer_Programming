@@ -1,0 +1,92 @@
+{
+  "test_running": false,
+  "elapsed_time": 87.70845890045166,
+  "total_bots": 10,
+  "connected_bots": 0,
+  "messages_sent": 35,
+  "messages_received": 350,
+  "error_count": 0,
+  "latency": {},
+  "bot_details": [
+    {
+      "bot_id": 1,
+      "name": "Bot_0001",
+      "connected": false,
+      "messages_sent": 3,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 2,
+      "name": "Bot_0002",
+      "connected": false,
+      "messages_sent": 4,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 3,
+      "name": "Bot_0003",
+      "connected": false,
+      "messages_sent": 3,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 4,
+      "name": "Bot_0004",
+      "connected": false,
+      "messages_sent": 3,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 5,
+      "name": "Bot_0005",
+      "connected": false,
+      "messages_sent": 4,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 6,
+      "name": "Bot_0006",
+      "connected": false,
+      "messages_sent": 4,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 7,
+      "name": "Bot_0007",
+      "connected": false,
+      "messages_sent": 4,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 8,
+      "name": "Bot_0008",
+      "connected": false,
+      "messages_sent": 4,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 9,
+      "name": "Bot_0009",
+      "connected": false,
+      "messages_sent": 3,
+      "messages_received": 35,
+      "pending_pings": 0
+    },
+    {
+      "bot_id": 10,
+      "name": "Bot_0010",
+      "connected": false,
+      "messages_sent": 3,
+      "messages_received": 35,
+      "pending_pings": 0
+    }
+  ]
+}

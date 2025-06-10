@@ -157,45 +157,30 @@ void ADODatabase::execute()
 		command->ActiveConnection = dbConnection_;
 		command->CommandType = ADODB::adCmdText;
 		command->CommandText = sqlQuery;
-
 		_variant_t resultVal;
 
 		switch (statement->type()) {
 		case QUERY_NOT_RETURN:
-			
 			record = command->Execute(&resultVal, NULL, ADODB::adCmdText | ADODB::adExecuteNoRecords);
 			break;
 		case QUERY_WAIT_RETURN:
-			
 			record = command->Execute(&resultVal, NULL, ADODB::adCmdText | ADODB::adExecuteRecord);
 			break;
 		case QUERY_CALL_BACK:
-			
 			record = command->Execute(&resultVal, NULL, ADODB::adCmdText | ADODB::adAsyncFetchNonBlocking);
 			break;
 		}
-		int quertResultVal = 0;
-		_variant_t vtInt;
 
-		HRESULT hr = VariantChangeType(&vtInt, &resultVal, 0, VT_I4);
-		quertResultVal = vtInt.lVal;
-		SLog(L"quertResultVal : [%d] ", quertResultVal);
-		record.setResultVal(quertResultVal);
-
-		/*if (record.isEof()) {
-			SLog(L"Run isEof!");
-			
-			
+		if (record.isEof()) {
+			int quertResultVal = atol((char*)((_bstr_t)resultVal));
 			
 			if (quertResultVal < 1) {
-				SLog(L"ResultVal = [%d]", quertResultVal);
 				SLog(L"* query : [%s] have error code [%d] ", sqlQuery, quertResultVal);
 			}
 			else {
-				SLog(L"ResultVal = [%d]", quertResultVal);
 				record.setResultVal(quertResultVal);
 			}
-		}*/
+		}
 		
 		query->result() = record;
 		state_ = DB_STANDBY;

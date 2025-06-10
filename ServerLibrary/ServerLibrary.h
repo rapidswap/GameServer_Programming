@@ -34,7 +34,7 @@
 #include <ctime>
 #include <random>
 #include <typeinfo>    //typeinfo
-// TODO: °ø¿ë ¸ÅÅ©·Î
+// TODO: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½
 
 #if _DEBUG
 #define CONTEXT_SWITCH		Sleep(1)
@@ -44,11 +44,11 @@
 
 typedef void(*Function)(void *);
 
-//±âÅ¸ À¯Æ¿
+//ï¿½ï¿½Å¸ ï¿½ï¿½Æ¿
 #include "./Util/csv_parser/csv_parser.hpp"
 #include "./Util/tinyXml/tinyxml.h"
 
-// TODO: ÇÊ¼ö Çì´õ ÆÄÀÏ
+// TODO: ï¿½Ê¼ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------//
 #include "./Net/WinSocket.h"
 #include "./Util/Type.h"
@@ -75,7 +75,7 @@ typedef void(*Function)(void *);
 #include "./Util/Monitoring.h"
 #include "./util/ProgramValidation.h"
 
-//ÆÐÅ¶µé
+//ï¿½ï¿½Å¶ï¿½ï¿½
 #include "./Net/Packet/Stream.h"
 #include "./Net/Packet/PacketHeader.h"
 #include "./Net/Packet/PacketClass.h"
@@ -84,10 +84,10 @@ typedef void(*Function)(void *);
 #include "./Net/Packet/Package.h"
 #include "./Net/Packet/PacketObfuscation.h"
 
-//ÄÁÅÙÃ÷ °ü·Ã
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #include "./Contents/ContentsProcess.h"
 
-//¼­¹ö
+//ï¿½ï¿½ï¿½ï¿½
 #include "./Net/Session.h"
 #include "./Net/SessionManager.h"
 #include "./Net/Server.h"
@@ -96,7 +96,7 @@ typedef void(*Function)(void *);
 #include "./Net/Iocp/IOCPSession.h"
 #include "./Net/SessionMonitor.h"
 
-//ÅÍ¹Ì³Î
+//ï¿½Í¹Ì³ï¿½
 #include "./Net/Terminal/TerminalSession.h"
 #include "./Net/Terminal/Terminal.h"
 #include "./Net/Terminal/TerminalManager.h"
@@ -106,5 +106,5 @@ typedef void(*Function)(void *);
 #include "./Database/Query.h"
 #include "./Database/DBManager.h"
 
-// Àü¿ª º¯¼ö
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #include "Shutdown.h"

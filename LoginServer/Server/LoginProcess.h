@@ -15,4 +15,5 @@ private:
 	static void I_DB_ANS_CREATE_CHARACTER(Session* session, Packet* rowPacket);
 	static void I_DB_ANS_CREATE_USER(Session* session, Packet* rowPacket);
 	static void I_DB_ANS_CREATE_CHARACTER_SUCCESS(Session* session, Packet* rowPacket);
+	static void C_REQ_PING(Session* session, Packet* rowPacket);
 };

@@ -6,7 +6,10 @@ SessionManager::SessionManager(int maxConnection)
 	: lock_(L"SessionManager")
 {
 	sessionSeed_ = 1;
-	maxConnection_ = maxConnection;
+	sessionCount_ = 0;
+	// Singleton íŒ¨í„´ì—ì„œëŠ” ê¸°ë³¸ ìƒì„±ìžê°€ í˜¸ì¶œë˜ë¯€ë¡œ í•­ìƒ ê¸°ë³¸ê°’ ì‚¬ìš©
+	maxConnection_ = SESSION_CAPACITY;  // 5000
+	SLog(L"* SessionManager initialized with capacity: %d", maxConnection_);
 	this->commandFuncInitialize();
 }
 
@@ -38,14 +41,17 @@ bool SessionManager::addSession(Session *session)
 	if (findSession != sessionList_.end()) {
 		return false;
 	}
-	if (sessionCount_ > maxConnection_) {
-		SLog(L"* session so busy. count[%d]", sessionCount_);
+	
+	// í˜„ìž¬ ì„¸ì…˜ ìˆ˜ ì •í™•ížˆ ê³„ì‚°
+	int currentSessionCount = static_cast<int>(sessionList_.size());
+	if (currentSessionCount >= maxConnection_) {
+		SLog(L"* session limit reached. current[%d], max[%d]", currentSessionCount, maxConnection_);
 		return false;
 	}
 
 	session->setId(this->createSessionId());
 	sessionList_.push_back(session);
-	++sessionCount_;
+	sessionCount_ = currentSessionCount + 1;  // ì •í™•í•œ ì¹´ìš´íŠ¸
 	return true;
 }
 
@@ -60,10 +66,15 @@ bool SessionManager::closeSession(Session *session)
 	if (findSession != sessionList_.end()) {
 		Session *delSession = *findSession;
 		SLog(L"* detected close by client [%s]", delSession->clientAddress().c_str());
-		::closesocket(delSession->socket());
+		
+		try {
+			::closesocket(delSession->socket());
+		} catch (...) {
+			// ì†Œì¼“ ë‹«ê¸° ì‹¤íŒ¨ ì‹œ ë¬´ì‹œ
+		}
 
 		sessionList_.remove(delSession);
-		--sessionCount_;
+		sessionCount_ = static_cast<int>(sessionList_.size());  // ì •í™•í•œ ì¹´ìš´íŠ¸
 		SAFE_DELETE(delSession);
 		return true;
 	}
@@ -78,10 +89,10 @@ void SessionManager::forceCloseSession(Session *session)
 		return;
 	}
 
-	//¿ì¾ÆÇÑ Á¾·á À¯µµ. 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
 	LINGER linger;
-	linger.l_onoff = 1;   //»ç¿ë
-	linger.l_linger = 0;  //´ë±â½Ã°£, 0ÀÏ½Ã ¿Ï·á ¾ÈµÈ ÆÐÅ¶ ¹ö¸®°í Áï½Ã Á¾·á.
+	linger.l_onoff = 1;   //ï¿½ï¿½ï¿½
+	linger.l_linger = 0;  //ï¿½ï¿½ï¿½Ã°ï¿½, 0ï¿½Ï½ï¿½ ï¿½Ï·ï¿½ ï¿½Èµï¿½ ï¿½ï¿½Å¶ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 	::setsockopt(session->socket(), SOL_SOCKET, SO_LINGER, (char *)&linger, sizeof(linger));
 	this->closeSession(session);
@@ -181,7 +192,7 @@ void SessionManager::commandFuncInitialize()
         _shutdown = true;
     };
 
-    //¸í·É¾î µî·Ï
+    //ï¿½ï¿½ï¿½É¾ï¿½ ï¿½ï¿½ï¿½
     serverCommand_.insert(make_pair(L"/notify", notiyFunc));
 	serverCommand_.insert(make_pair(L"/kickoff", kickoffFunc));
 	serverCommand_.insert(make_pair(L"/exit", exitFunc));

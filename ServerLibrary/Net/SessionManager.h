@@ -12,13 +12,13 @@ class SessionManager : public Singleton<SessionManager>
     typedef list<Session*>		SessionList;
 
     SessionList		            sessionList_;
-	int									sessionCount_;
+	int									sessionCount_ = 0;  // ì´ˆê¸°í™” ì¶”ê°€
 	int									maxConnection_;
     Lock								lock_;
 
 	oid_t								sessionSeed_;			
 
-	// ¼­¹ö ¼öµ¿ ¸í·É¾î
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½É¾ï¿½
     typedef std::function<void (SessionList *sessionList, wstr_t *arg)> cmdFunc;
 	unordered_map<wstr_t, cmdFunc>   serverCommand_;
 
